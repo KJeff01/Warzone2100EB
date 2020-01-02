@@ -187,25 +187,58 @@ function __camGameWon()
 	}
 }
 
+//Checks if the player is considered to be alive on all non-offworld missions.
 //NOTE: Do not count cyborg factory here since combat engineer does not exist
 //in campaign at the moment.
 function __camPlayerDead()
 {
 	var dead = true;
-	var haveFactories = enumStruct(CAM_HUMAN_PLAYER, FACTORY).length > 0;
+	var haveFactories = enumStruct(CAM_HUMAN_PLAYER, FACTORY).filter(function(obj) {
+		return obj.status === BUILT;
+	}).length > 0;
+
 	if (haveFactories)
 	{
 		dead = false;
 	}
-	//NOTE: Includes the construct droids in mission.apsDroidLists[selectedPlayer] and in a transporter.
-	if (countDroid(DROID_CONSTRUCT) > 0)
+
+	if (__camNextLevel === "SUB_3_1S")
 	{
+		//Check for any construction units.
+		//NOTE: countDroid() will return the counts of construction units in
+		//apsLimboDroids between Gamma 3 to Gamma 5.
+		if (countDroid(DROID_CONSTRUCT) > 0)
+		{
+			dead = false;
+		}
+	}
+	else if (enumDroid(CAM_HUMAN_PLAYER, DROID_CONSTRUCT).length > 0)
+	{
+		//A construction unit is currently on the map.
 		dead = false;
 	}
+	else
+	{
+		//Check the transporter.
+		var transporter = enumDroid(CAM_HUMAN_PLAYER, DROID_TRANSPORTER);
+		if (transporter.length > 0)
+		{
+			var cargoDroids = enumCargo(transporter[0]);
+			for (var i = 0, len = cargoDroids.length; i < len; ++i)
+			{
+				var virDroid = cargoDroids[i];
+				if (camDef(virDroid) && virDroid && virDroid.droidType === DROID_CONSTRUCT)
+				{
+					dead = false;
+					break;
+				}
+			}
+		}
+	}
+
 	if (__camWinLossCallback === "__camVictoryTimeout")
 	{
-		//Because countDroid() also counts trucks not on the map, we must also
-		//make the mission fail if no units are alive on map while having no factories.
+		//Make the mission fail if no units are alive on map while having no factories.
 		var droidCount = 0;
 		enumDroid(CAM_HUMAN_PLAYER).forEach(function(obj) {
 			droidCount += 1;
@@ -216,6 +249,7 @@ function __camPlayerDead()
 		});
 		dead = droidCount <= 0 && !haveFactories;
 	}
+
 	return dead;
 }
 
@@ -321,8 +355,7 @@ function __camVictoryOffworld()
 
 			//Missions that are not won based on artifact count (see missions 2-1 and 3-2).
 			//If either forceLZ or destroyAll is true then ignore this.
-			var arti = camGetArtifacts();
-			if (arti.length === 0 && !forceLZ && !destroyAll)
+			if (__camNumArtifacts === 0 && !forceLZ && !destroyAll)
 			{
 				__camGameWon();
 				return;
