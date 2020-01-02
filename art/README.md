@@ -16,3 +16,6 @@ Authors: NoQ, Berg, Berserk Cyborg, Black Project, MIH-XTC, Mysteryem, Flail13
 
 "Contingency": http://addons.wz2100.net/258
 Authors: Shadow Wolf TJC, NoQ, Berg, Jorzi, Aubergine, Black Project, Mysteryem, Flail13
+
+"Wz Graphics Mod": ?
+Authors: ?
