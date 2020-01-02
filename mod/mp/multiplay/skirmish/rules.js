@@ -334,7 +334,7 @@ function eventGameInit()
 		"R-Comp-SynapticLink",
 		"R-Sys-Sensor-Upgrade00",
 		"R-Vehicle-Body26",
-		"R-Vehicle-Prop-Wheels-NAS",
+		//"R-Vehicle-Prop-Wheels-NAS",
 		"R-Wpn-MG1Mk1",
 		"R-Defense-HardcreteWall",
 		"R-Struc-Factory-Cyborg",
