@@ -76,6 +76,7 @@ function cam_eventChat(from, to, message)
 	}
 	if (message === "research available")
 	{
+		dump("\n\n");
 		while (true)
 		{
 			var research = enumResearch();
@@ -87,6 +88,7 @@ function cam_eventChat(from, to, message)
 			{
 				var researchName = research[i].name;
 				completeResearch(researchName, CAM_HUMAN_PLAYER);
+				dump(researchName);
 			}
 		}
 	}
