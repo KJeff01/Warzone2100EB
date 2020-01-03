@@ -1,0 +1,174 @@
+1-a
+"base1ArtifactPos": { tech: "R-Wpn-MG-Damage01" },
+"base2Factory": { tech: "R-Wpn-Flamer01Mk1" },
+"base3Factory": { tech: "R-Defense-Tower01" },
+"base4Factory": { tech: "R-Sys-Engineering01" },
+
+1-b
+"base1factory": { tech: "R-Wpn-Flamer-Damage01" },
+"base2factory": { tech: "R-Wpn-MG2Mk1" },
+"base4factory": { tech: "R-Vehicle-Engine01" },
+"base3sensor": { tech: "R-Sys-Sensor-Turret01" },
+"base4gen": { tech: "R-Struc-PowerModuleMk1" },
+
+1-1
+"artifactLocation": { tech: "R-Wpn-MG3Mk1" },
+
+1-2
+"ScavLab": { tech: "R-Wpn-Mortar01Lt" },
+"NorthFactory": { tech: "R-Vehicle-Prop-Halftracks" },
+"ScavAA": { tech: "R-Wpn-AAGun05" },
+
+1-3
+"ScavFactory": { tech: "R-Wpn-Cannon1Mk1" },
+"NPFactory": { tech: "R-Struc-Factory-Module" },
+"NPHQ": { tech: "R-Defense-HardcreteWall" },
+"NPCRC": { tech: "R-Struc-CommandRelay" },
+"NPRepair": { tech: "R-Struc-RepairFacility" },
+"TwinHvyMG": { tech: "R-Wpn-MG3Mk1-Twn" },
+"JammerTurret": { tech: "R-Sys-ECM-Upgrade01" },
+
+1-c
+"ScavSouthFactory": { tech: "R-Wpn-Rocket05-MiniPod" },
+"NPResearchFacility": { tech: "R-Struc-Research-Module" },
+"NPCentralFactory": { tech: "R-Vehicle-Prop-Tracks" },
+"NPNorthFactory": { tech: "R-Struc-Factory-Upgrade01" },
+"NPPowGenerator": { tech: "R-Vehicle-Engine02" },
+"ThermalDroid": { tech: "R-Vehicle-Armor-Heat01" },
+
+1-4a
+"NPCommandCenter": { tech: "R-Vehicle-Metals01" },
+"NPResearchFacility": { tech: "R-Vehicle-Body04" },
+"MediumNPFactory": { tech: "R-Wpn-Rocket-Pod-MRA" },
+"ThermalScorpion": { tech: "R-Vehicle-Body17" },
+"MedCannonHardpoint": { tech: "R-Wpn-Cannon2Mk1" },
+"RocketTower": { tech: "R-Wpn-Rocket05-MiniPod-Arch" },
+"Thermaldroid": { tech: "R-Wpn-Rocket-Pod-MRA-Twin" },
+
+1-5
+"NPCyborgFactory": { tech: "R-Struc-Factory-Cyborg" },
+"NPRightFactory": { tech: "R-Vehicle-Engine02" },
+"NPLeftFactory": { tech: "R-Vehicle-Body08" }, //scorpion body
+"NPResearchFacility": { tech: "R-Comp-SynapticLink" },
+"MRAemplacement": { tech: "R-Wpn-Rocket-Range01" },
+"Sunburst": { tech: "R-Wpn-Sunburst" },
+
+1-7
+"artifactLocation": { tech: "R-Wpn-Cannon3Mk1" },
+
+1-d
+"artifactLocation": { tech: "R-Vehicle-Prop-Hover" }, //SE base
+"NPFactoryW": { tech: "R-Vehicle-Metals03" }, //West factory
+"NPFactoryNE": { tech: "R-Vehicle-Body12" }, //Main base factory
+
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+
+2-a
+"COCommandCenter": { tech: "R-Sys-Engineering02" },
+"COArtiPillbox": { tech: "R-Wpn-MG-ROF02" },
+"COArtiCBTower": { tech: "R-Sys-Sensor-Upgrade01" },
+"SuperMortar": { tech: "R-Defense-SuperRamjetMortar" },
+
+2-1
+"base1ArtifactPos": { tech: "R-Vehicle-Body20" }, //hardened alloys, blue bodies
+
+2-b
+"InfernoBunker": { tech: "R-Wpn-Flame2" },
+"COResearchLab": { tech: "R-Struc-Research-Upgrade04" },
+"COHeavyFacL-b1": { tech: "R-Wpn-MG-ROF03" },
+"COCommandCenter": { tech: "R-Vehicle-Body02" }, //Leopard
+
+2-2
+"COCommander": { tech: "R-Wpn-Rocket-Accuracy02" },
+"COFactoryEast": { tech: "R-Struc-Materials04" },
+"PepperPotEmp": { tech: "R-Wpn-Mortar3" },
+"RoboticRepair": { tech: "R-Struc-RprFac-Upgrade04" },
+
+2-c
+"rippleRocket": { tech: "R-Wpn-Rocket06-IDF" },
+"quadbof": { tech: "R-Wpn-AAGun02" },
+"howitzer": { tech: "R-Wpn-HowitzerMk1" },
+"COHeavyFac-Leopard": { tech: "R-Vehicle-Body06" }, //panther
+"COHeavyFac-Upgrade": { tech: "R-Struc-Factory-Upgrade04" },
+"COVtolFacLeft-Prop": { tech: "R-Vehicle-Prop-VTOL" },
+"COInfernoEmplacement-Arti": { tech: "R-Wpn-Flamer-ROF02" },
+
+2-5
+"NuclearReactor": { tech: "R-Struc-Power-Upgrade01" },
+"COMediumFactory": { tech: "R-Wpn-Cannon4AMk1" },
+"COCyborgFactoryL": { tech: "R-Wpn-MG4" },
+"COTankKillerHardpoint": { tech: "R-Wpn-Rocket-ROF02" },
+
+2-d
+"COCommandCenter": { tech: "R-Struc-VTOLPad-Upgrade01" },
+"COResearchLab": { tech: "R-Struc-Research-Upgrade05" },
+"COCommandRelay": { tech: "R-Wpn-Bomb02" },
+"COHeavyFactory": { tech: "R-Wpn-Howitzer-Accuracy01" },
+"ScavFact": { tech: "R-Wpn-Missile2A-T" },
+
+2-6
+"COCyborgFactory-Arti": { tech: "R-Wpn-Rocket07-Tank-Killer" },
+"COCommandCenter": { tech: "R-Wpn-Mortar3" },
+"uplink": { tech: "R-Sys-VTOLCBS-Tower01" },
+"COCyborgFactory-b1": { tech: "R-Cyborg-HvyBody" },
+
+2-7
+"COCyborgFac-b2": { tech: "R-Wpn-Cannon5" },
+"COTankKillerHardpoint": { tech: "R-Wpn-Rocket07-Tank-Killer-Quad" },
+"COCyborgFac-b3": { tech: "R-Wpn-Cannon-Damage07" },
+"COHeavyFac-b4": { tech: "R-Wpn-Cannon-ROF04" },
+
+2-8
+"COVtolFac-b3": { tech: "R-Vehicle-Body09" }, //Tiger body
+"COHeavyFacL-b2": { tech: "R-Wpn-Cannon4AMk1-Hvy" },
+"PlasmaCannonEmpl": { tech: "R-Wpn-PlasmaCannon" },
+"ScavFact": { tech: "R-Wpn-Cannon375mmMk1-Twn" },
+"GroundShaker": { tech: "R-Wpn-HvyHowitzer" },
+
+
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+
+
+
+3-a
+"NXPowerGenArti": { tech: "R-Struc-Power-Upgrade02" },
+"NXResearchLabArti": { tech: "R-Sys-Engineering03" },
+
+3-1
+
+3-b
+"NXCommandCenter": { tech: "R-Struc-Research-Upgrade07" },
+"NXBeamTowerArti": { tech: "R-Wpn-Laser01" },
+"gammaResLabArti": { tech: "R-Vehicle-Body15" }, // leopard superior alloys
+"gammaCommandArti": { tech: "R-Vehicle-Body03" }, //retalitation
+"MechCyborgFac": { tech: "R-Cyborg-MechaBody" },
+"LargeVtolFactory": { tech: "R-Wpn-Bomb05" },
+
+3-c
+"NXbase1HeavyFacArti": { tech: "R-Wpn-Laser02" }, 
+"NXcybFacArti": { tech: "R-Wpn-RailGun01" },
+"NXvtolFacArti": { tech: "R-Struc-Factory-Upgrade07" },
+"NXcommandCenter": { tech: "R-Wpn-Missile-LtSAM" },
+
+3-ad1
+"NXbase1VtolFacArti": { tech: "R-Wpn-RailGun02" },
+"NXcommandCenter": { tech: "R-Wpn-LasSat" },
+"NXcyborgFac2Arti": { tech: "R-Struc-Factory-Upgrade09" },
+"SouthEastFac": { tech: "R-Vehicle-Body16" },
+
+3-4
+"NX-NWCyborgFactory": { tech: "R-Wpn-RailGun03" },
+"NX-NEFactory": { tech: "R-Vehicle-Body14" }, // Dragon
+"PlasteelWall": { tech: "R-Defense-WallUpgrade10" },
