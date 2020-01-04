@@ -8,6 +8,7 @@ R-Struc-RepairFacility
 R-Sys-ECM-Upgrade01
 R-Wpn-Cannon1Mk1
 R-Wpn-MG3Mk1-Twn
+R-Comp-CommandTurret01
 R-Defense-HardcreteGate
 R-Defense-MortarPit
 R-Defense-Pillbox01
@@ -26,5 +27,4 @@ R-Defense-WallUpgrade02
 R-Struc-Materials01
 R-Defense-WallUpgrade03
 R-Struc-Materials02
-R-Sys-Engineering02
 R-Struc-Materials03

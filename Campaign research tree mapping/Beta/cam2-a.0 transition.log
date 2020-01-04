@@ -70,6 +70,7 @@
 	Found: R-Wpn-Rocket-Pod-MRA
 	Found: R-Wpn-Rocket-Range01
 	Found: R-Wpn-Rocket-Range02
+	Found: R-Wpn-Rocket-Range03
 	Found: R-Wpn-Rocket-Pod-MRA-Twin
 	Found: R-Wpn-Rocket02-MRL
 	Found: R-Wpn-Rocket-Pod-MRA-Quad
@@ -103,6 +104,15 @@
 	Found: R-Wpn-Mortar-Damage01
 	Found: R-Wpn-Mortar-Damage02
 	Found: R-Wpn-Mortar-Damage03
+	Found: R-Wpn-Cannon-Damage04
+	Found: R-Wpn-Cannon-ROF01
+	Found: R-Wpn-Mortar02Hvy
+	Found: R-Wpn-Cannon-ROF02
+	Found: R-Wpn-Cannon-ROF03
+	Found: R-Wpn-Mortar-ROF01
+	Found: R-Wpn-Mortar-ROF02
+	Found: R-Wpn-Mortar-ROF03
+	Found: R-Wpn-Mortar-ROF04
 	Found: R-Wpn-Rocket01-LtAT
 	Found: R-Wpn-Rocket-Damage04
 	Found: R-Wpn-Rocket-Accuracy02
@@ -116,7 +126,6 @@
 	Found: R-Sys-Sensor-Tower02
 	Found: R-Sys-ECM-Upgrade01
 	Found: R-Defense-Pillbox05
-	Found: R-Wpn-Rocket01-LtAT-Quad
 	Found: R-Defense-Pillbox06
 	Found: R-Defense-TankTrap01
 	Found: R-Defense-Tower01
@@ -135,14 +144,27 @@
 	Found: R-Vehicle-Prop-Tracks
 	Found: R-Vehicle-Prop-Hover
 	Found: R-Wpn-Cannon-Accuracy01
-	Found: R-Wpn-Cannon-Damage04
 	Found: R-Wpn-Cannon-Damage05
 	Found: R-Wpn-Cannon3Mk1
 	Found: R-Wpn-Mortar-Acc01
-	Found: R-Wpn-Cannon4AMk1
-	Found: R-Wpn-AAGun02
-	Found: R-Defense-AASite-QuadBof
-	Found: R-Wpn-Mortar02Hvy
 	Found: R-Defense-HvyMor
 	Found: R-Wpn-Rocket03-HvAT
 	Found: R-Defense-ECM1PylonMk1
+	Found: R-Cyborg-Armor-Heat01
+	Found: R-Cyborg-Armor-Heat02
+	Found: R-Cyborg-Armor-Heat03
+	Found: R-Wpn-Rocket05-MiniPod-Arch
+	Found: R-Wpn-Rocket-Pod-Twn-Arch
+	Found: R-Wpn-Rocket-Pod-Quad-Arch
+	Found: R-Defense-Tower10
+	Found: R-Wpn-Rocket01-LtAT-Quad
+	Found: R-Wpn-Sunburst
+	Found: R-Defense-Sunburst
+	Found: R-Wpn-Sunburst-Arch
+	Found: R-Defense-Sunburst-Arch
+	Found: R-Wpn-Rocket-Arch-Hvy-Aslt-Gat
+	Found: R-Comp-SynapticLink
+	Found: R-Wpn-Cannon-Damage06
+	Found: R-Wpn-Cannon-Mount01
+	Found: R-Wpn-MG3Mk1-Aslt
+	Found: R-Defense-MG3Mk1-Aslt
