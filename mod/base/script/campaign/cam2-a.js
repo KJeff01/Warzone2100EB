@@ -207,6 +207,9 @@ function cam2Setup()
 	camCompleteRequiredResearch(CAM2A_RES_COL, THE_COLLECTIVE);
 	camCompleteRequiredResearch(CAM2A_RES_COL, ULTSCAV);
 
+	enableResearch("R-Wpn-Mortar-Damage04", CAM_HUMAN_PLAYER);
+	enableResearch("R-Wpn-Rocket-Damage05", CAM_HUMAN_PLAYER);
+
 	const BASE_STRUCTURES = [
 		"A0CommandCentre", "A0PowerGenerator", "A0ResourceExtractor",
 		"A0ResearchFacility", "A0LightFactory",

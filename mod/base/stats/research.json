@@ -2,11 +2,13 @@
     "R-Comp-CommandTurret01": {
         "iconID": "IMAGE_RES_COMPUTERTECH",
         "id": "R-Comp-CommandTurret01",
-        "keyTopic": 1,
         "msgName": "RES_C_CT1",
         "name": "Command Turret",
         "requiredResearch": [
             "R-Struc-CommandRelay"
+        ],
+        "requiredStructures": [
+            "A0ComDroidControl"
         ],
         "researchPoints": 1100,
         "researchPower": 55,
@@ -29,6 +31,9 @@
         "researchPower": 250,
         "resultComponents": [
             "CommandBrain01"
+        ],
+        "requiredStructures": [
+            "A0ComDroidControl"
         ],
         "results": [
             {
@@ -72,7 +77,6 @@
         "iconID": "IMAGE_RES_COMPUTERTECH",
         "id": "R-Comp-MissileCodes02",
         "imdName": "ICMSLCD.PIE",
-        "keyTopic": 1,
         "name": "Second Level Missile Targeting Codes",
         "requiredResearch": [
             "R-Comp-MissileCodes01"
@@ -85,7 +89,6 @@
         "iconID": "IMAGE_RES_COMPUTERTECH",
         "id": "R-Comp-MissileCodes03",
         "imdName": "ICMSLCD.PIE",
-        "keyTopic": 1,
         "name": "Third Level Missile Firing Codes",
         "requiredResearch": [
             "R-Comp-MissileCodes02"
@@ -101,9 +104,6 @@
         "keyTopic": 1,
         "msgName": "RES_C_SL1",
         "name": "Synaptic Link",
-        "requiredResearch": [
-            "R-Comp-SynapticLink"
-        ],
         "researchPoints": 1200,
         "researchPower": 120
     },
@@ -2502,7 +2502,7 @@
         "name": "Lancer Tower",
         "requiredResearch": [
             "R-Defense-HardcreteWall",
-            "R-Wpn-Rocket01-LtAT-Quad"
+            "R-Wpn-Rocket01-LtAT"
         ],
         "researchPoints": 1500,
         "researchPower": 75,
@@ -5269,6 +5269,7 @@
     "R-Struc-VTOLFactory": {
         "iconID": "IMAGE_RES_STRUCTURETECH",
         "id": "R-Struc-VTOLFactory",
+        "keyTopic": 1,
         "msgName": "RES_ST_VF",
         "name": "VTOL Factory",
         "requiredResearch": [
@@ -5552,6 +5553,7 @@
         "iconID": "IMAGE_RES_SYSTEMTECH",
         "id": "R-Sys-Engineering02",
         "imdName": "trlcon.pie",
+        "keyTopic": 1,
         "msgName": "RES_ENGIN2",
         "name": "Structural Engineering",
         "requiredResearch": [
@@ -8422,6 +8424,7 @@
     "R-Wpn-Cannon-Damage07": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Cannon-Damage07",
+        "keyTopic": 1,
         "msgName": "RES_W_CN_D7",
         "name": "HVAPFSDS Cannon Rounds",
         "requiredResearch": [
@@ -12062,6 +12065,7 @@
     "R-Wpn-Mortar-Damage04": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Mortar-Damage04",
+        "keyTopic": 1,
         "msgName": "RES_W_M_D4",
         "name": "HEAP Mortar Shells",
         "requiredResearch": [
@@ -13295,6 +13299,7 @@
     "R-Wpn-Rocket-Damage05": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket-Damage05",
+        "keyTopic": 1,
         "msgName": "RES_W_RK_D5",
         "name": "HEAT Rocket Warhead Mk2",
         "requiredResearch": [
@@ -13685,7 +13690,6 @@
     "R-Wpn-Rocket01-LtAT": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket01-LtAT",
-        "keyTopic": 1,
         "msgName": "RES_NULL_PLACE_HOL08",
         "name": "Lancer AT Rocket",
         "requiredResearch": [
