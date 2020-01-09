@@ -242,7 +242,6 @@ const CAM2END_RES_COL = [
 // Starting research for all players in campaign 3
 // TODO: Make this minimal
 const CAM3A_RESEARCH = CAM2A_RESEARCH.concat([
-
 	"R-Defense-SuperRamjetMortar",
 	"R-Sys-Engineering02",
 	"R-Sys-Sensor-Upgrade01",
@@ -320,6 +319,8 @@ const CAM3A_RESEARCH = CAM2A_RESEARCH.concat([
 	"R-Wpn-Bomb07",
 	"R-Wpn-Howitzer-Damage03",
 	"R-Wpn-Bomb-Accuracy03",
+	"R-Defense-Howitzer-Incenediary",
+	"R-Defense-SuperIncHowitzer",
 	//beta 5
 	"R-Wpn-Cannon4AMk1",
 	"R-Wpn-MG4",
@@ -348,8 +349,15 @@ const CAM3A_RESEARCH = CAM2A_RESEARCH.concat([
 	"R-Wpn-Missile-Damage03",
 	"R-Wpn-Howitzer-ROF04",
 	"R-Wpn-Missile-Range03",
+	"R-Wpn-Howitzer-Range01",
+	"R-Defense-Howitzer-Ram",
+	"R-Defense-SuperRamjetHowitzer",
+	"R-Wpn-Howitzer03-Rot-Inc",
+	"R-Wpn-Howitzer03-Rot-Ram",
+	"R-Defense-RotHow-Inc",
 	//beta 7
 	"R-Cyborg-HvyBody",
+	"R-Cyborg-Engine03",
 	"R-Sys-VTOLCBS-Tower01",
 	"R-Wpn-Rocket07-Tank-Killer",
 	"R-Cyborg-Hvywpn-A-T",
@@ -364,6 +372,8 @@ const CAM3A_RESEARCH = CAM2A_RESEARCH.concat([
 	"R-Cyborg-Hvywpn-Rocket-Sunburst",
 	"R-Cyborg-Hvywpn-Rocket-Sunburst-Arch",
 	"R-Cyborg-Hvywpn-TK",
+	"R-Cyborg-Hvywpn-Flamer",
+	"R-Cyborg-Hvywpn-Mortar1Mk1-Ram",
 	"R-Wpn-Rocket07-Tank-Killer-Quad",
 	"R-Cyborg-Hvywpn-HPV",
 	"R-Cyborg-Hvywpn-MG4",
@@ -396,10 +406,14 @@ const CAM3A_RESEARCH = CAM2A_RESEARCH.concat([
 	"R-Defense-Cannon4AUTOMk1-Hvy-Inc",
 	"R-Wpn-Cannon-Mount03",
 	"R-Wpn-Howitzer-Damage06",
-
-
-	//MIH-XTC research list
-	"R-Wpn-Flamer-Range03",
+	"R-Wpn-HvyHowitzer-Inc",
+	"R-Defense-HvyHowitzer-Gat",
+	"R-Defense-HvyHowitzer-Inc",
+	"R-Defense-HvyHowitzer-Ram",
+	"R-Defense-RotHow-Ram",
+	"R-Wpn-Howitzer-Range03",
+	"R-Defense-HvyHowitzer-Ram-Hvy",
+	"R-Wpn-HvyHowitzer-Ram-Hvy",
 ]);
 
 // Additional AI research for starting campaign 3
