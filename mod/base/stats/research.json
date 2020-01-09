@@ -3495,6 +3495,7 @@
     "R-Defense-SuperRamjetMortar": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-SuperRamjetMortar",
+        "keyTopic": 1,
         "name": "Super Stabilized Mortar",
         "requiredResearch": [
             "R-Defense-MortarPit-Ram",
