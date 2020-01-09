@@ -314,7 +314,7 @@ function eventStartLevel()
 	setAlliance(THE_COLLECTIVE, ULTSCAV, true);
 	camSetArtifacts({
 		"COCommandCenter": { tech: "R-Sys-Engineering02" },
-		"COArtiPillbox": { tech: "R-Wpn-MG-ROF02" },
+		"COArtiPillbox": { tech: ["R-Wpn-MG-ROF02", "R-Wpn-MG-Damage05"] },
 		"COArtiCBTower": { tech: "R-Sys-Sensor-Upgrade01" },
 		"SuperMortar": { tech: "R-Defense-SuperRamjetMortar" },
 	});

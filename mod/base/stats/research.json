@@ -177,7 +177,6 @@
         "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-Cyborg-Armor-Heat04",
         "imdName": "icamrhot.pie",
-        "keyTopic": 1,
         "msgName": "RES_CY_AH4",
         "name": "Cyborg High Intensity Thermal Armor",
         "requiredResearch": [
@@ -245,6 +244,7 @@
         "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-Cyborg-Armor-Heat07",
         "imdName": "icamrhot.pie",
+        "keyTopic": 1,
         "msgName": "RES_CY_AH7",
         "name": "Cyborg Superdense Thermal Armor",
         "requiredResearch": [
@@ -2304,6 +2304,9 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Mortar3ROTARYMk1-Inc",
         "name": "Incendiary Pepperpot Pit",
+        "requiredResearch": [
+            "R-Wpn-Mortar03-Incenediary"
+        ],
         "researchPoints": 4800,
         "researchPower": 240,
         "resultStructures": [
@@ -2315,6 +2318,9 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Mortar3ROTARYMk1-Ram-Rot",
         "name": "Stabilized Pepperpot Pit",
+        "requiredResearch": [
+            "R-Wpn-Mortar-Range03"
+        ],
         "researchPoints": 4800,
         "researchPower": 240,
         "resultStructures": [
@@ -11933,7 +11939,6 @@
     "R-Wpn-Mortar-Acc03": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Mortar-Acc03",
-        "keyTopic": 1,
         "msgName": "RES_W_M_AC3",
         "name": "Target Acquisition Mortar Shells",
         "requiredResearch": [
@@ -12284,7 +12289,6 @@
     "R-Wpn-Mortar-Range01": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Mortar-Range01",
-        "keyTopic": 1,
         "msgName": "RES_W_M_RA1",
         "name": "Stabilized Mortar",
         "redComponents": [

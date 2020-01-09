@@ -101,9 +101,9 @@ function eventStartLevel()
 		"COCyborgFactory-Arti": { tech: "R-Wpn-Rocket07-Tank-Killer" },
 		"COCommandCenter": { tech: "R-Wpn-Mortar3" },
 		"uplink": { tech: "R-Sys-VTOLCBS-Tower01" },
-		"COCyborgFactory-b1": { tech: "R-Cyborg-HvyBody" },
+		"COCyborgFactory-b1": { tech: ["R-Cyborg-HvyBody", "R-Cyborg-Engine02"] },
 	});
-	
+
 	setAlliance(THE_COLLECTIVE, ULTSCAV, true);
 	camCompleteRequiredResearch(CAM2_6_RES_COL, THE_COLLECTIVE);
 

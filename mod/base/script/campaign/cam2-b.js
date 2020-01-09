@@ -122,7 +122,7 @@ function eventStartLevel()
 	camPlayVideos(["MB2_B_MSG", "MB2_B_MSG2"]);
 
 	camSetArtifacts({
-		"InfernoBunker": { tech: "R-Wpn-Flame2" },
+		"InfernoBunker": { tech: ["R-Wpn-Flame2", "R-Wpn-Flamer-Damage04"] },
 		"COResearchLab": { tech: "R-Struc-Research-Upgrade04" },
 		"COHeavyFacL-b1": { tech: "R-Wpn-MG-ROF03" },
 		"COCommandCenter": { tech: "R-Vehicle-Body02" }, //Leopard
@@ -131,7 +131,7 @@ function eventStartLevel()
 	setAlliance(THE_COLLECTIVE, ULTSCAV, true);
 	camCompleteRequiredResearch(CAM2B_RES_COL, THE_COLLECTIVE);
 	camCompleteRequiredResearch(CAM2B_RES_COL, ULTSCAV);
-	
+
 	camSetEnemyBases({
 		"CONorthBase": {
 			cleanup: "base1Cleanup",
