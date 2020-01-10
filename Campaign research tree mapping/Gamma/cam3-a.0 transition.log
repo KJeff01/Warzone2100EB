@@ -70,6 +70,7 @@
 	Found: R-Wpn-Rocket-Pod-MRA
 	Found: R-Wpn-Rocket-Range01
 	Found: R-Wpn-Rocket-Range02
+	Found: R-Wpn-Rocket-Range03
 	Found: R-Wpn-Rocket-Pod-MRA-Twin
 	Found: R-Wpn-Rocket02-MRL
 	Found: R-Wpn-Rocket-Pod-MRA-Quad
@@ -103,6 +104,15 @@
 	Found: R-Wpn-Mortar-Damage01
 	Found: R-Wpn-Mortar-Damage02
 	Found: R-Wpn-Mortar-Damage03
+	Found: R-Wpn-Cannon-Damage04
+	Found: R-Wpn-Cannon-ROF01
+	Found: R-Wpn-Mortar02Hvy
+	Found: R-Wpn-Cannon-ROF02
+	Found: R-Wpn-Cannon-ROF03
+	Found: R-Wpn-Mortar-ROF01
+	Found: R-Wpn-Mortar-ROF02
+	Found: R-Wpn-Mortar-ROF03
+	Found: R-Wpn-Mortar-ROF04
 	Found: R-Wpn-Rocket01-LtAT
 	Found: R-Wpn-Rocket-Damage04
 	Found: R-Wpn-Rocket-Accuracy02
@@ -116,7 +126,6 @@
 	Found: R-Sys-Sensor-Tower02
 	Found: R-Sys-ECM-Upgrade01
 	Found: R-Defense-Pillbox05
-	Found: R-Wpn-Rocket01-LtAT-Quad
 	Found: R-Defense-Pillbox06
 	Found: R-Defense-TankTrap01
 	Found: R-Defense-Tower01
@@ -135,202 +144,261 @@
 	Found: R-Vehicle-Prop-Tracks
 	Found: R-Vehicle-Prop-Hover
 	Found: R-Wpn-Cannon-Accuracy01
-	Found: R-Wpn-Cannon-Damage04
 	Found: R-Wpn-Cannon-Damage05
 	Found: R-Wpn-Cannon3Mk1
 	Found: R-Wpn-Mortar-Acc01
-	Found: R-Wpn-Cannon4AMk1
-	Found: R-Wpn-AAGun02
-	Found: R-Defense-AASite-QuadBof
-	Found: R-Wpn-Mortar02Hvy
 	Found: R-Defense-HvyMor
 	Found: R-Wpn-Rocket03-HvAT
 	Found: R-Defense-ECM1PylonMk1
-
-
-
-
-	Found: R-Sys-Engineering02
-	Found: R-Cyborg-Engine02
-	Found: R-Cyborg-Engine03
-	Found: R-Wpn-Rocket-Damage05
-	Found: R-Wpn-Rocket-Damage06
-	Found: R-Wpn-Rocket07-Tank-Killer
-	Found: R-Wpn-Rocket07-Tank-Killer-Quad
-	Found: R-Defense-Mortar3ROTARYMk1-Inc
-	Found: R-Struc-Research-Upgrade04
-	Found: R-Vehicle-Metals04
-	Found: R-Vehicle-Metals05
-	Found: R-Vehicle-Metals06
-	Found: R-Cyborg-Metals04
-	Found: R-Cyborg-Metals05
-	Found: R-Cyborg-Metals06
-	Found: R-Defense-WallUpgrade04
-	Found: R-Defense-WallUpgrade05
-	Found: R-Defense-WallUpgrade06
-	Found: R-Defense-WallTower-HvyA-Trocket
-	Found: R-Wpn-Cannon4AMk1-Hvy
-	Found: R-Wpn-Cannon-ROF01
-	Found: R-Struc-Research-Upgrade05
-	Found: R-Wpn-Cannon5
-	Found: R-Wpn-Cannon6TwinAslt
-	Found: R-Wpn-Cannon375mmMk1-Twn
-	Found: R-Defense-WallTower04
-	Found: R-Struc-Materials04
-	Found: R-Struc-Materials05
-	Found: R-Struc-Materials06
-	Found: R-Struc-Research-Upgrade06
-	Found: R-Vehicle-Prop-VTOL
-	Found: R-Wpn-Bomb01
-	Found: R-Wpn-Bomb-Accuracy01
-	Found: R-Wpn-Bomb07
-	Found: R-Wpn-Flamer-Damage04
-	Found: R-Wpn-Flame2
-	Found: R-Wpn-Mortar-Incenediary
-	Found: R-Defense-MortarPit-Incenediary
-	Found: R-Defense-SuperIncMortar
-	Found: R-Wpn-Mortar02-Incenediary
-	Found: R-Defense-HvyMor-Inc
-	Found: R-Struc-RprFac-Upgrade04
-	Found: R-Wpn-MG-ROF02
-	Found: R-Wpn-MG-ROF03
-	Found: R-Defense-HvyA-Trocket
-	Found: R-Wpn-Mortar-Range01
-	Found: R-Wpn-Mortar-Range01
-	Found: R-Wpn-Mortar-Range02
-	Found: R-Defense-MortarPit-Ram
-	Found: R-Defense-HvyMor-Ram
+	Found: R-Cyborg-Armor-Heat01
+	Found: R-Cyborg-Armor-Heat02
+	Found: R-Cyborg-Armor-Heat03
+	Found: R-Wpn-Rocket05-MiniPod-Arch
+	Found: R-Wpn-Rocket-Pod-Twn-Arch
+	Found: R-Wpn-Rocket-Pod-Quad-Arch
+	Found: R-Defense-Tower10
+	Found: R-Wpn-Rocket01-LtAT-Quad
+	Found: R-Wpn-Sunburst
+	Found: R-Defense-Sunburst
+	Found: R-Wpn-Sunburst-Arch
+	Found: R-Defense-Sunburst-Arch
+	Found: R-Wpn-Rocket-Arch-Hvy-Aslt-Gat
+	Found: R-Comp-SynapticLink
 	Found: R-Wpn-Cannon-Damage06
-	Found: R-Wpn-Cannon-ROF02
-	Found: R-Wpn-Cannon-ROF03
-	Found: R-Wpn-Cannon-ROF02
-	Found: R-Wpn-Cannon-ROF03
-	Found: R-Wpn-Cannon-Damage07
-	Found: R-Wpn-Cannon-ROF04
-	Found: R-Wpn-Cannon-Damage07
-	Found: R-Wpn-Cannon-ROF04
-	Found: R-Wpn-Cannon5-Hvy-Aslt
-	Found: R-Wpn-Cannon5-Hvy-Aslt
 	Found: R-Wpn-Cannon-Mount01
-	Found: R-Wpn-Cannon-Mount02
-	Found: R-Wpn-Cannon-Mount03
-	Found: R-Defense-Mortar3ROTARYMk1-Ram-Rot
-	Found: R-Wpn-Flamer-Damage05
-	Found: R-Wpn-Flamer-Damage06
-	Found: R-Wpn-Flamer-ROF02
-	Found: R-Wpn-Flamer-ROF03
+	Found: R-Wpn-MG3Mk1-Aslt
+	Found: R-Defense-MG3Mk1-Aslt
+	Found: R-Wpn-Mortar-Range01
+	Found: R-Defense-MortarPit-Ram
+	Found: R-Wpn-Mortar-Range02
+	Found: R-Defense-HvyMor-Ram
+
+	//beta tech
+	Found: R-Defense-SuperRamjetMortar
+	Found: R-Sys-Engineering02
+	Found: R-Sys-Sensor-Upgrade01
+	Found: R-Wpn-AAGun-Damage01
+	Found: R-Wpn-MG-ROF02
 	Found: R-Wpn-MG-Damage05
 	Found: R-Wpn-MG-Damage06
 	Found: R-Wpn-MG-Damage07
 	Found: R-Wpn-MG-Damage08
-	Found: R-Defense-WallTower-DoubleAAgun
+	Found: R-Sys-CBSensor-Turret01
+	Found: R-Sys-RadarDetector01
+	Found: R-Sys-Sensor-Upgrade02
+	Found: R-Sys-ECM-Upgrade02
+	Found: R-Wpn-AAGun-Damage02
+	Found: R-Wpn-AAGun-Damage03
 	Found: R-Wpn-Mortar-Damage04
 	Found: R-Wpn-Mortar-Damage05
 	Found: R-Wpn-Mortar-Damage06
-	Found: R-Wpn-AAGun-Damage01
-	Found: R-Wpn-AAGun-Damage02
-	Found: R-Wpn-MG4
-	Found: R-Wpn-AAGun04
-	Found: R-Defense-AASite-QuadRotMg
-	Found: R-Defense-WallTower-QuadRotAA
-	Found: R-Wpn-Rocket-ROF03
-	Found: R-Vehicle-Engine05
-	Found: R-Vehicle-Engine06
-	Found: R-Sys-Sensor-Upgrade01
-	Found: R-Sys-Sensor-Upgrade02
-	Found: R-Wpn-RocketSlow-Accuracy02
-	Found: R-Wpn-Missile2A-T
-	Found: R-Wpn-Cannon5-Inc
-	Found: R-Wpn-Cannon-Accuracy02
-	Found: R-Wpn-MG3Mk1-Aslt
-	Found: R-Defense-ECM1PylonMk2
-	Found: R-Wpn-HowitzerMk1
-	Found: R-Wpn-Howitzer-Accuracy01
-	Found: R-Wpn-Howitzer-Accuracy02
-	Found: R-Wpn-Howitzer-Damage01
-	Found: R-Wpn-Howitzer-Damage02
-	Found: R-Wpn-Howitzer-Damage03
-	Found: R-Wpn-Rocket-Damage07
-	Found: R-Wpn-Rocket-Damage08
-	Found: R-Defense-Super-Rocket
-	Found: R-Wpn-Mortar-Acc02
-	Found: R-Wpn-Mortar-Acc03
-	Found: R-Wpn-Mortar-ROF01
-	Found: R-Wpn-Mortar-ROF02
-	Found: R-Wpn-Mortar-ROF03
-	Found: R-Wpn-Mortar-ROF04
-	Found: R-Wpn-Rocket-Damage09
-	Found: R-Sys-RadarDetector01
-	Found: R-Vehicle-Body02
-	Found: R-Vehicle-Body06
-	Found: R-Vehicle-Body09
-	Found: R-Vehicle-Armor-Heat04
-	Found: R-Vehicle-Armor-Heat05
-	Found: R-Vehicle-Armor-Heat06
-	Found: R-Cyborg-Armor-Heat01
-	Found: R-Cyborg-Armor-Heat02
-	Found: R-Cyborg-Armor-Heat03
-	Found: R-Cyborg-Armor-Heat04
-	Found: R-Cyborg-Armor-Heat05
-	Found: R-Cyborg-Armor-Heat06
-	Found: R-Sys-CBSensor-Turret01
-	Found: R-Sys-VTOLCBS-Turret01
-	Found: R-Sys-VTOLCBS-Tower01
-	Found: R-Wpn-MG4-Hvy
-	Found: R-Defense-SensoTower04
-	Found: R-Struc-VTOLPad-Upgrade01
-	Found: R-Struc-VTOLPad-Upgrade02
-	Found: R-Struc-VTOLPad-Upgrade03
-	Found: R-Defense-Super-Cannon
-	Found: R-Sys-VTOLStrike-Turret01
-	Found: R-Sys-VTOLStrike-Tower01
-	Found: R-Sys-ECM-Upgrade02
-	Found: R-Struc-Power-Upgrade01
-	Found: R-Wpn-AAGun-Accuracy01
-	Found: R-Wpn-AAGun-Accuracy02
-	Found: R-Wpn-AAGun-Accuracy03
-	Found: R-Wpn-MG4-Hvy-Inc
-	Found: R-Wpn-Mortar3
-	Found: R-Wpn-Mortar-Range03
-	Found: R-Wpn-AAGun-Damage03
-	Found: R-Wpn-AAGun-Damage04
-	Found: R-Wpn-AAGun-Damage05
-	Found: R-Wpn-AAGun-Damage06
 	Found: R-Wpn-AAGun-ROF01
 	Found: R-Wpn-AAGun-ROF02
 	Found: R-Wpn-AAGun-ROF03
-	Found: R-Wpn-Bomb-Accuracy02
-	Found: R-Wpn-Bomb03
-	Found: R-Wpn-Cannon4AMk1-Hvy-Inc
-	Found: R-Defense-Cannon4AUTOMk1-Hvy-Inc
-	Found: R-Wpn-Howitzer-ROF01
-	Found: R-Wpn-Howitzer-ROF02
-	Found: R-Wpn-Howitzer-ROF03
-	Found: R-Defense-Cannon6
-	Found: R-Defense-Emplacement-HPVcannon
-	Found: R-Cyborg-HvyBody
-	Found: R-Cyborg-Hvywpn-Rocket-Pod-MRA
-	Found: R-Defense-Howitzer
-	Found: R-Defense-HvyFlamer
-	Found: R-Defense-RotMG
-	Found: R-Defense-Wall-VulcanCan
-	Found: R-Defense-MG3Mk1-Aslt
-	Found: R-Defense-WallTower-HPVcannon
-	Found: R-Wpn-HvyHowitzer
-	Found: R-Defense-HvyHowitzer
-	Found: R-Defense-Wall-RotMg
-	Found: R-Sys-CBSensor-Tower01
-	Found: R-Wpn-Rocket06-IDF
-	Found: R-Defense-IDFRocket
-	Found: R-Wpn-Flamer-Range01
-	Found: R-Wpn-Flamer-Range02
-	Found: R-Wpn-Flamer-Range03
-	Found: R-Wpn-RailGun2Mk1TwinAslt-Inc
+	Found: R-Wpn-Rocket-Damage05
+	Found: R-Wpn-Rocket-Damage06
+	Found: R-Wpn-Rocket-Damage07
+	Found: R-Wpn-Rocket-Damage08
+	Found: R-Wpn-Rocket-Damage09
 	Found: R-Vehicle-Body20
 	Found: R-Vehicle-Body21
 	Found: R-Vehicle-Body22
-	Found: R-Cyborg-Hvywpn-Rocket-Pod
+	Found: R-Struc-Research-Upgrade04
+	Found: R-Vehicle-Metals04
+	Found: R-Vehicle-Body02
+	Found: R-Wpn-Flamer-Damage04
+	Found: R-Wpn-Flame2
+	Found: R-Wpn-Flamer-Damage05
+	Found: R-Wpn-Flamer-Damage06
+	Found: R-Wpn-Flamer-Range01
+	Found: R-Wpn-Flamer-Range02
+	Found: R-Wpn-Flamer-Range03
+	Found: R-Wpn-MG-ROF03
+	Found: R-Defense-HvyFlamer
+	Found: R-Wpn-Cannon-Accuracy02
+	Found: R-Wpn-Mortar-Acc02
+	Found: R-Struc-Research-Upgrade05
+	Found: R-Struc-Research-Upgrade06
+	Found: R-Wpn-Mortar-Acc03
+	Found: R-Wpn-Mortar-Incenediary
+	Found: R-Wpn-Rocket03-HvAT-Arch
+	Found: R-Wpn-RocketSlow-Accuracy02
+	Found: R-Defense-WallUpgrade04
+	Found: R-Defense-ECM1PylonMk2
+	Found: R-Defense-MortarPit-Incenediary
+	Found: R-Defense-SensoTower04
+	Found: R-Sys-CBSensor-Tower01
+	Found: R-Vehicle-Engine05
+	Found: R-Vehicle-Engine06
+	Found: R-Wpn-AAGun-Accuracy01
+	Found: R-Wpn-Mortar02-Incenediary
+	Found: R-Cyborg-Metals04
+	Found: R-Cyborg-Metals05
+	Found: R-Cyborg-Metals06
+	Found: R-Cyborg-Armor-Heat04
+	Found: R-Cyborg-Armor-Heat05
+	Found: R-Cyborg-Armor-Heat06
+	Found: R-Defense-HvyMor-Inc
+	Found: R-Defense-WallUpgrade05
+	Found: R-Defense-Super-Cannon
+	Found: R-Defense-Super-Rocket
+	Found: R-Defense-SuperIncMortar
+	Found: R-Defense-WallUpgrade06
+	Found: R-Sys-Sensor-Upgrade03
+	Found: R-Vehicle-Metals05
+	Found: R-Vehicle-Metals06
+	Found: R-Vehicle-Armor-Heat04
+	Found: R-Vehicle-Armor-Heat05
+	Found: R-Vehicle-Armor-Heat06
+	Found: R-Struc-RprFac-Upgrade04
+	Found: R-Wpn-Mortar3
 	Found: R-Defense-RotMor
-	Found: R-Defense-SuperRamjetMortar
-	Found: R-Wpn-Rocket-Range03
-
+	Found: R-Wpn-Mortar03-Incenediary
+	Found: R-Struc-Materials04
+	Found: R-Struc-Materials05
+	Found: R-Struc-Materials06
+	Found: R-Defense-Mortar3ROTARYMk1-Inc
+	Found: R-Wpn-Mortar-Range03
+	Found: R-Defense-Mortar3ROTARYMk1-Ram-Rot
+	Found: R-Vehicle-Body06
+	Found: R-Vehicle-Prop-VTOL
+	Found: R-Wpn-Cannon4AMk1
+	Found: R-Wpn-AAGun02
+	Found: R-Wpn-HowitzerMk1
+	Found: R-Wpn-Howitzer-Incenediary
+	Found: R-Wpn-Rocket06-IDF
+	Found: R-Defense-AASite-QuadBof
+	Found: R-Defense-Howitzer
+	Found: R-Defense-IDFRocket
+	Found: R-Defense-WallTower-DoubleAAgun
+	Found: R-Sys-VTOLCBS-Turret01
+	Found: R-Sys-VTOLStrike-Turret01
+	Found: R-Wpn-Bomb01
+	Found: R-Wpn-Bomb03
+	Found: R-Wpn-Flamer-ROF02
+	Found: R-Wpn-Flamer-ROF03
+	Found: R-Sys-VTOLStrike-Tower01
+	Found: R-Wpn-Bomb-Accuracy01
+	Found: R-Wpn-Bomb07
+	Found: R-Wpn-Howitzer-Damage01
+	Found: R-Wpn-Howitzer-Damage02
+	Found: R-Wpn-Howitzer-Damage03
+	Found: R-Wpn-Bomb-Accuracy02
+	Found: R-Wpn-Bomb-Accuracy03
+	Found: R-Defense-Howitzer-Incenediary
+	Found: R-Defense-SuperIncHowitzer
+	Found: R-Wpn-MG4
+	Found: R-Defense-Emplacement-HPVcannon
+	Found: R-Defense-RotMG
+	Found: R-Defense-WallTower-HPVcannon
+	Found: R-Wpn-AAGun04
+	Found: R-Wpn-MG4-Hvy
+	Found: R-Defense-AASite-QuadRotMg
+	Found: R-Defense-Wall-RotMg
+	Found: R-Struc-Power-Upgrade01
+	Found: R-Struc-Power-Upgrade01b
+	Found: R-Struc-Power-Upgrade01c
+	Found: R-Wpn-MG4-Hvy-Inc
+	Found: R-Defense-WallTower-QuadRotAA
+	Found: R-Wpn-Bomb02
+	Found: R-Wpn-Bomb04
+	Found: R-Wpn-Rocket07-Tank-Killer
+	Found: R-Wpn-Missile2A-T
+	Found: R-Struc-VTOLPad-Upgrade01
+	Found: R-Struc-VTOLPad-Upgrade02
+	Found: R-Struc-VTOLPad-Upgrade03
+	Found: R-Wpn-Howitzer-Accuracy01
+	Found: R-Wpn-AAGun-Accuracy02
+	Found: R-Wpn-AAGun-Accuracy03
+	Found: R-Wpn-Howitzer-Accuracy02
+	Found: R-Wpn-Howitzer-Accuracy03
+	Found: R-Wpn-Howitzer-ROF01
+	Found: R-Wpn-Howitzer03-Rot
+	Found: R-Wpn-Missile-ROF01
+	Found: R-Wpn-Missile-ROF02
+	Found: R-Wpn-Missile-ROF03
+	Found: R-Defense-RotHow
+	Found: R-Defense-Super-Missile
+	Found: R-Wpn-Missile-Damage01
+	Found: R-Wpn-Missile-Accuracy01
+	Found: R-Wpn-Missile-Accuracy02
+	Found: R-Wpn-Missile-Damage02
+	Found: R-Wpn-Missile-Damage03
+	Found: R-Wpn-Howitzer-ROF02
+	Found: R-Wpn-Howitzer-ROF03
+	Found: R-Wpn-Howitzer-ROF04
+	Found: R-Wpn-Missile-Range01
+	Found: R-Wpn-Missile-Range02
+	Found: R-Wpn-Missile-Range03
+	Found: R-Wpn-Howitzer-Range01
+	Found: R-Defense-Howitzer-Ram
+	Found: R-Defense-SuperRamjetHowitzer
+	Found: R-Wpn-Howitzer03-Rot-Inc
+	Found: R-Wpn-Howitzer03-Rot-Ram
+	Found: R-Defense-RotHow-Inc
+	Found: R-Cyborg-HvyBody
+	Found: R-Cyborg-Engine02
+	Found: R-Cyborg-Engine03
+	Found: R-Sys-VTOLCBS-Tower01
+	Found: R-Cyborg-Hvywpn-A-T
+	Found: R-Cyborg-Hvywpn-IncMortar
+	Found: R-Cyborg-Hvywpn-MG3
+	Found: R-Cyborg-Hvywpn-Mcannon
+	Found: R-Cyborg-Hvywpn-Ripple
+	Found: R-Cyborg-Hvywpn-Rocket-LtA-T
+	Found: R-Cyborg-Hvywpn-Rocket-Pod
+	Found: R-Cyborg-Hvywpn-Rocket-Pod-Arch
+	Found: R-Cyborg-Hvywpn-Rocket-Pod-MRA
+	Found: R-Cyborg-Hvywpn-Rocket-Sunburst
+	Found: R-Cyborg-Hvywpn-Rocket-Sunburst-Arch
+	Found: R-Cyborg-Hvywpn-TK
+	Found: R-Cyborg-Hvywpn-Flamer
+	Found: R-Cyborg-Hvywpn-Mortar1Mk1-Ram
+	Found: R-Wpn-Rocket07-Tank-Killer-Quad
+	Found: R-Cyborg-Hvywpn-HPV
+	Found: R-Cyborg-Hvywpn-MG4
+	Found: R-Defense-HvyA-Trocket
+	Found: R-Defense-WallTower-HvyA-Trocket
+	Found: R-Wpn-Cannon5
+	Found: R-Cyborg-Hvywpn-Acannon
+	Found: R-Defense-Wall-VulcanCan
+	Found: R-Wpn-Cannon5-Inc
+	Found: R-Wpn-Cannon6TwinAslt
+	Found: R-Defense-Cannon6
+	Found: R-Wpn-Cannon-Damage07
+	Found: R-Wpn-Cannon-Damage08
+	Found: R-Wpn-Cannon-Damage09
+	Found: R-Wpn-Cannon-ROF04
+	Found: R-Wpn-Cannon-ROF05
+	Found: R-Wpn-Cannon-ROF06
+	Found: R-Wpn-Cannon5-Hvy-Aslt
+	Found: R-Wpn-RailGun2Mk1TwinAslt-Inc
+	Found: R-Wpn-AAGun-Damage04
+	Found: R-Wpn-AAGun-Damage05
+	Found: R-Wpn-AAGun-Damage06
+	Found: R-Vehicle-Body09
+	Found: R-Wpn-Cannon375mmMk1-Twn
+	Found: R-Wpn-Cannon4AMk1-Hvy
+	Found: R-Wpn-HvyHowitzer
+	Found: R-Wpn-PlasmaCannon
+	Found: R-Defense-HvyHowitzer
+	Found: R-Defense-PlasmaCannon
+	Found: R-Defense-Super-LaserPlasma-Fort
+	Found: R-Defense-WallTower04
+	Found: R-Wpn-Cannon4AMk1-Hvy-Inc
+	Found: R-Wpn-HvyHowitzer-Gat
+	Found: R-Defense-Cannon4AUTOMk1-Hvy-Inc
+	Found: R-Wpn-Cannon-Mount02
+	Found: R-Wpn-Cannon-Mount03
+	Found: R-Wpn-Howitzer-Damage04
+	Found: R-Wpn-Howitzer-Damage05
+	Found: R-Wpn-Howitzer-Damage06
+	Found: R-Wpn-HvyHowitzer-Inc
+	Found: R-Defense-HvyHowitzer-Gat
+	Found: R-Defense-HvyHowitzer-Inc
+	Found: R-Wpn-Howitzer-Range02
+	Found: R-Defense-HvyHowitzer-Ram
+	Found: R-Defense-RotHow-Ram
+	Found: R-Wpn-Howitzer-Range03
+	Found: R-Defense-HvyHowitzer-Ram-Hvy
+	Found: R-Wpn-HvyHowitzer-Ram-Hvy

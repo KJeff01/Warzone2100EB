@@ -481,3 +481,7 @@ const CAM3C_RES_NEXUS = [
 const CAM3C_RES_ALLY = [
 	"R-Wpn-MG1Mk1"
 ];
+
+const CAMEND_RES = CAM3A_RESEARCH.concat([
+
+]);

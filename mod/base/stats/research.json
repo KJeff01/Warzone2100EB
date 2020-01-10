@@ -5737,7 +5737,6 @@
         "iconID": "IMAGE_RES_SYSTEMTECH",
         "id": "R-Sys-Resistance-Upgrade02",
         "imdName": "ICCCCONS.PIE",
-        "keyTopic": 1,
         "name": "NEXUS Resistance Circuits Mk2",
         "requiredResearch": [
             "R-Sys-Resistance-Upgrade01"
@@ -5767,7 +5766,6 @@
         "iconID": "IMAGE_RES_SYSTEMTECH",
         "id": "R-Sys-Resistance-Upgrade03",
         "imdName": "ICCCCONS.PIE",
-        "keyTopic": 1,
         "name": "NEXUS Resistance Circuits Mk3",
         "requiredResearch": [
             "R-Sys-Resistance-Upgrade02"
