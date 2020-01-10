@@ -31,7 +31,7 @@ function camIsTransporter(object)
 //;;
 function camSetupTransporter(x, y, x1, y1)
 {
-	addDroid(CAM_HUMAN_PLAYER, x, y, "Transport", "SuperTransportNAS", "V-Tol", "", "", "MG3-VTOL");
+	addDroid(CAM_HUMAN_PLAYER, x, y, "Transport", "SuperTransportNAS-campaign", "V-Tol", "", "", "MG3-VTOL");
 	setTransporterExit(x1, y1, CAM_HUMAN_PLAYER);
 }
 
@@ -74,15 +74,7 @@ function __camDispatchTransporterUnsafe()
 	__camTransporterQueue.shift(); // what could possibly go wrong?
 	if (!camDef(__camPlayerTransports[player]))
 	{
-		var transporter_body;
-		if (player !== CAM_HUMAN_PLAYER) // give enemies new transport models
-		{
-			transporter_body = (camRand(10) < 5) ? "SuperTransportNAS" : "TransporterNAS";
-		}
-		else
-		{
-			transporter_body = "SuperTransportNAS";
-		}
+		var transporter_body = "SuperTransportNAS-campaign";
 		camTrace("Creating a transporter for player", player);
 		__camPlayerTransports[player] = addDroid(player, -1, -1,
 		                                         "Transporter",
