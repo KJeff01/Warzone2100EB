@@ -2,12 +2,16 @@
 
 R-Struc-Factory-Upgrade09
 R-Sys-Resistance
+R-Vehicle-Body07
 R-Vehicle-Body16
 R-Wpn-LasSat
 R-Wpn-RailGun02
 R-Comp-MissileCodes01
 R-Cyborg-Hvywpn-RailGunner
 R-Defense-Rail2
+R-Defense-WallTower-Rail2
+R-Vehicle-Body10
+R-Vehicle-Engine08
 R-Wpn-AAGun07
 R-Wpn-Cannon6TwinAslt-Rail
 R-Wpn-Howitzer03-Rot-Rail
@@ -19,8 +23,10 @@ R-Wpn-Rail-Range01
 R-Wpn-RailGun07
 R-Comp-MissileCodes02
 R-Cyborg-MechaRail
+R-Defense-Cannon6TwinAslt-Rail
 R-Defense-Howitzer-Rail
 R-Defense-HvyHowitzer-Rail
+R-Defense-RailGun1Mk1-GatAA
 R-Defense-RotHow-Rail
 R-Wpn-Howitzer03-Rot-Rail-Inc
 R-Wpn-Howitzer03-Rot-Rail-Ram
@@ -37,10 +43,11 @@ R-Defense-Howitzer-Rail-Ram
 R-Defense-HvyHowitzer-Gat-Rail
 R-Defense-HvyHowitzer-Rail-Inc
 R-Defense-HvyHowitzer-Rail-Ram
+R-Defense-RailGun2Mk1-Twn-Inc
 R-Defense-RotHow-Rail-Inc
 R-Defense-RotHow-Rail-Ram
 R-Defense-SuperRailHowitzer
+R-Defense-WallTower-RailGun2Mk1-Twn-Inc
 R-Wpn-Rail-Range03
 R-Defense-HvyHowitzer-Rail-Hvy-Ram
 R-Defense-SuperIncRailHowitzer
-

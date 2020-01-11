@@ -5,6 +5,7 @@ R-Defense-SuperRamjetMortar
 R-Sys-Engineering02
 R-Sys-Sensor-Upgrade01
 R-Wpn-AAGun-Damage01
+R-Wpn-MG-Damage05
 R-Wpn-MG-ROF02
 R-Wpn-Mortar-Damage04
 R-Wpn-Rocket-Damage05
@@ -13,11 +14,13 @@ R-Sys-RadarDetector01
 R-Sys-Sensor-Upgrade02
 R-Wpn-AAGun-Damage02
 R-Wpn-AAGun-ROF01
+R-Wpn-MG-Damage06
 R-Wpn-Mortar-Damage05
 R-Wpn-Rocket-Damage06
 R-Sys-ECM-Upgrade02
 R-Wpn-AAGun-Damage03
 R-Wpn-AAGun-ROF02
+R-Wpn-MG-Damage07
 R-Wpn-Mortar-Damage06
 R-Wpn-Rocket-Damage07
 R-Wpn-AAGun-ROF03

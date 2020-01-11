@@ -171,6 +171,7 @@ const CAM2A_RESEARCH = [
 	"R-Sys-Sensor-Tower02",
 	"R-Wpn-MG3Mk1-Twn",
 	"R-Defense-MG3Mk1-Twn",
+
 ];
 
 
@@ -341,6 +342,10 @@ const CAM3A_RESEARCH = CAM2A_RESEARCH.concat([
 	"R-Wpn-MG5-Hvy-Inc",
 	"R-Defense-WallTower-QuadRotAA",
 	"R-Wpn-AAGun-ROF06",
+	"R-Defense-GuardTower-RotMg",
+	"R-Defense-Super-MG-Fort",
+	"R-Defense-MG5TWINROTARY-Hvy",
+	"R-Defense-MG5TWINROTARY-Hvy-Inc",
 	//beta 6
 	"R-Wpn-Bomb02",
 	"R-Wpn-Bomb04",
@@ -367,6 +372,14 @@ const CAM3A_RESEARCH = CAM2A_RESEARCH.concat([
 	"R-Defense-RotHow-Inc",
 	"R-Defense-WallUpgrade09",
 	"R-Struc-Materials09",
+	"R-Defense-CB-Tower02",
+	"R-Defense-ECM1PylonMk3",
+	"R-Defense-GuardTower-ATMiss",
+	"R-Defense-SensoTower05",
+	"R-Defense-WallTower-A-Tmiss",
+	"R-Defense-WallTower-TwinAGun",
+	"R-Defense-MdArtMissile",
+	"R-Defense-HvyArtMissile",
 	//beta 7
 	"R-Cyborg-HvyBody",
 	"R-Cyborg-Engine03",
@@ -404,6 +417,7 @@ const CAM3A_RESEARCH = CAM2A_RESEARCH.concat([
 	"R-Wpn-Cannon5-Hvy-Aslt",
 	"R-Wpn-RailGun2Mk1TwinAslt-Inc",
 	"R-Wpn-AAGun-Damage06",
+	"R-Defense-Cannon5VulcanMk1-Hvy",
 	//beta end
 	"R-Vehicle-Body09",
 	"R-Wpn-Cannon375mmMk1-Twn",
@@ -427,6 +441,7 @@ const CAM3A_RESEARCH = CAM2A_RESEARCH.concat([
 	"R-Wpn-Howitzer-Range03",
 	"R-Defense-HvyHowitzer-Ram-Hvy",
 	"R-Wpn-HvyHowitzer-Ram-Hvy",
+	"R-Defense-Cannon4AUTOMk1-Hvy-Aslt",
 ]);
 
 // Additional AI research for starting campaign 3
@@ -549,6 +564,10 @@ const CAMEND_RES = CAM3A_RESEARCH.concat([
 	"R-Wpn-Bomb-Damage06",
 	"R-Cyborg-Armor-Heat09",
 	"R-Cyborg-Metals09",
+	"R-Defense-Laser3BEAMMk1-Gat",
+	"R-Defense-Laser4-PlasmaCannon-Hvy-Aslt",
+	"R-Struc-RprFac-Upgrade06",
+	"R-Defense-PlasmiteFlamer-Hvy",
 	//gamma 5
 	"R-Sys-Resistance-Upgrade03",
 	//gamma 6
@@ -605,6 +624,27 @@ const CAMEND_RES = CAM3A_RESEARCH.concat([
 	"R-Wpn-Energy-ROF03",
 	"R-Wpn-Energy-Range04",
 	"R-Wpn-Rail-ROF03",
+	"R-Defense-GuardTower-Rail1",
+	"R-Defense-PulseLas",
+	"R-Defense-SamSite1",
+	"R-Defense-WallTower-PulseLas",
+	"R-Defense-HeavyLaser-Gat",
+	"R-Defense-Laser2PULSEMk1-Inc",
+	"R-Defense-Laser4-PlasmaCannon-Hvy-Lsr-Aslt",
+	"R-Defense-SamSite-Arch",
+	"R-Defense-SamSite2",
+	"R-Defense-WallTower-HeavyLaser-Gat",
+	"R-Defense-WallTower-Laser2PULSEMk1-Inc",
+	"R-Defense-WallTower-SamHvy",
+	"R-Defense-WallTower-SamSite",
+	"R-Defense-HeavyLaser-Inc-Aslt",
+	"R-Defense-PlasmiteFlamer-Rail",
+	"R-Defense-RailGun1Mk1-Gat-Twn",
+	"R-Defense-SamHvy-Arch",
+	"R-Defense-AAGunLaser-Lng",
+	"R-Defense-Railgun-Flak",
+	"R-Defense-WallTower-RailGun1Mk1-GatAA",
+	"R-Defense-WallTower-Railgun-Flak",
 	//gamma 7
 	"R-Struc-Factory-Upgrade09",
 	"R-Sys-Resistance",
@@ -645,6 +685,14 @@ const CAMEND_RES = CAM3A_RESEARCH.concat([
 	"R-Wpn-Rail-Range03",
 	"R-Defense-HvyHowitzer-Rail-Hvy-Ram",
 	"R-Defense-SuperIncRailHowitzer",
+	"R-Vehicle-Body07",
+	"R-Defense-WallTower-Rail2",
+	"R-Vehicle-Body10",
+	"R-Vehicle-Engine08",
+	"R-Defense-Cannon6TwinAslt-Rail",
+	"R-Defense-RailGun1Mk1-GatAA",
+	"R-Defense-RailGun2Mk1-Twn-Inc",
+	"R-Defense-WallTower-RailGun2Mk1-Twn-Inc",
 	//gamme end
 	"R-Vehicle-Body13",
 	"R-Vehicle-Body14",
@@ -661,7 +709,22 @@ const CAMEND_RES = CAM3A_RESEARCH.concat([
 	"R-Defense-WallUpgrade12",
 	"R-Wpn-RailGun05",
 	"R-Wpn-RailGun06",
-
-
-
+	"R-Defense-CB-Tower03",
+	"R-Defense-ECM1PylonMk4",
+	"R-Defense-Plasteel-Cannon6TwinAslt-Rail",
+	"R-Defense-Plasteel-HeavyLaser-Gat",
+	"R-Defense-Plasteel-HeavyLaser-Inc-Aslt",
+	"R-Defense-Plasteel-Laser2PULSEMk1-Inc",
+	"R-Defense-Plasteel-PulseLas",
+	"R-Defense-Plasteel-Rail2",
+	"R-Defense-Plasteel-RailGun1Mk1-Gat-Twn",
+	"R-Defense-Plasteel-RailGun2Mk1-Twn-Inc",
+	"R-Defense-Plasteel-Railgun-Flak",
+	"R-Defense-Plasteel-TwinAssaultGun",
+	"R-Defense-WallTower-Rail3",
+	"R-Vehicle-Engine09",
+	"R-Defense-Plasteel-Rail3",
+	"R-Defense-RailGun2Mk1-GatAT",
+	"R-Defense-RailGun3Mk1-Aslt",
+	"R-Defense-RailGun3Mk1-Hvy",
 ]);
