@@ -244,11 +244,11 @@
         "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-Cyborg-Armor-Heat07",
         "imdName": "icamrhot.pie",
-        "keyTopic": 1,
         "msgName": "RES_CY_AH7",
         "name": "Cyborg Superdense Thermal Armor",
         "requiredResearch": [
-            "R-Cyborg-Armor-Heat06"
+            "R-Cyborg-Armor-Heat06",
+            "R-Struc-Research-Upgrade07"
         ],
         "researchPoints": 14000,
         "researchPower": 700,
@@ -1181,11 +1181,11 @@
         "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-Cyborg-Metals07",
         "imdName": "icmolql.pie",
-        "keyTopic": 1,
         "msgName": "RES_CYMET7",
         "name": "Cyborg Superdense Composite Alloys",
         "requiredResearch": [
-            "R-Cyborg-Metals06"
+            "R-Cyborg-Metals06",
+            "R-Struc-Research-Upgrade07"
         ],
         "researchPoints": 11600,
         "researchPower": 580,
@@ -1398,6 +1398,10 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Cannon4AUTOMk1-Hvy-Aslt",
         "name": "Heavy HPV Emplacement",
+        "requiredResearch": [
+            "R-Wpn-Cannon-Mount02",
+            "R-Defense-WallUpgrade04"
+        ],
         "researchPoints": 4800,
         "researchPower": 240,
         "resultStructures": [
@@ -1424,6 +1428,10 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Cannon5VulcanMk1-Hvy",
         "name": "Heavy Assault Cannon Emplacement",
+        "requiredResearch": [
+            "R-Wpn-Cannon5-Hvy-Aslt",
+            "R-Defense-WallUpgrade04"
+        ],
         "researchPoints": 4800,
         "researchPower": 240,
         "resultStructures": [
@@ -1679,6 +1687,10 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-HeavyLaser-Gat",
         "name": "Heavy Rotary Laser Emplacement",
+        "requiredResearch": [
+            "R-Wpn-HvyLaser-Gat",
+            "R-Defense-WallUpgrade07"
+        ],
         "researchPoints": 4800,
         "researchPower": 240,
         "resultStructures": [
@@ -2159,6 +2171,10 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Laser2PULSEMk1-Inc",
         "name": "Incendiary Pulse Laser Bunker",
+        "requiredResearch": [
+            "R-Wpn-Laser02-Inc",
+            "R-Defense-WallUpgrade07"
+        ],
         "researchPoints": 4800,
         "researchPower": 240,
         "resultStructures": [
@@ -2185,6 +2201,10 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Laser4-PlasmaCannon-Hvy-Aslt",
         "name": "Heavy Plasma Cannon Emplacement",
+        "requiredResearch": [
+            "R-Wpn-PlasmaCannon-Hvy-Aslt",
+            "R-Defense-WallUpgrade04"
+        ],
         "researchPoints": 4800,
         "researchPower": 240,
         "resultStructures": [
@@ -2196,6 +2216,10 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Laser4-PlasmaCannon-Hvy-Lsr-Aslt",
         "name": "Super Heavy Plasma Cannon Emplacement",
+        "requiredResearch": [
+            "R-Wpn-PlasmaCannon-Hvy-Lsr-Aslt",
+            "R-Defense-WallUpgrade04"
+        ],
         "researchPoints": 4800,
         "researchPower": 240,
         "resultStructures": [
@@ -2222,6 +2246,10 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-MG3Mk1-Twn",
         "name": "Twin Heavy Machinegun Bunker",
+        "requiredResearch": [
+            "R-Wpn-MG3Mk1-Twn",
+            "R-Defense-WallUpgrade01"
+        ],
         "researchPoints": 4800,
         "researchPower": 240,
         "resultStructures": [
@@ -2233,6 +2261,10 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-MG5TWINROTARY-Hvy",
         "name": "Twin Heavy Assault Gun Bunker",
+        "requiredResearch": [
+            "R-Wpn-MG5-Hvy",
+            "R-Defense-WallUpgrade04"
+        ],
         "researchPoints": 4800,
         "researchPower": 240,
         "resultStructures": [
@@ -2244,6 +2276,10 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-MG5TWINROTARY-Hvy-Inc",
         "name": "Incendiary Twin Assault Gun Bunker",
+        "requiredResearch": [
+            "R-Wpn-MG5-Hvy-Inc",
+            "R-Defense-WallUpgrade04"
+        ],
         "researchPoints": 4800,
         "researchPower": 240,
         "resultStructures": [
@@ -2554,6 +2590,10 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-PlasmiteFlamer-Hvy",
         "name": "Heavy Plasmite Bunker",
+        "requiredResearch": [
+            "R-Wpn-Flamer-Damage09",
+            "R-Defense-WallUpgrade07"
+        ],
         "researchPoints": 4800,
         "researchPower": 240,
         "resultStructures": [
@@ -2565,6 +2605,10 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-PlasmiteFlamer-Rail",
         "name": "Heavy Plasmite Rail Bunker",
+        "requiredResearch": [
+            "R-Wpn-Flame3-Rail",
+            "R-Defense-WallUpgrade07"
+        ],
         "researchPoints": 4800,
         "researchPower": 240,
         "resultStructures": [
@@ -2846,6 +2890,10 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-RailGun1Mk1-GatAA",
         "name": "Railgun AA Emplacement",
+        "requiredResearch": [
+            "R-Wpn-AAGun07",
+            "R-Defense-WallUpgrade07"
+        ],
         "researchPoints": 4800,
         "researchPower": 240,
         "resultStructures": [
@@ -2857,6 +2905,10 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-RailGun2Mk1-GatAT",
         "name": "Heavy Rail Gun Emplacement",
+        "requiredResearch": [
+            "R-Wpn-RailGun03-Aslt",
+            "R-Defense-WallUpgrade07"
+        ],
         "researchPoints": 4800,
         "researchPower": 240,
         "resultStructures": [
@@ -2868,6 +2920,10 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-RailGun2Mk1-Twn-Inc",
         "name": "Twin Rail Gun Emplacement",
+        "requiredResearch": [
+            "R-Wpn-RailGun08",
+            "R-Defense-WallUpgrade07"
+        ],
         "researchPoints": 4800,
         "researchPower": 240,
         "resultStructures": [
@@ -2879,6 +2935,10 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-RailGun3Mk1-Aslt",
         "name": "Heavy Gauss Cannon Emplacement",
+        "requiredResearch": [
+            "R-Wpn-RailGun05",
+            "R-Defense-WallUpgrade07"
+        ],
         "researchPoints": 4800,
         "researchPower": 240,
         "resultStructures": [
@@ -2890,6 +2950,10 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-RailGun3Mk1-Hvy",
         "name": "Heavy Gauss Cannon Assault Emplacement",
+        "requiredResearch": [
+            "R-Wpn-RailGun06",
+            "R-Defense-WallUpgrade07"
+        ],
         "researchPoints": 4800,
         "researchPower": 240,
         "resultStructures": [
@@ -2901,6 +2965,10 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Railgun-Flak",
         "name": "Railgun Flak AA Emplacement",
+        "requiredResearch": [
+            "R-Wpn-AAGun08",
+            "R-Defense-WallUpgrade07"
+        ],
         "researchPoints": 4800,
         "researchPower": 240,
         "resultStructures": [
@@ -2908,21 +2976,14 @@
         ],
         "statID": "Empl3-Railgun-Flak"
     },
-    "R-Defense-Railgun-Hvy": {
-        "iconID": "IMAGE_RES_DEFENCE",
-        "id": "R-Defense-Railgun-Hvy",
-        "name": "Heavy Railgun Emplacement",
-        "researchPoints": 4800,
-        "researchPower": 240,
-        "resultStructures": [
-            "Bunker3-Railgun-Hvy"
-        ],
-        "statID": "Bunker3-Railgun-Hvy"
-    },
     "R-Defense-Rocket-Arch-Hvy-Aslt-Gat": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Rocket-Arch-Hvy-Aslt-Gat",
         "name": "Heavy Thermal Rocket Emplacement",
+        "requiredResearch": [
+            "R-Wpn-Rocket-Arch-Hvy-Aslt-Gat",
+            "R-Defense-WallUpgrade01"
+        ],
         "researchPoints": 4800,
         "researchPower": 240,
         "resultStructures": [
@@ -5254,7 +5315,6 @@
     "R-Struc-RprFac-Upgrade06": {
         "iconID": "IMAGE_RES_SYSTEMTECH",
         "id": "R-Struc-RprFac-Upgrade06",
-        "keyTopic": 1,
         "msgName": "RES_ST_RFU6",
         "name": "Advanced Repair Facility",
         "requiredResearch": [
@@ -6503,7 +6563,6 @@
     "R-Vehicle-Body10": {
         "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-Vehicle-Body10",
-        "keyTopic": 1,
         "msgName": "RES_V_B10",
         "name": "Heavy Body - Vengeance",
         "requiredResearch": [
@@ -6578,7 +6637,6 @@
     "R-Vehicle-Body14": {
         "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-Vehicle-Body14",
-        "keyTopic": 1,
         "msgName": "RES_V_B14",
         "name": "Super Heavy Body - Dragon",
         "requiredResearch": [
@@ -10636,7 +10694,6 @@
     "R-Wpn-HvArtMissile": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-HvArtMissile",
-        "keyTopic": 1,
         "msgName": "RES_W_MS_HART",
         "name": "Archangel Missile",
         "requiredResearch": [
@@ -11445,7 +11502,6 @@
     "R-Wpn-MG5": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-MG5",
-        "keyTopic": 1,
         "msgName": "RES_WT_TWINAGUN",
         "name": "Twin Assault Gun",
         "redComponents": [
@@ -11501,7 +11557,6 @@
     "R-Wpn-MdArtMissile": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-MdArtMissile",
-        "keyTopic": 1,
         "msgName": "RES_NULL_PLACE_HOL04",
         "name": "Seraph Missile Array",
         "requiredResearch": [

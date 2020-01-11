@@ -236,7 +236,7 @@ function eventStartLevel()
 		"NXbase1VtolFacArti": { tech: "R-Wpn-RailGun02" },
 		"NXcommandCenter": { tech: "R-Wpn-LasSat" },
 		"NXcyborgFac2Arti": { tech: "R-Struc-Factory-Upgrade09" },
-		"SouthEastFac": { tech: "R-Vehicle-Body16" },
+		"SouthEastFac": { tech: ["R-Vehicle-Body16", "R-Vehicle-Body07"] },
 	});
 
 	camSetEnemyBases({

@@ -66,6 +66,7 @@
 	Found: R-Wpn-Rocket-Damage02
 	Found: R-Wpn-Rocket-ROF01
 	Found: R-Wpn-Rocket-ROF02
+	Found: R-Wpn-Rocket-ROF03
 	Found: R-Wpn-Rocket-Accuracy01
 	Found: R-Wpn-Rocket-Pod-MRA
 	Found: R-Wpn-Rocket-Range01
@@ -172,8 +173,6 @@
 	Found: R-Defense-MortarPit-Ram
 	Found: R-Wpn-Mortar-Range02
 	Found: R-Defense-HvyMor-Ram
-
-	//beta tech
 	Found: R-Defense-SuperRamjetMortar
 	Found: R-Sys-Engineering02
 	Found: R-Sys-Sensor-Upgrade01

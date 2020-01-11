@@ -158,6 +158,7 @@ const CAM2A_RESEARCH = [
 	"R-Defense-Sunburst",
 	"R-Defense-Sunburst-Arch",
 	"R-Wpn-Rocket-Arch-Hvy-Aslt-Gat",
+	"R-Defense-Rocket-Arch-Hvy-Aslt-Gat",
 	"R-Comp-SynapticLink",
 	"R-Wpn-Cannon-Damage06",
 	"R-Wpn-Cannon-ROF03",
@@ -168,6 +169,8 @@ const CAM2A_RESEARCH = [
 	"R-Wpn-Mortar-Range02",
 	"R-Defense-HvyMor-Ram",
 	"R-Sys-Sensor-Tower02",
+	"R-Wpn-MG3Mk1-Twn",
+	"R-Defense-MG3Mk1-Twn",
 ];
 
 
@@ -324,20 +327,27 @@ const CAM3A_RESEARCH = CAM2A_RESEARCH.concat([
 	//beta 5
 	"R-Wpn-Cannon4AMk1",
 	"R-Wpn-MG4",
+	"R-Wpn-MG5",
 	"R-Defense-Emplacement-HPVcannon",
 	"R-Defense-RotMG",
 	"R-Defense-WallTower-HPVcannon",
 	"R-Wpn-AAGun04",
 	"R-Wpn-MG4-Hvy",
+	"R-Wpn-MG5-Hvy",
 	"R-Defense-AASite-QuadRotMg",
 	"R-Defense-Wall-RotMg",
 	"R-Struc-Power-Upgrade01c",
 	"R-Wpn-MG4-Hvy-Inc",
+	"R-Wpn-MG5-Hvy-Inc",
 	"R-Defense-WallTower-QuadRotAA",
+	"R-Wpn-AAGun-ROF06",
 	//beta 6
 	"R-Wpn-Bomb02",
 	"R-Wpn-Bomb04",
 	"R-Wpn-Missile2A-T", // before tank-killer ?!?!?!
+	"R-Wpn-MdArtMissile",
+	"R-Wpn-MdArtMissile-Hvy",
+	"R-Wpn-HvArtMissile",
 	"R-Struc-VTOLPad-Upgrade03",
 	"R-Wpn-AAGun-Accuracy03",
 	"R-Wpn-Howitzer-Accuracy03",
@@ -355,6 +365,8 @@ const CAM3A_RESEARCH = CAM2A_RESEARCH.concat([
 	"R-Wpn-Howitzer03-Rot-Inc",
 	"R-Wpn-Howitzer03-Rot-Ram",
 	"R-Defense-RotHow-Inc",
+	"R-Defense-WallUpgrade09",
+	"R-Struc-Materials09",
 	//beta 7
 	"R-Cyborg-HvyBody",
 	"R-Cyborg-Engine03",
@@ -365,6 +377,7 @@ const CAM3A_RESEARCH = CAM2A_RESEARCH.concat([
 	"R-Cyborg-Hvywpn-MG3",
 	"R-Cyborg-Hvywpn-Mcannon",
 	"R-Cyborg-Hvywpn-Ripple",
+	"R-Cyborg-Hvywpn-Arch",
 	"R-Cyborg-Hvywpn-Rocket-LtA-T",
 	"R-Cyborg-Hvywpn-Rocket-Pod",
 	"R-Cyborg-Hvywpn-Rocket-Pod-Arch",
@@ -534,6 +547,8 @@ const CAMEND_RES = CAM3A_RESEARCH.concat([
 	"R-Wpn-Flamer-Damage09",
 	"R-Wpn-Flamer-ROF06",
 	"R-Wpn-Bomb-Damage06",
+	"R-Cyborg-Armor-Heat09",
+	"R-Cyborg-Metals09",
 	//gamma 5
 	"R-Sys-Resistance-Upgrade03",
 	//gamma 6
@@ -631,6 +646,7 @@ const CAMEND_RES = CAM3A_RESEARCH.concat([
 	"R-Defense-HvyHowitzer-Rail-Hvy-Ram",
 	"R-Defense-SuperIncRailHowitzer",
 	//gamme end
+	"R-Vehicle-Body13",
 	"R-Vehicle-Body14",
 	"R-Wpn-RailGun03",
 	"R-Defense-MassDriver",

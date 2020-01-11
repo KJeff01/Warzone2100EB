@@ -133,7 +133,7 @@ function eventStartLevel()
 	setAlliance(ULTSCAV, NEXUS, true);
 	camSetArtifacts({
 		"NX-NWCyborgFactory": { tech: "R-Wpn-RailGun03" },
-		"NX-NEFactory": { tech: "R-Vehicle-Body14" }, // Dragon
+		"NX-NEFactory": { tech: "R-Vehicle-Body13" }, // Wyvern - Dragon
 		"PlasteelWall": { tech: "R-Defense-WallUpgrade10" },
 	});
 

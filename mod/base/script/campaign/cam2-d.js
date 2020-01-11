@@ -77,13 +77,13 @@ function eventStartLevel()
 	startTransporterEntry(tent.x, tent.y, CAM_HUMAN_PLAYER);
 	setTransporterExit(text.x, text.y, CAM_HUMAN_PLAYER);
 	setAlliance(THE_COLLECTIVE, ULTSCAV, true);
-	
+
 	var enemyLz = getObject("COLandingZone");
 	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, THE_COLLECTIVE);
 
 	camSetArtifacts({
 		"COCommandCenter": { tech: "R-Struc-VTOLPad-Upgrade01" },
-		"COResearchLab": { tech: "R-Struc-Research-Upgrade05" },
+		"COResearchLab": { tech: "R-Defense-WallUpgrade07" },
 		"COCommandRelay": { tech: "R-Wpn-Bomb02" },
 		"COHeavyFactory": { tech: "R-Wpn-Howitzer-Accuracy01" },
 		"ScavFact": { tech: "R-Wpn-Missile2A-T" },
