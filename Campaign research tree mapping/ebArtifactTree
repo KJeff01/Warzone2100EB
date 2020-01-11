@@ -211,7 +211,7 @@ R-Vehicle-Body19
 
 ******2-a
 "COCommandCenter": { tech: "R-Sys-Engineering02" },
-"COArtiPillbox": { tech: "R-Wpn-MG-ROF02" },
+"COArtiPillbox": { tech: ["R-Wpn-MG-ROF02", "R-Wpn-MG-Damage05"] },
 "COArtiCBTower": { tech: "R-Sys-Sensor-Upgrade01" },
 "SuperMortar": { tech: "R-Defense-SuperRamjetMortar" },
 
@@ -274,7 +274,7 @@ R-Vehicle-Body21
 R-Vehicle-Body22
 
 ******2-b
-"InfernoBunker": { tech: "R-Wpn-Flame2" },
+"InfernoBunker": { tech: ["R-Wpn-Flame2", "R-Wpn-Flamer-Damage04"] },
 "COResearchLab": { tech: "R-Struc-Research-Upgrade04" },
 "COHeavyFacL-b1": { tech: "R-Wpn-MG-ROF03" },
 "COCommandCenter": { tech: "R-Vehicle-Body02" }, //Leopard
@@ -379,7 +379,7 @@ R-Defense-WallTower-QuadRotAA
 
 ******2-d
 "COCommandCenter": { tech: "R-Struc-VTOLPad-Upgrade01" },
-"COResearchLab": { tech: "R-Struc-Research-Upgrade05" },
+"COResearchLab": { tech: "R-Defense-WallUpgrade07" },
 "COCommandRelay": { tech: "R-Wpn-Bomb02" },
 "COHeavyFactory": { tech: "R-Wpn-Howitzer-Accuracy01" },
 "ScavFact": { tech: "R-Wpn-Missile2A-T" },
@@ -417,7 +417,7 @@ R-Wpn-Missile-Range03
 "COCyborgFactory-Arti": { tech: "R-Wpn-Rocket07-Tank-Killer" },
 "COCommandCenter": { tech: "R-Wpn-Mortar3" },
 "uplink": { tech: "R-Sys-VTOLCBS-Tower01" },
-"COCyborgFactory-b1": { tech: "R-Cyborg-HvyBody" },
+"COCyborgFactory-b1": { tech: ["R-Cyborg-HvyBody", "R-Cyborg-Engine02"] },
 
 R-Cyborg-HvyBody
 R-Sys-VTOLCBS-Tower01
@@ -637,7 +637,7 @@ R-Wpn-Bomb-Damage06
 R-Sys-Resistance-Upgrade01
 
 ******3-c
-"NXbase1HeavyFacArti": { tech: "R-Wpn-Laser02" }, 
+"NXbase1HeavyFacArti": { tech: "R-Wpn-Laser02" },
 "NXcybFacArti": { tech: "R-Wpn-RailGun01" },
 "NXvtolFacArti": { tech: "R-Struc-Factory-Upgrade07" },
 "NXcommandCenter": { tech: "R-Wpn-Missile-LtSAM" },
@@ -706,7 +706,7 @@ R-Wpn-Rail-ROF03
 "NXbase1VtolFacArti": { tech: "R-Wpn-RailGun02" },
 "NXcommandCenter": { tech: "R-Wpn-LasSat" },
 "NXcyborgFac2Arti": { tech: "R-Struc-Factory-Upgrade09" },
-"SouthEastFac": { tech: "R-Vehicle-Body16" },
+"SouthEastFac": { tech: ["R-Vehicle-Body16", "R-Vehicle-Body07"] },
 
 R-Struc-Factory-Upgrade09
 R-Sys-Resistance
@@ -752,7 +752,7 @@ R-Defense-SuperIncRailHowitzer
 
 ******3-4
 "NX-NWCyborgFactory": { tech: "R-Wpn-RailGun03" },
-"NX-NEFactory": { tech: "R-Vehicle-Body14" }, // Dragon
+"NX-NEFactory": { tech: "R-Vehicle-Body13" }, // Wyvern - Dragon
 "PlasteelWall": { tech: "R-Defense-WallUpgrade10" },
 
 R-Defense-WallUpgrade10
