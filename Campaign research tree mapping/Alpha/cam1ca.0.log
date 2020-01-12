@@ -19,6 +19,7 @@ R-Cyborg-Metals02
 R-Struc-Research-Upgrade02
 R-Sys-MobileRepairTurretHvy
 R-Vehicle-Armor-Heat03
+R-Wpn-Cannon-Accuracy01
 R-Wpn-Rocket-Damage02
 R-Cyborg-Metals03
 R-Struc-Research-Upgrade03
@@ -35,12 +36,14 @@ R-Wpn-Rocket01-LtAT
 R-Cyborg-Armor-Heat02
 R-Defense-Pillbox06
 R-Defense-WallTower06
+R-Wpn-Cannon-ROF02
 R-Wpn-Rocket-Damage04
 R-Wpn-Rocket-Pod-Quad
 R-Wpn-Rocket-ROF03
 R-Wpn-Rocket03-HvAT
 R-Cyborg-Armor-Heat03
 R-Defense-Tower06
+R-Wpn-Cannon-ROF03
 R-Wpn-Rocket-Accuracy02
 R-Wpn-Rocket01-LtAT-Quad
 R-Wpn-RocketSlow-Accuracy01

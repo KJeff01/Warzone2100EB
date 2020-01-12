@@ -208,6 +208,7 @@ function cam2Setup()
 	camCompleteRequiredResearch(CAM2A_RES_COL, ULTSCAV);
 
 	enableResearch("R-Wpn-Mortar-Damage04", CAM_HUMAN_PLAYER);
+	enableResearch("R-Wpn-Mortar-ROF04", CAM_HUMAN_PLAYER);
 	enableResearch("R-Wpn-Rocket-Damage05", CAM_HUMAN_PLAYER);
 
 	const BASE_STRUCTURES = [
