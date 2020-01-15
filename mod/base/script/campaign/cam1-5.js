@@ -175,7 +175,7 @@ function eventStartLevel()
 
 	camSetArtifacts({
 		"NPCyborgFactory": { tech: "R-Struc-Factory-Cyborg" },
-		"NPRightFactory": { tech: "R-Vehicle-Engine02" },
+		"NPRightFactory": { tech: "R-Vehicle-Engine03" },
 		"NPLeftFactory": { tech: "R-Vehicle-Body08" }, //scorpion body
 		"NPResearchFacility": { tech: "R-Comp-SynapticLink" },
 		"MRAemplacement": { tech: "R-Wpn-Rocket-Range01" },

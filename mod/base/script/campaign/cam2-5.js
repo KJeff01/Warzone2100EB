@@ -101,7 +101,6 @@ function eventStartLevel()
 		"NuclearReactor": { tech: "R-Struc-Power-Upgrade01" },
 		"COMediumFactory": { tech: "R-Wpn-Cannon4AMk1" },
 		"COCyborgFactoryL": { tech: "R-Wpn-MG4" },
-		"COTankKillerHardpoint": { tech: "R-Wpn-Rocket-ROF02" },
 	});
 
 	setAlliance(THE_COLLECTIVE, ULTSCAV, true);

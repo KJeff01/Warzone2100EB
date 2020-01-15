@@ -4581,6 +4581,7 @@
         "iconID": "IMAGE_RES_STRUCTURETECH",
         "id": "R-Struc-Factory-Upgrade07",
         "imdName": "BLFACT1ar.PIE",
+        "keyTopic": 1,
         "msgName": "RES_ST_FU7",
         "name": "Advanced Manufacturing",
         "requiredResearch": [
@@ -6850,6 +6851,7 @@
         "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-Vehicle-Engine03",
         "imdName": "iceng.pie",
+        "keyTopic": 1,
         "msgName": "RES_V_EN3",
         "name": "Fuel Injection Engine Mk3",
         "requiredResearch": [
@@ -13923,6 +13925,7 @@
     "R-Wpn-Rocket07-Tank-Killer-Quad": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket07-Tank-Killer-Quad",
+        "keyTopic": 1,
         "name": "Quad Tank Killer",
         "requiredResearch": [
             "R-Wpn-Rocket07-Tank-Killer",

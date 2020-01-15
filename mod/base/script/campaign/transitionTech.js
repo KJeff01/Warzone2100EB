@@ -144,7 +144,6 @@ const CAM2A_RESEARCH = [
 	"R-Struc-Research-Upgrade03",
 	"R-Wpn-Mortar-Acc01",
 	"R-Struc-Factory-Upgrade04",
-	"R-Vehicle-Engine04",
 	"R-Wpn-Rocket-Pod-Twn",
 	"R-Wpn-Rocket01-LtAT",
 	"R-Defense-Pillbox06",
@@ -199,6 +198,7 @@ const CAM2A_RESEARCH = [
 	"R-Vehicle-Body18",
 	"R-Wpn-Sunburst-Arch",
 	"R-Defense-Sunburst-Arch",
+	"R-Vehicle-Engine04",
 	//alpha 11
 	"R-Wpn-Cannon3Mk1",
 	//alpha 12
@@ -299,8 +299,7 @@ const CAM3A_RESEARCH = CAM2A_RESEARCH.concat([
 	"R-Wpn-AAGun-Damage03",
 	"R-Wpn-Mortar-Damage06",
 	"R-Wpn-AAGun-ROF03",
-	"R-Wpn-Rocket-Damage09", // Beta 1 already ????
-	"R-Wpn-Mortar-ROF04",
+	"R-Wpn-Rocket-Damage09",
 	//beta 1
 	"R-Vehicle-Body20",
 	"R-Vehicle-Body21",
@@ -390,7 +389,7 @@ const CAM3A_RESEARCH = CAM2A_RESEARCH.concat([
 	//beta 6
 	"R-Wpn-Bomb02",
 	"R-Wpn-Bomb04",
-	"R-Wpn-Missile2A-T", // before tank-killer ?!?!?!
+	"R-Wpn-Missile2A-T",
 	"R-Wpn-MdArtMissile",
 	"R-Wpn-MdArtMissile-Hvy",
 	"R-Wpn-HvArtMissile",
@@ -441,11 +440,9 @@ const CAM3A_RESEARCH = CAM2A_RESEARCH.concat([
 	"R-Cyborg-Hvywpn-TK",
 	"R-Cyborg-Hvywpn-Flamer",
 	"R-Cyborg-Hvywpn-Mortar1Mk1-Ram",
-	"R-Wpn-Rocket07-Tank-Killer-Quad",
 	"R-Cyborg-Hvywpn-HPV",
 	"R-Cyborg-Hvywpn-MG4",
-	"R-Defense-HvyA-Trocket",
-	"R-Defense-WallTower-HvyA-Trocket",
+	"R-Wpn-Mortar-ROF04",
 	//beta 8
 	"R-Wpn-Cannon5",
 	"R-Cyborg-Hvywpn-Acannon",
@@ -459,6 +456,9 @@ const CAM3A_RESEARCH = CAM2A_RESEARCH.concat([
 	"R-Wpn-RailGun2Mk1TwinAslt-Inc",
 	"R-Wpn-AAGun-Damage06",
 	"R-Defense-Cannon5VulcanMk1-Hvy",
+	"R-Wpn-Rocket07-Tank-Killer-Quad",
+	"R-Defense-WallTower-HvyA-Trocket",
+	"R-Defense-HvyA-Trocket",
 	//beta end
 	"R-Vehicle-Body09",
 	"R-Wpn-Cannon375mmMk1-Twn",
@@ -593,7 +593,6 @@ const CAMEND_RES = CAM3A_RESEARCH.concat([
 	"R-Cyborg-Hvywpn-TwnFlamer",
 	"R-Defense-EMPMortar",
 	"R-Defense-Super-NEXUS-Fort",
-	"R-Struc-Factory-Upgrade07",
 	"R-Sys-Sensor-UpLink",
 	"R-Sys-SpyTower",
 	"R-Vehicle-Armor-Heat09",
@@ -686,6 +685,7 @@ const CAMEND_RES = CAM3A_RESEARCH.concat([
 	"R-Defense-Railgun-Flak",
 	"R-Defense-WallTower-RailGun1Mk1-GatAA",
 	"R-Defense-WallTower-Railgun-Flak",
+	"R-Struc-Factory-Upgrade07",
 	//gamma 7
 	"R-Struc-Factory-Upgrade09",
 	"R-Sys-Resistance",
