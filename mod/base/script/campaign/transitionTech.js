@@ -4,77 +4,163 @@
 // Alpha Campaign - New Paradigm and Scavenger AI's
 // Starting research for all players in campaign 1, except scavengers
 const CAM1A_RESEARCH = [
-	"R-Vehicle-Body01", "R-Sys-Spade1Mk1", "R-Vehicle-Prop-Wheels", "R-Vehicle-Body26", "R-Sys-Sensor-Upgrade00",
+	"R-Vehicle-Body01",
+	"R-Sys-Spade1Mk1",
+	"R-Vehicle-Prop-Wheels",
+	"R-Vehicle-Body26",
+	"R-Sys-Sensor-Upgrade00",
 ];
 
 // Starting scavenger research for campaign 1
 const CAM1A_RES_SCAV = [
-	"R-Wpn-MG1Mk1", "R-Sys-Sensor-Upgrade00",
+	"R-Wpn-MG1Mk1",
+	"R-Sys-Sensor-Upgrade00",
+	"R-Wpn-Flamer-Damage01",
 ];
+
+const CAM1B_RES_SCAV = CAM1A_RES_SCAV.concat([
+	"R-Wpn-MG-Damage02",
+	"R-Sys-Sensor-Turret01",
+	"R-Wpn-Flamer-Damage03",
+	"R-Wpn-Flamer-ROF01",
+	"R-Wpn-Mortar-Damage01",
+	"R-Wpn-Cannon-Damage01",
+]);
+
+const CAM1_1_RES_SCAV = CAM1B_RES_SCAV.concat([
+	"R-Wpn-MG-Damage03",
+	"R-Wpn-Mortar-Damage03",
+]);
+
+const CAM1_2_RES_SCAV = CAM1_1_RES_SCAV.concat([
+	"R-Wpn-MG-Damage04",
+	"R-Wpn-Mortar-ROF01",
+	"R-Wpn-Mortar-Acc01",
+	"R-Vehicle-Metals01",
+	"R-Wpn-Cannon-Damage03",
+	"R-Defense-WallUpgrade01",
+	"R-Struc-Materials02",
+	"R-Wpn-Rocket-Damage02",
+	"R-Wpn-Rocket-ROF01",
+]);
 
 // Additional starting research for New Paradigm AI. This AI first appears in SUB1-3
 const CAM1_3_RES_NP = [
-	"R-Wpn-MG-Damage04", "R-Wpn-MG-ROF01", "R-Defense-WallUpgrade02",
+	"R-Wpn-MG-Damage04",
+	"R-Wpn-MG-ROF01",
+	"R-Defense-WallUpgrade02",
 	"R-Struc-Materials02",
 	"R-Vehicle-Engine02",
-	"R-Vehicle-Metals02", "R-Cyborg-Metals02", "R-Wpn-Cannon-Damage03",
-	"R-Wpn-Flamer-Damage03", "R-Wpn-Flamer-ROF01",
-	"R-Wpn-Mortar-Damage02", "R-Wpn-Rocket-Accuracy01",
-	"R-Wpn-Rocket-Damage02", "R-Wpn-Rocket-ROF01",
+	"R-Vehicle-Metals01",
+	"R-Cyborg-Metals01",
+	"R-Wpn-Cannon-Damage03",
+	"R-Wpn-Cannon-Accuracy01",
+	"R-Wpn-Flamer-Damage03",
+	"R-Wpn-Flamer-ROF01",
+	"R-Wpn-Mortar-Damage02",
+	"R-Wpn-Mortar-ROF02",
+	"R-Wpn-Mortar-Acc01",
+	"R-Wpn-Rocket-Accuracy01",
+	"R-Wpn-Rocket-Damage02",
+	"R-Wpn-Rocket-ROF01",
 	"R-Struc-RprFac-Upgrade01",
 ];
 
-const CAM1_3_RES_SCAV = [
-	"R-Wpn-MG1Mk1", "R-Wpn-MG-Damage02", "R-Wpn-Mortar-Damage01", "R-Vehicle-Metals01"
-];
+const CAM1_3_RES_SCAV = CAM1_2_RES_SCAV.concat([
+	"R-Defense-WallUpgrade02",
+	"R-Wpn-Rocket-ROF02",
+	"R-Wpn-Mortar-ROF02",
+	"R-Wpn-Cannon-Damage04",
+	"R-Wpn-Cannon-Accuracy01",
+]);
 
-const CAM1C_RES_NP = [
-	"R-Wpn-MG1Mk1"
-];
+const CAM1C_RES_NP = CAM1_3_RES_NP.concat([
+	"R-Defense-WallUpgrade03",
+	"R-Struc-Materials03",
+	"R-Vehicle-Engine03",
+	"R-Cyborg-Armor-Heat01",
+	"R-Vehicle-Armor-Heat01",
+	"R-Wpn-Cannon-Damage04",
+	"R-Wpn-Cannon-ROF02",
+	"R-Wpn-Mortar-Damage03",
+	"R-Wpn-Rocket-Damage04",
+	"R-Wpn-Rocket-Accuracy02",
+	"R-Wpn-Rocket-ROF02",
+	"R-Wpn-RocketSlow-Accuracy01",
+]);
 
-const CAM1C_RES_SCAV = [
-	"R-Wpn-MG-Damage04"
-];
+const CAM1C_RES_SCAV = CAM1_3_RES_SCAV.concat([
+	"R-Defense-WallUpgrade03",
+	"R-Struc-Materials03",
+	"R-Wpn-Rocket-Damage03",
+	"R-Wpn-Mortar-ROF03",
+	"R-Wpn-Cannon-ROF02",
+	"R-Wpn-MG-ROF01",
+	"R-Struc-RprFac-Upgrade01",
+]);
 
-const CAM1_4_RES_NP = [
-	"R-Wpn-MG1Mk1"
-];
-const CAM1_4_RES_SCAV = [
-	"R-Wpn-MG1Mk1"
-];
+const CAM1_4_RES_NP = CAM1C_RES_NP.concat([
+	"R-Wpn-Rocket-ROF03",
+	"R-Vehicle-Engine04",
+	"R-Vehicle-Metals02",
+	"R-Cyborg-Metals02",
+	"R-Cyborg-Armor-Heat02",
+	"R-Vehicle-Armor-Heat02",
+	"R-Wpn-Mortar-ROF03",
+	"R-Wpn-Mortar-Range02",
+	"R-Wpn-Cannon-Mount01",
+	"R-Wpn-Rocket-Range02",
+]);
+
+const CAM1_4_RES_SCAV = CAM1C_RES_SCAV.concat([
+	"R-Wpn-Rocket-ROF03",
+	"R-Vehicle-Armor-Heat01",
+	"R-Vehicle-Engine02",
+]);
 
 const CAM1_5_RES_NP = [
-	"R-Wpn-MG1Mk1"
+	"R-Vehicle-Metals03",
+	"R-Cyborg-Metals03",
+	"R-Cyborg-Armor-Heat03",
+	"R-Vehicle-Armor-Heat03",
+	"R-Wpn-Cannon-Damage05",
+	"R-Wpn-Cannon-ROF03",
+	"R-Wpn-RocketSlow-Accuracy02",
 ];
 
 const CAM1_5_RES_SCAV = [
-	"R-Wpn-MG1Mk1"
+	"R-Wpn-Rocket-Damage04",
+	"R-Wpn-Cannon-ROF03",
+	"R-Wpn-RocketSlow-Accuracy01",
+	"R-Vehicle-Engine03",
+	"R-Sys-Engineering01",
 ];
 
-const CAM1AC_RES_NP = [
-	"R-Wpn-MG1Mk1"
+const CAM1AC_RES_NP = CAM1_5_RES_NP.concat([
+	"R-Cyborg-Engine01",
+	"R-Wpn-Cannon-Damage06",
+]);
+
+const CAM1_7_RES_NP = CAM1AC_RES_NP;
+
+const CAM1_7_RES_SCAV = [
+	"R-Wpn-Cannon-Damage06",
 ];
 
 const CAM1D_RES_NP = [
-	"R-Wpn-MG1Mk1"
-];
-
-const CAM1_7_RES_NP = [
-	"R-Wpn-MG1Mk1"
-];
-const CAM1_7_RES_SCAV = [
-	"R-Wpn-MG1Mk1"
+	"R-Cyborg-Engine03",
+	"R-Wpn-Mortar-Range03",
+	"R-Wpn-Cannon-Damage07",
+	"R-Wpn-Rocket-Damage05",
+	"R-Vehicle-Metals04",
+	"R-Cyborg-Metals04",
 ];
 
 
 // 				*** CAMPAIGN 2 ***
 //			Beta Campaign - Collective AI
 // Starting research for all players in campaign 2
-const CAM2A_RESEARCH = [
-	"R-Vehicle-Body26",
-	"R-Vehicle-Body01",
-	"R-Sys-Spade1Mk1",
-	"R-Vehicle-Prop-Wheels",
+const CAM2A_RESEARCH = CAM1A_RESEARCH.concat([
 	"R-Defense-Tower01",
 	"R-Sys-Engineering01",
 	"R-Wpn-Flamer01Mk1",
@@ -171,7 +257,8 @@ const CAM2A_RESEARCH = [
 	"R-Wpn-Mortar02Hvy",
 	"R-Wpn-Rocket-Pod-Twn-Arch",
 	"R-Wpn-Rocket02-MRL",
-	"R-Defense-HvyMor",
+	"R-Defense-HvyMor","R-Vehicle-Metals06",
+	"R-Cyborg-Metals06",
 	"R-Vehicle-Body11",
 	"R-Wpn-MG3Mk1-Aslt",
 	"R-Wpn-Mortar-Range01",
@@ -198,6 +285,7 @@ const CAM2A_RESEARCH = [
 	"R-Vehicle-Body18",
 	"R-Wpn-Sunburst-Arch",
 	"R-Defense-Sunburst-Arch",
+	"R-Cyborg-Engine04",
 	"R-Vehicle-Engine04",
 	//alpha 11
 	"R-Wpn-Cannon3Mk1",
@@ -212,22 +300,49 @@ const CAM2A_RESEARCH = [
 	"R-Defense-AASite-QuadMg1",
 	"R-Wpn-AAGun03",
 	"R-Struc-VTOLPad",
-];
+]);
 
 
 // Additional AI research for campaign 2
 const CAM2A_RES_COL = [
-	"R-Wpn-MG1Mk1", "R-Sys-Engineering03", "R-Wpn-Howitzer-ROF02",
-	"R-Defense-WallUpgrade06", "R-Struc-Materials03", "R-Wpn-Howitzer-Damage03",
-	"R-Struc-Factory-Upgrade07", "R-Wpn-Cannon-Mount02", "R-Wpn-Howitzer-Accuracy02",
-	"R-Vehicle-Engine06", "R-Vehicle-Metals06", "R-Cyborg-Metals06",
-	"R-Wpn-Cannon-Accuracy02", "R-Wpn-Cannon-Damage06", "R-Wpn-Flamer-Range02",
-	"R-Wpn-Cannon-ROF06", "R-Wpn-Flamer-Damage06", "R-Wpn-Flamer-ROF03", "R-Wpn-Mortar-ROF03",
-	"R-Wpn-MG-Damage06", "R-Wpn-MG-ROF02", "R-Wpn-Mortar-Acc02",
-	"R-Wpn-Mortar-Damage03", "R-Wpn-Mortar-ROF02", "R-Struc-Materials06", "R-Wpn-Mortar-Range03",
-	"R-Wpn-Rocket-Accuracy02", "R-Wpn-Rocket-Damage06", "R-Cyborg-HvyBody", "R-Wpn-Rocket-Range03",
-	"R-Wpn-Rocket-ROF03", "R-Wpn-RocketSlow-Accuracy02", "R-Cyborg-Armor-Heat03", "R-Wpn-Rocket-Accuracy02",
-	"R-Sys-Sensor-Upgrade01", "R-Cyborg-Engine04", "R-Wpn-Bomb-Accuracy03", "R-Struc-VTOLPad-Upgrade06"
+	"R-Wpn-MG1Mk1",
+	"R-Sys-Engineering03",
+	"R-Wpn-Howitzer-ROF02",
+	"R-Defense-WallUpgrade06",
+	"R-Struc-Materials03",
+	"R-Wpn-Howitzer-Damage03",
+	"R-Struc-Factory-Upgrade07",
+	"R-Wpn-Cannon-Mount02",
+	"R-Wpn-Howitzer-Accuracy02",
+	"R-Vehicle-Engine06",
+	"R-Vehicle-Metals06",
+	"R-Cyborg-Metals06",
+	"R-Wpn-Cannon-Accuracy02",
+	"R-Wpn-Cannon-Damage06",
+	"R-Wpn-Flamer-Range02",
+	"R-Wpn-Cannon-ROF06",
+	"R-Wpn-Flamer-Damage06",
+	"R-Wpn-Flamer-ROF03",
+	"R-Wpn-Mortar-ROF03",
+	"R-Wpn-MG-Damage06",
+	"R-Wpn-MG-ROF02",
+	"R-Wpn-Mortar-Acc02",
+	"R-Wpn-Mortar-Damage03",
+	"R-Wpn-Mortar-ROF02",
+	"R-Struc-Materials06",
+	"R-Wpn-Mortar-Range03",
+	"R-Wpn-Rocket-Accuracy02",
+	"R-Wpn-Rocket-Damage06",
+	"R-Cyborg-HvyBody",
+	"R-Wpn-Rocket-Range03",
+	"R-Wpn-Rocket-ROF03",
+	"R-Wpn-RocketSlow-Accuracy02",
+	"R-Cyborg-Armor-Heat03",
+	"R-Wpn-Rocket-Accuracy02",
+	"R-Sys-Sensor-Upgrade01",
+	"R-Cyborg-Engine04",
+	"R-Wpn-Bomb-Accuracy03",
+	"R-Struc-VTOLPad-Upgrade06"
 ];
 
 const CAM2_1_RES_HUMAN = [
@@ -267,10 +382,26 @@ const CAM2B_RES_COL = [
 ];
 
 const CAM2C_RES_COL = [
-	"R-Struc-Materials09", "R-Wpn-Rocket-ROF03", "R-Wpn-Rocket-Range03", "R-Wpn-Rocket-Damage09", "R-Wpn-Mortar-Damage06", "R-Wpn-Mortar-Acc03",
-	"R-Wpn-MG-Damage08", "R-Wpn-Howitzer-Damage04", "R-Wpn-Howitzer-Accuracy03", "R-Wpn-Flamer-ROF04", "R-Wpn-Flamer-Damage09", "R-Wpn-Cannon-ROF06",
-	"R-Wpn-Cannon-Damage09", "R-Wpn-Bomb-Damage06", "R-Wpn-AAGun-Accuracy03", "R-Wpn-AAGun-Damage06", "R-Sys-Sensor-Upgrade03", "R-Defense-WallUpgrade09",
-	"R-Cyborg-Metals09", "R-Wpn-Cannon-Mount03"
+	"R-Struc-Materials09",
+	"R-Wpn-Rocket-ROF03",
+	"R-Wpn-Rocket-Range03",
+	"R-Wpn-Rocket-Damage09",
+	"R-Wpn-Mortar-Damage06",
+	"R-Wpn-Mortar-Acc03",
+	"R-Wpn-MG-Damage08",
+	"R-Wpn-Howitzer-Damage04",
+	"R-Wpn-Howitzer-Accuracy03",
+	"R-Wpn-Flamer-ROF04",
+	"R-Wpn-Flamer-Damage09",
+	"R-Wpn-Cannon-ROF06",
+	"R-Wpn-Cannon-Damage09",
+	"R-Wpn-Bomb-Damage06",
+	"R-Wpn-AAGun-Accuracy03",
+	"R-Wpn-AAGun-Damage06",
+	"R-Sys-Sensor-Upgrade03",
+	"R-Defense-WallUpgrade09",
+	"R-Cyborg-Metals09",
+	"R-Wpn-Cannon-Mount03"
 ];
 
 const CAM2D_RES_COL = [
@@ -487,28 +618,63 @@ const CAM3A_RESEARCH = CAM2A_RESEARCH.concat([
 
 // Additional AI research for starting campaign 3
 const CAM3A_RES_NEXUS = [
-	"R-Wpn-MG1Mk1", "R-Sys-Engineering03", "R-Defense-WallUpgrade12",
-	"R-Struc-Materials07", "R-Struc-Factory-Upgrade07",
-	"R-Struc-VTOLPad-Upgrade06", "R-Vehicle-Engine09", "R-Vehicle-Metals07",
-	"R-Cyborg-Metals07", "R-Vehicle-Armor-Heat03", "R-Cyborg-Armor-Heat03",
-	"R-Wpn-Bomb-Accuracy03", "R-Wpn-Missile-Damage01", "R-Wpn-Missile-ROF01",
-	"R-Sys-Sensor-Upgrade01", "R-Wpn-Rail-Damage01",
-	"R-Wpn-Rail-ROF01", "R-Wpn-Rail-Accuracy01", "R-Wpn-Flamer-Damage06",
+	"R-Wpn-MG1Mk1",
+	"R-Sys-Engineering03",
+	"R-Defense-WallUpgrade12",
+	"R-Struc-Materials07",
+	"R-Struc-Factory-Upgrade07",
+	"R-Struc-VTOLPad-Upgrade06",
+	"R-Vehicle-Engine09",
+	"R-Vehicle-Metals07",
+	"R-Cyborg-Metals07",
+	"R-Vehicle-Armor-Heat03",
+	"R-Cyborg-Armor-Heat03",
+	"R-Wpn-Bomb-Accuracy03",
+	"R-Wpn-Missile-Damage01",
+	"R-Wpn-Missile-ROF01",
+	"R-Sys-Sensor-Upgrade01",
+	"R-Wpn-Rail-Damage01",
+	"R-Wpn-Rail-ROF01",
+	"R-Wpn-Rail-Accuracy01",
+	"R-Wpn-Flamer-Damage06",
 ];
 
 //This is used for giving allies in Gamma technology (3-b/3-2/3-c)
 const CAM3_2_RES_ALLY = [
-	"R-Wpn-Cannon-Accuracy02", "R-Wpn-Cannon-Damage06", "R-Wpn-Cannon-ROF03",
-	"R-Wpn-Flamer-Damage06", "R-Wpn-Flamer-ROF03", "R-Wpn-Howitzer-Accuracy02",
-	"R-Wpn-Howitzer-Damage03", "R-Wpn-MG-Damage07", "R-Wpn-MG-ROF03",
-	"R-Wpn-Mortar-Acc02", "R-Wpn-Mortar-Damage06", "R-Wpn-Mortar-ROF03",
-	"R-Wpn-Rocket-Accuracy02", "R-Wpn-Rocket-Damage06", "R-Wpn-Rocket-ROF03",
-	"R-Vehicle-Armor-Heat02", "R-Vehicle-Engine06", "R-Vehicle-Metals06", "R-Cyborg-Metals06",
-	"R-Cyborg-Armor-Heat02", "R-Defense-WallUpgrade06", "R-Struc-Factory-Upgrade07",
-	"R-Struc-VTOLPad-Upgrade03", "R-Struc-Materials06", "R-Struc-Power-Upgrade01",
-	"R-Struc-Research-Upgrade06", "R-Struc-RprFac-Upgrade04", "R-Sys-Engineering02",
-	"R-Sys-MobileRepairTurret01", "R-Sys-Sensor-Upgrade01", "R-Wpn-AAGun-Accuracy02",
-	"R-Wpn-AAGun-Damage03", "R-Wpn-AAGun-ROF03", "R-Wpn-Bomb-Accuracy02",
+	"R-Wpn-Cannon-Accuracy02",
+	"R-Wpn-Cannon-Damage06",
+	"R-Wpn-Cannon-ROF03",
+	"R-Wpn-Flamer-Damage06",
+	"R-Wpn-Flamer-ROF03",
+	"R-Wpn-Howitzer-Accuracy02",
+	"R-Wpn-Howitzer-Damage03",
+	"R-Wpn-MG-Damage07",
+	"R-Wpn-MG-ROF03",
+	"R-Wpn-Mortar-Acc02",
+	"R-Wpn-Mortar-Damage06",
+	"R-Wpn-Mortar-ROF03",
+	"R-Wpn-Rocket-Accuracy02",
+	"R-Wpn-Rocket-Damage06",
+	"R-Wpn-Rocket-ROF03",
+	"R-Vehicle-Armor-Heat02",
+	"R-Vehicle-Engine06",
+	"R-Vehicle-Metals06",
+	"R-Cyborg-Metals06",
+	"R-Cyborg-Armor-Heat02",
+	"R-Defense-WallUpgrade06",
+	"R-Struc-Factory-Upgrade07",
+	"R-Struc-VTOLPad-Upgrade03",
+	"R-Struc-Materials06",
+	"R-Struc-Power-Upgrade01",
+	"R-Struc-Research-Upgrade06",
+	"R-Struc-RprFac-Upgrade04",
+	"R-Sys-Engineering02",
+	"R-Sys-MobileRepairTurret01",
+	"R-Sys-Sensor-Upgrade01",
+	"R-Wpn-AAGun-Accuracy02",
+	"R-Wpn-AAGun-Damage03",
+	"R-Wpn-AAGun-ROF03",
+	"R-Wpn-Bomb-Accuracy02",
 ];
 
 const CAM3_2_RES_NEXUS = [
