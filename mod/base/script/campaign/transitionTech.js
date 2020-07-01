@@ -342,7 +342,6 @@ const CAM2B_RES_COL = CAM2_1_RES_COL.concat([
 	"R-Sys-Sensor-Upgrade03",
 	"R-Defense-WallUpgrade05",
 	"R-Struc-Materials06",
-	"R-Vehicle-Engine05",
 	"R-Wpn-Mortar-ROF04",
 	"R-Wpn-Cannon-Damage08",
 	"R-Wpn-Cannon-ROF05",
@@ -352,7 +351,6 @@ const CAM2B_RES_COL = CAM2_1_RES_COL.concat([
 const CAM2_2_RES_COL = CAM2B_RES_COL.concat([
 	"R-Wpn-Rocket-Damage09",
 	"R-Wpn-Mortar-Acc03",
-	"R-Vehicle-Engine06",
 	"R-Cyborg-Metals06",
 	"R-Cyborg-Armor-Heat06",
 	"R-Vehicle-Metals05",
@@ -424,6 +422,13 @@ const CAM2_8_RES_COL = CAM2_7_RES_COL.concat([
 const CAM2END_RES_COL = CAM2_8_RES_COL.concat([
 	"R-Wpn-Cannon-Mount03",
 	"R-Wpn-Howitzer-Damage06",
+	//Extra tough
+	"R-Vehicle-Metals07",
+	"R-Vehicle-Armor-Heat07",
+	"R-Cyborg-Metals07",
+	"R-Cyborg-Armor-Heat07"
+	"R-Vehicle-Engine07",
+	"R-Cyborg-Engine06",
 ]);
 
 // 					*** CAMPAIGN 3 ***
