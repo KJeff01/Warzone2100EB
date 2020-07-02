@@ -944,7 +944,14 @@ function ultScav_groundAttackStuff()
 		return;
 	}
 
-	var target = ultScav_rangeStep(ultScav_baseInfo[camRand(ultScav_baseInfo.length)], true);
+	var randomBase = camRand(ultScav_baseInfo.length);
+
+	var target = ultScav_rangeStep(ultScav_baseInfo[randomBase], true);
+	if (!camDef(target))
+	{
+		target = ultScav_rangeStep(ultScav_baseInfo[randomBase], false);
+	}
+
 	if (camDef(target))
 	{
 		for (var i = 0, l = ultScav_baseInfo.length; i < l; ++i)
