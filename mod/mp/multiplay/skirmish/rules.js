@@ -13,8 +13,12 @@ include("multiplay/script/weather.js");
 
 var lastHitTime = 0;
 var cheatmode = false;
-var maxOilDrums = 0;
 var mainReticule = false;
+var oilDrumData = {
+	delay: 0, // time delay to prevent multiple drums from spawning on the same frame
+	lastSpawn: 0, // time of the last successful drum added to the map
+	maxOilDrums: 0 // maximum amount of random oil drums allowed on the map
+};
 
 
 function printGameSettings()
@@ -216,14 +220,20 @@ function setupGame()
 	//Use light fog for multiplayer
 	setRevealStatus(true);
 
-	if (tilesetType == "URBAN")
+	if (tilesetType == "ARIZONA")
 	{
+		setCampaignNumber(1);
+	}
+	else if (tilesetType == "URBAN")
+	{
+		setCampaignNumber(2);
 		replaceTexture("page-8-player-buildings-bases.png", "page-8-player-buildings-bases-urban.png");
 		replaceTexture("page-9-player-buildings-bases.png", "page-9-player-buildings-bases-urban.png");
 		replaceTexture("page-7-barbarians-arizona.png", "page-7-barbarians-urban.png");
 	}
 	else if (tilesetType == "ROCKIES")
 	{
+		setCampaignNumber(3);
 		replaceTexture("page-8-player-buildings-bases.png", "page-8-player-buildings-bases-rockies.png");
 		replaceTexture("page-9-player-buildings-bases.png", "page-9-player-buildings-bases-rockies.png");
 		replaceTexture("page-7-barbarians-arizona.png", "page-7-barbarians-kevlar.png");
@@ -255,8 +265,8 @@ function eventGameInit()
 	printGameSettings();
 
 	// always at least one oil drum, and one more for every 64x64 tiles of map area
-	maxOilDrums = (mapWidth * mapHeight) >> 12; // replace float division with shift for sync-safety
-	for (var i = 0; i < maxOilDrums; ++i)
+	oilDrumData.maxOilDrums = (mapWidth * mapHeight) >> 12; // replace float division with shift for sync-safety
+	for (var i = 0; i < oilDrumData.maxOilDrums; ++i)
 	{
 		queue("placeOilDrum", 10000 * i);
 	}
@@ -667,7 +677,7 @@ function eventChat(from, to, message)
 function placeOilDrum()
 {
 	var drums = enumFeature(-1, "OilDrum").length;
-	if (drums >= maxOilDrums)
+	if (drums >= oilDrumData.maxOilDrums)
 	{
 		return;
 	}
@@ -675,29 +685,50 @@ function placeOilDrum()
 	var x = syncRandom(mapWidth - 20) + 10;
 	var y = syncRandom(mapHeight - 20) + 10;
 
+	// Don't allow placement of structures onto a potential drum location if a truck
+	// could suddenly built something near it.
+	var nearbyTruck = false;
+	const SCAN_RANGE_TRUCKS = 6;
+	var nearbyObjects = enumRange(x, y, SCAN_RANGE_TRUCKS, ALL_PLAYERS, false);
+	for (var i = 0, len = nearbyObjects.length; i < len; ++i)
+	{
+		var object = nearbyObjects[i];
+		if (object.type === DROID && object.droidType === DROID_CONSTRUCT)
+		{
+			nearbyTruck = true;
+			break;
+		}
+	}
+
+	// scan about the same radius as the biggest game objects in the case a drum
+	// wants to be placed near once. This way the scan should touch the center
+	// tile of the object.
+	const SCAN_RANGE_OCCUPIED = 3;
 	// see if the random position is valid
-	var occupied = (enumRange(x, y, 2, ALL_PLAYERS, false).length > 0);
+	var occupied = (enumRange(x, y, SCAN_RANGE_OCCUPIED, ALL_PLAYERS, false).length > 0);
 	var unreachable = true;
 	for (var i = 0; i < maxPlayers; ++i)
 	{
-		if (propulsionCanReach("wheeled01", x, y, startPositions[i].x, startPositions[i].y))
+		if (propulsionCanReach("hover01", x, y, startPositions[i].x, startPositions[i].y))
 		{
 			unreachable = false;
 			break;
 		}
 	}
+
 	var terrain = terrainType(x, y);
 	if (terrain == TER_WATER || terrain == TER_CLIFFFACE)
 	{
 		unreachable = true;
 	}
-	if (occupied || unreachable)
+	if (occupied || unreachable || nearbyTruck || (gameTime - oilDrumData.lastSpawn <= 200))
 	{
 		// try again in a different position after 1 second
 		queue("placeOilDrum", 1000);
 		return;
 	}
 
+	oilDrumData.lastSpawn = gameTime;
 	addFeature("OilDrum", x, y);
 }
 
@@ -714,7 +745,12 @@ function eventPickup(feature, droid)
 				break;
 			}
 		}
+		if (oilDrumData.delay > 120000)
+		{
+			oilDrumData.delay = 0;
+		}
+		oilDrumData.delay = oilDrumData.delay + 100;
 		// amounts to 10 minutes average respawn time
-		queue("placeOilDrum", delay * 120000);
+		queue("placeOilDrum", (delay * 120000) + oilDrumData.delay);
 	}
 }

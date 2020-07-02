@@ -741,7 +741,7 @@
             "milasbasar.pie"
         ],
         "thermal": 16,
-        "type": "GENERIC",
+        "type": "LASSAT",
         "userLimits": [
             0,
             1,
