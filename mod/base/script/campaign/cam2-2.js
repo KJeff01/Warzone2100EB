@@ -169,6 +169,7 @@ function eventStartLevel()
 	});
 	
 	camCompleteRequiredResearch(CAM2_2_RES_COL, THE_COLLECTIVE);
+	camCompleteRequiredResearch(CAM2_2_RES_COL, ULTSCAV);
 
 	camSetEnemyBases({
 		"COEastBase": {

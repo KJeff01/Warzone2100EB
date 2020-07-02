@@ -132,6 +132,7 @@ function eventStartLevel()
 	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, NEXUS);
 
 	camCompleteRequiredResearch(CAM3C_RES_NEXUS, NEXUS);
+	camCompleteRequiredResearch(CAM3C_RES_NEXUS, ULTSCAV);
 	camCompleteRequiredResearch(CAM3_RES_ALLY, GAMMA);
 	hackAddMessage("CM3C_GAMMABASE", PROX_MSG, CAM_HUMAN_PLAYER, true);
 	hackAddMessage("CM3C_BETATEAM", PROX_MSG, CAM_HUMAN_PLAYER, true);

@@ -224,6 +224,7 @@ function eventStartLevel()
 	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, NEXUS);
 
 	camCompleteRequiredResearch(CAM3AB_RES_NEXUS, NEXUS);
+	camCompleteRequiredResearch(CAM3AB_RES_NEXUS, ULTSCAV);
 
 	enableResearch("R-Sys-Resistance-Upgrade01", CAM_HUMAN_PLAYER);
 	winFlag = false;
@@ -255,5 +256,5 @@ function eventStartLevel()
 		3, // min number of defend droids
 		135, // ground attack every x seconds
 		135, // VTOL attack every x seconds
-		4); // tech level
+		3); // tech level
 }

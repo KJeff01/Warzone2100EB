@@ -76,7 +76,8 @@ function eventStartLevel()
 	centreView(startpos.x, startpos.y);
 	setNoGoArea(lz.x, lz.y, lz.x2, lz.y2, CAM_HUMAN_PLAYER);
 
-	camCompleteRequiredResearch(["R-Sys-Sensor-Turret01"], 7);
+	camCompleteRequiredResearch(CAM1B_RES_SCAV, SCAVS);
+	camCompleteRequiredResearch(CAM1B_RES_SCAV, ULTSCAV);
 	setMissionTime(camChangeOnDiff(camHoursToSeconds(.5)));
 	setAlliance(ULTSCAV, SCAVS, true);
 

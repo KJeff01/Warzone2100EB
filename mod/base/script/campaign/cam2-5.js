@@ -105,6 +105,7 @@ function eventStartLevel()
 
 	setAlliance(THE_COLLECTIVE, ULTSCAV, true);
 	camCompleteRequiredResearch(CAM2_5_RES_COL, THE_COLLECTIVE);
+	camCompleteRequiredResearch(CAM2_5_RES_COL, ULTSCAV);
 
 	camSetEnemyBases({
 		"COEastBase": {

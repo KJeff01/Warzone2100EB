@@ -185,6 +185,7 @@ function cam3Setup()
 	camCompleteRequiredResearch(CAM3A_RESEARCH, CAM_HUMAN_PLAYER);
 	camCompleteRequiredResearch(CAM3A_RESEARCH, NEXUS);
 	camCompleteRequiredResearch(CAM3A_RESEARCH, ULTSCAV);
+
 	camCompleteRequiredResearch(CAM3A_RES_NEXUS, NEXUS);
 	camCompleteRequiredResearch(CAM3A_RES_NEXUS, ULTSCAV);
 

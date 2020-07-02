@@ -160,6 +160,7 @@ function eventStartLevel()
 	});
 
 	camCompleteRequiredResearch(CAM1D_RES_NP, NEW_PARADIGM);
+	camCompleteRequiredResearch(CAM1D_RES_NP, ULTSCAV);
 
 	camSetEnemyBases({
 		"NPSouthEastGroup": {

@@ -294,6 +294,7 @@ function eventStartLevel()
 	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, NEXUS);
 
 	camCompleteRequiredResearch(CAM3AD2_RES_NEXUS, NEXUS);
+	camCompleteRequiredResearch(CAM3AD2_RES_NEXUS, ULTSCAV);
 	camPlayVideos("MB3_AD2_MSG");
 
 	queue("checkTime", camSecondsToMilliseconds(0.2));

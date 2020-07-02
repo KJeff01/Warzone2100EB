@@ -126,6 +126,7 @@ function eventStartLevel()
 	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, NEXUS);
 
 	camCompleteRequiredResearch(CAM3_4_RES_NEXUS, NEXUS);
+	camCompleteRequiredResearch(CAM3_4_RES_NEXUS, ULTSCAV);
 	setupNexusPatrols();
 	camManageTrucks(NEXUS);
 	truckDefense();

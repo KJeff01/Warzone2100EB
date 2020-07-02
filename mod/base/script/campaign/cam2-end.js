@@ -146,6 +146,7 @@ function eventStartLevel()
 	
 	setMissionTime(camMinutesToSeconds(30));
 	camCompleteRequiredResearch(CAM2END_RES_COL, THE_COLLECTIVE);
+	camCompleteRequiredResearch(CAM2END_RES_COL, ULTSCAV);
 
 	allowWin = false;
 	camPlayVideos(["MB2_DII_MSG", "MB2_DII_MSG2"]);
