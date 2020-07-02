@@ -426,7 +426,7 @@ const CAM2END_RES_COL = CAM2_8_RES_COL.concat([
 	"R-Vehicle-Metals07",
 	"R-Vehicle-Armor-Heat07",
 	"R-Cyborg-Metals07",
-	"R-Cyborg-Armor-Heat07"
+	"R-Cyborg-Armor-Heat07",
 	"R-Vehicle-Engine07",
 	"R-Cyborg-Engine06",
 ]);
