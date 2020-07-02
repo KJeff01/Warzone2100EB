@@ -637,104 +637,95 @@ const CAM3A_RESEARCH = CAM2A_RESEARCH.concat([
 
 // Additional AI research for starting campaign 3
 const CAM3A_RES_NEXUS = [
-	"R-Wpn-MG1Mk1",
-	"R-Sys-Engineering03",
-	"R-Defense-WallUpgrade12",
-	"R-Struc-Materials07",
-	"R-Struc-Factory-Upgrade07",
+	"R-Sys-Engineering04",
+	"R-Struc-Power-Upgrade03a",
 	"R-Struc-VTOLPad-Upgrade06",
-	"R-Vehicle-Engine09",
+	"R-Defense-WallUpgrade09",
+	"R-Struc-Materials07",
 	"R-Vehicle-Metals07",
 	"R-Cyborg-Metals07",
-	"R-Vehicle-Armor-Heat03",
-	"R-Cyborg-Armor-Heat03",
-	"R-Wpn-Bomb-Accuracy03",
-	"R-Wpn-Missile-Damage01",
-	"R-Wpn-Missile-ROF01",
-	"R-Sys-Sensor-Upgrade01",
+	"R-Vehicle-Armor-Heat07",
+	"R-Cyborg-Armor-Heat07",
+	"R-Vehicle-Engine07",
 	"R-Wpn-Rail-Damage01",
-	"R-Wpn-Rail-ROF01",
 	"R-Wpn-Rail-Accuracy01",
-	"R-Wpn-Flamer-Damage06",
+	"R-Wpn-Rail-ROF01",
+	"R-Sys-Autorepair-General",
+	"R-Cyborg-Engine06",
+	"R-Wpn-Flamer-Damage09",
+	"R-Wpn-Flamer-ROF06",
+	"R-Wpn-Bomb-Damage05",
+	"R-Struc-RprFac-Upgrade06",
+	"R-Wpn-Energy-Damage01",
+	"R-Wpn-Energy-ROF01",
+	"R-Wpn-Energy-Range01",
 ];
+
+const CAM3_1_RES_NEXUS = CAM3A_RESEARCH.concat([
+	"R-Defense-WallUpgrade10",
+	"R-Struc-Materials09",
+	"R-Wpn-Energy-Damage02",
+	"R-Wpn-Energy-ROF02",
+	"R-Wpn-Energy-Range02",
+	"R-Wpn-EMP-Damage01",
+	"R-Wpn-Rail-Range01",
+]);
 
 //This is used for giving allies in Gamma technology (3-b/3-2/3-c)
-const CAM3_2_RES_ALLY = [
-	"R-Wpn-Cannon-Accuracy02",
-	"R-Wpn-Cannon-Damage06",
-	"R-Wpn-Cannon-ROF03",
-	"R-Wpn-Flamer-Damage06",
-	"R-Wpn-Flamer-ROF03",
-	"R-Wpn-Howitzer-Accuracy02",
-	"R-Wpn-Howitzer-Damage03",
-	"R-Wpn-MG-Damage07",
-	"R-Wpn-MG-ROF03",
-	"R-Wpn-Mortar-Acc02",
-	"R-Wpn-Mortar-Damage06",
-	"R-Wpn-Mortar-ROF03",
-	"R-Wpn-Rocket-Accuracy02",
-	"R-Wpn-Rocket-Damage06",
-	"R-Wpn-Rocket-ROF03",
-	"R-Vehicle-Armor-Heat02",
-	"R-Vehicle-Engine06",
-	"R-Vehicle-Metals06",
-	"R-Cyborg-Metals06",
-	"R-Cyborg-Armor-Heat02",
-	"R-Defense-WallUpgrade06",
-	"R-Struc-Factory-Upgrade07",
-	"R-Struc-VTOLPad-Upgrade03",
-	"R-Struc-Materials06",
-	"R-Struc-Power-Upgrade01",
-	"R-Struc-Research-Upgrade06",
-	"R-Struc-RprFac-Upgrade04",
-	"R-Sys-Engineering02",
-	"R-Sys-MobileRepairTurret01",
-	"R-Sys-Sensor-Upgrade01",
-	"R-Wpn-AAGun-Accuracy02",
-	"R-Wpn-AAGun-Damage03",
-	"R-Wpn-AAGun-ROF03",
-	"R-Wpn-Bomb-Accuracy02",
-];
+const CAM3_RES_ALLY = CAM3A_RESEARCH;
 
-const CAM3_2_RES_NEXUS = [
-	"R-Wpn-MG1Mk1"
-];
+const CAM3B_RES_NEXUS = CAM3_1_RES_NEXUS.concat([
+	"R-Defense-WallUpgrade11",
+	"R-Vehicle-Engine08",
+	"R-Wpn-Rail-ROF02",
+	"R-Wpn-Rail-Damage02",
+	"R-Wpn-Energy-Accuracy01",
+	"R-Wpn-Energy-Range03",
+	"R-Sys-SpyTurret-Range01",
+	"R-Wpn-EMP-Damage02",
+]);
 
-const CAM3_4_RES_NEXUS = [
-	"R-Wpn-MG1Mk1"
-];
 
-const CAM3A_RES_HUMAN = [
-	"R-Wpn-MG1Mk1"
-];
+const CAM3_2_RES_NEXUS = CAM3B_RES_NEXUS.concat([
+	"R-Wpn-Energy-Damage03",
+	"R-Sys-Resistance-Upgrade01",
+	"R-Defense-WallUpgrade12",
+	"R-Vehicle-Metals08",
+	"R-Cyborg-Metals08",
+	"R-Vehicle-Armor-Heat08",
+	"R-Cyborg-Armor-Heat08",
+]);
 
-const CAM3AB_RES_NEXUS = [
-	"R-Wpn-MG1Mk1"
-];
+const CAM3AB_RES_NEXUS = CAM3_2_RES_NEXUS.concat([
+	"R-Wpn-Energy-ROF03",
+	"R-Wpn-EMP-Damage03",
+	"R-Wpn-Bomb-Damage06",
+	"R-Sys-Resistance-Upgrade02",
+	"R-Wpn-Rail-Range02",
+]);
 
-const CAM3AD_RES_NEXUS = [
-	"R-Wpn-MG1Mk1"
-];
+const CAM3C_RES_NEXUS = CAM3AB_RES_NEXUS.concat([
+	"R-Wpn-Rail-ROF03",
+	"R-Wpn-Rail-Damage03",
+	"R-Wpn-Energy-Range04",
+	"R-Sys-Resistance-Upgrade03",
+]);
 
-const CAM3AD2_RES_NEXUS = [
-	"R-Wpn-MG1Mk1"
-];
+const CAM3AD_RES_NEXUS = CAM3C_RES_NEXUS.concat([
+	"R-Vehicle-Engine09",
+	"R-Vehicle-Metals09",
+]);
 
-const CAM3B_RES_ALLY = [
-	"R-Wpn-MG1Mk1"
-];
+const CAM3AD2_RES_NEXUS = CAM3AD_RES_NEXUS.concat([
+	"R-Wpn-Rail-Range03",
+	"R-Cyborg-Metals09",
+]);
 
-const CAM3B_RES_NEXUS = [
-	"R-Wpn-MG1Mk1"
-];
+const CAM3_4_RES_NEXUS = CAM3AD2_RES_NEXUS.concat([
+	"R-Vehicle-Armor-Heat09",
+	"R-Cyborg-Armor-Heat09",
+]);
 
-const CAM3C_RES_NEXUS = [
-	"R-Wpn-MG1Mk1"
-];
-
-const CAM3C_RES_ALLY = [
-	"R-Wpn-MG1Mk1"
-];
 
 const CAMEND_RES = CAM3A_RESEARCH.concat([
 	"R-Sys-Engineering03",

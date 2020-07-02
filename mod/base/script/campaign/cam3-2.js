@@ -271,7 +271,7 @@ function eventStartLevel()
 	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, NEXUS);
 
 	camCompleteRequiredResearch(CAM3_2_RES_NEXUS, NEXUS);
-	camCompleteRequiredResearch(CAM3_2_RES_ALLY, ALPHA);
+	camCompleteRequiredResearch(CAM3_RES_ALLY, ALPHA);
 	setAlliance(ALPHA, NEXUS, true);
 	setAlliance(ALPHA, ULTSCAV, true);
 	setAlliance(ALPHA, CAM_HUMAN_PLAYER, true);

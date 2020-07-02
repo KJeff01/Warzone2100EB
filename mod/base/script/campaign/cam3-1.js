@@ -294,7 +294,8 @@ function eventStartLevel()
 	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, NEXUS);
 
 	setAlliance(ULTSCAV, NEXUS, true);
-	camCompleteRequiredResearch(CAM3A_RES_NEXUS, NEXUS);
+	camCompleteRequiredResearch(CAM31_RES_NEXUS, NEXUS);
+	camCompleteRequiredResearch(CAM31_RES_NEXUS, ULTSCAV);
 
 	camSetEnemyBases({
 		"NX-SWBase": {

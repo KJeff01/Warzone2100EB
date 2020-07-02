@@ -252,7 +252,7 @@ function eventStartLevel()
 
 	camCompleteRequiredResearch(CAM3B_RES_NEXUS, NEXUS);
 	camCompleteRequiredResearch(CAM3B_RES_NEXUS, ULTSCAV);
-	camCompleteRequiredResearch(CAM3B_RES_ALLY, GAMMA);
+	camCompleteRequiredResearch(CAM3_RES_ALLY, GAMMA);
 
 	setAlliance(GAMMA, CAM_HUMAN_PLAYER, false);
 	setAlliance(GAMMA, NEXUS, true);
