@@ -755,7 +755,7 @@ function ultScav_produce(what)
 			return undefined;
 	}
 
-	var faclist = enumStruct(ULTSCAV, ultScav_factory);
+	var faclist = enumStruct(ULTSCAV, factoryType);
 	for (var i = 0, len = faclist.length; i < len; ++i)
 	{
 		var fac = faclist[i];
