@@ -247,11 +247,12 @@ function eventStartLevel()
 		-1, // min cyborg factories
 		3, // min number of trucks
 		-1, // min number of sensor droids
-		25, // min number of attack droids
-		10, // min number of defend droids
+		3, // min number of attack droids
+		2, // min number of defend droids
 		120, // ground attack every x seconds
 		-1, // VTOL attack every x seconds
-		1); // tech level
+		1 // tech level
+	);
 
 	// Delete scav rockets and mortars (cam1a only)
 	delete ultScav_templates.rbjeep;

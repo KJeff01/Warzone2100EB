@@ -411,9 +411,10 @@ function eventStartLevel()
 		5, // min cyborg factories
 		10, // min number of trucks
 		3, // min number of sensor droids
-		20, // min number of attack droids
-		20, // min number of defend droids
+		6, // min number of attack droids
+		6, // min number of defend droids
 		135, // ground attack every x seconds
 		165, // VTOL attack every x seconds
-		2); // tech level
+		2 // tech level
+	);
 }

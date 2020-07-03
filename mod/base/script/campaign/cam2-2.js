@@ -241,5 +241,6 @@ function eventStartLevel()
 		10, // min number of defend droids
 		210, // ground attack every x seconds
 		-1, // VTOL attack every x seconds
-		2); // tech level
+		2 // tech level
+	);
 }

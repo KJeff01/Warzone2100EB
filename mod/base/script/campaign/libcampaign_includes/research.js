@@ -60,10 +60,6 @@ function __camGrantSpecialResearch()
 {
 	for (var i = 1; i < CAM_MAX_PLAYERS; ++i)
 	{
-		if (camPlayerMatchesFilter(i, ULTSCAV))
-		{
-			continue;
-		}
 		if (!allianceExistsBetween(CAM_HUMAN_PLAYER, i) && (countDroid(DROID_ANY, i) > 0 || enumStruct(i).length > 0))
 		{
 			//Boost AI production to produce all droids within a factory throttle
