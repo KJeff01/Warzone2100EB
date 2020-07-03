@@ -610,12 +610,53 @@ function ultScav_buildOils()
 	}
 }
 
+function isUpgradeableFactory(factory)
+{
+	return ((factory !== "A0BaBaFactory") && (factory !== "A0BaBaVtolFactory"));
+}
+
+function ultscav_buildFactoryModule(fac)
+{
+	const MAX_MODS = 2;
+	var facs = enumStruct(ULTSCAV, fac);
+	var trucks = enumDroid(ULTSCAV, DROID_CONSTRUCT);
+	var success = false;
+	var module = "A0FacMod1";
+
+	for (var i = 0, len = facs.length; i < len; ++i)
+	{
+		var factory = facs[i];
+		if (factory.status !== BUILT || factory.modules >= MAX_MODS)
+		{
+			continue;
+		}
+
+		for (var j = 0, len2 = trucks.length; j < len2; ++j)
+		{
+			var truck = trucks[j];
+			var shouldBuild = camDist(truck.x, truck.y, factory.x, factory.y) <= 20;
+			
+			if (shouldBuild && (truck.order !== DORDER_BUILD) && orderDroidBuild(truck, DORDER_BUILD, module, factory.x, factory.y))
+			{
+				success = true;
+			}
+		}
+	}
+
+	return success;
+}
+
 function ultScav_buildFactories()
 {
-	var list = enumDroid(ULTSCAV, DROID_CONSTRUCT);
+	if (isUpgradeableFactory(ultScav_factory) && ultscav_buildFactoryModule(ultScav_factory))
+	{
+		return;
+	}
 
 	if (countStruct(ultScav_factory, ULTSCAV) < ultScav_MIN_FACTORIES)
 	{
+		var list = enumDroid(ULTSCAV, DROID_CONSTRUCT);
+
 		for (var i = 0, d = list.length; i < d; ++i)
 		{
 			var droid = list[i];
@@ -639,31 +680,37 @@ function ultScav_buildFactories()
 				var n = ultScav_baseInfo.length;
 				ultScav_baseInfo[n] = new ultScav_constructbaseInfo(droid.x, droid.y);
 				groupAddDroid(ultScav_baseInfo[n].builderGroup, droid);
-				return true;
+				return;
 			}
-			return false;
 		}
 	}
 }
 
 function ultScav_buildvtolFactories()
 {
-	var list = ultScav_findTruck();
-
-	if (countStruct(ultScav_vtolfac, ULTSCAV) < ultScav_MIN_VTOL_FACTORIES)
+	if (isUpgradeableFactory(ultScav_vtolfac) && ultscav_buildFactoryModule(ultScav_vtolfac))
 	{
-		for (var i = 0, d = list.length; i < d; ++i)
-		{
-			var droid = list[i];
-			ultScav_buildStructure(droid, ultScav_vtolfac);
-		}
+		return;
 	}
-	else if (countStruct(ultScav_vtolpad, ULTSCAV < (ultScav_countHelicopters() * 3)))
+	else
 	{
-		for (var i = 0, d = list.length; i < d; ++i)
+		var list = ultScav_findTruck();
+
+		if (countStruct(ultScav_vtolfac, ULTSCAV) < ultScav_MIN_VTOL_FACTORIES)
 		{
-			var droid = list[i];
-			ultScav_buildStructure(droid, ultScav_vtolpad);
+			for (var i = 0, d = list.length; i < d; ++i)
+			{
+				var droid = list[i];
+				ultScav_buildStructure(droid, ultScav_vtolfac);
+			}
+		}
+		else if (countStruct(ultScav_vtolpad, ULTSCAV < (ultScav_countHelicopters() * 3)))
+		{
+			for (var i = 0, d = list.length; i < d; ++i)
+			{
+				var droid = list[i];
+				ultScav_buildStructure(droid, ultScav_vtolpad);
+			}
 		}
 	}
 }
