@@ -350,7 +350,7 @@ function ultScav_atLimits()
 
 function ultScav_isHeli(propulsion)
 {
-	return propulsion === "Helicopter";
+	return propulsion === "Helicopter" || propulsion === "V-Tol";
 }
 
 // Make sure a unit does not try to go off map
@@ -459,9 +459,11 @@ function ultScav_addDroidToSomeGroup(droid)
 		case DROID_CONSTRUCT:
 		{
 			groupAddDroid(base.builderGroup, droid);
-			break;
 		}
+		break;
+
 		case DROID_WEAPON:
+		case DROID_CYBORG:
 		{
 			if (groupSize(base.defendGroup) < ultScav_MIN_DEFENDERS)
 			{
@@ -479,19 +481,9 @@ function ultScav_addDroidToSomeGroup(droid)
 			}
 		}
 		break;
+
 		case DROID_SENSOR:
-		{
-			groupAddDroid(base.attackGroup, droid);
-		}
-		break;
-
 		case DROID_PERSON:
-		{
-			groupAddDroid(base.attackGroup, droid);
-		}
-		break;
-
-		case DROID_CYBORG:
 		{
 			groupAddDroid(base.attackGroup, droid);
 		}
@@ -883,7 +875,7 @@ function ultScav_attackWithDroid(droid, target, force)
 			return;
 		}
 
-		if (droid.droidType === DROID_WEAPON)
+		if (droid.droidType === DROID_WEAPON || droid.droidType === DROID_CYBORG)
 		{
 			if ((droid.order !== DORDER_ATTACK) || force)
 			{
