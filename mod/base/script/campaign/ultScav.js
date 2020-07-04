@@ -626,7 +626,7 @@ function ultscav_buildFactoryModule(fac)
 		for (var j = 0, len2 = trucks.length; j < len2; ++j)
 		{
 			var truck = trucks[j];
-			var shouldBuild = camDist(truck.x, truck.y, factory.x, factory.y) <= 20;
+			var shouldBuild = ((gameTime - factory.born) >= 240000) && camDist(truck.x, truck.y, factory.x, factory.y) <= 20;
 			
 			if (shouldBuild && (truck.order !== DORDER_BUILD) && orderDroidBuild(truck, DORDER_BUILD, module, factory.x, factory.y))
 			{
@@ -640,11 +640,6 @@ function ultscav_buildFactoryModule(fac)
 
 function ultScav_buildFactories()
 {
-	if (isUpgradeableFactory(ultScav_factory) && ultscav_buildFactoryModule(ultScav_factory))
-	{
-		return;
-	}
-
 	if (countStruct(ultScav_factory, ULTSCAV) < ultScav_MIN_FACTORIES)
 	{
 		var list = enumDroid(ULTSCAV, DROID_CONSTRUCT);
@@ -675,6 +670,10 @@ function ultScav_buildFactories()
 				return;
 			}
 		}
+	}
+	if (isUpgradeableFactory(ultScav_factory) && ultscav_buildFactoryModule(ultScav_factory))
+	{
+		return;
 	}
 }
 
