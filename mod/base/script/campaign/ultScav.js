@@ -1079,6 +1079,37 @@ function ultScav_reinforcements()
 	queue("ultScav_reinforcements", camChangeOnDiff(camMinutesToMilliseconds(1)));
 }
 
+function eventAttacked(victim, attacker)
+{
+	if (victim === null || attacker === null)
+	{
+		return;
+	}
+	if (!allianceExistsBetween(ULTSCAV, victim.player))
+	{
+		return;
+	}
+
+	var base = ultScav_findNearest(ultScav_baseInfo, victim.x, victim.y, true);
+	var attackerLongRanged = (attacker.isCB || attacker.hasIndirect);
+
+	if (camDef(base) && (camDist(victim.x, victim.y, attacker.x, attacker.y) < (attackerLongRanged ? 40 : 20)))
+	{
+		var list = enumGroup(base.defendGroup);
+
+		if (list.length < ultScav_MIN_DEFENDERS)
+		{
+			return;
+		}
+
+		for (var i = 0, l = list.length; i < l; ++i)
+		{
+			ultScav_attackWithDroid(list[i], attacker, true);
+		}
+	}
+
+}
+
 function ultScav_eventStartLevel(
 	vtol_flag,
 	build_defense,
