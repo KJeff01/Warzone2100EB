@@ -1705,7 +1705,7 @@ R-Wpn-TUTMG	_("Machinegun Artifact")
 ScavCamperBody	"scavengercamper"
 ScavCamperBody-BabaPitRocket	"ScavCamperBody-BabaPitRocket"
 ScavCamperBody-BusCannon	"ScavCamperBody-BusCannon"
-ScavengerChopper	"scavengechopper"
+ScavengerChopper	"scavengerchopper"
 ScavengerHelicopter	"ScavengerHelicopter"
 ScavengerHelicopter2	"2ScavengerHelicopter"
 ScavIcevanBody	"scavengericevan"

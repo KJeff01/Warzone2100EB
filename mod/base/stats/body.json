@@ -3268,7 +3268,7 @@
         "id": "HeavyChopper",
         "model": "hvychop.pie",
         "name": "heavychopper",
-        "powerOutput": 60000,
+        "powerOutput": 100000,
         "propulsionExtraModels": {
             "Helicopter": {
                 "left": "prmheli1.pie",
@@ -3365,8 +3365,8 @@
         "hitpoints": 130,
         "id": "ScavengerChopper",
         "model": "scavchop.pie",
-        "name": "scavengechopper",
-        "powerOutput": 44000,
+        "name": "scavengerchopper",
+        "powerOutput": 84000,
         "propulsionExtraModels": {
             "Helicopter": {
                 "left": "prlheli1.pie",
