@@ -85,8 +85,8 @@ const templates = [
 ];
 
 const vtolTemplates = [
-	["ScavengerChopper","MG1-VTOL"],
-	["HeavyChopper","Rocket-VTOL-Pod"],
+	["ScavengerChopper","MG1-VTOL-SCAVS"],
+	["HeavyChopper","Rocket-VTOL-Pod-SCAVS"],
 ];
 
 // scav groups

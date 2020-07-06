@@ -338,8 +338,8 @@ function scavengerInit()
 	];
 
 	const vtolTemplates = [
-		["ScavengerChopper","MG1-VTOL"],
-		["HeavyChopper","Rocket-VTOL-Pod"],
+		["ScavengerChopper","MG1-VTOL-SCAVS"],
+		["HeavyChopper","Rocket-VTOL-Pod-SCAVS"],
 	];
 
 	for (var i = 0, len = templates.length; i < len; ++i)
