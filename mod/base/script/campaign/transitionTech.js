@@ -118,7 +118,7 @@ const CAM1_4_RES_SCAV = CAM1C_RES_SCAV.concat([
 	"R-Vehicle-Engine02",
 ]);
 
-const CAM1_5_RES_NP = [
+const CAM1_5_RES_NP = CAM1_4_RES_NP.concat([
 	"R-Vehicle-Metals03",
 	"R-Cyborg-Metals03",
 	"R-Cyborg-Armor-Heat03",
@@ -126,15 +126,15 @@ const CAM1_5_RES_NP = [
 	"R-Wpn-Cannon-Damage05",
 	"R-Wpn-Cannon-ROF03",
 	"R-Wpn-RocketSlow-Accuracy02",
-];
+]);
 
-const CAM1_5_RES_SCAV = [
+const CAM1_5_RES_SCAV = CAM1_4_RES_SCAV.concat([
 	"R-Wpn-Rocket-Damage04",
 	"R-Wpn-Cannon-ROF03",
 	"R-Wpn-RocketSlow-Accuracy01",
 	"R-Vehicle-Engine03",
 	"R-Sys-Engineering01",
-];
+]);
 
 const CAM1AC_RES_NP = CAM1_5_RES_NP.concat([
 	"R-Cyborg-Engine01",
@@ -143,18 +143,18 @@ const CAM1AC_RES_NP = CAM1_5_RES_NP.concat([
 
 const CAM1_7_RES_NP = CAM1AC_RES_NP;
 
-const CAM1_7_RES_SCAV = [
+const CAM1_7_RES_SCAV = CAM1_5_RES_SCAV.concat([
 	"R-Wpn-Cannon-Damage06",
-];
+]);
 
-const CAM1D_RES_NP = [
+const CAM1D_RES_NP = CAM1_7_RES_NP.concat([
 	"R-Cyborg-Engine03",
 	"R-Wpn-Mortar-Range03",
 	"R-Wpn-Cannon-Damage07",
 	"R-Wpn-Rocket-Damage05",
 	"R-Vehicle-Metals04",
 	"R-Cyborg-Metals04",
-];
+]);
 
 
 // 				*** CAMPAIGN 2 ***
