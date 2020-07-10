@@ -1,7 +1,7 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
 include("script/campaign/transitionTech.js");
-include ("script/campaign/ultScav.js");
+include("script/campaign/ultScav.js");
 
 
 function vtolAttack()
@@ -196,6 +196,6 @@ function eventStartLevel()
 		4, // min number of defend droids
 		125, // ground attack every x seconds
 		145, // VTOL attack every x seconds
-		2.5, // tech level
+		2.5 // tech level
 	);
 }
