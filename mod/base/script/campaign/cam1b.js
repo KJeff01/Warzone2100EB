@@ -2,6 +2,7 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
 include("script/campaign/ultScav.js");
+include("script/campaign/transitionTech.js");
 
 var NPScout; // Sensor scout
 

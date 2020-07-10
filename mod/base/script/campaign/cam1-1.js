@@ -2,6 +2,7 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
 include("script/campaign/ultScav.js");
+include("script/campaign/transitionTech.js");
 
 
 //Ambush player from scav base - triggered from middle path
