@@ -14,7 +14,7 @@ Authors: Jorzi, MaNGusT, cnceo, Alpha93, Olrox, macuser
 "Ultimate scavengers":  http://addons.wz2100.net/148 - https://github.com/KJeff01/Ultimate-Scavengers
 Authors: NoQ, Berg, Berserk Cyborg, Black Project, MIH-XTC, Mysteryem, Flail13
 
-"Contingency": http://addons.wz2100.net/258
+"Contingency": http://addons.wz2100.net/258 - http://forums.wz2100.net/viewtopic.php?f=49&t=9493
 Authors: Shadow Wolf TJC, NoQ, Berg, Jorzi, Aubergine, Black Project, Mysteryem, Flail13
 
 "Warzone 2100 Graphic Mods": https://sourceforge.net/projects/wzgraphicmods/
