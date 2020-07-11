@@ -2397,6 +2397,39 @@
             "All droids are retro-fitted automatically"
         ]
     },
+    "RES_SY_RC1": {
+        "id": "RES_SY_RC1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_systech.ogg",
+        "text": [
+            "New Electronic Technology Discovered",
+            "On-board resistance circuit systems",
+            "+60% Resistance to Nexus Link technology",
+            "All droids are retro-fitted automatically"
+        ]
+    },
+    "RES_SY_RC2": {
+        "id": "RES_SY_RC2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_systech.ogg",
+        "text": [
+            "New Electronic Technology Discovered",
+            "On-board resistance circuit systems",
+            "+60% Resistance to Nexus Link technology",
+            "All droids are retro-fitted automatically"
+        ]
+    },
+    "RES_SY_RC3": {
+        "id": "RES_SY_RC3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_systech.ogg",
+        "text": [
+            "New Electronic Technology Discovered",
+            "On-board resistance circuit systems",
+            "+60% Resistance to Nexus Link technology",
+            "All droids are retro-fitted automatically"
+        ]
+    },
     "RES_SY_RDST1": {
         "id": "RES_SY_RDST1",
         "imdName": "MICAPSUL.pie",

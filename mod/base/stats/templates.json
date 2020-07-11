@@ -1775,7 +1775,7 @@
         ]
     },
     "ConstructionDroid": {
-        "available": "true",
+        "available": true,
         "body": "Body1REC",
         "construct": "Spade1Mk1",
         "id": "ConstructionDroid",
@@ -1824,7 +1824,7 @@
         "type": "CONSTRUCT"
     },
     "Cyb-Atmiss-GROUND": {
-        "available": "true",
+        "available": true,
         "body": "CyborgLightBody",
         "id": "Cyb-Atmiss-GROUND",
         "name": "Scourge",
@@ -1835,7 +1835,7 @@
         ]
     },
     "Cyb-Cannon-GROUND": {
-        "available": "false",
+        "available": false,
         "body": "CyborgLightBody",
         "id": "Cyb-Cannon-GROUND",
         "name": "Heavy Gunner",
@@ -1846,7 +1846,7 @@
         ]
     },
     "Cyb-Chain-GROUND": {
-        "available": "false",
+        "available": false,
         "body": "CyborgLightBody",
         "id": "Cyb-Chain-GROUND",
         "name": "Machinegunner",
@@ -1857,7 +1857,7 @@
         ]
     },
     "Cyb-ComEng": {
-        "available": "true",
+        "available": true,
         "body": "CyborgLightNAS",
         "construct": "CyborgSpade",
         "id": "Cyb-ComEng",
@@ -1866,7 +1866,7 @@
         "type": "CYBORG_CONSTRUCT"
     },
     "Cyb-Flamer-GROUND": {
-        "available": "false",
+        "available": false,
         "body": "CyborgLightBody",
         "id": "Cyb-Flamer-GROUND",
         "name": "Cyborg Flamer",
@@ -1877,7 +1877,7 @@
         ]
     },
     "Cyb-Gren": {
-        "available": "true",
+        "available": true,
         "body": "CyborgLightNAS",
         "id": "Cyb-Gren",
         "name": "Grenadier",
@@ -1888,7 +1888,7 @@
         ]
     },
     "Cyb-Hvy-A-T": {
-        "available": "true",
+        "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvy-A-T",
         "name": "Super Scourge Cyborg",
@@ -1899,7 +1899,7 @@
         ]
     },
     "Cyb-Hvy-Acannon": {
-        "available": "true",
+        "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvy-Acannon",
         "name": "Super Auto-Cannon Cyborg",
@@ -1910,7 +1910,7 @@
         ]
     },
     "Cyb-Hvy-HPV": {
-        "available": "true",
+        "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvy-HPV",
         "name": "Super HPV Cyborg",
@@ -1921,7 +1921,7 @@
         ]
     },
     "Cyb-Hvy-IncMortar": {
-        "available": "true",
+        "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvy-IncMortar",
         "name": "Super Incendiary Grenadier",
@@ -1932,7 +1932,7 @@
         ]
     },
     "Cyb-Hvy-Mcannon": {
-        "available": "true",
+        "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvy-Mcannon",
         "name": "Super Heavy-Gunner",
@@ -1943,7 +1943,7 @@
         ]
     },
     "Cyb-Hvy-PulseLsr": {
-        "available": "true",
+        "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvy-PulseLsr",
         "name": "Super Pulse Laser Cyborg",
@@ -1954,7 +1954,7 @@
         ]
     },
     "Cyb-Hvy-RailGunner": {
-        "available": "true",
+        "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvy-RailGunner",
         "name": "Super Rail-Gunner",
@@ -1965,7 +1965,7 @@
         ]
     },
     "Cyb-Hvy-TK": {
-        "available": "true",
+        "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvy-TK",
         "name": "Super Tank-Killer Cyborg",
@@ -1976,7 +1976,7 @@
         ]
     },
     "Cyb-Hvywpn-EMP": {
-        "available": "true",
+        "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvywpn-EMP",
         "name": "Cyb-Hvywpn-EMP",
@@ -1987,7 +1987,7 @@
         ]
     },
     "Cyb-Hvywpn-Flamer2": {
-        "available": "true",
+        "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvywpn-Flamer2",
         "name": "Cyb-Hvywpn-Flamer2",
@@ -1998,7 +1998,7 @@
         ]
     },
     "Cyb-Hvywpn-Flamer3": {
-        "available": "true",
+        "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvywpn-Flamer3",
         "name": "Cyb-Hvywpn-Flamer3",
@@ -2009,7 +2009,7 @@
         ]
     },
     "Cyb-Hvywpn-MG3": {
-        "available": "true",
+        "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvywpn-MG3",
         "name": "Cyb-Hvywpn-MG3",
@@ -2020,7 +2020,7 @@
         ]
     },
     "Cyb-Hvywpn-MG4": {
-        "available": "true",
+        "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvywpn-MG4",
         "name": "Cyb-Hvywpn-MG4",
@@ -2031,7 +2031,7 @@
         ]
     },
     "Cyb-Hvywpn-Missile-MdArt": {
-        "available": "true",
+        "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvywpn-Missile-MdArt",
         "name": "Cyb-Hvywpn-Missile-MdArt",
@@ -2042,7 +2042,7 @@
         ]
     },
     "Cyb-Hvywpn-Mortar1Mk1-Ram": {
-        "available": "true",
+        "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvywpn-Mortar1Mk1-Ram",
         "name": "Cyb-Hvywpn-Mortar1Mk1-Ram",
@@ -2053,7 +2053,7 @@
         ]
     },
     "Cyb-Hvywpn-Rocket-LtA-T": {
-        "available": "true",
+        "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvywpn-Rocket-LtA-T",
         "name": "Cyb-Hvywpn-Rocket-LtA-T",
@@ -2064,7 +2064,7 @@
         ]
     },
     "Cyb-Hvywpn-Rocket-Sunburst": {
-        "available": "true",
+        "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvywpn-Rocket-Sunburst",
         "name": "Cyb-Hvywpn-Rocket-Sunburst",
@@ -2075,7 +2075,7 @@
         ]
     },
     "Cyb-Hvywpn-Rocket-Sunburst-Arch": {
-        "available": "true",
+        "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvywpn-Rocket-Sunburst-Arch",
         "name": "Cyb-Hvywpn-Rocket-Sunburst-Arch",
@@ -2086,7 +2086,7 @@
         ]
     },
     "Cyb-Hvywpn-Rocket-TopAttack": {
-        "available": "true",
+        "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvywpn-Rocket-TopAttack",
         "name": "Cyb-Hvywpn-Rocket-TopAttack",
@@ -2097,7 +2097,7 @@
         ]
     },
     "Cyb-Laser1-GROUND": {
-        "available": "true",
+        "available": true,
         "body": "CyborgLightNAS",
         "id": "Cyb-Laser1-GROUND",
         "name": "Flashlight Gunner",
@@ -2108,7 +2108,7 @@
         ]
     },
     "Cyb-Mechanic": {
-        "available": "true",
+        "available": true,
         "body": "CyborgLightNAS",
         "id": "Cyb-Mechanic",
         "name": "Cyborg Mechanic",
@@ -2117,7 +2117,7 @@
         "type": "CYBORG_REPAIR"
     },
     "Cyb-Rail1-GROUND": {
-        "available": "true",
+        "available": true,
         "body": "CyborgLightNAS",
         "id": "Cyb-Rail1-GROUND",
         "name": "Needle Gunner",
@@ -2128,7 +2128,7 @@
         ]
     },
     "Cyb-Rocket-GROUND": {
-        "available": "false",
+        "available": false,
         "body": "CyborgLightBody",
         "id": "Cyb-Rocket-GROUND",
         "name": "Lancer",
@@ -2139,7 +2139,7 @@
         ]
     },
     "Cyb-RotMG-GROUND": {
-        "available": "true",
+        "available": true,
         "body": "CyborgLightBody",
         "id": "Cyb-RotMG-GROUND",
         "name": "Assault Gunner",
@@ -2150,7 +2150,7 @@
         ]
     },
     "Cyb-Thermite": {
-        "available": "true",
+        "available": true,
         "body": "CyborgLightNAS",
         "id": "Cyb-Thermite",
         "name": "Thermite Flamer",
@@ -2161,7 +2161,7 @@
         ]
     },
     "Cyb-Wpn-Cannon-Sniper": {
-        "available": "true",
+        "available": true,
         "body": "CyborgLightNAS",
         "id": "Cyb-Wpn-Cannon-Sniper",
         "name": "Cyb-Wpn-Cannon-Sniper",
@@ -2172,7 +2172,7 @@
         ]
     },
     "Cyb-Wpn-Mortar1Mk1-Rail": {
-        "available": "true",
+        "available": true,
         "body": "CyborgLightNAS",
         "id": "Cyb-Wpn-Mortar1Mk1-Rail",
         "name": "Cyb-Wpn-Mortar1Mk1-Rail",
@@ -2183,7 +2183,7 @@
         ]
     },
     "Cyb-Wpn-MortarInc": {
-        "available": "true",
+        "available": true,
         "body": "CyborgLightNAS",
         "id": "Cyb-Wpn-MortarInc",
         "name": "Cyb-Wpn-MortarInc",
@@ -2194,7 +2194,7 @@
         ]
     },
     "Cyb-Wpn-Rocket-HvyA-T": {
-        "available": "true",
+        "available": true,
         "body": "CyborgLightNAS",
         "id": "Cyb-Wpn-Rocket-HvyA-T",
         "name": "Cyb-Wpn-Rocket-HvyA-T",
@@ -2205,7 +2205,7 @@
         ]
     },
     "Cyb-Wpn-Rocket-Pod": {
-        "available": "true",
+        "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Wpn-Rocket-Pod",
         "name": "Cyb-Wpn-Rocket-Pod",
@@ -2216,7 +2216,7 @@
         ]
     },
     "Cyb-Wpn-Rocket-Pod-Arch": {
-        "available": "true",
+        "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Wpn-Rocket-Pod-Arch",
         "name": "Cyb-Wpn-Rocket-Pod-Arch",
@@ -2227,7 +2227,7 @@
         ]
     },
     "Cyb-Wpn-Rocket-Pod-MRA": {
-        "available": "true",
+        "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Wpn-Rocket-Pod-MRA",
         "name": "Cyb-Wpn-Rocket-Pod-MRA",
@@ -2238,7 +2238,7 @@
         ]
     },
     "Cyb-Wpn-Rocket-Sunburst": {
-        "available": "true",
+        "available": true,
         "body": "CyborgLightNAS",
         "id": "Cyb-Wpn-Rocket-Sunburst",
         "name": "Cyb-Wpn-Rocket-Sunburst",
@@ -2249,7 +2249,7 @@
         ]
     },
     "Cyb-Wpn-Rocket-Sunburst-Arch": {
-        "available": "true",
+        "available": true,
         "body": "CyborgLightNAS",
         "id": "Cyb-Wpn-Rocket-Sunburst-Arch",
         "name": "Cyb-Wpn-Rocket-Sunburst-Arch",
@@ -2260,7 +2260,7 @@
         ]
     },
     "Cyb-Wpn-SpyTurret01": {
-        "available": "true",
+        "available": true,
         "body": "CyborgLightNAS",
         "id": "Cyb-Wpn-SpyTurret01",
         "name": "Cyb-Wpn-SpyTurret01",
@@ -2271,7 +2271,7 @@
         ]
     },
     "CyborgCannon01Grd": {
-        "available": "true",
+        "available": true,
         "body": "CyborgLightNAS",
         "id": "CyborgCannon01Grd",
         "name": "Heavy Gunner",
@@ -2282,7 +2282,7 @@
         ]
     },
     "CyborgChain01Ground": {
-        "available": "true",
+        "available": true,
         "body": "CyborgLightNAS",
         "id": "CyborgChain01Ground",
         "name": "Machinegunner",
@@ -2293,7 +2293,7 @@
         ]
     },
     "CyborgFlamer01Grd": {
-        "available": "true",
+        "available": true,
         "body": "CyborgLightNAS",
         "id": "CyborgFlamer01Grd",
         "name": "Flamer",
@@ -2304,7 +2304,7 @@
         ]
     },
     "CyborgRkt01Ground": {
-        "available": "true",
+        "available": true,
         "body": "CyborgLightNAS",
         "id": "CyborgRkt01Ground",
         "name": "Lancer",
@@ -2315,7 +2315,7 @@
         ]
     },
     "CyborgRotMgGround": {
-        "available": "true",
+        "available": true,
         "body": "CyborgLightNAS",
         "id": "CyborgRotMgGround",
         "name": "Assault Gunner",
@@ -4267,7 +4267,7 @@
         ]
     },
     "MP-Cyb-ATmiss-GRD": {
-        "available": "true",
+        "available": true,
         "body": "CyborgLightNAS",
         "id": "MP-Cyb-ATmiss-GRD",
         "name": "Scourge",
@@ -4516,7 +4516,7 @@
         ]
     },
     "Mech1": {
-        "available": "true",
+        "available": true,
         "body": "CyborgMecha",
         "id": "Mech1",
         "name": "Mech1",
@@ -4527,7 +4527,7 @@
         ]
     },
     "Mech2": {
-        "available": "true",
+        "available": true,
         "body": "CyborgMecha",
         "id": "Mech2",
         "name": "Mech2",
@@ -4538,7 +4538,7 @@
         ]
     },
     "Mech3": {
-        "available": "true",
+        "available": true,
         "body": "CyborgMecha",
         "id": "Mech3",
         "name": "Mech3",
@@ -4549,7 +4549,7 @@
         ]
     },
     "Mech4": {
-        "available": "true",
+        "available": true,
         "body": "CyborgMecha",
         "id": "Mech4",
         "name": "Mech4",
@@ -4560,7 +4560,7 @@
         ]
     },
     "Mech5": {
-        "available": "true",
+        "available": true,
         "body": "CyborgMecha",
         "id": "Mech5",
         "name": "Mech5",
@@ -4571,7 +4571,7 @@
         ]
     },
     "Mech6": {
-        "available": "true",
+        "available": true,
         "body": "CyborgMecha",
         "id": "Mech6",
         "name": "Mech6",
@@ -4582,7 +4582,7 @@
         ]
     },
     "Mech7": {
-        "available": "true",
+        "available": true,
         "body": "CyborgMecha",
         "id": "Mech7",
         "name": "Mech7",
@@ -8255,7 +8255,7 @@
         ]
     },
     "SuperTransport": {
-        "available": "true",
+        "available": true,
         "body": "SuperTransportBody",
         "id": "SuperTransport",
         "name": "Super Transport",
@@ -8263,7 +8263,7 @@
         "type": "SUPERTRANSPORTER"
     },
     "SuperTransportNAS": {
-        "available": "true",
+        "available": true,
         "body": "SuperTransportNAS",
         "id": "SuperTransportNAS",
         "name": "Super NASDA Transport ",
@@ -8631,7 +8631,7 @@
         ]
     },
     "Transporter": {
-        "available": "true",
+        "available": true,
         "body": "TransporterBody",
         "id": "Transporter",
         "name": "Cyborg Transport",
@@ -8639,7 +8639,7 @@
         "type": "TRANSPORTER"
     },
     "TransporterNAS": {
-        "available": "true",
+        "available": true,
         "body": "TransporterNAS",
         "id": "TransporterNAS",
         "name": "NASDA Cyborg Transport",
@@ -8647,7 +8647,7 @@
         "type": "TRANSPORTER"
     },
     "TruckNAS": {
-        "available": "true",
+        "available": true,
         "body": "Body11REC",
         "construct": "Spade1Mk1NAS",
         "id": "TruckNAS",
