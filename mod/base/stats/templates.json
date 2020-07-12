@@ -1824,7 +1824,7 @@
         "type": "CONSTRUCT"
     },
     "Cyb-Atmiss-GROUND": {
-        "available": true,
+        "available": false,
         "body": "CyborgLightBody",
         "id": "Cyb-Atmiss-GROUND",
         "name": "Scourge",
@@ -2139,7 +2139,7 @@
         ]
     },
     "Cyb-RotMG-GROUND": {
-        "available": true,
+        "available": false,
         "body": "CyborgLightBody",
         "id": "Cyb-RotMG-GROUND",
         "name": "Assault Gunner",
