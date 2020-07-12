@@ -4532,6 +4532,24 @@
         ],
         "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
+    "R-Struc-Factory-Upgrade-AI-T4Undo": {
+        "iconID": "IMAGE_RES_STRUCTURETECH",
+        "id": "R-Struc-Factory-Upgrade-AI-T4Undo",
+        "imdName": "BLFACT1.PIE",
+        "keyTopic": 1,
+        "msgName": "RES_ST_FU1",
+        "name": "Automated AI Production T4 Undo",
+        "researchPoints": 2400,
+        "researchPower": 120,
+        "results": [
+            {
+                "class": "Building",
+                "parameter": "ProductionPoints",
+                "value": -30000
+            }
+        ],
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
+    },
     "R-Struc-Factory-Upgrade01": {
         "iconID": "IMAGE_RES_STRUCTURETECH",
         "id": "R-Struc-Factory-Upgrade01",
