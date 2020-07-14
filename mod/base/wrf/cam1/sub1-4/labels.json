@@ -162,19 +162,19 @@
 	},
 	"object_6": {
 		"label": "ThermalScorpion",
-		"id": 634,
+		"id": 637,
 		"player": 1,
 		"type": 0
 	},
 	"object_7": {
 		"label": "MedCannonHardpoint",
-		"id": 607,
+		"id": 350,
 		"player": 1,
 		"type": 1
 	},
 	"object_8": {
 		"label": "Thermaldroid",
-		"id": 623,
+		"id": 617,
 		"player": 1,
 		"type": 0
 	},
