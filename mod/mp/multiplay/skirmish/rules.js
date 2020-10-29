@@ -443,6 +443,10 @@ function eventGameInit()
 		{
 			setPowerModifier(200 + 15 * powerType, playnum);
 		}
+		else if (playerData[playnum].difficulty == HARD)
+		{
+			setPowerModifier(150 + 10 * powerType, playnum);
+		}
 		else if (playerData[playnum].difficulty == EASY)
 		{
 			setPowerModifier(70 + 5 * powerType, playnum);

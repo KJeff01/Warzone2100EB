@@ -14,6 +14,8 @@ var lastSoundTime; //Only play the "civilian rescued" sound every so often.
 //by destroying the air base or crossing the base3Trigger area.
 function videoTrigger()
 {
+	camSetExtraObjectiveMessage(_("Rescue the civilians from The Collective before too many are captured"));
+
 	setMissionTime(getMissionTime() + camChangeOnDiff(camMinutesToSeconds(30)));
 	civilianOrders();
 	captureCivilians();
@@ -113,7 +115,7 @@ function truckDefense()
 		queue("truckDefense", camSecondsToMilliseconds(160));
 	}
 
-	const LIST = ["WallTower06", "PillBox1", "WallTower03"];
+	const LIST = ["CO-Tower-LtATRkt", "PillBox1", "CO-Tower-MdCan"];
 	camQueueBuilding(THE_COLLECTIVE, LIST[camRand(LIST.length)]);
 }
 

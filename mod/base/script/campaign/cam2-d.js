@@ -23,7 +23,7 @@ function truckDefense()
 		queue("truckDefense", camSecondsToMilliseconds(160));
 	}
 
-	var list = ["AASite-QuadBof", "WallTower04", "GuardTower-RotMg", "WallTower-Projector"];
+	var list = ["AASite-QuadBof", "CO-WallTower-HvCan", "CO-Tower-RotMG", "CO-Tower-HvFlame"];
 	camQueueBuilding(THE_COLLECTIVE, list[camRand(list.length)], camMakePos("uplinkPos"));
 }
 
@@ -59,6 +59,8 @@ function checkNASDACentral()
 
 function eventStartLevel()
 {
+	camSetExtraObjectiveMessage(_("Secure the Uplink from The Collective"));
+
 	camSetStandardWinLossConditions(CAM_VICTORY_OFFWORLD, "SUB_2_6S", {
 		area: "RTLZ",
 		message: "C2D_LZ",

@@ -120,6 +120,8 @@ function sendTransport()
 
 function eventStartLevel()
 {
+	camSetExtraObjectiveMessage(_("Build non-wall structures on the plateau and destroy all New Paradigm reinforcements"));
+
 	totalTransportLoads = 0;
 	blipActive = false;
 

@@ -1827,7 +1827,7 @@
         "available": false,
         "body": "CyborgLightBody",
         "id": "Cyb-Atmiss-GROUND",
-        "name": "Scourge",
+        "name": "Scourge Cyborg",
         "propulsion": "CyborgLegs",
         "type": "CYBORG",
         "weapons": [
@@ -1838,7 +1838,7 @@
         "available": false,
         "body": "CyborgLightBody",
         "id": "Cyb-Cannon-GROUND",
-        "name": "Heavy Gunner",
+        "name": "Heavy Gunner Cyborg",
         "propulsion": "CyborgLegs",
         "type": "CYBORG",
         "weapons": [
@@ -1849,7 +1849,7 @@
         "available": false,
         "body": "CyborgLightBody",
         "id": "Cyb-Chain-GROUND",
-        "name": "Machinegunner",
+        "name": "Machinegunner Cyborg",
         "propulsion": "CyborgLegs",
         "type": "CYBORG",
         "weapons": [
@@ -1861,7 +1861,7 @@
         "body": "CyborgLightNAS",
         "construct": "CyborgSpade",
         "id": "Cyb-ComEng",
-        "name": "Combat Engineer",
+        "name": "Combat Engineer Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG_CONSTRUCT"
     },
@@ -1869,7 +1869,7 @@
         "available": false,
         "body": "CyborgLightBody",
         "id": "Cyb-Flamer-GROUND",
-        "name": "Cyborg Flamer",
+        "name": "Flamer Cyborg",
         "propulsion": "CyborgLegs",
         "type": "CYBORG",
         "weapons": [
@@ -1880,7 +1880,7 @@
         "available": true,
         "body": "CyborgLightNAS",
         "id": "Cyb-Gren",
-        "name": "Grenadier",
+        "name": "Grenadier Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG",
         "weapons": [
@@ -1924,7 +1924,7 @@
         "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvy-IncMortar",
-        "name": "Super Incendiary Grenadier",
+        "name": "Super Incendiary Grenadier Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG_SUPER",
         "weapons": [
@@ -1935,7 +1935,7 @@
         "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvy-Mcannon",
-        "name": "Super Heavy-Gunner",
+        "name": "Super Heavy-Gunner Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG_SUPER",
         "weapons": [
@@ -1957,7 +1957,7 @@
         "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvy-RailGunner",
-        "name": "Super Rail-Gunner",
+        "name": "Super Rail-Gunner Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG_SUPER",
         "weapons": [
@@ -1979,7 +1979,7 @@
         "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvywpn-EMP",
-        "name": "Cyb-Hvywpn-EMP",
+        "name": "Super EMP Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG_SUPER",
         "weapons": [
@@ -1990,7 +1990,7 @@
         "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvywpn-Flamer2",
-        "name": "Cyb-Hvywpn-Flamer2",
+        "name": "Super Twin Flamer Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG_SUPER",
         "weapons": [
@@ -2001,7 +2001,7 @@
         "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvywpn-Flamer3",
-        "name": "Cyb-Hvywpn-Flamer3",
+        "name": "Super Flamer Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG_SUPER",
         "weapons": [
@@ -2012,7 +2012,7 @@
         "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvywpn-MG3",
-        "name": "Cyb-Hvywpn-MG3",
+        "name": "Super Heavy Machinegun Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG_SUPER",
         "weapons": [
@@ -2023,7 +2023,7 @@
         "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvywpn-MG4",
-        "name": "Cyb-Hvywpn-MG4",
+        "name": "Super Assault Gun Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG_SUPER",
         "weapons": [
@@ -2034,7 +2034,7 @@
         "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvywpn-Missile-MdArt",
-        "name": "Cyb-Hvywpn-Missile-MdArt",
+        "name": "Super Twin Thermal Ballistic Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG_SUPER",
         "weapons": [
@@ -2045,7 +2045,7 @@
         "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvywpn-Mortar1Mk1-Ram",
-        "name": "Cyb-Hvywpn-Mortar1Mk1-Ram",
+        "name": "Super Grenadier Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG_SUPER",
         "weapons": [
@@ -2056,7 +2056,7 @@
         "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvywpn-Rocket-LtA-T",
-        "name": "Cyb-Hvywpn-Rocket-LtA-T",
+        "name": "Super Lancer Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG_SUPER",
         "weapons": [
@@ -2067,7 +2067,7 @@
         "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvywpn-Rocket-Sunburst",
-        "name": "Cyb-Hvywpn-Rocket-Sunburst",
+        "name": "Super Ballistic Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG_SUPER",
         "weapons": [
@@ -2078,7 +2078,7 @@
         "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvywpn-Rocket-Sunburst-Arch",
-        "name": "Cyb-Hvywpn-Rocket-Sunburst-Arch",
+        "name": "Super Thermal Ballistic Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG_SUPER",
         "weapons": [
@@ -2089,7 +2089,7 @@
         "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvywpn-Rocket-TopAttack",
-        "name": "Cyb-Hvywpn-Rocket-TopAttack",
+        "name": "Super Twin Ballistic Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG_SUPER",
         "weapons": [
@@ -2100,7 +2100,7 @@
         "available": true,
         "body": "CyborgLightNAS",
         "id": "Cyb-Laser1-GROUND",
-        "name": "Flashlight Gunner",
+        "name": "Flashlight Gunner Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG",
         "weapons": [
@@ -2111,7 +2111,7 @@
         "available": true,
         "body": "CyborgLightNAS",
         "id": "Cyb-Mechanic",
-        "name": "Cyborg Mechanic",
+        "name": "Mechanic Cyborg",
         "propulsion": "CyborgLegsNAS",
         "repair": "CyborgRepair",
         "type": "CYBORG_REPAIR"
@@ -2120,7 +2120,7 @@
         "available": true,
         "body": "CyborgLightNAS",
         "id": "Cyb-Rail1-GROUND",
-        "name": "Needle Gunner",
+        "name": "Needle Gunner Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG",
         "weapons": [
@@ -2131,7 +2131,7 @@
         "available": false,
         "body": "CyborgLightBody",
         "id": "Cyb-Rocket-GROUND",
-        "name": "Lancer",
+        "name": "Lancer Cyborg",
         "propulsion": "CyborgLegs",
         "type": "CYBORG",
         "weapons": [
@@ -2142,7 +2142,7 @@
         "available": false,
         "body": "CyborgLightBody",
         "id": "Cyb-RotMG-GROUND",
-        "name": "Assault Gunner",
+        "name": "Assault Gunner Cyborg",
         "propulsion": "CyborgLegs",
         "type": "CYBORG",
         "weapons": [
@@ -2153,7 +2153,7 @@
         "available": true,
         "body": "CyborgLightNAS",
         "id": "Cyb-Thermite",
-        "name": "Thermite Flamer",
+        "name": "Thermite Flamer Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG",
         "weapons": [
@@ -2164,7 +2164,7 @@
         "available": true,
         "body": "CyborgLightNAS",
         "id": "Cyb-Wpn-Cannon-Sniper",
-        "name": "Cyb-Wpn-Cannon-Sniper",
+        "name": "Sniper Cannon Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG",
         "weapons": [
@@ -2175,7 +2175,7 @@
         "available": true,
         "body": "CyborgLightNAS",
         "id": "Cyb-Wpn-Mortar1Mk1-Rail",
-        "name": "Cyb-Wpn-Mortar1Mk1-Rail",
+        "name": "Incendiary Rail Grenadier Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG",
         "weapons": [
@@ -2186,7 +2186,7 @@
         "available": true,
         "body": "CyborgLightNAS",
         "id": "Cyb-Wpn-MortarInc",
-        "name": "Cyb-Wpn-MortarInc",
+        "name": "Incendiary Grenadier Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG",
         "weapons": [
@@ -2197,7 +2197,7 @@
         "available": true,
         "body": "CyborgLightNAS",
         "id": "Cyb-Wpn-Rocket-HvyA-T",
-        "name": "Cyb-Wpn-Rocket-HvyA-T",
+        "name": "Tank Killer Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG",
         "weapons": [
@@ -2208,7 +2208,7 @@
         "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Wpn-Rocket-Pod",
-        "name": "Cyb-Wpn-Rocket-Pod",
+        "name": "Rocket Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG",
         "weapons": [
@@ -2219,7 +2219,7 @@
         "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Wpn-Rocket-Pod-Arch",
-        "name": "Cyb-Wpn-Rocket-Pod-Arch",
+        "name": "Thermal Rocket Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG",
         "weapons": [
@@ -2230,7 +2230,7 @@
         "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Wpn-Rocket-Pod-MRA",
-        "name": "Cyb-Wpn-Rocket-Pod-MRA",
+        "name": "Mini Rocket Array Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG",
         "weapons": [
@@ -2241,7 +2241,7 @@
         "available": true,
         "body": "CyborgLightNAS",
         "id": "Cyb-Wpn-Rocket-Sunburst",
-        "name": "Cyb-Wpn-Rocket-Sunburst",
+        "name": "Ballistic Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG",
         "weapons": [
@@ -2252,7 +2252,7 @@
         "available": true,
         "body": "CyborgLightNAS",
         "id": "Cyb-Wpn-Rocket-Sunburst-Arch",
-        "name": "Cyb-Wpn-Rocket-Sunburst-Arch",
+        "name": "Thermal Ballistic Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG",
         "weapons": [
@@ -2263,7 +2263,7 @@
         "available": true,
         "body": "CyborgLightNAS",
         "id": "Cyb-Wpn-SpyTurret01",
-        "name": "Cyb-Wpn-SpyTurret01",
+        "name": "Nexus Link Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG",
         "weapons": [
@@ -2274,7 +2274,7 @@
         "available": true,
         "body": "CyborgLightNAS",
         "id": "CyborgCannon01Grd",
-        "name": "Heavy Gunner",
+        "name": "Heavy Gunner Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG",
         "weapons": [
@@ -2285,7 +2285,7 @@
         "available": true,
         "body": "CyborgLightNAS",
         "id": "CyborgChain01Ground",
-        "name": "Machinegunner",
+        "name": "Machinegunner Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG",
         "weapons": [
@@ -2296,7 +2296,7 @@
         "available": true,
         "body": "CyborgLightNAS",
         "id": "CyborgFlamer01Grd",
-        "name": "Flamer",
+        "name": "Flamer Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG",
         "weapons": [
@@ -2307,7 +2307,7 @@
         "available": true,
         "body": "CyborgLightNAS",
         "id": "CyborgRkt01Ground",
-        "name": "Lancer",
+        "name": "Lancer Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG",
         "weapons": [
@@ -2318,7 +2318,7 @@
         "available": true,
         "body": "CyborgLightNAS",
         "id": "CyborgRotMgGround",
-        "name": "Assault Gunner",
+        "name": "Assault Gunner Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG",
         "weapons": [
@@ -4270,7 +4270,7 @@
         "available": true,
         "body": "CyborgLightNAS",
         "id": "MP-Cyb-ATmiss-GRD",
-        "name": "Scourge",
+        "name": "Scourge Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG",
         "weapons": [
@@ -4519,7 +4519,7 @@
         "available": true,
         "body": "CyborgMecha",
         "id": "Mech1",
-        "name": "Mech1",
+        "name": "Cannon Mech",
         "propulsion": "MechLegs",
         "type": "CYBORG",
         "weapons": [
@@ -4530,7 +4530,7 @@
         "available": true,
         "body": "CyborgMecha",
         "id": "Mech2",
-        "name": "Mech2",
+        "name": "Flamer Mech",
         "propulsion": "MechLegs",
         "type": "CYBORG",
         "weapons": [
@@ -4541,7 +4541,7 @@
         "available": true,
         "body": "CyborgMecha",
         "id": "Mech3",
-        "name": "Mech3",
+        "name": "Lancer Mech",
         "propulsion": "MechLegs",
         "type": "CYBORG",
         "weapons": [
@@ -4552,7 +4552,7 @@
         "available": true,
         "body": "CyborgMecha",
         "id": "Mech4",
-        "name": "Mech4",
+        "name": "Assault Machinegun Mech",
         "propulsion": "MechLegs",
         "type": "CYBORG",
         "weapons": [
@@ -4563,7 +4563,7 @@
         "available": true,
         "body": "CyborgMecha",
         "id": "Mech5",
-        "name": "Mech5",
+        "name": "Scourge Missile Mech",
         "propulsion": "MechLegs",
         "type": "CYBORG",
         "weapons": [
@@ -4574,7 +4574,7 @@
         "available": true,
         "body": "CyborgMecha",
         "id": "Mech6",
-        "name": "Mech6",
+        "name": "Pulse Laser Mech",
         "propulsion": "MechLegs",
         "type": "CYBORG",
         "weapons": [
@@ -4585,7 +4585,7 @@
         "available": true,
         "body": "CyborgMecha",
         "id": "Mech7",
-        "name": "Mech7",
+        "name": "Rail Gun Mech",
         "propulsion": "MechLegs",
         "type": "CYBORG",
         "weapons": [
@@ -4853,7 +4853,7 @@
     "NX-Cyb-Miss-JUMP": {
         "body": "CyborgLightBody",
         "id": "NX-Cyb-Miss-JUMP",
-        "name": "*NX-Cyb-Miss-JUMP*",
+        "name": "Nexus Scourge Missile Cyborg",
         "propulsion": "CyborgLegs",
         "sensor": "NavGunSensor",
         "type": "CYBORG",
@@ -4864,7 +4864,7 @@
     "NX-Cyb-PulseLas-JUMP": {
         "body": "CyborgLightBody",
         "id": "NX-Cyb-PulseLas-JUMP",
-        "name": "*NX-Cyb-PulseLas-JUMP*",
+        "name": "Nexus laser Cyborg",
         "propulsion": "CyborgLegs",
         "sensor": "NavGunSensor",
         "type": "CYBORG",
@@ -4875,7 +4875,7 @@
     "NX-Cyb-Rail1-JUMP": {
         "body": "CyborgLightBody",
         "id": "NX-Cyb-Rail1-JUMP",
-        "name": "*NX-Cyb-JUMP*",
+        "name": "Nexus Needle Cyborg",
         "propulsion": "CyborgLegs",
         "sensor": "NavGunSensor",
         "type": "CYBORG",

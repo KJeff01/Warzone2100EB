@@ -1550,8 +1550,7 @@
         "resultStructures": [
             "WallTower-EMP"
         ],
-        "statID": "WallTower-EMP",
-        "subgroupIconID": "IMAGE_RES_GRPUPG"
+        "statID": "WallTower-EMP"
     },
     "R-Defense-EMPMortar": {
         "iconID": "IMAGE_RES_DEFENCE",
@@ -1566,8 +1565,7 @@
         "resultStructures": [
             "Emplacement-MortarEMP"
         ],
-        "statID": "Emplacement-MortarEMP",
-        "subgroupIconID": "IMAGE_RES_GRPUPG"
+        "statID": "Emplacement-MortarEMP"
     },
     "R-Defense-Emplacement-HPVcannon": {
         "iconID": "IMAGE_RES_DEFENCE",
@@ -1885,7 +1883,7 @@
         "resultStructures": [
             "Emplacement-Howitzer150"
         ],
-        "statID": "Emplacement-Howitzer105"
+        "statID": "Emplacement-Howitzer150"
     },
     "R-Defense-HvyHowitzer-Gat": {
         "iconID": "IMAGE_RES_DEFENCE",
@@ -2058,7 +2056,7 @@
         "resultStructures": [
             "Emplacement-MortarPit02"
         ],
-        "statID": "Emplacement-MortarPit01"
+        "statID": "Emplacement-MortarPit02"
     },
     "R-Defense-HvyMor-Inc": {
         "iconID": "IMAGE_RES_DEFENCE",
@@ -4060,8 +4058,7 @@
         "resultStructures": [
             "WallTower06"
         ],
-        "statID": "WallTower06",
-        "subgroupIconID": "IMAGE_RES_GRPACC"
+        "statID": "WallTower06"
     },
     "R-Defense-WallUpgrade01": {
         "iconID": "IMAGE_RES_DEFENCE",
@@ -9121,8 +9118,7 @@
         "resultComponents": [
             "EMP-Cannon"
         ],
-        "statID": "EMP-Cannon",
-        "subgroupIconID": "IMAGE_RES_GRPUPG"
+        "statID": "EMP-Cannon"
     },
     "R-Wpn-Energy-Accuracy01": {
         "iconID": "IMAGE_RES_WEAPONTECH",
@@ -9620,7 +9616,7 @@
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Flamer-Damage07",
         "msgName": "RES_W_FL_D7",
-        "name": "Superhot Plasmite gel",
+        "name": "Superhot Plasmite Gel",
         "requiredResearch": [
             "R-Wpn-Flamer-Damage06",
             "R-Wpn-Plasmite-Flamer"
@@ -9685,7 +9681,7 @@
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Flamer-Damage08",
         "msgName": "RES_W_FL_D8",
-        "name": "Superhot Plasmite gel Mk2",
+        "name": "Superhot Plasmite Gel Mk2",
         "requiredResearch": [
             "R-Wpn-Flamer-Damage07"
         ],
@@ -9749,7 +9745,7 @@
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Flamer-Damage09",
         "msgName": "RES_W_FL_D9",
-        "name": "Superhot Plasmite gel Mk3",
+        "name": "Superhot Plasmite Gel Mk3",
         "requiredResearch": [
             "R-Wpn-Flamer-Damage08"
         ],
