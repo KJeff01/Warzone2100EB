@@ -95,8 +95,10 @@ function truckDefense()
 			camQueueBuilding(NEXUS, list[camRand(list.length)]);
 		}
 	}
-
-	queue("truckDefense", camChangeOnDiff(camMinutesToMilliseconds(5)));
+	else
+	{
+		removeTimer("truckDefense");
+	}
 }
 
 function changeColors()
@@ -327,6 +329,7 @@ function eventStartLevel()
 	hackAddMessage("CM34_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER);
 
 	queue("enableAllFactories", camChangeOnDiff(camMinutesToMilliseconds(10)));
+	setTimer("truckDefense", camChangeOnDiff(camMinutesToMilliseconds(5)));
 	setTimer("changeColors", camSecondsToMilliseconds(100));
 	ultScav_eventStartLevel(
 		1, // vtols on/off. -1 = off

@@ -109,6 +109,7 @@ function getArtifact()
 {
 	if (groupSize(artiGroup) === 0)
 	{
+		removeTimer("getArtifact");
 		return;
 	}
 
@@ -162,8 +163,6 @@ function getArtifact()
 			regroup: false
 		});
 	}
-
-	queue("getArtifact", camSecondsToMilliseconds(0.2));
 }
 
 //New Paradigm truck builds six lancer hardpoints around LZ
@@ -217,6 +216,11 @@ function eventPickup(feature, droid)
 			camCallOnce("removeCanyonBlip");
 		}
 	}
+}
+
+function startArtifactCollection()
+{
+	setTimer("getArtifact", camSecondsToMilliseconds(0.2));
 }
 
 //Mission setup stuff
@@ -321,7 +325,7 @@ function eventStartLevel()
 	buildLancers();
 
 	hackAddMessage("C1-7_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, true); //Canyon
-	queue("getArtifact", camChangeOnDiff(camMinutesToMilliseconds(1.5)));
+	queue("startArtifactCollection", camChangeOnDiff(camMinutesToMilliseconds(1.5)));
 	ultScav_eventStartLevel(
 		1, // vtols on/off. -1 = off
 		55, // build defense every x seconds

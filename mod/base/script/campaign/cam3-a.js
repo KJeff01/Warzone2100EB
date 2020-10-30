@@ -94,6 +94,7 @@ function sendPlayerTransporter()
 
 	if (index === transportLimit)
 	{
+		removeTimer("sendPlayerTransporter");
 		return;
 	}
 
@@ -114,7 +115,6 @@ function sendPlayerTransporter()
 	);
 
 	index = index + 1;
-	queue("sendPlayerTransporter", camMinutesToMilliseconds(5));
 }
 
 //Setup Nexus VTOL hit and runners.
@@ -155,18 +155,6 @@ function groupPatrolNoTrigger()
 	});
 
 	camManageGroup(camMakeGroup("NAmbushCyborgs"), CAM_ORDER_ATTACK);
-}
-
-//Build defenses.
-function truckDefense()
-{
-	if (enumDroid(NEXUS, DROID_CONSTRUCT).length > 0)
-	{
-		queue("truckDefense", camSecondsToMilliseconds(160));
-	}
-
-	const DEFENSE = ["NX-Tower-Rail1", "NX-Tower-ATMiss"];
-	camQueueBuilding(NEXUS, DEFENSE[camRand(DEFENSE.length)]);
 }
 
 //Gives starting tech and research.
@@ -335,7 +323,6 @@ function eventStartLevel()
 	});
 
 	camManageTrucks(NEXUS);
-	truckDefense();
 	camPlayVideos(["MB3A_MSG", "MB3A_MSG2"]);
 	startedFromMenu = false;
 
@@ -345,6 +332,7 @@ function eventStartLevel()
 		startedFromMenu = true;
 		setReinforcementTime(LZ_COMPROMISED_TIME);
 		sendPlayerTransporter();
+		setTimer("sendPlayerTransporter", camMinutesToMilliseconds(5));
 	}
 	else
 	{

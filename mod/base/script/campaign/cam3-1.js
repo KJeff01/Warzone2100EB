@@ -163,10 +163,7 @@ function setupNextMission()
 		hackAddMessage("CM31_HIDE_LOC", PROX_MSG, CAM_HUMAN_PLAYER);
 
 		setReinforcementTime(-1);
-	}
-	else
-	{
-		queue("setupNextMission", camSecondsToMilliseconds(2));
+		removeTimer("setupNextMission");
 	}
 }
 
@@ -204,8 +201,6 @@ function getCountdown()
 			break;
 		}
 	}
-
-	queue("getCountdown", camSecondsToMilliseconds(0.4));
 }
 
 function enableAllFactories()
@@ -361,7 +356,8 @@ function eventStartLevel()
 	cyborgAttack();
 	getCountdown();
 
-	queue("setupNextMission", camSecondsToMilliseconds(8));
+	setTimer("getCountdown", camSecondsToMilliseconds(0.4));
+	setTimer("setupNextMission", camSecondsToMilliseconds(2));
 	queue("hoverAttack", camChangeOnDiff(camMinutesToMilliseconds(4)));
 	queue("vtolAttack", camChangeOnDiff(camMinutesToMilliseconds(5)));
 	queue("enableAllFactories", camChangeOnDiff(camMinutesToMilliseconds(5)));

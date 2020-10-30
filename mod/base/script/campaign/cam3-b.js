@@ -115,8 +115,10 @@ function sendNXTransporter()
 			entry: { x: 62, y: 4 },
 			exit: { x: 62, y: 4 }
 		});
-
-		queue("sendNXTransporter", camChangeOnDiff(camMinutesToMilliseconds(3)));
+	}
+	else
+	{
+		removeTimer("sendNXTransporter");
 	}
 }
 
@@ -125,6 +127,7 @@ function sendNXlandReinforcements()
 {
 	if (!enumArea("NXWestBaseCleanup", NEXUS, false).length)
 	{
+		removeTimer("sendNXlandReinforcements");
 		return;
 	}
 
@@ -133,8 +136,6 @@ function sendNXlandReinforcements()
 			data: {regroup: true, count: -1,},
 		}
 	);
-
-	queue("sendNXlandReinforcements", camChangeOnDiff(camMinutesToMilliseconds(4)));
 }
 
 function transferPower()
@@ -188,16 +189,6 @@ function activateNexusGroups()
 //Take everything Gamma has and donate to Nexus.
 function trapSprung()
 {
-	if (!trapActive)
-	{
-		playSound("pcv455.ogg"); //Incoming message.
-		trapActive = true;
-		setAlliance(GAMMA, NEXUS, false);
-		setAlliance(GAMMA, ULTSCAV, true);
-		queue("trapSprung", camSecondsToMilliseconds(2)); //call this a few seconds later
-		return;
-	}
-
 	setAlliance(GAMMA, NEXUS, true);
 	setAlliance(GAMMA, CAM_HUMAN_PLAYER, false);
 	setAlliance(GAMMA, ULTSCAV, true);
@@ -208,15 +199,21 @@ function trapSprung()
 	camCallOnce("activateNexusGroups");
 	enableAllFactories();
 
-	queue("sendNXlandReinforcements", camChangeOnDiff(camMinutesToMilliseconds(5)));
 	sendNXTransporter();
 	changePlayerColour(GAMMA, NEXUS); // Black painting.
 	playSound(SYNAPTICS_ACTIVATED);
+
+	setTimer("sendNXTransporter", camChangeOnDiff(camMinutesToMilliseconds(3)));
+	setTimer("sendNXlandReinforcements", camChangeOnDiff(camMinutesToMilliseconds(4)));
 }
 
 function setupCapture()
 {
-	trapSprung();
+	trapActive = true;
+	playSound("pcv455.ogg"); //Incoming message.
+	setAlliance(GAMMA, NEXUS, false);
+
+	queue("trapSprung", camSecondsToMilliseconds(2)); //call this a few seconds later
 }
 
 function eventAttacked(victim, attacker)

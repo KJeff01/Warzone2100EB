@@ -105,7 +105,6 @@ function vaporizeTarget()
 	//Droid or structure was destroyed before firing so pick a new one.
 	if (!camDef(target))
 	{
-		queue("vaporizeTarget", camSecondsToMilliseconds(0.1));
 		return;
 	}
 	if (Math.floor(mapLimit) < Math.floor(mapHeight / 2))
@@ -316,6 +315,8 @@ function eventStartLevel()
 	queue("vaporizeTarget", camSecondsToMilliseconds(2));
 	queue("setupGroups", camSecondsToMilliseconds(5));
 	queue("enableAllFactories", camChangeOnDiff(camMinutesToMilliseconds(5)));
+
+	setTimer("vaporizeTarget", camSecondsToMilliseconds(10));
 	ultScav_eventStartLevel(
 		1, // vtols on/off. -1 = off
 		65, // build defense every x seconds

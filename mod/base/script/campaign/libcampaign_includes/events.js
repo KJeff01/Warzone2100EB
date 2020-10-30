@@ -96,7 +96,7 @@ function cam_eventChat(from, to, message)
 
 function cam_eventStartLevel()
 {
-	isReceivingAllEvents = true;
+	receiveAllEvents(true);
 	// Variables initialized here are the ones that should not be
 	// re-initialized on save-load. Otherwise, they are initialized
 	// on the global scope (or wherever necessary).
@@ -121,7 +121,6 @@ function cam_eventStartLevel()
 	__camVtolStartPosition = {};
 	__camVtolTemplates = {};
 	__camVtolExitPosition = {};
-	__camVtolTimer = 0;
 	__camVtolSpawnActive = false;
 	__camVtolExtras = {};
 	__camLastNexusAttack = 0;
@@ -139,7 +138,7 @@ function cam_eventStartLevel()
 	setTimer("__camTruckTick", camSecondsToMilliseconds(40) + camSecondsToMilliseconds(0.1)); // some slower campaign pollers
 	setTimer("__camAiPowerReset", camMinutesToMilliseconds(3)); //reset AI power every so often
 	setTimer("__camShowVictoryConditions", camMinutesToMilliseconds(5));
-	queue("__camTacticsTick", camSecondsToMilliseconds(0.1)); // would re-queue itself
+	setTimer("__camTacticsTick", camSecondsToMilliseconds(0.1));
 	queue("__camGrantSpecialResearch", camSecondsToMilliseconds(6));
 }
 
@@ -296,7 +295,7 @@ function cam_eventAttacked(victim, attacker)
 //Work around some things that break on save-load.
 function cam_eventGameLoaded()
 {
-	isReceivingAllEvents = true;
+	receiveAllEvents(true);
 	__camSaveLoading = true;
 	const SCAV_KEVLAR_MISSIONS = [
 		"CAM_1CA", "SUB_1_4AS", "SUB_1_4A", "SUB_1_5S", "SUB_1_5",

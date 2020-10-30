@@ -97,9 +97,10 @@ function vtolAttack()
 //Order the truck to build some defenses.
 function truckDefense()
 {
-	if (enumDroid(THE_COLLECTIVE, DROID_CONSTRUCT).length > 0)
+	if (enumDroid(THE_COLLECTIVE, DROID_CONSTRUCT).length === 0)
 	{
-		queue("truckDefense", camSecondsToMilliseconds(160));
+		removeTimer("truckDefense");
+		return;
 	}
 
 	const list = ["CO-Tower-LtATRkt", "PillBox1", "CO-Tower-MdCan"];
@@ -223,6 +224,7 @@ function eventStartLevel()
 	hackAddMessage("C22_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, true);
 
 	queue("vtolAttack", camMinutesToMilliseconds(2));
+	setTimer("truckDefense", camSecondsToMilliseconds(160));
 	ultScav_eventStartLevel(
 		-1, // vtols on/off. -1 = off
 		45, // build defense every x seconds

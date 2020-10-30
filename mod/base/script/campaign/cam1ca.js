@@ -88,13 +88,11 @@ function sendTransport()
 	if (lastHeavy)
 	{
 		lastHeavy = false;
-		queue("sendTransport", camChangeOnDiff(camMinutesToMilliseconds(1.5)));
 		templates = [ cTempl.nppod, cTempl.nphmg, cTempl.npmrl, cTempl.npsmc ];
 	}
 	else
 	{
 		lastHeavy = true;
-		queue("sendTransport", camChangeOnDiff(camMinutesToMilliseconds(3)));
 		templates = [ cTempl.npsmct, cTempl.npmor, cTempl.npsmc, cTempl.npmmct, cTempl.npmrl, cTempl.nphmg, cTempl.npsbb ];
 	}
 
@@ -116,6 +114,12 @@ function sendTransport()
 	});
 
 	totalTransportLoads = totalTransportLoads + 1;
+}
+
+function startTransporterAttack()
+{
+	sendTransport();
+	setTimer("sendTransport", camChangeOnDiff(camMinutesToMilliseconds(2.2)));
 }
 
 function eventStartLevel()
@@ -145,6 +149,6 @@ function eventStartLevel()
 	setMissionTime(camChangeOnDiff(camMinutesToSeconds(30)));
 	camPlayVideos("MB1CA_MSG");
 
-	// first transport after 10 seconds; will re-queue itself
-	queue('sendTransport', camSecondsToMilliseconds(10));
+	// first transport after 10 seconds
+	queue("startTransporterAttack", camSecondsToMilliseconds(10));
 }

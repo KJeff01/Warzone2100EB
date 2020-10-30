@@ -116,12 +116,15 @@ function sendTransport()
 
 	if (index === 5)
 	{
+		removeTimer("sendTransport");
 		return;
 	}
-	else
-	{
-		queue("sendTransport", camChangeOnDiff(camMinutesToMilliseconds(1)));
-	}
+}
+
+function startTransporterAttack()
+{
+	sendTransport();
+	setTimer("sendTransport", camChangeOnDiff(camMinutesToMilliseconds(1)));
 }
 
 function eventStartLevel()
@@ -152,5 +155,5 @@ function eventStartLevel()
 	index = 0;
 	switchLZ = 0;
 
-	queue("sendTransport", camSecondsToMilliseconds(10));
+	queue("startTransporterAttack", camSecondsToMilliseconds(10));
 }
