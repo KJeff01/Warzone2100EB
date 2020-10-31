@@ -105,6 +105,7 @@ function vaporizeTarget()
 	//Droid or structure was destroyed before firing so pick a new one.
 	if (!camDef(target))
 	{
+		queue("vaporizeTarget", camSecondsToMilliseconds(0.1));
 		return;
 	}
 	if (Math.floor(mapLimit) < Math.floor(mapHeight / 2))
@@ -115,7 +116,6 @@ function vaporizeTarget()
 		mapLimit = mapLimit + 0.36; //sector clear; move closer
 	}
 	laserSatFuzzyStrike(target);
-	queue("vaporizeTarget", camSecondsToMilliseconds(10));
 }
 
 //A simple way to fire the LasSat with a chance of missing.
