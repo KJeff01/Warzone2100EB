@@ -4850,7 +4850,7 @@
         "weaponWav": "hevlsr.ogg",
         "weight": 140000
     },
-    "Howitzer-Incenediary": {
+    "Howitzer-Incendiary": {
         "buildPoints": 1200,
         "buildPower": 150,
         "damage": 200,
@@ -4864,7 +4864,7 @@
         "flightSpeed": 1500,
         "hitGfx": "FXVLExp.PIE",
         "hitpoints": 10,
-        "id": "Howitzer-Incenediary",
+        "id": "Howitzer-Incendiary",
         "lightWorld": 1,
         "longHit": 35,
         "longRange": 4992,
@@ -8226,7 +8226,7 @@
         "weaponWav": "rocket.ogg",
         "weight": 200000
     },
-    "Mortar-Incenediary": {
+    "Mortar-Incendiary": {
         "buildPoints": 750,
         "buildPower": 100,
         "damage": 80,
@@ -8240,7 +8240,7 @@
         "flightSpeed": 1500,
         "hitGfx": "fxgrdexS.PIE",
         "hitpoints": 5,
-        "id": "Mortar-Incenediary",
+        "id": "Mortar-Incendiary",
         "lightWorld": 1,
         "longHit": 30,
         "longRange": 2304,
@@ -12859,7 +12859,7 @@
         "weaponWav": "hevlsr.ogg",
         "weight": 200000
     },
-    "Str-Emp-Howitzer-Incenediary": {
+    "Str-Emp-Howitzer-Incendiary": {
         "buildPoints": 1000,
         "buildPower": 150,
         "damage": 225,
@@ -12872,7 +12872,7 @@
         "flightSpeed": 1500,
         "hitGfx": "FXVLExp.PIE",
         "hitpoints": 10,
-        "id": "Str-Emp-Howitzer-Incenediary",
+        "id": "Str-Emp-Howitzer-Incendiary",
         "lightWorld": 1,
         "longHit": 35,
         "longRange": 5504,
@@ -13357,7 +13357,7 @@
         "weaponWav": "rocket.ogg",
         "weight": 28000
     },
-    "Str-Emp-Mortar-Incenediary": {
+    "Str-Emp-Mortar-Incendiary": {
         "buildPoints": 750,
         "buildPower": 100,
         "damage": 80,
@@ -13369,7 +13369,7 @@
         "flightSpeed": 1500,
         "hitGfx": "fxgrdexS.PIE",
         "hitpoints": 5,
-        "id": "Str-Emp-Mortar-Incenediary",
+        "id": "Str-Emp-Mortar-Incendiary",
         "lightWorld": 1,
         "longHit": 30,
         "longRange": 2432,

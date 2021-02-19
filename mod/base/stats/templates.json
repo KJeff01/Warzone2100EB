@@ -3027,7 +3027,7 @@
         "propulsion": "tracked01",
         "type": "DROID",
         "weapons": [
-            "Mortar-Incenediary"
+            "Mortar-Incendiary"
         ]
     },
     "HPythonLtCnTrks": {
@@ -3583,8 +3583,8 @@
         "propulsion": "tracked01",
         "type": "DROID",
         "weapons": [
-            "Mortar-Incenediary",
-            "Mortar-Incenediary"
+            "Mortar-Incendiary",
+            "Mortar-Incendiary"
         ]
     },
     "HvyHPython-Trk-TwinAssaultCannon": {
@@ -3671,8 +3671,8 @@
         "propulsion": "tracked01NAS",
         "type": "DROID",
         "weapons": [
-            "Mortar-Incenediary",
-            "Mortar-Incenediary"
+            "Mortar-Incendiary",
+            "Mortar-Incendiary"
         ]
     },
     "HvyLeopard-Trk-TwinAssaultCannon": {
@@ -3759,8 +3759,8 @@
         "propulsion": "tracked01",
         "type": "DROID",
         "weapons": [
-            "Mortar-Incenediary",
-            "Mortar-Incenediary"
+            "Mortar-Incendiary",
+            "Mortar-Incendiary"
         ]
     },
     "HvyMantis-Trk-TwinAssaultCannon": {
@@ -3803,8 +3803,8 @@
         "propulsion": "tracked01",
         "type": "DROID",
         "weapons": [
-            "Mortar-Incenediary",
-            "Mortar-Incenediary"
+            "Mortar-Incendiary",
+            "Mortar-Incendiary"
         ]
     },
     "HvyMantisHeat-Trk-TwinAssaultCannon": {
@@ -4157,8 +4157,8 @@
         "propulsion": "tracked01",
         "type": "DROID",
         "weapons": [
-            "Mortar-Incenediary",
-            "Mortar-Incenediary"
+            "Mortar-Incendiary",
+            "Mortar-Incendiary"
         ]
     },
     "HvyPythonMedCanTracks": {
@@ -4305,7 +4305,7 @@
         "propulsion": "tracked01",
         "type": "DROID",
         "weapons": [
-            "Mortar-Incenediary"
+            "Mortar-Incendiary"
         ]
     },
     "Mantis-Heat-Trk-TwinAssaultCannon": {
@@ -4346,7 +4346,7 @@
         "propulsion": "tracked01",
         "type": "DROID",
         "weapons": [
-            "Mortar-Incenediary"
+            "Mortar-Incendiary"
         ]
     },
     "Mantis-Trk-TwinAssaultCannon": {
@@ -5798,7 +5798,7 @@
         "propulsion": "tracked01",
         "type": "DROID",
         "weapons": [
-            "Mortar-Incenediary"
+            "Mortar-Incendiary"
         ]
     },
     "PythonLtCnTrks": {
@@ -7649,7 +7649,7 @@
         "propulsion": "tracked01",
         "type": "DROID",
         "weapons": [
-            "Howitzer-Incenediary"
+            "Howitzer-Incendiary"
         ]
     },
     "SK-Tiger-Track-NexusTurret": {
@@ -7975,14 +7975,14 @@
             "CommandTurret1"
         ]
     },
-    "Scorp-Heat-Trk-Mortar-Incenediary": {
+    "Scorp-Heat-Trk-Mortar-Incendiary": {
         "body": "Body18MED",
-        "id": "Scorp-Heat-Trk-Mortar-Incenediary",
+        "id": "Scorp-Heat-Trk-Mortar-Incendiary",
         "name": "Incendiary Mortar Thermal Scorpion Tracks",
         "propulsion": "tracked01",
         "type": "DROID",
         "weapons": [
-            "Mortar-Incenediary"
+            "Mortar-Incendiary"
         ]
     },
     "Scorp-Helicopter-HvyMG": {
@@ -8016,14 +8016,14 @@
             "CommandTurret1"
         ]
     },
-    "Scorp-Trk-Mortar-Incenediary": {
+    "Scorp-Trk-Mortar-Incendiary": {
         "body": "Body8MBT",
-        "id": "Scorp-Trk-Mortar-Incenediary",
+        "id": "Scorp-Trk-Mortar-Incendiary",
         "name": "Incendiary Mortar Scorpion Tracks",
         "propulsion": "tracked01",
         "type": "DROID",
         "weapons": [
-            "Mortar-Incenediary"
+            "Mortar-Incendiary"
         ]
     },
     "ScorpBBTracks": {
