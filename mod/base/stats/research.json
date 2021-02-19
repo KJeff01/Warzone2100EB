@@ -1748,9 +1748,6 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Howitzer-Rail",
         "name": "Howitzer Rail Emplacement",
-        "redStructures": [
-            "Howitzer105Mk1-RailPlasSuper"
-        ],
         "requiredResearch": [
             "R-Defense-Howitzer",
             "R-Wpn-HowitzerMk1-Rail"
