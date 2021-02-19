@@ -323,11 +323,11 @@ function eventStartLevel()
 	});
 
 	camManageTrucks(NEXUS);
-	camPlayVideos(["MB3A_MSG", "MB3A_MSG2"]);
+	camPlayVideos(["CAM3_INT", "MB3A_MSG2"]);
 	startedFromMenu = false;
 
 	//Only if starting Gamma directly rather than going through Beta
-	if (enumDroid(CAM_HUMAN_PLAYER, DROID_TRANSPORTER).length === 0)
+	if (enumDroid(CAM_HUMAN_PLAYER, DROID_SUPERTRANSPORTER).length === 0)
 	{
 		startedFromMenu = true;
 		setReinforcementTime(LZ_COMPROMISED_TIME);

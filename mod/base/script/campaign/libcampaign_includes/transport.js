@@ -20,7 +20,7 @@ function camIsTransporter(object)
 		return false;
 	}
 
-	return ((object.droidType === DROID_TRANSPORTER) || (object.droidType === DROID_SUPERTRANSPORTER));
+	return object.droidType === DROID_SUPERTRANSPORTER;
 }
 
 //;; ## camSetupTransport(place x, place y, exit x, exit y)
@@ -149,4 +149,13 @@ function __camLandTransporter(player, pos)
 	camTrace("Landing transport for player", player);
 	playSound("pcv395.ogg", pos.x, pos.y, 0); //Incoming enemy transport.
 	camManageGroup(camMakeGroup(ti.droids), ti.order, ti.data);
+}
+
+function __camRemoveIncomingTransporter(player)
+{
+	// allow the next transporter to enter
+	if (camDef(__camIncomingTransports[player]))
+	{
+		delete __camIncomingTransports[player];
+	}
 }

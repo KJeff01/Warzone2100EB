@@ -248,10 +248,9 @@ function setupGame()
 	// Enable all templates
 	setDesign(true);
 
+	showInterface(); // init buttons. This MUST come before setting the reticule button data
 	setMainReticule();
-	showInterface();
 	mainReticule = true;
-	hackPlayIngameAudio();
 }
 
 function scavengerInit()

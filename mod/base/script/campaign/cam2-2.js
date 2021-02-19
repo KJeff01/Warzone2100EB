@@ -84,7 +84,7 @@ camAreaEvent("failZone", function(droid)
 	}
 	else
 	{
-		resetLabel("failZone");
+		resetLabel("failZone", THE_COLLECTIVE);
 	}
 });
 
@@ -168,7 +168,7 @@ function eventStartLevel()
 		"PepperPotEmp": { tech: "R-Wpn-Mortar3" },
 		"RoboticRepair": { tech: "R-Struc-RprFac-Upgrade04" },
 	});
-	
+
 	camCompleteRequiredResearch(CAM2_2_RES_COL, THE_COLLECTIVE);
 	camCompleteRequiredResearch(CAM2_2_RES_COL, ULTSCAV);
 
