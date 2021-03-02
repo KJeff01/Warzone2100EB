@@ -1,3 +1,23 @@
+function completeResearchOnTime(time, playnum)
+{
+	for (var tech in allRes)
+	{
+		if (allRes[tech] <= time)
+		{
+			completeResearch(tech, playnum);
+		}
+	}
+}
+
+var allRes = {
+	"R-Vehicle-Prop-Wheels": 0,
+	"R-Sys-Spade1Mk1": 0,
+	"R-Vehicle-Body01": 0,
+	"R-Sys-Sensor-Upgrade00": 0,
+	"R-Vehicle-Body26": 0,
+	"R-Sys-Sensor-Upgrade00": 0,
+	"R-Vehicle-Body26": 0,
+};
 
 const TECH_TWO = [
      "R-Comp-CommandTurret01",
@@ -414,38 +434,3 @@ const TECH_THREE = [
      "R-Defense-HvyMor-Inc",
      "R-Defense-SuperRamjetMortar",
 ];
-
-//Automatically research these items for the player.
-function grantTech(tech)
-{
-     var len = tech.length;
-     for (var c = 0; c < maxPlayers; ++c)
-     {
-          for (var i = 0; i < len; ++i)
-          {
-               completeResearch(tech[i], c);
-          }
-     }
-}
-
-//Automatically research all items for the player.
-function grantAllTech()
-{
-     for (var c = 0; c < maxPlayers; ++c)
-     {
-          completeAllResearch(c);
-     }
-}
-
-//Makes these items available for research.
-function enableTech(tech)
-{
-     var len = tech.length;
-     for (var c = 0; c < maxPlayers; ++c)
-     {
-          for (var i = 0; i < len; ++i)
-          {
-               enableResearch(tech[i], c);
-          }
-     }
-}
