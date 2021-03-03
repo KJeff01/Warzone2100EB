@@ -4,7 +4,7 @@ In order to keep using the original parent project's art assets (reserved for "w
 projects are located within the folder "mix" under modified yet similar filenames in their respective folders.
 
 ### Updating the mod
-Copy all the contents of these folders into the main mod, EB-Mod.wz. Always copy folder "override" as the final step since it may
+Copy all the contents of these folders into the main mod, EB-Mod.wz. Always copy folder "override" (should it exist) as the final step since it may
 contain bugfixes from the master branch of the parent project.
 
 ### Credits
