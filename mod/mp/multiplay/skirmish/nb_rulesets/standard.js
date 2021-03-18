@@ -845,16 +845,80 @@ const weaponStats = {
 		"R-Defense-HeavyLas",
 		],
 	},
+	lasers_AA:
+	{
+		roles: [ 0.0, 0.0, 0.0, 1.0 ],
+		chatalias: "las_AA",
+		micro: MICRO.RANGED,
+		weapons: [
+			{ res: "R-Wpn-AALaser", stat: "AAGunLaser", weight: WEIGHT.ULTRAHEAVY }, // stormbringer
+		],
+		vtols: [],
+		defenses: [
+			{ res: "R-Defense-AA-Laser", stat: "P0-AASite-Laser", defrole: DEFROLE.STANDALONE }, // stormbringer
+		],
+		templates: [],
+		extras: [
+			"R-Defense-Tower01",
+			"R-Wpn-MG-Damage02",
+			"R-Vehicle-Prop-Halftracks",
+			"R-Wpn-Flamer01Mk1",
+			"R-Struc-PowerModuleMk1",
+			"R-Struc-Research-Upgrade03",
+			"R-Sys-MobileRepairTurret01",
+			"R-Vehicle-Body05",
+			"R-Wpn-Flame2",
+			"R-Struc-RepairFacility",
+			"R-Wpn-Flamer-ROF03",
+			"R-Wpn-Flamer-Damage06",
+			"R-Vehicle-Metals03",
+			"R-Wpn-Flamer-Range03",
+			"R-Cyborg-Metals04",
+			"R-Sys-Autorepair-General",
+			"R-Struc-Power-Upgrade03a",
+			"R-Vehicle-Body11",
+			"R-Vehicle-Prop-Hover",
+			"R-Wpn-Bomb04",
+			"R-Vehicle-Body06",
+			"R-Cyborg-Engine04",
+			"R-Struc-VTOLPad-Upgrade03",
+			"R-Sys-MobileRepairTurretHvy",
+			"R-Vehicle-Body10",
+			"R-Wpn-Energy-Accuracy01",
+			"R-Defense-Pillbox05",
+			"R-Defense-HvyFlamer",
+			"R-Struc-Materials03",
+			"R-Vehicle-Prop-Tracks",
+			"R-Defense-WallUpgrade02",
+			"R-Vehicle-Metals09",
+			"R-Cyborg-Metals09",
+			"R-Wpn-Bomb-Damage06",
+			"R-Struc-VTOLPad-Upgrade06",
+			"R-Sys-SpyTurret",
+			"R-Defense-PlasmiteFlamer",
+			"R-Wpn-HvyLaser",
+			"R-Wpn-AALaser",
+			"R-Wpn-Energy-ROF03",
+			"R-Wpn-Energy-Damage03",
+			"R-Struc-Factory-Upgrade09",
+			"R-Sys-Sensor-UpLink",
+			"R-Defense-AA-Laser",
+			"R-Vehicle-Body14",
+			"R-Defense-WallUpgrade04",
+			"R-Defense-PulseLas",
+			"R-Defense-WallTower-PulseLas",
+			"R-Defense-HeavyLas",
+		],
+	},
 	useless_AT: {
 		roles: [ 1.0, 0.0, 0.0, 0.0 ],
 		chatalias: "useless_AT",
+		micro: MICRO.RANGED,
 		weapons: [
-			{ stat: "CannonSuper" }, // cannon fort weapon
-			{ stat: "RocketSuper" }, // rocket bastion weapon
-			{ stat: "MissileSuper" }, // missile fort weapon
-			{ stat: "MassDriver" }, // mass driver fort weapon
-			{ stat: "MortarEMP" }, // emp mortar
-			{ stat: "EMP-Cannon" }, // emp cannon
+			{ stat: "CannonSuper", weight: WEIGHT.ULTRAHEAVY }, // cannon fort weapon
+			{ stat: "RocketSuper", weight: WEIGHT.ULTRAHEAVY }, // rocket bastion weapon
+			{ stat: "MissileSuper", weight: WEIGHT.ULTRAHEAVY }, // missile fort weapon
+			{ stat: "MassDriver", weight: WEIGHT.ULTRAHEAVY }, // mass driver fort weapon
 		],
 		vtols: [],
 		defenses: [],
@@ -864,12 +928,12 @@ const weaponStats = {
 	useless_AP: {
 		roles: [ 0.0, 1.0, 0.0, 0.0 ],
 		chatalias: "useless_AP",
+		micro: MICRO.RANGED,
 		weapons: [
-			{ stat: "MG1-Pillbox" }, // imaginary invisible single mg, may be found on some maps
-			{ stat: "MG2-Pillbox" }, // imaginary invisible twin mg, may be found on some maps
-			{ stat: "MG3-Pillbox" }, // mg bunker dedicated weapon
-			{ stat: "NEXUSlink" }, // nexus link (still unused)
-			{ stat: "MG4ROTARY-Pillbox" }, // ag bunker dedicated weapon
+			{ stat: "MG1-Pillbox", weight: WEIGHT.LIGHT }, // imaginary invisible single mg, may be found on some maps
+			{ stat: "MG2-Pillbox", weight: WEIGHT.LIGHT }, // imaginary invisible twin mg, may be found on some maps
+			{ stat: "MG3-Pillbox", weight: WEIGHT.MEDIUM }, // mg bunker dedicated weapon
+			{ stat: "MG4ROTARY-Pillbox", weight: WEIGHT.MEDIUM }, // ag bunker dedicated weapon
 		],
 		vtols: [],
 		defenses: [],
@@ -879,24 +943,116 @@ const weaponStats = {
 	useless_AS: {
 		roles: [ 0.0, 0.0, 1.0, 0.0 ],
 		chatalias: "useless_AS",
+		micro: MICRO.DUMB,
 		weapons: [
-			{ stat: "PlasmaHeavy" }, // plasma cannon (still unused)
+			{ stat: "PlasmaHeavy", weight: WEIGHT.ULTRAHEAVY }, // heavy plasma launcher (still unused)
 		],
 		vtols: [],
 		defenses: [],
 		templates: [],
 		extras: [],
 	},
-	useless_AA: {
+	machinegun_AA: {
 		roles: [ 0.0, 0.0, 0.0, 1.0 ],
-		chatalias: "useless_AA",
+		chatalias: "mg_AA",
+		micro: MICRO.RANGED,
+		defenses: [
+			{ res: "R-Defense-AASite-QuadMg1", stat: "AASite-QuadMg1", defrole: DEFROLE.STANDALONE }, // hurricane
+			{ res: "R-Defense-AASite-QuadRotMg", stat: "AASite-QuadRotMg", defrole: DEFROLE.STANDALONE }, // whirlwind
+			{ res: "R-Defense-WallTower-QuadRotAA", stat: "WallTower-QuadRotAAGun", defrole: DEFROLE.GATEWAY }, //whirlwind hard
+		],
+		templates: [],
+		extras: [
+			"R-Wpn-AAGun-ROF06",
+			"R-Wpn-AAGun-Damage06",
+			"R-Wpn-AAGun-Accuracy03",
+		],
+	},
+	energy: {
+		roles: [ 0.5, 0.4, 0.1, 0.0 ],
+		chatalias: "ener",
+		micro: MICRO.DUMB,
 		weapons: [
-			{ stat: "QuadMg1AAGun" }, // hurricane (still unused)
-			{ stat: "QuadRotAAGun" }, // whirlwind (still unused)
+			{ res: "R-Comp-CommandTurret01", stat: "CommandTurret1", weight: WEIGHT.LIGHT }, // command turret
+			{ res: "R-Sys-SpyTurret", stat: "SpyTurret01", weight: WEIGHT.LIGHT }, // nexus link
 		],
 		vtols: [],
-		defenses: [],
+		defenses: [
+			{ res: "R-Sys-SpyTower", stat: "Sys-SpyTower", defrole: DEFROLE.STANDALONE }, // nexus link tower
+		],
+		templates: [],
+		extras: [
+			"R-Sys-Resistance-Circuits",
+		],
+	},
+	emp: {
+		roles: [ 0.7, 0.3, 0.0, 0.0 ],
+		chatalias: "emp",
+		micro: MICRO.DUMB,
+		weapons: [
+			{ res: "R-Wpn-MortarEMP", stat: "MortarEMP", weight: WEIGHT.HEAVY }, // emp mortar
+			{ res: "R-Wpn-EMPCannon", stat: "EMP-Cannon", weight: WEIGHT.ULTRAHEAVY  }, // emp cannon
+		],
+		vtols: [
+			{ res: "R-Wpn-Bomb06", stat: "Bomb6-VTOL-EMP", weight: WEIGHT.HEAVY }, // emp missile launcher
+		],
+		defenses: [
+			{ res: "R-Defense-EMPMortar", stat: "Emplacement-MortarEMP", defrole: DEFROLE.STANDALONE }, // emp mortar pit
+			{ res: "R-Defense-EMPCannon", stat: "WallTower-EMP", defrole: DEFROLE.STANDALONE }, // emp cannon hardpoint
+		],
 		templates: [],
 		extras: [],
+	},
+	plasmaCannon: {
+		roles: [ 0.9, 0.0, 0.1, 0.0 ],
+		chatalias: "plsmcan",
+		micro: MICRO.DUMB,
+		weapons: [
+			{ res: "R-Wpn-PlasmaCannon", stat: "Laser4-PlasmaCannon", weight: WEIGHT.ULTRAHEAVY  }, // plasma cannon
+		],
+		vtols: [],
+		defenses: [
+			{ res: "R-Defense-PlasmaCannon", stat: "Emplacement-PlasmaCannon", defrole: DEFROLE.STANDALONE }, // plasma cannon empl
+		],
+		templates: [],
+		extras: [
+			"R-Wpn-Cannon-ROF06",
+			"R-Wpn-Rail-Damage03", // sure it's required by gauss, but what if our AI uses only cyborgs and vtols?
+			"R-Wpn-Rail-ROF03",
+			"R-Defense-Tower01",
+			"R-Wpn-MG-Damage02",
+			"R-Wpn-Cannon1Mk1",
+			"R-Struc-PowerModuleMk1",
+			"R-Vehicle-Prop-Halftracks",
+			"R-Wpn-Cannon2Mk1",
+			"R-Sys-Autorepair-General",
+			"R-Sys-MobileRepairTurret01",
+			"R-Vehicle-Body05",
+			"R-Wpn-Cannon4AMk1",
+			"R-Wpn-Cannon6TwinAslt",
+			"R-Struc-RepairFacility",
+			"R-Cyborg-Hvywpn-Mcannon",
+			"R-Vehicle-Body12",
+			"R-Cyborg-Hvywpn-Acannon",
+			"R-Struc-Power-Upgrade03a",
+			"R-Struc-Factory-Upgrade09",
+			"R-Wpn-MG4",
+			"R-Vehicle-Prop-Tracks",
+			"R-Wpn-Cannon-Mount03",
+			"R-Wpn-MG-Damage04",
+			"R-Wpn-Cannon-Damage09",
+			"R-Cyborg-Metals09",
+			"R-Cyborg-Engine04",
+			"R-Wpn-MG5",
+			"R-Wpn-Cannon-ROF06",
+			"R-Sys-Sensor-Upgrade02",
+			"R-Wpn-Cannon-Accuracy02",
+			"R-Wpn-RailGun03",
+			"R-Wpn-EMPCannon",
+			"R-Vehicle-Body14",
+			"R-Defense-WallTower-DoubleAAgun",
+			"R-Struc-Materials02",
+			"R-Defense-WallUpgrade02",
+		],
 	},
 };
