@@ -5,7 +5,7 @@
  */
 
 function eventStartLevel() {
-	queue("checkResearch");
+	queue("checkResearch", 100);
 	queue("setTimers", me * 100);
 	if (alliancesType === ALLIANCES_TEAMS) {
 		// initialize subpersonality pseudo-randomly here
@@ -53,16 +53,20 @@ function eventDroidBuilt(droid, structure) {
 }
 
 function eventResearched(research, structure, player)	{
-	queue("checkResearch");
+	queue("checkResearch", 100);
 }
 
 
 function eventStructureBuilt(structure) {
+	if (!structure)
+	{
+		return;
+	}
 	if (structure.stattype === RESEARCH_LAB || structure.stattype === POWER_GEN || structure.stattype === FACTORY) {
-		queue("upgradeModule", structure);
+		queue("upgradeModule", 100, structure);
 	}
 	if (structure.stattype === RESOURCE_EXTRACTOR){
-		queue("captureSomeOil");
+		queue("captureSomeOil", 100);
 	}
 }
 

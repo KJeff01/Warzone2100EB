@@ -375,7 +375,7 @@ _global.checkConstruction = function() {
 		recycleDefenses,
 		buildDefenses,
 	]))
-		queue("checkConstruction");
+		queue("checkConstruction", 100);
 }
 
 _global.upgradeModule = function(_struct) {

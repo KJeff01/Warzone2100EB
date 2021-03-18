@@ -221,7 +221,7 @@ _global.checkProduction = function() {
 	if (myPower() > personality.maxPower) {
 		checkTankProduction();
 		checkTemplateProduction();
-		queue("checkConstruction");
+		queue("checkConstruction", 100);
 		checkVtolProduction();
 	}
 		switch(chooseObjectType()) {
