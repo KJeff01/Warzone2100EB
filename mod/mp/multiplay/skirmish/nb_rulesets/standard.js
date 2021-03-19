@@ -956,11 +956,16 @@ const weaponStats = {
 		roles: [ 0.0, 0.0, 0.0, 1.0 ],
 		chatalias: "mg_AA",
 		micro: MICRO.RANGED,
+		weapons: [
+			{ res: "R-Wpn-AAGun03", stat: "QuadMg1AAGun", weight: WEIGHT.ULTRAHEAVY }, // hurricane
+			{ res: "R-Wpn-AAGun04", stat: "QuadRotAAGun", weight: WEIGHT.ULTRAHEAVY }, // whirlwind
+		],
 		defenses: [
 			{ res: "R-Defense-AASite-QuadMg1", stat: "AASite-QuadMg1", defrole: DEFROLE.STANDALONE }, // hurricane
 			{ res: "R-Defense-AASite-QuadRotMg", stat: "AASite-QuadRotMg", defrole: DEFROLE.STANDALONE }, // whirlwind
 			{ res: "R-Defense-WallTower-QuadRotAA", stat: "WallTower-QuadRotAAGun", defrole: DEFROLE.GATEWAY }, //whirlwind hard
 		],
+		vtols: [],
 		templates: [],
 		extras: [
 			"R-Wpn-AAGun-ROF06",
