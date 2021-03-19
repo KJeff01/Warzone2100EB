@@ -3270,13 +3270,13 @@
         "name": "heavychopper",
         "powerOutput": 100000,
         "propulsionExtraModels": {
-            "Helicopter": {
-                "left": "prmheli1.pie",
-                "moving": "hvyblades.pie",
-                "right": "prmheli1.pie",
-                "still": "mediumheli_rotor_stationary.pie"
-            }
-        },
+			"Helicopter": {
+				"left": "prmheli1.pie",
+				"moving": "hvyblades.pie",
+				"still": "hvyblades-still.pie",
+				"right": "prmheli1.pie"
+			}
+		},
         "size": "LIGHT",
         "weaponSlots": 1,
         "weight": 30000

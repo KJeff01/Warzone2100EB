@@ -47,8 +47,11 @@ file		TEXPAGE	"page-2-crane.png"
 file		TEXPAGE	"page-3-bababus.png"
 file		TEXPAGE	"page-4-scav.png"
 file		TEXPAGE	"page-50-chopperblades.png"
+file        TEXPAGE "page-51-chopperblades.png"
 file		TEXPAGE	"page-111.png"
 file		TEXPAGE	"page-112-scav-vtol-fac.png"
 file		TEXPAGE	"page-113-chopper.png"
 file		TEXPAGE	"page-400-barbarians-arizona.png"
-
+/* WZ Graphics Mod */
+file		TEXPAGE	"page-110-player-buildings.png"
+file		TEXPAGE	"page-201-droid-drives.png"
