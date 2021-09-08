@@ -64,15 +64,15 @@ camAreaEvent("NPFactoryTrigger", function(droid)
 //Land New Paradigm transport in the LZ area (protected by four hardpoints in the New Paradigm base)
 camAreaEvent("NPLZTrigger", function()
 {
-	sendNPTransport();
 	setTimer("sendNPTransport", camChangeOnDiff(camMinutesToMilliseconds(3)));
+	sendNPTransport();
 });
 
 function sendNPTransport()
 {
-	var tPos = getObject("NPTransportPos");
-	var nearbyDefense = enumRange(tPos.x, tPos.y, 6, NEW_PARADIGM, false);
-
+	var nearbyDefense = enumArea("LandingZone2", NEW_PARADIGM, false).filter(function(obj) {
+		return (obj.type === STRUCTURE && obj.stattype === DEFENSE);
+	});
 	if (nearbyDefense.length > 0)
 	{
 		var list = getDroidsForNPLZ();
