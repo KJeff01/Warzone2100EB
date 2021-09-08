@@ -552,7 +552,7 @@
         "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-Cyborg-Hvywpn-HPV",
         "msgName": "RES_CYW_H_HPV",
-        "name": "Super HPV Cyborg",
+        "name": "Super HVC Cyborg",
         "redComponents": [
             "Cyb-Hvywpn-Mcannon"
         ],
@@ -1397,7 +1397,7 @@
     "R-Defense-Cannon4AUTOMk1-Hvy-Aslt": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Cannon4AUTOMk1-Hvy-Aslt",
-        "name": "Heavy HPV Emplacement",
+        "name": "Heavy HVC Emplacement",
         "requiredResearch": [
             "R-Wpn-Cannon-Mount02",
             "R-Defense-WallUpgrade04"
@@ -1412,7 +1412,7 @@
     "R-Defense-Cannon4AUTOMk1-Hvy-Inc": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Cannon4AUTOMk1-Hvy-Inc",
-        "name": "Heavy Incendiary HPV Hardpoint",
+        "name": "Heavy Incendiary HVC Hardpoint",
         "requiredResearch": [
             "R-Wpn-Cannon4AMk1-Hvy-Inc",
             "R-Defense-WallUpgrade04"
@@ -5502,7 +5502,7 @@
         "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-SuperTransport": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-SuperTransport",
         "keyTopic": 1,
         "msgName": "RES_SUPERTRANS",
@@ -8899,7 +8899,7 @@
         "id": "R-Wpn-Cannon4AMk1-Hvy",
         "keyTopic": 1,
         "msgName": "RES_W_CN_4A_H",
-        "name": "Heavy HPV Cannon",
+        "name": "Heavy HVC Cannon",
         "requiredResearch": [
             "R-Wpn-Cannon4AMk1",
             "R-Wpn-Cannon3Mk1"
@@ -8915,7 +8915,7 @@
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Cannon4AMk1-Hvy-Inc",
         "msgName": "RES_W_CN_4A_HI",
-        "name": "Incendiary Augmented HPV",
+        "name": "Incendiary Augmented HVC",
         "requiredResearch": [
             "R-Wpn-Cannon4AMk1-Hvy",
             "R-Wpn-Cannon5-Inc"
@@ -12733,7 +12733,7 @@
     "R-Wpn-PlasmaCannon-Hvy-Aslt": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-PlasmaCannon-Hvy-Aslt",
-        "name": "Heavy Plasma Cannon ",
+        "name": "Heavy Plasma Cannon",
         "redComponents": [
             "Laser4-PlasmaCannon"
         ],

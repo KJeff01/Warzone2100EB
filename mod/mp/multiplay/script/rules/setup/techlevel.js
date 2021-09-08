@@ -1,4 +1,4 @@
-function seupTechLevel(player)
+function setupTechLevel(player)
 {
 	completeResearchOnTime(0, player);
 

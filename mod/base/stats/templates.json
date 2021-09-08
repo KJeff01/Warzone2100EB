@@ -1913,7 +1913,7 @@
         "available": true,
         "body": "CyborgHeavyNAS",
         "id": "Cyb-Hvy-HPV",
-        "name": "Super HPV Cyborg",
+        "name": "Super HVC Cyborg",
         "propulsion": "CyborgLegsNAS",
         "type": "CYBORG_SUPER",
         "weapons": [
@@ -2488,7 +2488,7 @@
     "H-Scorp-Heat-Trk-HPV": {
         "body": "Body18MED",
         "id": "H-Scorp-Heat-Trk-HPV",
-        "name": "HPV Thermal Scorpion Tracks",
+        "name": "HVC Thermal Scorpion Tracks",
         "propulsion": "tracked01",
         "type": "DROID",
         "weapons": [
@@ -2538,7 +2538,7 @@
     "H-Scorp-Trk-HPV": {
         "body": "Body8MBT",
         "id": "H-Scorp-Trk-HPV",
-        "name": "HPV Scorpion Tracks",
+        "name": "HVC Scorpion Tracks",
         "propulsion": "tracked01",
         "type": "DROID",
         "weapons": [
@@ -2973,7 +2973,7 @@
     "HPythonHPVHalfTrack": {
         "body": "Body22HVY",
         "id": "HPythonHPVHalfTrack",
-        "name": "HPV HPython Half Track",
+        "name": "HVC HPython Half Track",
         "propulsion": "HalfTrack",
         "type": "DROID",
         "weapons": [
@@ -5744,7 +5744,7 @@
     "PythonHPVHalfTrack": {
         "body": "Body11ABT",
         "id": "PythonHPVHalfTrack",
-        "name": "HPV Python Half Track",
+        "name": "HVC Python Half Track",
         "propulsion": "HalfTrack",
         "type": "DROID",
         "weapons": [
@@ -8266,7 +8266,7 @@
         "available": true,
         "body": "SuperTransportNAS",
         "id": "SuperTransportNAS",
-        "name": "Super NASDA Transport ",
+        "name": "Super NASDA Transport",
         "propulsion": "V-Tol",
         "type": "SUPERTRANSPORTER"
     },

@@ -1,7 +1,5 @@
 function setupScavenger()	// inside hackNetOff()
 {
-	// NOTE: Keep this stuff in sync with scavfact.js or else desyncs could happen
-
 	// Returns true if something is defined
 	function isDefined(data)
 	{
@@ -12,7 +10,6 @@ function setupScavenger()	// inside hackNetOff()
 	const factory = "A0BaBaFactory";
 	const vtolfac = "A0BaBaVtolFactory";
 	const gen = "A0BaBaPowerGenerator";
-	const oilres = "OilResource";
 	const repair = "ScavRepairCentre";
 	const vtolpad = "A0BaBaVtolPad";
 
@@ -82,8 +79,8 @@ function setupScavenger()	// inside hackNetOff()
 	];
 
 	const vtolTemplates = [
-		["ScavengerChopper","MG1-VTOL-SCAVS"],
-		["HeavyChopper","Rocket-VTOL-Pod-SCAVS"],
+		["ScavengerChopper", "MG1-VTOL-SCAVS"],
+		["HeavyChopper", "Rocket-VTOL-Pod-SCAVS"],
 	];
 
 	for (var i = 0, len = templates.length; i < len; ++i)
@@ -121,16 +118,45 @@ function setupScavenger()	// inside hackNetOff()
 	}
 
 	const SCAV_COMPONENTS = [
-		"B4body-sml-trike01", "B3body-sml-buggy01", "B2JeepBody", "BusBody",
-		"FireBody", "B1BaBaPerson01", "BaBaProp", "BaBaLegs", "bTrikeMG",
-		"BuggyMG", "BJeepMG", "BusCannon", "BabaFlame", "BaBaMG",
-		"B2crane1", "scavCrane1", "B2crane2", "scavCrane2", "ScavSensor",
-		"Helicopter", "B2RKJeepBody", "B2tractor", "B3bodyRKbuggy01",
-		"HeavyChopper", "ScavCamperBody", "ScavengerChopper", "ScavIcevanBody",
-		"ScavNEXUSbody", "ScavNEXUStrack", "ScavTruckBody", "MG1-VTOL",
-		"Rocket-VTOL-Pod", "ScavNEXUSlink", "BaBaCannon", "BabaPitRocket",
-		"BabaPitRocketAT", "BabaRocket", "BabaRPG", "babawep",
-		"BTowerMG", "Mortar1Mk1", "B1BaBaPerson02",
+		"B4body-sml-trike01",
+		"B3body-sml-buggy01",
+		"B2JeepBody",
+		"BusBody",
+		"FireBody",
+		"B1BaBaPerson01",
+		"BaBaProp",
+		"BaBaLegs",
+		"bTrikeMG",
+		"BuggyMG",
+		"BJeepMG",
+		"BusCannon",
+		"BabaFlame",
+		"BaBaMG",
+		"B2crane1",
+		"scavCrane1",
+		"B2crane2",
+		"scavCrane2",
+		"ScavSensor",
+		"Helicopter",
+		"B2RKJeepBody",
+		"B2tractor",
+		"B3bodyRKbuggy01",
+		"HeavyChopper",
+		"ScavCamperBody",
+		"ScavengerChopper",
+		"ScavIcevanBody",
+		"ScavNEXUSbody",
+		"ScavNEXUStrack",
+		"ScavTruckBody",
+		"MG1-VTOL-SCAVS",
+		"Rocket-VTOL-Pod-SCAVS",
+		"ScavNEXUSlink",
+		"BaBaCannon",
+		"BabaPitRocket",
+		"BabaPitRocketAT",
+		"BabaRocket",
+		"BTowerMG",
+		"Mortar1Mk1",
 	];
 
 	for (var i = 0, len = SCAV_COMPONENTS.length; i < len; ++i)
@@ -149,9 +175,4 @@ function setupScavenger()	// inside hackNetOff()
 	{
 		enableStructure(defenses[i], scavengerPlayer);
 	}
-}
-
-function scavengerInit()
-{
-
 }

@@ -5022,7 +5022,7 @@
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
                 "filterValue": "A-A GUN",
-                "parameter": "Reload",
+                "parameter": "ReloadTime",
                 "value": -10
             }
         ],
@@ -6119,7 +6119,7 @@
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
                 "filterValue": "ENERGY",
-                "parameter": "Reload",
+                "parameter": "ReloadTime",
                 "value": -15
             }
         ],
