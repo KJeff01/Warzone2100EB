@@ -5602,9 +5602,7 @@
         "researchPower": 475,
         "results": [
             {
-                "class": "Weapon",
-                "filterParameter": "ImpactClass",
-                "filterValue": "CANNON",
+                "class": "ECM",
                 "parameter": "Range",
                 "value": 15
             }
