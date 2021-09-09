@@ -2,6 +2,7 @@ PIE 3
 TYPE 10200
 TEXTURE 0 page-117-mediumwheels.png 0 0
 NORMALMAP 0 page-117_normalmap2.png
+SPECULARMAP 0 page-117_spec.png
 LEVELS 1
 LEVEL 1
 POINTS 78

@@ -2,6 +2,7 @@ PIE 3
 TYPE 10200
 TEXTURE 0 page-67-sensor.png 0 0
 NORMALMAP 0 page-67_normalmap.png
+SPECULARMAP 0 page-67_spec.png
 LEVELS 1
 LEVEL 1
 POINTS 69

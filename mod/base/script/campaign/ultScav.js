@@ -314,11 +314,11 @@ function ultScav_setTech(tech_level)
 
 		ultScav_templates = {
 			bloke: { body: "B1BaBaPerson01", prop: "BaBaLegs", weap: "BabaMG" },
-			trike: { body: "B4body-sml-trike01", prop: "BaBaProp", weap: "BabaTrikeMG" },
-			buggy: { body: "B3body-sml-buggy01", prop: "BaBaProp", weap: "BabaBuggyMG" },
-			bjeep: { body: "B2JeepBody", prop: "BaBaProp", weap: "BabaJeepMG" },
-			rbjeep: { body: "B2RKJeepBody", prop: "BaBaProp", weap: "BabaRocket" },
-			rbuggy: { body: "B3bodyRKbuggy01", prop: "BaBaProp", weap: "BabaRocket" },
+			trike: { body: "B4body-sml-trike01-AR", prop: "BaBaProp", weap: "BabaTrikeMG" },
+			buggy: { body: "B3body-sml-buggy01-AR", prop: "BaBaProp", weap: "BabaBuggyMG" },
+			bjeep: { body: "B2JeepBody-AR", prop: "BaBaProp", weap: "BabaJeepMG" },
+			rbjeep: { body: "B2RKJeepBody-AR", prop: "BaBaProp", weap: "BabaRocket" },
+			rbuggy: { body: "B3bodyRKbuggy01-AR", prop: "BaBaProp", weap: "BabaRocket" },
 		};
 
 		ultScav_vtoltemplates = {
@@ -627,7 +627,7 @@ function ultscav_buildFactoryModule(fac)
 		{
 			var truck = trucks[j];
 			var shouldBuild = ((gameTime - factory.born) >= 240000) && camDist(truck.x, truck.y, factory.x, factory.y) <= 20;
-			
+
 			if (shouldBuild && (truck.order !== DORDER_BUILD) && orderDroidBuild(truck, DORDER_BUILD, module, factory.x, factory.y))
 			{
 				success = true;

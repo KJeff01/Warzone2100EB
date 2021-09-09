@@ -2,6 +2,7 @@ PIE 3
 TYPE 200
 TEXTURE 0 page-113-scav_vehicles.png 0 0
 NORMALMAP 0 page-113_normalmap.png
+SPECULARMAP 0 page-113_spec.png
 LEVELS 1
 LEVEL 1
 POINTS 184

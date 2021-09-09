@@ -2,6 +2,7 @@ PIE 3
 TYPE 200
 TEXTURE 0 tiger_comp.png 0 0
 NORMALMAP 0 tiger_nor.png
+SPECULARMAP 0 tiger_spec.png
 LEVELS 1
 LEVEL 1
 POINTS 100
