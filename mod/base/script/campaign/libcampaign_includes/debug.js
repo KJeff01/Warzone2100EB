@@ -98,7 +98,7 @@ function camTrace()
 		return;
 	}
 	__camGenericDebug("TRACE",
-	                   debugGetCallerFuncName(),
+	                  debugGetCallerFuncName(),
 	                  arguments);
 }
 
@@ -113,7 +113,7 @@ function camTraceOnce()
 	{
 		return;
 	}
-	var str =  debugGetCallerFuncName() + ": " + Array.prototype.join.call(arguments, " ");
+	var str = debugGetCallerFuncName() + ": " + Array.prototype.join.call(arguments, " ");
 	if (camDef(__camTracedOnce[str]))
 	{
 		return;

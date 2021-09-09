@@ -15,7 +15,7 @@ function camNextLevel(nextLevel)
 		var bonusTime = getMissionTime();
 		if (difficulty === EASY || difficulty === MEDIUM)
 		{
-			bonusTime = Math.floor(bonusTime * 0.15);
+			bonusTime = Math.floor(bonusTime * 0.75);
 		}
 		if (bonusTime > 0)
 		{
@@ -29,9 +29,9 @@ function camNextLevel(nextLevel)
 				bonus = 100;
 			}
 			camTrace("Bonus time", bonusTime);
-			//setPowerModifier(bonus); // Bonus percentage for completing fast
+			setPowerModifier(bonus); // Bonus percentage for completing fast
 			extraPowerTime(bonusTime);
-			//setPowerModifier(100);
+			setPowerModifier(100);
 		}
 	}
 	camBreakAlliances();
@@ -253,7 +253,7 @@ function __camPlayerDead()
 		}
 	}
 
-	if (__camWinLossCallback === "__camVictoryTimeout")
+	if (__camWinLossCallback === CAM_VICTORY_TIMEOUT)
 	{
 		//Make the mission fail if no units are alive on map while having no factories.
 		var droidCount = 0;
