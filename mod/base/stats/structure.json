@@ -5697,6 +5697,26 @@
         "type": "DEFENSE",
         "width": 1
     },
+    "Sys-RadarDetector02": {
+        "armour": 15,
+        "breadth": 1,
+        "buildPoints": 3100,
+        "buildPower": 135,
+        "ecmID": "ZNULLECM",
+        "height": 4,
+        "hitpoints": 700,
+        "id": "Sys-RadarDetector02",
+        "name": "Large Radar Detector Tower",
+        "resistance": 150,
+        "sensorID": "RadarDetector",
+        "strength": "MEDIUM",
+        "structureModel": [
+            "BLGUARDR.pie"
+        ],
+        "thermal": 15,
+        "type": "DEFENSE",
+        "width": 1
+    },
     "Sys-SensoTower01": {
         "armour": 10,
         "breadth": 1,
@@ -5828,7 +5848,7 @@
         "id": "Sys-SensoTowerWS",
         "name": "Wide Spectrum Sensor Tower",
         "resistance": 150,
-        "sensorID": "Sensor-WideSpecTower",
+        "sensorID": "Sensor-WideSpec",
         "strength": "HARD",
         "structureModel": [
             "Blgrdnex.PIE"

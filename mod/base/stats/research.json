@@ -1358,6 +1358,36 @@
         ],
         "statID": "AASite-QuadRotMg"
     },
+    "R-Defense-AASite-QuadMg1AAGun-Scav": {
+        "iconID": "IMAGE_RES_WEAPONTECH",
+        "id": "R-Defense-AASite-QuadMg1AAGun-Scav",
+        "msgName": "RES_EMP_SAM1",
+        "name": "AA Turret Site",
+        "requiredResearch": [
+            "R-Wpn-AAGun05"
+        ],
+        "researchPoints": 1600,
+        "researchPower": 85,
+        "resultStructures": [
+            "AASite-QuadMg1AAGun-Scav"
+        ],
+        "statID": "AASite-QuadMg1AAGun-Scav"
+    },
+    "R-Defense-AASite-QuadRotAAGun-Scav": {
+        "iconID": "IMAGE_RES_WEAPONTECH",
+        "id": "R-Defense-AASite-QuadRotAAGun-Scav",
+        "name": "Cyclone AA Turret Site",
+        "msgName": "RES_EMP_SAM1",
+        "requiredResearch": [
+            "R-Wpn-AAGun06"
+        ],
+        "researchPoints": 4200,
+        "researchPower": 225,
+        "resultStructures": [
+            "AASite-QuadRotAAGun-Scav"
+        ],
+        "statID": "AASite-QuadRotAAGun-Scav"
+    },
     "R-Defense-CB-Tower02": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-CB-Tower02",
@@ -1394,6 +1424,21 @@
         ],
         "statID": "Sys-CB-Tower03"
     },
+    "R-Defense-Cannon4AUTOMk1-Full-Aslt": {
+        "iconID": "IMAGE_RES_DEFENCE",
+        "id": "R-Defense-Cannon4AUTOMk1-Full-Aslt",
+        "name": "Full Assault Cannon Emplacement",
+        "requiredResearch": [
+            "R-Wpn-Cannon-Mount03",
+            "R-Defense-WallUpgrade04"
+        ],
+        "researchPoints": 5400,
+        "researchPower": 260,
+        "resultStructures": [
+            "Emplacement-Cannon4AUTOMk1-Full-Aslt"
+        ],
+        "statID": "Emplacement-Cannon4AUTOMk1-Full-Aslt"
+    },
     "R-Defense-Cannon4AUTOMk1-Hvy-Aslt": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Cannon4AUTOMk1-Hvy-Aslt",
@@ -1423,6 +1468,52 @@
             "WallTower2-Cannon4AUTOMk1-Hvy-Inc"
         ],
         "statID": "WallTower2-Cannon4AUTOMk1-Hvy-Inc"
+    },
+    "R-Defense-Tower-VulcanCan": {
+        "iconID": "IMAGE_RES_DEFENCE",
+        "id": "R-Defense-Tower-VulcanCan",
+        "name": "Assault Cannon Tower",
+        "requiredResearch": [
+            "R-Wpn-Cannon5",
+            "R-Defense-WallUpgrade04"
+        ],
+        "researchPoints": 4800,
+        "researchPower": 240,
+        "resultStructures": [
+            "Tower-VulcanCan"
+        ],
+        "statID": "Tower-VulcanCan"
+    },
+    "R-Defense-Tower2-Cannon5VulcanMk1-Inc": {
+        "iconID": "IMAGE_RES_WEAPONTECH",
+        "id": "R-Defense-Tower2-Cannon5VulcanMk1-Inc",
+        "msgName": "RES_W_CN6_T_AI",
+        "name": "Incendiary Assault Cannon Tower",
+        "requiredResearch": [
+            "R-Wpn-Cannon5-Inc",
+            "R-Defense-WallUpgrade04"
+        ],
+        "researchPoints": 4800,
+        "researchPower": 240,
+        "resultStructures": [
+            "Tower2-Cannon5VulcanMk1-Inc"
+        ],
+        "statID": "Tower2-Cannon5VulcanMk1-Inc"
+    },
+    "R-Defense-Cannon5VulcanMk1-Gat": {
+        "iconID": "IMAGE_RES_DEFENCE",
+        "id": "R-Defense-Cannon5VulcanMk1-Gat",
+        "name": "Rotary Cannon Emplacement",
+        "requiredResearch": [
+            "R-Wpn-Cannon-Mount02",
+            "R-Defense-WallUpgrade04"
+        ],
+        "researchPoints": 4800,
+        "researchPower": 240,
+        "resultStructures": [
+            "Emplacement-Cannon5VulcanMk1-Gat"
+        ],
+        "statID": "Emplacement-Cannon5VulcanMk1-Gat"
     },
     "R-Defense-Cannon5VulcanMk1-Hvy": {
         "iconID": "IMAGE_RES_DEFENCE",
@@ -1635,6 +1726,22 @@
         ],
         "statID": "GuardTower-RotMg"
     },
+    "R-Defense-PlascreteGate": {
+        "iconID": "IMAGE_RES_DEFENCE",
+        "id": "R-Defense-PlascreteGate",
+        "msgName": "RES_DF_HCG1",
+        "name": "Plascrete Gate",
+        "requiredResearch": [
+            "R-Defense-HardcreteGate",
+            "R-Defense-WallUpgrade07"
+        ],
+        "researchPoints": 2400,
+        "researchPower": 130,
+        "resultStructures": [
+            "A0HardcreteMk1Gate"
+        ],
+        "statID": "A0HardcreteMk1Gate"
+    },
     "R-Defense-HardcreteGate": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-HardcreteGate",
@@ -1648,7 +1755,7 @@
         "resultStructures": [
             "A0HardcreteMk1GateHar"
         ],
-        "statID": "A0HardcreteMk1Gate"
+        "statID": "A0HardcreteMk1GateHar"
     },
     "R-Defense-HardcreteWall": {
         "iconID": "IMAGE_RES_DEFENCE",
@@ -1710,6 +1817,22 @@
             "WallTower3-HeavyLaser-Inc-Aslt"
         ],
         "statID": "WallTower3-HeavyLaser-Inc-Aslt"
+    },
+    "R-Defense-Laser02-Inc-Aslt": {
+        "iconID": "IMAGE_RES_WEAPONTECH",
+        "id": "R-Defense-Laser02-Inc-Aslt",
+        "msgName": "RES_W_LAS2_IA",
+        "name": "Incendiary Assault Laser Hardpoint",
+        "requiredResearch": [
+            "R-Wpn-Laser02-Inc-Aslt",
+            "R-Defense-WallUpgrade07"
+        ],
+        "researchPoints": 4800,
+        "researchPower": 240,
+        "resultStructures": [
+            "WallTower2-Laser2PULSEMk1-Inc-Aslt"
+        ],
+        "statID": "WallTower2-Laser2PULSEMk1-Inc-Aslt"
     },
     "R-Defense-Howitzer": {
         "iconID": "IMAGE_RES_DEFENCE",
@@ -1855,6 +1978,7 @@
         ],
         "requiredResearch": [
             "R-Wpn-Flame2",
+            "R-Defense-HardcreteWall",
             "R-Sys-ECM-Upgrade01"
         ],
         "researchPoints": 4000,
@@ -1863,6 +1987,22 @@
             "Tower-Projector"
         ],
         "statID": "Tower-Projector"
+    },
+    "R-Defense-WallTower-Projector": {
+        "iconID": "IMAGE_RES_DEFENCE",
+        "id": "R-Defense-WallTower-Projector",
+        "name": "Inferno Hardpoint",
+        "requiredResearch": [
+            "R-Wpn-Flame2",
+            "R-Defense-HardcreteWall",
+            "R-Sys-ECM-Upgrade01"
+        ],
+        "researchPoints": 4000,
+        "researchPower": 200,
+        "resultStructures": [
+            "WallTower-Projector"
+        ],
+        "statID": "WallTower-Projector"
     },
     "R-Defense-HvyHowitzer": {
         "iconID": "IMAGE_RES_DEFENCE",
@@ -2492,12 +2632,27 @@
             "R-Defense-Pillbox01",
             "R-Wpn-MG2Mk1"
         ],
-        "researchPoints": 1000,
-        "researchPower": 50,
+        "researchPoints": 1500,
+        "researchPower": 75,
         "resultStructures": [
             "PillBox2"
         ],
         "statID": "PillBox2"
+    },
+    "R-Defense-Pillbox03": {
+        "iconID": "IMAGE_RES_DEFENCE",
+        "id": "R-Defense-Pillbox03",
+        "name": "Heavy Machinegun Bunker",
+        "requiredResearch": [
+            "R-Defense-Pillbox01",
+            "R-Wpn-MG3Mk1"
+        ],
+        "researchPoints": 1500,
+        "researchPower": 75,
+        "resultStructures": [
+            "PillBox3"
+        ],
+        "statID": "PillBox3"
     },
     "R-Defense-Pillbox04": {
         "iconID": "IMAGE_RES_DEFENCE",
@@ -2548,6 +2703,37 @@
         ],
         "statID": "GuardTower5"
     },
+    "R-Defense-Pillbox06-Bun": {
+        "iconID": "IMAGE_RES_DEFENCE",
+        "id": "R-Defense-Pillbox06-Bun",
+        "msgName": "RES_PB_ATR",
+        "name": "Lancer Bunker",
+        "requiredResearch": [
+            "R-Defense-HardcreteWall",
+            "R-Wpn-Rocket01-LtAT"
+        ],
+        "researchPoints": 1500,
+        "researchPower": 75,
+        "resultStructures": [
+            "PillBox6"
+        ],
+        "statID": "PillBox6"
+    },
+    "R-Defense-Tower-RotMg": {
+        "iconID": "IMAGE_RES_DEFENCE",
+        "id": "R-Defense-Tower-RotMg",
+        "msgName": "RES_PB_FL",
+        "name": "Assault Gun Emplacement",
+        "requiredResearch": [
+            "R-Wpn-MG4"
+        ],
+        "researchPoints": 1500,
+        "researchPower": 75,
+        "resultStructures": [
+            "Tower-RotMg"
+        ],
+        "statID": "Tower-RotMg"
+    },
     "R-Defense-PlasmaCannon": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-PlasmaCannon",
@@ -2560,7 +2746,7 @@
         "resultStructures": [
             "Emplacement-PlasmaCannon"
         ],
-        "statID": "Emplacement-PulseLaser"
+        "statID": "Emplacement-PlasmaCannon"
     },
     "R-Defense-PlasmiteFlamer": {
         "iconID": "IMAGE_RES_DEFENCE",
@@ -2819,6 +3005,20 @@
             "Emplacement-PrisLas"
         ],
         "statID": "Emplacement-PrisLas"
+    },
+    "R-Defense-PulseLas": {
+        "iconID": "IMAGE_RES_DEFENCE",
+        "id": "R-Defense-PulseLas",
+        "name": "Pulse Laser Emplacement",
+        "requiredResearch": [
+            "R-Wpn-Laser02"
+        ],
+        "researchPoints": 14400,
+        "researchPower": 720,
+        "resultStructures": [
+            "Emplacement-PulseLaser"
+        ],
+        "statID": "Emplacement-PulseLaser"
     },
     "R-Defense-PulseLas": {
         "iconID": "IMAGE_RES_DEFENCE",
@@ -3089,7 +3289,9 @@
         "id": "R-Defense-RotMG",
         "name": "Rotary MG Bunker",
         "redStructures": [
-            "PillBox2"
+            "PillBox1",
+            "PillBox2",
+            "PillBox3"
         ],
         "requiredResearch": [
             "R-Wpn-MG4"
@@ -3617,6 +3819,43 @@
         ],
         "statID": "GuardTower2"
     },
+    "R-Defense-Tower03": {
+        "iconID": "IMAGE_RES_DEFENCE",
+        "id": "R-Defense-Tower03",
+        "msgName": "RES_TOWER2",
+        "name": "Heavy Machinegun Tower",
+        "redStructures": [
+            "GuardTower1",
+            "GuardTower7",
+            "GuardTower2"
+        ],
+        "requiredResearch": [
+            "R-Defense-HardcreteWall",
+            "R-Wpn-MG3Mk1"
+        ],
+        "researchPoints": 1500,
+        "researchPower": 75,
+        "resultStructures": [
+            "GuardTower3"
+        ],
+        "statID": "GuardTower3"
+    },
+    "R-Defense-Tower04": {
+        "iconID": "IMAGE_RES_DEFENCE",
+        "id": "R-Defense-Tower04",
+        "msgName": "RES_TOWER2",
+        "name": "Flamer Tower",
+        "requiredResearch": [
+            "R-Defense-HardcreteWall",
+            "R-Wpn-Flamer01Mk1"
+        ],
+        "researchPoints": 1500,
+        "researchPower": 75,
+        "resultStructures": [
+            "GuardTower4"
+        ],
+        "statID": "GuardTower4"
+    },
     "R-Defense-Tower06": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Tower06",
@@ -4042,6 +4281,23 @@
         ],
         "statID": "WallTower04"
     },
+    "R-Defense-WallTower05": {
+        "iconID": "IMAGE_RES_DEFENCE",
+        "id": "R-Defense-WallTower05",
+        "msgName": "RES_PB_FL",
+        "name": "Flamer Hardpoint",
+        "requiredResearch": [
+            "R-Defense-HardcreteWall",
+            "R-Wpn-Flamer01Mk1",
+            "R-Sys-ECM-Upgrade01"
+        ],
+        "researchPoints": 1500,
+        "researchPower": 75,
+        "resultStructures": [
+            "WallTower05"
+        ],
+        "statID": "WallTower05"
+    },
     "R-Defense-WallTower06": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-WallTower06",
@@ -4158,7 +4414,8 @@
         "researchPoints": 6000,
         "researchPower": 300,
         "resultStructures": [
-            "A0Supercrete"
+            "A0Supercrete",
+            "A0SupercreteC"
         ],
         "results": [
             {
@@ -4250,7 +4507,9 @@
         "researchPower": 600,
         "resultStructures": [
             "A0Plascrete",
-            "A0PlascreteR"
+            "A0PlascreteR",
+            "A0PlascreteC",
+            "A0PlascreteRC"
         ],
         "results": [
             {
@@ -4343,7 +4602,8 @@
         "researchPower": 900,
         "resultStructures": [
             "A0Plasteel",
-            "A0PlasteelG"
+            "A0PlasteelG",
+            "A0PlasteelC"
         ],
         "results": [
             {
@@ -5743,6 +6003,24 @@
             "Sys-RadarDetector01"
         ],
         "statID": "RadarDetector"
+    },
+    "R-Sys-RadarDetector02": {
+        "iconID": "IMAGE_RES_SYSTEMTECH",
+        "id": "R-Sys-RadarDetector02",
+        "msgName": "RES_SY_RDST1",
+        "name": "Large Radar Detector",
+        "requiredResearch": [
+            "R-Sys-RadarDetector01"
+        ],
+        "researchPoints": 3200,
+        "researchPower": 180,
+        "resultComponents": [
+            "RadarDetectorHvy"
+        ],
+        "resultStructures": [
+            "Sys-RadarDetector02"
+        ],
+        "statID": "RadarDetectorHvy"
     },
     "R-Sys-Resistance": {
         "iconID": "IMAGE_RES_COMPUTERTECH",
@@ -13172,6 +13450,21 @@
             "RailGun2Mk1-Twn-Inc"
         ],
         "statID": "RailGun2Mk1-Twn-Inc"
+    },
+    "R-Defense-PillBox-Rail6": {
+        "iconID": "IMAGE_RES_WEAPONTECH",
+        "id": "R-Defense-PillBox-Rail6",
+        "name": "Incendiary Twin Rail Gun Bunker",
+        "requiredResearch": [
+            "R-Wpn-RailGun08",
+            "R-Defense-WallUpgrade07"
+        ],
+        "researchPoints": 4800,
+        "researchPower": 240,
+        "resultStructures": [
+            "PillBox-Rail6"
+        ],
+        "statID": "PillBox-Rail6"
     },
     "R-Wpn-RailGun2Mk1TwinAslt-Inc": {
         "iconID": "IMAGE_RES_WEAPONTECH",
