@@ -19,6 +19,7 @@ Authors: Shadow Wolf TJC, NoQ, Berg, Jorzi, Aubergine, Black Project, Mysteryem,
 
 "Warzone 2100 Graphic Mods": https://sourceforge.net/projects/wzgraphicmods/
 Authors: Berg, Stiv, le-squeak
+texpagesRealistic.zip: Contains non-orange propulsion textures by MaNGusT.
 
 Mech models: https://forums.wz2100.net/viewtopic.php?f=33&t=3337 - https://forums.wz2100.net/viewtopic.php?f=6&t=11005
 Authors: XANAX, Per, Berg, MaNGusT
