@@ -3,7 +3,7 @@ General:
 - [low] Add updated stats to the non-NullBot family of AIs.
 - [medium] check descriptions for ALL research.
 - [medium] Check Muzzle flash effects commit and apply if necessary. [DONE]
-        - Check all muzzle effects for ALL non-vanilla weapons...
+    - Check all muzzle effects for ALL non-vanilla weapons...
 
 Campaign:
 - [low] Test campaign and see if it can be beaten on Insane difficulty (likely tone down Ultscav enemy production rates).
@@ -14,17 +14,14 @@ Or start all over for campaign and base it off 4.2.0.
 
 Stats:
 - [critical] Fix these weapons so that they don't share mostly identical stats
-    - laser2*
-    - laser3*
-    - laser4*
-    - plasma-cannon*
-    - rail1*
-    - rail2*
-    - rail3*
+    - laser2* tank variants
+    - laser4* tank variants
+    - rail1* tank variants
+    - rail3* tank variants
     - rotary ground shaker - reduce firePause
     - rotary rail ground shaker - reduce damage
-    - heavy inferno - weight is the same as the rail version
-    - plasmite flamers
+    - massive inferno - weight is the same as the rail version
+    - plasmite flamer variants
 
 Warzone:
 - [medium] Super tall structures block visibility in build menus.
