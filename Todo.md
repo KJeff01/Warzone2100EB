@@ -14,17 +14,17 @@ Or start all over for campaign and base it off 4.2.0.
 
 Stats:
 - [critical] Fix these weapons so that they don't share mostly identical stats
-    laser2*
-    laser3*
-    laser4*
-    plasma-cannon*
-    rail1*
-    rail2*
-    rail3*
-    rotary ground shaker
-    rotary rail ground shaker
-    heavy inferno
-    plasmite flamer
+    - laser2*
+    - laser3*
+    - laser4*
+    - plasma-cannon*
+    - rail1*
+    - rail2*
+    - rail3*
+    - rotary ground shaker - reduce firePause
+    - rotary rail ground shaker - reduce damage
+    - heavy inferno - weight is the same as the rail version
+    - plasmite flamers
 
 Warzone:
 - [medium] Super tall structures block visibility in build menus.
