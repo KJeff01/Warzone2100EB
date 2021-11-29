@@ -220,8 +220,8 @@ const CAM2A_RESEARCH = CAM1A_RESEARCH.concat([
 	"R-Struc-Materials03",
 	"R-Wpn-Cannon-Damage06",
 	"R-Wpn-Cannon-ROF01",
-	//alpha 6
 	"R-Comp-CommandTurret01",
+	//alpha 6
 	"R-Struc-Factory-Upgrade01",
 	"R-Struc-Research-Module",
 	"R-Vehicle-Prop-Tracks",
