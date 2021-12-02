@@ -13,6 +13,11 @@ function setupTechLevel(player)
 	}
 	else if (techLevel == 3)
 	{
+		for (var i = 0, len = TECH_TWO.length; i < len; ++i)
+		{
+			completeResearch(TECH_TWO[i], player);
+		}
+
 		for (var i = 0, len = TECH_THREE.length; i < len; ++i)
 		{
 			completeResearch(TECH_THREE[i], player);

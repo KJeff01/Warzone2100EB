@@ -28,6 +28,7 @@ const TECH_TWO = [
 	"R-Defense-MortarPit",
 	"R-Defense-MRL",
 	"R-Defense-Pillbox01",
+	"R-Defense-Pillbox02",
 	"R-Defense-Pillbox03",
 	"R-Defense-Pillbox04",
 	"R-Defense-Pillbox05",
@@ -120,6 +121,10 @@ const TECH_TWO = [
 	"R-Defense-Tower10",
 	"R-Wpn-AAGun05",
 	"R-Defense-AASite-QuadMg1AAGun-Scav",
+	"R-Defense-ECM1PylonMk1",
+	"R-Defense-MG3Mk1-Twn",
+	"R-Wpn-AAGun06",
+	"R-Defense-AASite-QuadRotAAGun-Scav",
 ];
 
 const TECH_THREE = [
@@ -395,7 +400,6 @@ const TECH_THREE = [
 	"R-Wpn-Rocket05-MiniPod-Arch",
 	"R-Wpn-Rocket-Pod-Quad-Arch",
 	"R-Wpn-Rocket-Pod-Twn-Arch",
-	"R-Wpn-MG3Mk1-Twn",
 	"R-Wpn-MG3Mk1-Aslt",
 	"R-Cyborg-Hvywpn-Flamer",
 	"R-Cyborg-Hvywpn-Rocket-LtA-T",
@@ -415,7 +419,6 @@ const TECH_THREE = [
 	"R-Wpn-Cannon5-Inc",
 	"R-Defense-Tower2-Cannon5VulcanMk1-Inc",
 	"R-Wpn-AAGun05",
-	"R-Defense-ECM1PylonMk1",
 	"R-Defense-ECM1PylonMk2",
 	"R-Defense-MG3Mk1-Aslt",
 	"R-Defense-Sunburst-Arch",
@@ -426,7 +429,6 @@ const TECH_THREE = [
 	"R-Wpn-Rocket03-HvAT-Arch",
 	"R-Wpn-Rocket-Pod-MRA-Twin",
 	"R-Wpn-Rocket-Pod-MRA-Quad",
-	"R-Wpn-AAGun06",
 	"R-Wpn-Mortar02-Incendiary",
 	"R-Defense-SuperIncMortar",
 	"R-Defense-MortarPit-Ram",
@@ -436,4 +438,8 @@ const TECH_THREE = [
 	"R-Defense-HvyMor-Ram",
 	"R-Defense-HvyMor-Inc",
 	"R-Defense-SuperRamjetMortar",
+	"R-Defense-Howitzer-Incendiary",
+	"R-Defense-Mortar3ROTARYMk1-Inc",
+	"R-Defense-Mortar3ROTARYMk1-Ram-Rot",
+	"R-Defense-SuperIncHowitzer",
 ];
