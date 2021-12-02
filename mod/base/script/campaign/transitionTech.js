@@ -804,7 +804,7 @@ const CAMEND_RES = CAM3A_RESEARCH.concat([
 	"R-Sys-Resistance-Upgrade03",
 	//gamma 6
 	"R-Wpn-Laser02",
-	"R-Defense-PulseLas",
+	"R-Defense-PulseLas-Emp",
 	"R-Wpn-Missile-LtSAM",
 	"R-Wpn-RailGun01",
 	"R-Cyborg-Hvywpn-PulseLsr",

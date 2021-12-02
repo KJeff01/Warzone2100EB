@@ -3000,9 +3000,9 @@
         ],
         "statID": "Emplacement-PrisLas"
     },
-    "R-Defense-PulseLas": {
+    "R-Defense-PulseLas-Emp": {
         "iconID": "IMAGE_RES_DEFENCE",
-        "id": "R-Defense-PulseLas",
+        "id": "R-Defense-PulseLas-Emp",
         "name": "Pulse Laser Emplacement",
         "requiredResearch": [
             "R-Wpn-Laser02"
@@ -6698,7 +6698,8 @@
         "researchPower": 60,
         "resultComponents": [
             "Body1REC"
-        ]
+        ],
+        "statID": "Body1REC"
     },
     "R-Vehicle-Body02": {
         "iconID": "IMAGE_RES_DROIDTECH",

@@ -15,8 +15,6 @@ var allRes = {
 	"R-Vehicle-Body01": 0,
 	"R-Sys-Sensor-Upgrade00": 0,
 	"R-Vehicle-Body26": 0,
-	"R-Sys-Sensor-Upgrade00": 0,
-	"R-Vehicle-Body26": 0,
 };
 
 const TECH_TWO = [
@@ -64,8 +62,6 @@ const TECH_TWO = [
      "R-Sys-Sensor-Tower02",
      "R-Sys-Sensor-Turret01",
      "R-Sys-Sensor-Upgrade01",
-     "R-Sys-Spade1Mk1",
-     "R-Vehicle-Body01",
      "R-Vehicle-Body05",
      "R-Vehicle-Body11",
      "R-Vehicle-Engine01",
@@ -77,7 +73,6 @@ const TECH_TWO = [
      "R-Vehicle-Prop-Halftracks",
      "R-Vehicle-Prop-Hover",
      "R-Vehicle-Prop-Tracks",
-     "R-Vehicle-Prop-Wheels",
      "R-Wpn-Cannon-Damage01",
      "R-Wpn-Cannon-Damage02",
      "R-Wpn-Cannon-Damage03",
@@ -161,8 +156,6 @@ const TECH_THREE = [
      "R-Struc-Research-Upgrade01",
      "R-Struc-Research-Upgrade02",
      "R-Struc-RprFac-Upgrade01",
-     "R-Sys-Spade1Mk1",
-     "R-Vehicle-Body01",
      "R-Vehicle-Body04",
      "R-Vehicle-Body05",
      "R-Vehicle-Body08",
@@ -175,7 +168,6 @@ const TECH_THREE = [
      "R-Vehicle-Prop-Halftracks",
      "R-Vehicle-Prop-Hover",
      "R-Vehicle-Prop-Tracks",
-     "R-Vehicle-Prop-Wheels",
      "R-Wpn-Cannon1Mk1",
      "R-Wpn-Cannon2Mk1",
      "R-Wpn-Cannon3Mk1",
