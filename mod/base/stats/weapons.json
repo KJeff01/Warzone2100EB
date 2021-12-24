@@ -4535,7 +4535,7 @@
         "weaponEffect": "FLAMER",
         "weaponSubClass": "FLAME",
         "weaponWav": "flmthrow.ogg",
-        "weight": 170000
+        "weight": 120000
     },
     "Flame2-Rail": {
         "buildPoints": 1000,

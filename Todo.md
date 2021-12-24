@@ -18,7 +18,6 @@ Stats:
     - laser4* tank variants
     - rail1* tank variants
     - rail3* tank variants
-    - massive inferno - weight is the same as the rail version
     - plasmite flamer variants
 
 Warzone:
