@@ -5560,15 +5560,15 @@
         "weight": 200000
     },
     "Howitzer150Mk1-Gat": {
-        "buildPoints": 1800,
-        "buildPower": 125,
-        "damage": 325,
+        "buildPoints": 2200,
+        "buildPower": 225,
+        "damage": 161,
         "designable": 1,
         "effectSize": 100,
         "explosionWav": "lrgexpl.ogg",
         "facePlayer": 1,
         "fireOnMove": 0,
-        "firePause": 200,
+        "firePause": 15,
         "flightGfx": "FXCAmmo.PIE",
         "flightSpeed": 1500,
         "hitGfx": "FXLExp.PIE",
@@ -5601,9 +5601,9 @@
         "weight": 200000
     },
     "Howitzer150Mk1-Gat-Rail": {
-        "buildPoints": 2000,
-        "buildPower": 200,
-        "damage": 400,
+        "buildPoints": 2600,
+        "buildPower": 275,
+        "damage": 261,
         "designable": 1,
         "effectSize": 75,
         "explosionWav": "lrgexpl.ogg",
