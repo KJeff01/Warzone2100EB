@@ -16,7 +16,6 @@ Stats:
 - [critical] Fix these weapons so that they don't share mostly identical stats
     - laser2* tank variants
     - laser4* tank variants
-    - rail1* tank variants
     - rail3* tank variants
 
 Warzone:
