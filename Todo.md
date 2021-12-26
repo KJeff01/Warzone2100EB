@@ -18,8 +18,7 @@ Stats:
     - laser4* tank variants
     - rail1* tank variants
     - rail3* tank variants
-    - plasmite flamer variants
 
 Warzone:
 - [medium] Super tall structures block visibility in build menus.
-- [critical] ECM/jammer is a problem again since they are packed with the mod. 
+- [critical] ECM/jammer is a problem again since they are packed with the mod.
