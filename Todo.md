@@ -15,7 +15,6 @@ Or start all over for campaign and base it off 4.2.0.
 Stats:
 - [critical] Fix these weapons so that they don't share mostly identical stats
     - laser2* tank variants
-    - laser4* tank variants
 
 Warzone:
 - [medium] Super tall structures block visibility in build menus.
