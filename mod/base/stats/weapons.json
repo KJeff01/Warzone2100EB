@@ -6556,7 +6556,7 @@
         "weaponEffect": "ALL ROUNDER",
         "weaponSubClass": "CANNON",
         "weaponWav": "hevlsr.ogg",
-        "weight": 250000
+        "weight": 225000
     },
     "Laser4-PlasmaCannon-Hvy-Lsr-Aslt": {
         "buildPoints": 1400,
@@ -6597,7 +6597,7 @@
         "weaponEffect": "ALL ROUNDER",
         "weaponSubClass": "CANNON",
         "weaponWav": "hevlsr.ogg",
-        "weight": 300000
+        "weight": 250000
     },
     "LaserPlasmaSuper": {
         "buildPoints": 2400,
