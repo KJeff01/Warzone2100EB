@@ -11172,7 +11172,7 @@
             "HeavyLaser",
             "HeavyLaser-VTOL"
         ],
-        "statID": "Laser2PULSEMk1-Med-Aslt"
+        "statID": "HeavyLaser"
     },
     "R-Wpn-HvyLaser-Aslt": {
         "iconID": "IMAGE_RES_WEAPONTECH",
@@ -11384,7 +11384,7 @@
         "resultComponents": [
             "Laser2PULSEMk1-Med-Aslt"
         ],
-        "statID": "HeavyLaser"
+        "statID": "Laser2PULSEMk1-Med-Aslt"
     },
     "R-Wpn-MG-Damage01": {
         "iconID": "IMAGE_RES_WEAPONTECH",
