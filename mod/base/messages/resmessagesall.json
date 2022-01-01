@@ -32,6 +32,17 @@
             "Weight: Very Heavy, Hitpoints: High, Build Time: Medium, Cost: Medium"
         ]
     },
+    "RES_CN3MK12": {
+        "id": "RES_CN3MK12",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New Kinetic Weapon Turret Available",
+            "Twin Heavy Cannon firing 120 mm rounds",
+            "Best Targets: Vehicles, Hardpoints",
+            "Weight: Very Heavy, Hitpoints: High, Build Time: Medium, Cost: Medium"
+        ]
+    },
     "RES_CN7": {
         "id": "RES_CN7",
         "imdName": "MICAPSUL.pie",
@@ -170,31 +181,31 @@
         "sequenceName": "res_droid.ogg",
         "text": [
             "New Super Auto-Cannon Cyborg Available",
-            "Base Base Speed: 0.92",
-            "Base Range: 7.0",
-            "Base Body Point: 420"
+            "Armed with Cyborg Auto-Cannon",
+			"Body Points: Medium",
+			"Requires Cyborg factory to produce"
         ]
     },
     "RES_CYW_H_AG": {
         "id": "RES_CYW_H_AG",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_droid.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Super Assault Gun Cyborg Available",
+            "Armed with Cyborg Assault Gun",
+			"Body Points: Medium",
+			"Requires Cyborg factory to produce"
         ]
     },
     "RES_CYW_H_ARC": {
         "id": "RES_CYW_H_ARC",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_droid.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Super Arch-Angel Cyborg Available",
+			"Armed with Cyborg Arch-Angel Missile Launcher",
+			"Body Points: Medium",
+			"Requires Cyborg factory to produce"
         ]
     },
     "RES_CYW_H_AT": {
@@ -203,59 +214,59 @@
         "sequenceName": "res_droid.ogg",
         "text": [
             "New Super Scourge Cyborg Available",
-            "Base Speed: 0.97",
-            "Base Range: 14",
-            "Base Body Point: 400"
+            "Armed with Cyborg Scourge Missile Launcher",
+			"Body Points: Medium",
+			"Requires Cyborg factory to produce"
         ]
     },
     "RES_CYW_H_EMP": {
         "id": "RES_CYW_H_EMP",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_droid.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Super EMP Cyborg Available",
+            "Armed with Cyborg EMP Cannon",
+			"Body Points: Medium",
+			"Requires Cyborg factory to produce"
         ]
     },
     "RES_CYW_H_FL": {
         "id": "RES_CYW_H_FL",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_droid.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Super Flamer Cyborg Available",
+            "Armed with Cyborg Super Flamer",
+			"Body Points: Medium",
+			"Requires Cyborg factory to produce"
         ]
     },
     "RES_CYW_H_GR": {
         "id": "RES_CYW_H_GR",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_droid.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Super Stabilized Grenadier Cyborg Available",
+            "Armed with Cyborg Stabilized Grenade Launcher",
+			"Body Points: Medium",
+			"Requires Cyborg factory to produce"
         ]
     },
-    "RES_CYW_H_HPV": {
-        "id": "RES_CYW_H_HPV",
+    "RES_CYW_H_HVC": {
+        "id": "RES_CYW_H_HVC",
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_droid.ogg",
         "text": [
             "New Super HVC Cyborg Available",
-            "Base Speed: 0.84",
-            "Base Range: 9",
-            "Base Body Point: 400"
+            "Armed with Cyborg HVC",
+			"Body Points: Medium",
+			"Requires Cyborg factory to produce"
         ]
     },
     "RES_CYW_H_LA": {
         "id": "RES_CYW_H_LA",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_droid.ogg",
         "text": [
             "Improved Power Generator Performance",
             "Gas turbine boosts power output",
@@ -269,20 +280,20 @@
         "sequenceName": "res_droid.ogg",
         "text": [
             "New Super Heavy-Gunner Available",
-            "Base Speed: 0.73",
-            "Base Range: 5.9",
-            "Base Body Point: 420"
+            "Armed with Cyborg Medium Cannon",
+			"Body Points: Medium",
+			"Requires Cyborg factory to produce"
         ]
     },
     "RES_CYW_H_MG": {
         "id": "RES_CYW_H_MG",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_droid.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Super Incendiary Grenadier Cyborg Available",
+            "Armed with Cyborg Incendiary Grenade Launcher",
+			"Body Points: Medium",
+			"Requires Cyborg factory to produce"
         ]
     },
     "RES_CYW_H_MOR": {
@@ -290,21 +301,21 @@
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_droid.ogg",
         "text": [
-            "New Super Incendiary Grenadier Available",
-            "Base Speed: 0.80",
-            "Base Range: 14",
-            "Base Body Point: 370"
+            "New Super Machine Gunner Cyborg Available",
+            "Armed with Cyborg Machine Gun",
+			"Body Points: Medium",
+			"Requires Cyborg factory to produce"
         ]
     },
     "RES_CYW_H_NX": {
         "id": "RES_CYW_H_NX",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_droid.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Super Nexus Link Cyborg Available",
+            "Armed with Cyborg Nexus Link",
+			"Body Points: Medium",
+			"Requires Cyborg factory to produce"
         ]
     },
     "RES_CYW_H_PLAS": {
@@ -313,20 +324,20 @@
         "sequenceName": "res_droid.ogg",
         "text": [
             "New Super Pulse Laser Cyborg Available",
-            "Base Speed: 0.99",
-            "Base Range: 14",
-            "Base Body Point: 400"
+            "Armed with Cyborg Pulse Laser",
+			"Body Points: Medium",
+			"Requires Cyborg factory to produce"
         ]
     },
     "RES_CYW_H_RA": {
         "id": "RES_CYW_H_RA",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_droid.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Super Rocket Array Cyborg Available",
+            "Armed with Cyborg Mini-Rocket Array",
+			"Body Points: Medium",
+			"Requires Cyborg factory to produce"
         ]
     },
     "RES_CYW_H_RG": {
@@ -335,53 +346,86 @@
         "sequenceName": "res_droid.ogg",
         "text": [
             "New Super Rail-Gunner Available",
-            "Base Speed: 0.86",
-            "Base Range: 9",
-            "Base Body Point: 430"
+            "Armed with Cyborg Rail Gun",
+			"Body Points: Medium",
+			"Requires Cyborg factory to produce"
         ]
     },
     "RES_CYW_H_RI": {
         "id": "RES_CYW_H_RI",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_droid.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Super Ripple Rocket Cyborg Available",
+            "Armed with Cyborg Ripple Rocket Launcher",
+			"Body Points: Medium",
+			"Requires Cyborg factory to produce"
         ]
     },
     "RES_CYW_H_RO": {
         "id": "RES_CYW_H_RO",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_droid.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Super Rocket-Pod Cyborg Available",
+            "Armed with Cyborg Rocket Pod",
+			"Body Points: Medium",
+			"Requires Cyborg factory to produce"
+        ]
+    },
+    "RES_CYW_H_TRO": {
+        "id": "RES_CYW_H_TRO",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "New Super Thermal Rocket-Pod Cyborg Available",
+            "Armed with Cyborg Thermal Rocket Pod",
+			"Body Points: Medium",
+			"Requires Cyborg factory to produce"
+        ]
+    },
+    "RES_CYW_H_ROL": {
+        "id": "RES_CYW_H_ROL",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "New Super Lancer Cyborg Available",
+            "Armed with Cyborg Lancer",
+			"Body Points: Medium",
+			"Requires Cyborg factory to produce"
         ]
     },
     "RES_CYW_H_SU": {
         "id": "RES_CYW_H_SU",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_droid.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Super Sunburst Cyborg Available",
+            "Armed with Cyborg Sunburst Rocket",
+			"Body Points: Medium",
+			"Requires Cyborg factory to produce"
+        ]
+    },
+    "RES_CYW_H_TSU": {
+        "id": "RES_CYW_H_TSU",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "New Super Thermal Sunburst Cyborg Available",
+            "Armed with Cyborg Thermal Sunburst Rocket",
+			"Body Points: Medium",
+			"Requires Cyborg factory to produce"
         ]
     },
     "RES_CYW_H_TF": {
         "id": "RES_CYW_H_TF",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_droid.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Super Twin Flamer Cyborg Available",
+            "Armed with Cyborg Twin Flame-thrower",
+			"Body Points: Medium",
+			"Requires Cyborg factory to produce"
         ]
     },
     "RES_CYW_H_TK": {
@@ -389,10 +433,10 @@
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_droid.ogg",
         "text": [
-            "New Super Tank-Killer Cyborg Available",
-            "Base Speed: 0.97",
-            "Base Range: 10",
-            "Base Body Point: 400"
+            "Super Tank-Killer Cyborg",
+            "Armed with Cyborg Tank-Killer Rocket",
+			"Body Points: Medium",
+			"Requires Cyborg factory to produce"
         ]
     },
     "RES_CY_AH1": {
@@ -508,89 +552,89 @@
     "RES_CY_HYLEG": {
         "id": "RES_CY_HYLEG",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_droid.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Mech Cyborg Components Available",
+            "Mech Cyborg Components, Powerful Weapon Capabilities",
+            "All Mech Cyborgs Available for Research",
+            "Speed: Super Slow"
         ]
     },
     "RES_CY_MECCA": {
         "id": "RES_CY_MECCA",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_droid.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Mech-Cannon Cyborg Available",
+            "Armed with Mech Cyborg Cannon",
+			"Body Points: High",
+			"Prefer a Mech Cyborg factory to produce"
         ]
     },
     "RES_CY_MECFL": {
         "id": "RES_CY_MECFL",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_droid.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Mech-Flamer Cyborg Available",
+            "Armed with Mech Cyborg Flamer",
+			"Body Points: High",
+			"Prefer a Mech Cyborg factory to produce"
         ]
     },
     "RES_CY_MECLA": {
         "id": "RES_CY_MECLA",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_droid.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Mech-Laser Cyborg Available",
+            "Armed with Mech Cyborg Laser",
+			"Body Points: High",
+			"Prefer a Mech Cyborg factory to produce"
         ]
     },
     "RES_CY_MECMG": {
         "id": "RES_CY_MECMG",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_droid.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Mech-Machinegun Cyborg Available",
+            "Armed with Mech Cyborg Machine",
+			"Body Points: High",
+			"Prefer a Mech Cyborg factory to produce"
         ]
     },
     "RES_CY_MECMI": {
         "id": "RES_CY_MECMI",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_droid.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Mech-Missile Cyborg Available",
+            "Armed with Mech Cyborg Missile Launcher",
+			"Body Points: High",
+			"Prefer a Mech Cyborg factory to produce"
         ]
     },
     "RES_CY_MECRA": {
         "id": "RES_CY_MECRA",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_droid.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Mech-Railgun Cyborg Available",
+            "Armed with Mech Cyborg Railgun",
+			"Body Points: High",
+			"Preferred Mech Cyborg factory to produce"
         ]
     },
     "RES_CY_MECRO": {
         "id": "RES_CY_MECRO",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_droid.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Mech-Rocket Cyborg Available",
+            "Armed with Mech Cyborg Rocket Launcher",
+			"Body Points: High",
+			"Preferred Mech Cyborg factory to produce"
         ]
     },
     "RES_C_CT1": {
@@ -609,10 +653,10 @@
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_struttech.ogg",
         "text": [
-            "Hardpoint Avenger SAM Site Available",
-            "Surface-to-air missile",
-            "Best Targets: Aerial targets only",
-            "Body Points: Medium"
+            "Computer Technology Breakthrough",
+            "Improved battlefield computer system",
+            "Commander capabilities have been amplified",
+            "Body Points: High"
         ]
     },
     "RES_C_SL1": {
@@ -654,7 +698,7 @@
         "sequenceName": "res_struttech.ogg",
         "text": [
             "New Defensive Structure Available",
-            "Hardpoint weapon range +2",
+            "Electro-Magnetic Pulse weapon",
             "Electronically Disables all Droids within Blast Radius",
             "Defensive Strength: Medium, Build Time: Slow"
         ]
@@ -924,16 +968,16 @@
         ]
     },
     "RES_EMP_ATMTOW": {
-        "id": "RES_EMP_ATMTOW",
-        "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_struttech.ogg",
-        "text": [
-            "New Defensive Structure Available",
-            "Lookout Tower with Extra Range",
-            "Tower weapon range +3, damage +10%",
-            "Defensive Strength: Medium, Build Time: Slow"
-        ]
-    },
+		"id": "RES_EMP_ATMTOW",
+		"imdName": "MICAPSUL.pie",
+		"sequenceName": "res_struttech.ogg",
+		"text": [
+			"New Defensive Structure Available",
+			"Armored guard tower with Scourge Missile",
+			"Automatically targets enemies within sensor range",
+			"Defensive Strength: Medium"
+		]
+	},
     "RES_EMP_CAN": {
         "id": "RES_EMP_CAN",
         "imdName": "MICAPSUL.pie",
@@ -1000,6 +1044,17 @@
             "Defensive Strength: Medium, Build Time: Very Fast"
         ]
     },
+    "RES_EMP_HEAVYLASGAT": {
+        "id": "RES_EMP_HEAVYLASGAT",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "New Defensive Structure Available",
+            "Armored strongpoint with Heavy Rotary Laser",
+            "Fast firing Heavy Laser",
+            "Defensive Strength: Medium, Build Time: Very Fast"
+        ]
+    },
     "RES_EMP_HOW": {
         "id": "RES_EMP_HOW",
         "imdName": "MICAPSUL.pie",
@@ -1011,8 +1066,8 @@
             "Defensive Strength: Medium, Build Time: Fast"
         ]
     },
-    "RES_EMP_HPV": {
-        "id": "RES_EMP_HPV",
+    "RES_EMP_HVC": {
+        "id": "RES_EMP_HVC",
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_struttech.ogg",
         "text": [
@@ -1041,7 +1096,18 @@
             "New Defensive Structure Available",
             "Artillery Resistant, Susceptible to Flamer",
             "Bunker Weapon Range +1, Damage +20%",
-            "Defensive Strength: Medium, Build Time: Medium"
+            "Defensive Strength: Very Strong, Build Time: Fast"
+        ]
+    },
+    "RES_EMP_HVFLE": {
+        "id": "RES_EMP_HVFLE",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "New Defensive Structure Available",
+            "Armored strongpoint with Inferno",
+            "Automatically targets enemies in range",
+            "Defensive Strength: Medium, Build Time: Fast"
         ]
     },
     "RES_EMP_HvAM": {
@@ -1084,6 +1150,61 @@
         "text": [
             "New Defensive Structure Available",
             "Armored Bombard battery pit",
+            "Assigned automatically to nearest sensor or CB tower",
+            "Defensive Strength: Medium, Build Time: Fast"
+        ]
+    },
+    "RES_EMP_HvyMorInc": {
+        "id": "RES_EMP_HvyMorInc",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "New Defensive Structure Available",
+            "Armored Incendiary Bombard battery pit",
+            "Assigned automatically to nearest sensor or CB tower",
+            "Defensive Strength: Medium, Build Time: Fast"
+        ]
+    },
+    "RES_EMP_HvyMorRail": {
+        "id": "RES_EMP_HvyMorRail",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "New Defensive Structure Available",
+            "Armored Bombard Rail battery pit",
+            "Assigned automatically to nearest sensor or CB tower",
+            "Defensive Strength: Medium, Build Time: Fast"
+        ]
+    },
+    "RES_EMP_HvyMorRailInc": {
+        "id": "RES_EMP_HvyMorRailInc",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "New Defensive Structure Available",
+            "Armored Incendiary Bombard Rail battery pit",
+            "Assigned automatically to nearest sensor or CB tower",
+            "Defensive Strength: Medium, Build Time: Fast"
+        ]
+    },
+    "RES_EMP_HvyMorRailStab": {
+        "id": "RES_EMP_HvyMorRailStab",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "New Defensive Structure Available",
+            "Armored Stabilized Bombard Rail battery pit",
+            "Assigned automatically to nearest sensor or CB tower",
+            "Defensive Strength: Medium, Build Time: Fast"
+        ]
+    },
+    "RES_EMP_HvyMorStab": {
+        "id": "RES_EMP_HvyMorStab",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "New Defensive Structure Available",
+            "Armored Stabilized Bombard battery pit",
             "Assigned automatically to nearest sensor or CB tower",
             "Defensive Strength: Medium, Build Time: Fast"
         ]
@@ -1330,6 +1451,17 @@
             "Defensive Strength: Medium, Build Time: Medium"
         ]
     },
+    "RES_EMP_STB": {
+		"id": "RES_EMP_STB",
+		"imdName": "MICAPSUL.pie",
+		"sequenceName": "res_struttech.ogg",
+		"text": [
+			"New Defensive Structure Available",
+			"Armored Stormbringer Twin AA Laser emplacement",
+            "Emplacement Weapon Range: +1",
+            "Defensive Strength: Medium, Build Time: Medium"
+		]
+	},
     "RES_ENGIN1": {
         "id": "RES_ENGIN1",
         "imdName": "MICAPSUL.pie",
@@ -1412,10 +1544,10 @@
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_struttech.ogg",
         "text": [
-            "New Defensive Structure Available",
-            "Armored Pepperpot mortar battery pit",
-            "Assigned automatically to nearest sensor or CB tower",
-            "Defensive Strength: Medium, Build Time: Fast"
+            "New Thermal Weapon Turret Available",
+            "Very Heavy Flame-thrower firing Propylene Oxide gel",
+            "Best Targets: Bunkers, Wheeled, Half-Tracked and Hover Vehicles",
+            "Weight: Very Light, Hitpoints: Very Low, Build Time: Fast, Cost: Cheap"
         ]
     },
     "RES_FLAME2_R": {
@@ -1423,10 +1555,10 @@
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_struttech.ogg",
         "text": [
-            "New Defensive Structure Available",
-            "SAM site with Avenger missiles",
-            "Automatically targets VTOLs",
-            "Defensive Strength: Medium, Build Time: Medium"
+            "New Thermal Weapon Turret Available",
+            "Very Heavy Flame-thrower firing far reaching Propylene Oxide gel",
+            "Best Targets: Bunkers, Wheeled, Half-Tracked and Hover Vehicles",
+            "Weight: Very Light, Hitpoints: Very Low, Build Time: Fast, Cost: Cheap"
         ]
     },
     "RES_HALFT1": {
@@ -1502,7 +1634,7 @@
         "text": [
             "Laser Upgrade",
             "Improvement in laser emission density",
-            "Laser Range +100%",
+            "Laser Range +50%",
             "All lasers upgraded automatically"
         ]
     },
@@ -1568,6 +1700,17 @@
         "text": [
             "New Kinetic Weapon Turret Available",
             ".50-calibre heavy machinegun",
+            "Best Targets: Cyborgs, Wheeled Vehicles and Base Structures",
+            "Weight: Light, Hitpoints: Medium, Build Time: Fast, Cost: Cheap"
+        ]
+    },
+    "RES_MG3MK1H": {
+        "id": "RES_MG3MK1H",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New Kinetic Weapon Turret Available",
+            "Powerful .50-calibre heavy machinegun",
             "Best Targets: Cyborgs, Wheeled Vehicles and Base Structures",
             "Weight: Light, Hitpoints: Medium, Build Time: Fast, Cost: Cheap"
         ]
@@ -1733,6 +1876,17 @@
         "text": [
             "New Thermal Weapon Turret Available",
             "Plasmite Flame-thrower",
+            "Best Targets: Bunkers, Wheeled, Half-Tracked and Hover Vehicles",
+            "Weight: Light, Hitpoints: Low, Build Time: Very Fast, Cost: Cheap"
+        ]
+    },
+    "RES_PLFL_R": {
+        "id": "RES_PLFL",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New Thermal Weapon Turret Available",
+            "Plasmite Flame-thrower with enhanced damage and range ability",
             "Best Targets: Bunkers, Wheeled, Half-Tracked and Hover Vehicles",
             "Weight: Light, Hitpoints: Low, Build Time: Very Fast, Cost: Cheap"
         ]
@@ -2059,12 +2213,12 @@
     "RES_ST_MECHF": {
         "id": "RES_ST_MECHF",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_struttech.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Base Structure Available",
+            "Mech Cyborg Factory",
+            "Primarily Produces Mech Cyborgs",
+            "Production suitable to build complex robotic parts"
         ]
     },
     "RES_ST_RFU1": {
@@ -2371,7 +2525,7 @@
         "text": [
             "New Systems Tower Available",
             "Jammer Turret Blocks Enemy Sensor Visibility",
-            "Jammer Range: 8",
+            "Base Jammer Range: 8",
             "All sensors upgraded automatically"
         ]
     },
@@ -2397,39 +2551,61 @@
             "All droids are retro-fitted automatically"
         ]
     },
-    "RES_SY_RC1": {
-        "id": "RES_SY_RC1",
-        "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_systech.ogg",
-        "text": [
-            "New Electronic Technology Discovered",
-            "On-board resistance circuit systems",
-            "+60% Resistance to Nexus Link technology",
-            "All droids are retro-fitted automatically"
-        ]
-    },
-    "RES_SY_RC2": {
-        "id": "RES_SY_RC2",
-        "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_systech.ogg",
-        "text": [
-            "New Electronic Technology Discovered",
-            "On-board resistance circuit systems",
-            "+60% Resistance to Nexus Link technology",
-            "All droids are retro-fitted automatically"
-        ]
-    },
-    "RES_SY_RC3": {
-        "id": "RES_SY_RC3",
-        "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_systech.ogg",
-        "text": [
-            "New Electronic Technology Discovered",
-            "On-board resistance circuit systems",
-            "+60% Resistance to Nexus Link technology",
-            "All droids are retro-fitted automatically"
-        ]
-    },
+    "RES_SY_RESU1": {
+		"id": "RES_SY_RESU1",
+		"imdName": "MICAPSUL.PIE",
+		"sequenceName": "res_systech.ogg",
+		"text": [
+			"Computer Technology Breakthrough",
+			"NEXUS Intruder Program analyzed",
+			"Intruder parasite isolated",
+			"Reduced chance of NEXUS take-over"
+		]
+	},
+    "RES_SY_RESU2": {
+		"id": "RES_SY_RESU2",
+		"imdName": "MICAPSUL.PIE",
+		"sequenceName": "res_systech.ogg",
+		"text": [
+			"Computer Technology Breakthrough",
+			"Improved NEXUS resistance circuitry",
+			"Reduced chance of NEXUS take-over",
+			"Hero and Special rank units are protected"
+		]
+	},
+	"RES_SY_RESU3": {
+		"id": "RES_SY_RESU3",
+		"imdName": "MICAPSUL.PIE",
+		"sequenceName": "res_systech.ogg",
+		"text": [
+			"Computer Technology Breakthrough",
+			"Improved NEXUS resistance circuitry",
+			"Reduced chance of NEXUS take-over",
+			"Elite and Veteran rank units and Factories are protected"
+		]
+	},
+	"RES_SY_RESU4": {
+		"id": "RES_SY_RESU4",
+		"imdName": "MICAPSUL.PIE",
+		"sequenceName": "res_systech.ogg",
+		"text": [
+			"Computer Technology Breakthrough",
+			"Improved NEXUS resistance circuitry",
+			"Reduced chance of NEXUS take-over",
+			"Professional and Regular rank units are protected"
+		]
+	},
+	"RES_SY_RESU5": {
+		"id": "RES_SY_RESU5",
+		"imdName": "MICAPSUL.PIE",
+		"sequenceName": "res_systech.ogg",
+		"text": [
+			"Computer Technology Breakthrough",
+			"Improved NEXUS resistance circuitry",
+			"Computer systems are now 'ring-fenced' from NEXUS",
+			"Stops NEXUS take-over"
+		]
+	},
     "RES_SY_RDST1": {
         "id": "RES_SY_RDST1",
         "imdName": "MICAPSUL.pie",
@@ -2919,10 +3095,9 @@
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_struttech.ogg",
         "text": [
-            "New Defensive Structure Available",
-            "SAM site with Vindicator missiles",
-            "Automatically targets VTOLs",
-            "Defensive Strength: Medium, Build Time: Medium"
+            "Collective Light Body",
+            "Superior armor and body points to Viper and Bug",
+            "High Power costs, Fast Production Time"
         ]
     },
     "RES_V_B16": {
@@ -2930,10 +3105,9 @@
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_systech.ogg",
         "text": [
-            "Research Breakthrough Improves Construction Rates",
-            "Improved Engineering Techniques",
-            "Construction speed +75%",
-            "All trucks upgraded automatically"
+            "Collective Medium Body",
+            "Superior armor and body points to Cobra and Scorpion",
+            "High Power costs, Fast Production Time"
         ]
     },
     "RES_V_B17": {
@@ -2941,10 +3115,9 @@
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_systech.ogg",
         "text": [
-            "Research Breakthrough Improves Construction Rates",
-            "Improved Engineering Techniques",
-            "Construction speed +50%",
-            "All trucks upgraded automatically"
+            "New Paradigm Light Body",
+            "Superior thermal armor and body points to Viper and Leopard",
+            "High Power costs, Fast Production Time"
         ]
     },
     "RES_V_B18": {
@@ -2952,10 +3125,9 @@
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_systech.ogg",
         "text": [
-            "Research Breakthrough Improves Construction Rates",
-            "Advanced Engineering Techniques",
-            "Construction speed +70%",
-            "All trucks upgraded automatically"
+            "New Paradigm Medium Body",
+            "Superior thermal armor and body points to Cobra and Scorpion",
+            "High Power costs, Fast Production Time"
         ]
     },
     "RES_V_B19": {
@@ -2963,10 +3135,9 @@
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_systech.ogg",
         "text": [
-            "Research Breakthrough Improves Construction Rates",
-            "Advanced Engineering Techniques",
-            "Construction speed +90%",
-            "All trucks upgraded automatically"
+            "New Paradigm Heavy Body",
+            "Superior thermal armor and body points to Python and Tiger",
+            "High Power costs, Fast Production Time"
         ]
     },
     "RES_V_B20": {
@@ -2974,10 +3145,29 @@
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_systech.ogg",
         "text": [
-            "Research Breakthrough Improves Construction Rates",
-            "Self-Constructing Modular Engineering Components",
-            "Construction speed +120%",
-            "All trucks upgraded automatically"
+            "Project Light Body",
+            "Superior armor and body points to Bug",
+            "High Power costs, Fast Production Time"
+        ]
+    },
+    "RES_V_B21": {
+        "id": "RES_V_B21",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_systech.ogg",
+        "text": [
+            "Project Medium Body",
+            "Superior armor and body points to Scorpion",
+            "High Power costs, Fast Production Time"
+        ]
+    },
+    "RES_V_B22": {
+        "id": "RES_V_B21",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_systech.ogg",
+        "text": [
+            "Project Heavy Body",
+            "Superior armor and body points to Mantis",
+            "High Power costs, Fast Production Time"
         ]
     },
     "RES_V_CYEN1": {
@@ -2988,7 +3178,7 @@
             "Cyborg Control System Upgrade",
             "Hydraulic Cyborg Actuators",
             "Cyborg speed +25%",
-            "Only Applies to Newly Produced Cyborgs"
+            "All Cyborgs upgraded automatically"
         ]
     },
     "RES_V_CYEN2": {
@@ -2999,7 +3189,7 @@
             "Cyborg Control System Upgrade",
             "Hydraulic Cyborg Actuators",
             "Cyborg speed +15%",
-            "Only Applies to Newly Produced Cyborgs"
+            "All Cyborgs upgraded automatically"
         ]
     },
     "RES_V_CYEN3": {
@@ -3010,7 +3200,7 @@
             "Cyborg Control System Upgrade",
             "Hydraulic Cyborg Actuators",
             "Cyborg speed +10%",
-            "Only Applies to Newly Produced Cyborgs"
+            "All Cyborgs upgraded automatically"
         ]
     },
     "RES_V_CYEN4": {
@@ -3021,7 +3211,7 @@
             "Cyborg Control System Upgrade",
             "Cybernetic Actuators",
             "Cyborg speed +10%",
-            "Only Applies to Newly Produced Cyborgs"
+            "All Cyborgs upgraded automatically"
         ]
     },
     "RES_V_CYEN5": {
@@ -3032,7 +3222,7 @@
             "Cyborg Control System Upgrade",
             "Cybernetic Actuators",
             "Cyborg speed +10%",
-            "Only Applies to Newly Produced Cyborgs"
+            "All Cyborgs upgraded automatically"
         ]
     },
     "RES_V_CYEN6": {
@@ -3043,7 +3233,7 @@
             "Cyborg Control System Upgrade",
             "Cybernetic Actuators",
             "Cyborg speed +10%",
-            "Only Applies to Newly Produced Cyborgs"
+            "All Cyborgs upgraded automatically"
         ]
     },
     "RES_V_CYEN7": {
@@ -3054,7 +3244,7 @@
             "Cyborg Control System Upgrade",
             "Self-Coordinating Cybernetic Implants",
             "Cyborg speed +20%",
-            "Only Applies to Newly Produced Cyborgs"
+            "All Cyborgs upgraded automatically"
         ]
     },
     "RES_V_EN1": {
@@ -3065,7 +3255,7 @@
             "Vehicle Engine Upgrade",
             "Fuel Injection Engine",
             "Vehicle speed +30%",
-            "Only Applies to Newly Produced Vehicles"
+            "All vehicles upgraded automatically"
         ]
     },
     "RES_V_EN10": {
@@ -3087,7 +3277,7 @@
             "Vehicle Engine Upgrade",
             "Fuel Injection Engine",
             "Vehicle speed +20%",
-            "Only Applies to Newly Produced Vehicles"
+            "All vehicles upgraded automatically"
         ]
     },
     "RES_V_EN3": {
@@ -3098,7 +3288,7 @@
             "Vehicle Engine Upgrade",
             "Fuel Injection Engine",
             "Vehicle speed +10%",
-            "Only Applies to Newly Produced Vehicles"
+            "All vehicles upgraded automatically"
         ]
     },
     "RES_V_EN4": {
@@ -3332,8 +3522,8 @@
             "Defensive Strength: Very Hard, Build Time: Very Slow"
         ]
     },
-    "RES_WT13_HPV": {
-        "id": "RES_WT13_HPV",
+    "RES_WT13_HVC": {
+        "id": "RES_WT13_HVC",
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_struttech.ogg",
         "text": [
@@ -3349,7 +3539,7 @@
         "sequenceName": "res_struttech.ogg",
         "text": [
             "New Defensive Structure Available",
-            "Armored hardpoint with Flashlight laser",
+            "Armored hardpoint with Pulse laser",
             "Hardpoint Weapon Range +2",
             "Defensive Strength: Very Hard, Build Time: Very Slow"
         ]
@@ -3453,6 +3643,17 @@
             "Defensive Strength: Very Hard, Build Time: Very Slow"
         ]
     },
+    "RES_WT_RAALAS": {
+		"id": "RES_WT_RAALAS",
+		"imdName": "MICAPSUL.pie",
+		"sequenceName": "res_struttech.ogg",
+		"text": [
+			"New Defensive Structure Available",
+			"Reinforced Armored hardpoint with Stormbringer Flak AA",
+            "Hardpoint Weapon Range +2",
+            "Defensive Strength: Very Hard, Build Time: Very Slow"
+		]
+	},
     "RES_WT_DOUBLEAA": {
         "id": "RES_WT_DOUBLEAA",
         "imdName": "MICAPSUL.pie",
@@ -3508,6 +3709,28 @@
             "Replaces all machineguns"
         ]
     },
+    "RES_WT_TWINAGUNA": {
+        "id": "RES_WT_TWINAGUNA",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New Kinetic Weapon Turret Available",
+            "Long range, Twin Multi-barrel, rapid-fire machinegun",
+            "Best Targets: Infantry, base structures, wheeled vehicles",
+            "Replaces all machineguns"
+        ]
+    },
+    "RES_WT_TWINAGUNI": {
+        "id": "RES_WT_TWINAGUNI",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New Kinetic Weapon Turret Available",
+            "Incendiary Twin Multi-barrel, rapid-fire machinegun",
+            "Best Targets: Infantry, base structures, wheeled vehicles",
+            "Replaces all machineguns"
+        ]
+    },
     "RES_W_AA2": {
         "id": "RES_W_AA2",
         "imdName": "MICAPSUL.pie",
@@ -3539,6 +3762,50 @@
             "Quad 30mm Anti-Aircraft machinegun",
             "Aerial targets only",
             "Body Points: Medium"
+        ]
+    },
+    "RES_W_AA5": {
+        "id": "RES_W_AA5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New Kinetic AA Turret Available",
+            "Basic Anti-Aircraft machinegun",
+            "Aerial targets only",
+            "Body Points: Medium"
+        ]
+    },
+    "RES_W_AA6": {
+        "id": "RES_W_AA6",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New Kinetic AA Turret Available",
+            "Stronger basic Anti-Aircraft machinegun",
+            "Aerial targets only",
+            "Body Points: Medium"
+        ]
+    },
+    "RES_W_AA7": {
+        "id": "RES_W_AA7",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New Kinetic AA Turret Available",
+            "Mounted Rail gun flak cannon",
+            "Aerial targets only",
+            "Body Points: High"
+        ]
+    },
+    "RES_W_AA8": {
+        "id": "RES_W_AA8",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New Kinetic AA Turret Available",
+            "Mounted Needle gun flak cannon",
+            "Aerial targets only",
+            "Body Points: High"
         ]
     },
     "RES_W_AAAC1": {
@@ -3838,6 +4105,17 @@
             "Body Points: Very High, Weight: Very Heavy"
         ]
     },
+    "RES_W_BMB7": {
+        "id": "RES_W_BMB7",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New Bunker Buster Earthquake Bomb Available",
+            "Fires heavy Bunker Buster that causes an earthquake upon impact",
+            "Targets: Structures, Cyborgs, Vehicles",
+            "Body Points: low, Weight: Heavy"
+        ]
+    },
     "RES_W_CN5": {
         "id": "RES_W_CN5",
         "imdName": "MICAPSUL.pie",
@@ -3876,10 +4154,10 @@
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_weapons.ogg",
         "text": [
-            "New Kinetic Indirect Fire Weapon Available",
-            "May be targeted directly or assigned to a sensor turret or tower",
-            "Best Targets: Base structures, infantry, wheeled vehicles",
-            "Weight: Heavy, Hitpoints: Very Low, Build Time: Slow, Cost: Expensive"
+            "New Kinetic Weapon Turret Available",
+            "76mm twin-barrel rail automatic-cannon",
+            "Best Targets: Vehicles",
+            "Body Points: High"
         ]
     },
     "RES_W_CNAC1": {
@@ -3931,10 +4209,10 @@
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_weapons.ogg",
         "text": [
-            "New Thermal Weapon Turret Available",
-            "Heavy Flame-thrower firing Propylene Oxide gel",
-            "Best Targets: Bunkers, Wheeled, Half-Tracked and Hover Vehicles",
-            "Weight: Very Light, Hitpoints: Very Low, Build Time: Fast, Cost: Cheap"
+            "New Kinetic Weapon Turret Available",
+            "Heavy Hyper-velocity automatic-cannon firing 88mm rounds",
+            "Best Targets: Vehicles, Hardpoints",
+            "Does more damage than Hyper-velocity Automatic-cannon"
         ]
     },
     "RES_W_CN_4A_HG": {
@@ -3953,10 +4231,10 @@
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_weapons.ogg",
         "text": [
-            "New Thermal Indirect Fire Weapon Available",
-            "May be targeted directly or assigned to a sensor turret or tower",
-            "Best Targets: All droids, Especially Cyborgs",
-            "Weight: Heavy, Hitpoints: Low, Build Time: Medium, Cost: Medium"
+            "New Kinetic Weapon Turret Available",
+            "Incendiary Augmented Hyper-Velocity Cannon firing 88mm rounds",
+            "Best Targets: Vehicles, Hardpoints",
+            "Does incendiary damage to target"
         ]
     },
     "RES_W_CN_4A_HL": {
@@ -4008,10 +4286,10 @@
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_weapons.ogg",
         "text": [
-            "Laser Upgrade",
-            "Improvement in laser emission density",
-            "Laser Range +100%",
-            "All lasers upgraded automatically"
+            "New Kinetic Weapon Turret Available",
+            "76mm Heavy hyper-velocity quad-barrel automatic-cannon",
+            "Best Targets: Vehicles",
+            "Body Points: High, more damage"
         ]
     },
     "RES_W_CN_5_I": {
@@ -4019,10 +4297,10 @@
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_weapons.ogg",
         "text": [
-            "Laser Upgrade",
-            "Improved Energizer reduces laser recharge time",
-            "Laser reload time -15%",
-            "All lasers upgraded automatically"
+            "New Kinetic Weapon Turret Available",
+            "76mm Incendiary hyper-velocity quad-barrel automatic-cannon",
+            "Best Targets: Vehicles",
+            "Body Points: High, more damage, thermal based"
         ]
     },
     "RES_W_CN_D1": {
@@ -4097,7 +4375,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Cannon Upgrade",
-            "Hyper-Velocity Armor-Piercing Fin-Stabilised Discarding Sabot",
+            "Hyper-Velocity Armor-Piercing Fin-Stabilized Discarding Sabot",
             "Cannon damage +25%",
             "All cannons upgraded automatically"
         ]
@@ -4108,7 +4386,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Cannon Upgrade",
-            "Hyper-Velocity Armor-Piercing Fin-Stabilised Discarding Sabot",
+            "Hyper-Velocity Armor-Piercing Fin-Stabilized Discarding Sabot",
             "Cannon damage +25%",
             "All cannons upgraded automatically"
         ]
@@ -4119,7 +4397,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Cannon Upgrade",
-            "Hyper-Velocity Armor-Piercing Fin-Stabilised Discarding Sabot",
+            "Hyper-Velocity Armor-Piercing Fin-Stabilized Discarding Sabot",
             "Cannon damage +45%",
             "All cannons upgraded automatically"
         ]
@@ -4481,10 +4759,10 @@
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_weapons.ogg",
         "text": [
-            "New Kinetic Weapon Turret Available",
-            "Twin 7.62mm machineguns",
-            "Best Targets: Cyborgs, Wheeled Vehicles and Base Structures",
-            "Weight: Light, Hitpoints: Medium, Build Time: Fast, Cost: Cheap"
+            "New Indirect Fire Weapon Available",
+            "155mm fast firing Howitzer may be assigned to a sensor",
+            "Best Targets: Base Structures, infantry, wheeled vehicles",
+            "Body Points: Low"
         ]
     },
     "RES_W_HH1_GAR": {
@@ -4492,10 +4770,10 @@
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_weapons.ogg",
         "text": [
-            "New Kinetic Weapon Turret Available",
-            ".50-calibre heavy machinegun",
-            "Best Targets: Cyborgs, Wheeled Vehicles and Base Structures",
-            "Weight: Light, Hitpoints: Medium, Build Time: Fast, Cost: Cheap"
+            "New Indirect Fire Weapon Available",
+            "155mm fast firing Rail Howitzer may be assigned to a sensor",
+            "Best Targets: Base Structures, infantry, wheeled vehicles",
+            "Body Points: Low"
         ]
     },
     "RES_W_HH1_I": {
@@ -4512,56 +4790,56 @@
     "RES_W_HH1_RAH": {
         "id": "RES_W_HH1_RAH",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_struttech.ogg",
+        "sequenceName": "res_weapons.ogg",
         "text": [
-            "Hardpoint Avenger SAM Site Available",
-            "Surface-to-air missile",
-            "Best Targets: Aerial targets only",
-            "Body Points: Medium"
+            "New Kinetic Indirect Fire Weapon Available",
+            "May be targeted directly or assigned to a sensor turret or tower",
+            "Best Targets: Base structures, infantry, wheeled vehicles",
+            "Weight: Heavy, Hitpoints: Very Low, Build Time: Slow, Cost: Expensive"
         ]
     },
     "RES_W_HH1_RH": {
         "id": "RES_W_HH1_RH",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_struttech.ogg",
+        "sequenceName": "res_weapons.ogg",
         "text": [
-            "Hardpoint Vindicator SAM Site Available",
-            "Heavy surface-to-air missile",
-            "Best Targets: Aerial targets only",
-            "Defensive Strength: Very Hard, Build Time: Very Slow"
+            "New Kinetic Indirect Fire Weapon Available",
+            "May be targeted directly or assigned to a sensor turret or tower",
+            "Best Targets: Base structures, infantry, wheeled vehicles",
+            "Weight: Heavy, Hitpoints: Very Low, Build Time: Slow, Cost: Expensive"
         ]
     },
     "RES_W_HH1_RHI": {
         "id": "RES_W_HH1_RHI",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_struttech.ogg",
+        "sequenceName": "res_weapons.ogg",
         "text": [
-            "New Defensive Structure Available",
-            "Armored guard tower with Lancer AT rocket",
-            "Tower weapon range +3, damage +10%",
-            "Defensive Strength: Medium, Build Time: Slow"
+            "New Kinetic Indirect Fire Weapon Available",
+            "May be targeted directly or assigned to a sensor turret or tower",
+            "Best Targets: Base structures, infantry, wheeled vehicles",
+            "Weight: Heavy, Hitpoints: Very Low, Build Time: Slow, Cost: Expensive"
         ]
     },
     "RES_W_HH1_RHR": {
         "id": "RES_W_HH1_RHR",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_struttech.ogg",
+        "sequenceName": "res_weapons.ogg",
         "text": [
-            "New Defensive Structure Available",
-            "Armored bunker with Flamer",
-            "Bunker Weapon Range +1, Damage +20%",
-            "Defensive Strength: Hard, Build Time: Medium"
+            "New Kinetic Indirect Fire Weapon Available",
+            "May be targeted directly or assigned to a sensor turret or tower",
+            "Best Targets: Base structures, infantry, wheeled vehicles",
+            "Weight: Heavy, Hitpoints: Very Low, Build Time: Slow, Cost: Expensive"
         ]
     },
     "RES_W_HH1_RR": {
         "id": "RES_W_HH1_RR",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_struttech.ogg",
+        "sequenceName": "res_weapons.ogg",
         "text": [
-            "New Defensive Structure Available",
-            "Armored bunker with Light Cannon",
-            "Bunker Weapon Range +1, Damage +20%",
-            "Defensive Strength: Hard, Build Time: Medium"
+            "New Kinetic Indirect Fire Weapon Available",
+            "May be targeted directly or assigned to a sensor turret or tower",
+            "Best Targets: Base structures, infantry, wheeled vehicles",
+            "Weight: Heavy, Hitpoints: Very Low, Build Time: Slow, Cost: Expensive"
         ]
     },
     "RES_W_HLAS": {
@@ -4580,10 +4858,10 @@
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_weapons.ogg",
         "text": [
-            "New Thermal Weapon Turret Available",
-            "Plasmite Flame-thrower",
-            "Best Targets: Bunkers, Wheeled, Half-Tracked and Hover Vehicles",
-            "Weight: Light, Hitpoints: Low, Build Time: Very Fast, Cost: Cheap"
+            "New Thermal Laser Weapon Available",
+            "Fires heavy pulses of laser light",
+            "Best Targets: Heavy cyborgs",
+            "Body Points: Medium"
         ]
     },
     "RES_W_HLAS_G": {
@@ -4591,10 +4869,10 @@
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_pow.ogg",
         "text": [
-            "Power Module Available",
-            "Burns oil more efficiently",
-            "+50% Improved Power Generator Performance with Module",
-            "+25% Automatic Improved Power Generator Performance"
+            "New Thermal Laser Weapon Available",
+            "Fires heavy pulses of laser light",
+            "Best Targets: Heavy cyborgs",
+            "Body Points: Medium"
         ]
     },
     "RES_W_HLAS_IA": {
@@ -4602,10 +4880,10 @@
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_pow.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Thermal Laser Weapon Available",
+            "Fires heavy pulses of laser light",
+            "Best Targets: Heavy cyborgs",
+            "Body Points: Medium"
         ]
     },
     "RES_W_HMK1": {
@@ -4622,34 +4900,34 @@
     "RES_W_HMK1_RA": {
         "id": "RES_W_HMK1_RA",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_weapons.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Kinetic Indirect Fire Weapon Available",
+            "105mm Rail Howitzer may be assigned to a sensor",
+            "Best Targets: Base Structures, infantry, wheeled vehicles",
+            "Body Points: Low"
         ]
     },
     "RES_W_HMK1_RAR": {
         "id": "RES_W_HMK1_RAR",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_weapons.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Kinetic Indirect Fire Weapon Available",
+            "105mm long range Stabilized Rail Howitzer may be assigned to a sensor",
+            "Best Targets: Base Structures, infantry, wheeled vehicles",
+            "Body Points: Low"
         ]
     },
     "RES_W_HMK1_RI": {
         "id": "RES_W_HMK1_RI",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_weapons.ogg",
         "text": [
-            "Power Module Available",
-            "Burns oil more efficiently",
-            "+50% Improved Power Generator Performance with Module",
-            "+25% Automatic Improved Power Generator Performance"
+            "New Kinetic Indirect Fire Weapon Available",
+            "105mm Incendiary Rail Howitzer may be assigned to a sensor",
+            "Best Targets: Base Structures, infantry, wheeled vehicles",
+            "Body Points: Low"
         ]
     },
     "RES_W_HOWAC1": {
@@ -4758,7 +5036,7 @@
         "text": [
             "Howitzer Upgrade",
             "Improved Range Finding Coordinate System",
-            "Howitzer damage +25%",
+            "Howitzer max range +25%",
             "All howitzers upgraded automatically"
         ]
     },
@@ -4769,7 +5047,7 @@
         "text": [
             "Howitzer Upgrade",
             "Improved Range Finding Coordinate System",
-            "Howitzer damage +15%",
+            "Howitzer max range +15%",
             "All howitzers upgraded automatically"
         ]
     },
@@ -4780,7 +5058,7 @@
         "text": [
             "Howitzer Upgrade",
             "Improved Range Finding Coordinate System",
-            "Howitzer damage +15%",
+            "Howitzer amax range +15%",
             "All howitzers upgraded automatically"
         ]
     },
@@ -4864,34 +5142,34 @@
     "RES_W_LAS2_A": {
         "id": "RES_W_LAS2_A",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_struttech.ogg",
+        "sequenceName": "res_weapons.ogg",
         "text": [
-            "New Defensive Structure Available",
-            "Armored guard tower with Lancer AT rocket",
-            "Tower weapon range +3, damage +10%",
-            "Defensive Strength: Medium, Build Time: Slow"
+            "New Thermal Laser Weapon Available",
+            "Fires pulses of laser light, leaves small incendiary damage",
+            "Best Targets: All Droids, Land and Air",
+            "Production Time: Fast, Cost: Moderate"
         ]
     },
     "RES_W_LAS2_AH": {
         "id": "RES_W_LAS2_AH",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_struttech.ogg",
+        "sequenceName": "res_weapons.ogg",
         "text": [
-            "New Defensive Structure Available",
-            "Armored bunker with Flamer",
-            "Bunker Weapon Range +1, Damage +20%",
-            "Defensive Strength: Hard, Build Time: Medium"
+            "New Thermal Laser Weapon Available",
+            "Fires pulses of laser light, leaves small incendiary damage",
+            "Best Targets: All Droids, Land and Air",
+            "Production Time: Fast, Cost: Moderate"
         ]
     },
     "RES_W_LAS2_G": {
         "id": "RES_W_LAS2_G",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_struttech.ogg",
+        "sequenceName": "res_weapons.ogg",
         "text": [
-            "New Defensive Structure Available",
-            "Armored bunker with Light Cannon",
-            "Bunker Weapon Range +1, Damage +20%",
-            "Defensive Strength: Hard, Build Time: Medium"
+            "New Thermal Laser Weapon Available",
+            "Fires pulses of laser light, leaves small incendiary damage",
+            "Best Targets: All Droids, Land and Air",
+            "Production Time: Fast, Cost: Moderate"
         ]
     },
     "RES_W_LAS2_I": {
@@ -4899,43 +5177,43 @@
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_weapons.ogg",
         "text": [
-            "New Thermal Weapon Turret Available",
-            "Plasmite Flame-thrower",
-            "Best Targets: Bunkers, Wheeled, Half-Tracked and Hover Vehicles",
-            "Weight: Light, Hitpoints: Low, Build Time: Very Fast, Cost: Cheap"
+            "New Thermal Laser Weapon Available",
+            "Fires pulses of laser light, leaves small incendiary damage",
+            "Best Targets: All Droids, Land and Air",
+            "Production Time: Fast, Cost: Moderate"
         ]
     },
     "RES_W_LAS2_IA": {
         "id": "RES_W_LAS2_IA",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_weapons.ogg",
         "text": [
-            "Power Module Available",
-            "Burns oil more efficiently",
-            "+50% Improved Power Generator Performance with Module",
-            "+25% Automatic Improved Power Generator Performance"
+            "New Thermal Laser Weapon Available",
+            "Fires pulses of laser light, leaves small incendiary damage",
+            "Best Targets: All Droids, Land and Air",
+            "Production Time: Fast, Cost: Moderate"
         ]
     },
     "RES_W_LAS2_M": {
         "id": "RES_W_LAS2_M",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_weapons.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Thermal Laser Weapon Available",
+            "Fires pulses of laser light, leaves small incendiary damage",
+            "Best Targets: All Droids, Land and Air",
+            "Production Time: Fast, Cost: Moderate"
         ]
     },
     "RES_W_LAS2_MA": {
         "id": "RES_W_LAS2_MA",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_weapons.ogg",
         "text": [
-            "Improved Power Generator Performance",
-            "Gas turbine boosts power output",
-            "Power output +50%",
-            "All power generators upgraded automatically"
+            "New Thermal Laser Weapon Available",
+            "Fires pulses of laser light, leaves small incendiary damage",
+            "Best Targets: All Droids, Land and Air",
+            "Production Time: Fast, Cost: Moderate"
         ]
     },
     "RES_W_LASRA2": {
@@ -5022,6 +5300,28 @@
         "text": [
             "New Kinetic Weapon Turret Available",
             "Multi-barrel, rapid-fire machinegun",
+            "Best Targets: Infantry, base structures, wheeled vehicles",
+            "Production Time: Fast, Cost: Cheap"
+        ]
+    },
+    "RES_W_MG4A": {
+        "id": "RES_W_MG4A",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New Kinetic Weapon Turret Available",
+            "Long range, Multi-barrel, rapid-fire machinegun",
+            "Best Targets: Infantry, base structures, wheeled vehicles",
+            "Production Time: Fast, Cost: Cheap"
+        ]
+    },
+    "RES_W_MG4I": {
+        "id": "RES_W_MG4I",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New Kinetic Weapon Turret Available",
+            "Incendiary Multi-barrel, rapid-fire machinegun",
             "Best Targets: Infantry, base structures, wheeled vehicles",
             "Production Time: Fast, Cost: Cheap"
         ]
@@ -5128,12 +5428,12 @@
     "RES_W_MG_MN2": {
         "id": "RES_W_MG_MN2",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_struttech.ogg",
+        "sequenceName": "res_weapons.ogg",
         "text": [
-            "Hardpoint Vindicator SAM Site Available",
-            "Heavy surface-to-air missile",
-            "Best Targets: Aerial targets only",
-            "Defensive Strength: Very Hard, Build Time: Very Slow"
+            "New Kinetic Weapon Turret Available",
+            "Powerful Twin .50-calibre heavy machinegun",
+            "Best Targets: Cyborgs, Wheeled Vehicles and Base Structures",
+            "Weight: Light, Hitpoints: Medium, Build Time: Fast, Cost: Cheap"
         ]
     },
     "RES_W_MG_MN3": {
@@ -5766,23 +6066,23 @@
     "RES_W_RHOW_I": {
         "id": "RES_W_RHOW_I",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_struttech.ogg",
+        "sequenceName": "res_weapons.ogg",
         "text": [
-            "Hardpoint Vindicator SAM Site Available",
-            "Heavy surface-to-air missile",
-            "Best Targets: Aerial targets only",
-            "Defensive Strength: Very Hard, Build Time: Very Slow"
+            "New Kinetic Indirect Fire Weapon Available",
+            "105mm multi-barrel Incendiary Howitzer may be assigned to a sensor",
+            "Best Targets: Base Structures, infantry, wheeled vehicles",
+            "Body Points: Low"
         ]
     },
     "RES_W_RHOW_R": {
         "id": "RES_W_RHOW_R",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_struttech.ogg",
+        "sequenceName": "res_weapons.ogg",
         "text": [
-            "New Defensive Structure Available",
-            "Armored guard tower with Lancer AT rocket",
-            "Tower weapon range +3, damage +10%",
-            "Defensive Strength: Medium, Build Time: Slow"
+            "New Kinetic Indirect Fire Weapon Available",
+            "105mm multi-barrel Rail Howitzer may be assigned to a sensor",
+            "Best Targets: Base Structures, infantry, wheeled vehicles",
+            "Body Points: Low"
         ]
     },
     "RES_W_RHOW_RA": {
@@ -5790,32 +6090,32 @@
         "imdName": "MICAPSUL.pie",
         "sequenceName": "res_weapons.ogg",
         "text": [
-            "New Thermal Weapon Turret Available",
-            "Plasmite Flame-thrower",
-            "Best Targets: Bunkers, Wheeled, Half-Tracked and Hover Vehicles",
-            "Weight: Light, Hitpoints: Low, Build Time: Very Fast, Cost: Cheap"
+            "New Kinetic Indirect Fire Weapon Available",
+            "105mm multi-barrel long range Stabilized Howitzer may be assigned to a sensor",
+            "Best Targets: Base Structures, infantry, wheeled vehicles",
+            "Body Points: Low"
         ]
     },
     "RES_W_RHOW_RI": {
         "id": "RES_W_RHOW_RI",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_struttech.ogg",
+        "sequenceName": "res_weapons.ogg",
         "text": [
-            "New Defensive Structure Available",
-            "Armored bunker with Flamer",
-            "Bunker Weapon Range +1, Damage +20%",
-            "Defensive Strength: Hard, Build Time: Medium"
+            "New Kinetic Indirect Fire Weapon Available",
+            "105mm multi-barrel Rail Howitzer may be assigned to a sensor",
+            "Best Targets: Base Structures, infantry, wheeled vehicles",
+            "Body Points: Low"
         ]
     },
     "RES_W_RHOW_RR": {
         "id": "RES_W_RHOW_RR",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_struttech.ogg",
+        "sequenceName": "res_weapons.ogg",
         "text": [
-            "New Defensive Structure Available",
-            "Armored bunker with Light Cannon",
-            "Bunker Weapon Range +1, Damage +20%",
-            "Defensive Strength: Hard, Build Time: Medium"
+            "New Kinetic Indirect Fire Weapon Available",
+            "105mm multi-barrel long range Stabilized Howitzer may be assigned to a sensor",
+            "Best Targets: Base Structures, infantry, wheeled vehicles",
+            "Body Points: Low"
         ]
     },
     "RES_W_RK_AC1": {
@@ -6041,12 +6341,12 @@
     "RES_W_RK_MR_QD": {
         "id": "RES_W_RK_MR_QD",
         "imdName": "MICAPSUL.pie",
-        "sequenceName": "res_pow.ogg",
+        "sequenceName": "res_weapons.ogg",
         "text": [
-            "Power Module Available",
-            "Burns oil more efficiently",
-            "+50% Improved Power Generator Performance with Module",
-            "+25% Automatic Improved Power Generator Performance"
+            "New Kinetic Rocket Available",
+            "Quad Fires salvoes of mini-rockets",
+            "Best Targets: Base structures",
+            "Body Points: Very Low"
         ]
     },
     "RES_W_RK_MR_TW": {
@@ -6169,5 +6469,24 @@
             "Range: Long, Damage: Medium",
             "Body Points: Very Low, Reload Time: Very Slow"
         ]
-    }
+    },
+    "RES_ABC_1": {
+		"id": "RES_ABC_1",
+		"imdName": "MICAPSUL.pie",
+		"sequenceName": "res_struttech.ogg",
+		"text": [
+			"New Technology Available"
+		]
+	},
+    "RES_WT13_HPV": {
+		"id": "RES_WT13_HPV",
+		"imdName": "MICAPSUL.pie",
+		"sequenceName": "res_struttech.ogg",
+		"text": [
+			"New Defensive Structure Available",
+			"Armored hardpoint with Hyper-Velocity Cannon",
+			"Automatically targets enemies within sensor range",
+			"Defensive Strength: High"
+		]
+	}
 }

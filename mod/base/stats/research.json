@@ -545,7 +545,7 @@
     "R-Cyborg-Hvywpn-HPV": {
         "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-Cyborg-Hvywpn-HPV",
-        "msgName": "RES_CYW_H_HPV",
+        "msgName": "RES_CYW_H_HVC",
         "name": "Super HVC Cyborg",
         "redComponents": [
             "Cyb-Hvywpn-Mcannon"
@@ -709,6 +709,7 @@
     "R-Cyborg-Hvywpn-Rocket-LtA-T": {
         "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-Cyborg-Hvywpn-Rocket-LtA-T",
+        "msgName": "RES_CYW_H_ROL",
         "name": "Super Lancer Cyborg",
         "redComponents": [
             "CyborgRocket"
@@ -728,7 +729,7 @@
         "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-Cyborg-Hvywpn-Rocket-Pod",
         "msgName": "RES_CYW_H_RO",
-        "name": "Rocket-Pod Cyborg",
+        "name": "Super Rocket-Pod Cyborg",
         "requiredResearch": [
             "R-Wpn-Rocket05-MiniPod",
             "R-Cyborg-HvyBody"
@@ -743,7 +744,8 @@
     "R-Cyborg-Hvywpn-Rocket-Pod-Arch": {
         "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-Cyborg-Hvywpn-Rocket-Pod-Arch",
-        "name": "Thermal Rocket Cyborg",
+        "msgName": "RES_CYW_H_TRO",
+        "name": "Super Thermal Rocket Cyborg",
         "requiredResearch": [
             "R-Wpn-Rocket05-MiniPod-Arch",
             "R-Cyborg-HvyBody"
@@ -759,7 +761,7 @@
         "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-Cyborg-Hvywpn-Rocket-Pod-MRA",
         "msgName": "RES_CYW_H_RA",
-        "name": "Rocket Array Cyborg",
+        "name": "Super Rocket Array Cyborg",
         "requiredResearch": [
             "R-Wpn-Rocket02-MRL",
             "R-Cyborg-HvyBody"
@@ -793,6 +795,7 @@
     "R-Cyborg-Hvywpn-Rocket-Sunburst-Arch": {
         "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-Cyborg-Hvywpn-Rocket-Sunburst-Arch",
+        "msgName": "RES_CYW_H_TSU",
         "name": "Super Thermal Sunburst Cyborg",
         "redComponents": [
             "Cyb-Wpn-Rocket-Sunburst-Arch"
@@ -812,7 +815,7 @@
         "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-Cyborg-Hvywpn-SpyTurret01",
         "msgName": "RES_CYW_H_NX",
-        "name": "Super Nexus Cyborg",
+        "name": "Super Nexus Link Cyborg",
         "requiredResearch": [
             "R-Sys-SpyTurret",
             "R-Cyborg-HvyBody"
@@ -1280,6 +1283,7 @@
     "R-Defense-AA-Laser": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-AA-Laser",
+        "msgName": "RES_EMP_STB",
         "name": "Stormbringer Emplacement",
         "requiredResearch": [
             "R-Wpn-AALaser"
@@ -1294,6 +1298,7 @@
     "R-Defense-AAGunLaser-Lng": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-AAGunLaser-Lng",
+        "msgName": "RES_WT_RAALAS",
         "name": "Stormbringer Flak AA Hardpoint",
         "requiredResearch": [
             "R-Wpn-AALaser",
@@ -1309,6 +1314,7 @@
     "R-Defense-AASite-QuadBof": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-AASite-QuadBof",
+        "msgName": "RES_ABC_1",
         "name": "AA Flak Cannon Emplacement",
         "requiredResearch": [
             "R-Wpn-AAGun02"
@@ -1323,6 +1329,7 @@
     "R-Defense-AASite-QuadMg1": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-AASite-QuadMg1",
+        "msgName": "RES_EMP_AA2",
         "name": "Hurricane AA Site",
         "requiredResearch": [
             "R-Wpn-AAGun03"
@@ -1337,6 +1344,7 @@
     "R-Defense-AASite-QuadRotMg": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-AASite-QuadRotMg",
+        "msgName": "RES_EMP_AA3",
         "name": "Whirlwind AA Site",
         "redStructures": [
             "AASite-QuadMg1"
@@ -1355,7 +1363,7 @@
     "R-Defense-AASite-QuadMg1AAGun-Scav": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Defense-AASite-QuadMg1AAGun-Scav",
-        "msgName": "RES_EMP_SAM1",
+        "msgName": "RES_ABC_1",
         "name": "AA Turret Site",
         "requiredResearch": [
             "R-Wpn-AAGun05"
@@ -1371,7 +1379,7 @@
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Defense-AASite-QuadRotAAGun-Scav",
         "name": "Cyclone AA Turret Site",
-        "msgName": "RES_EMP_SAM1",
+        "msgName": "RES_ABC_1",
         "requiredResearch": [
             "R-Wpn-AAGun06"
         ],
@@ -1385,6 +1393,7 @@
     "R-Defense-CB-Tower02": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-CB-Tower02",
+        "msgName": "RES_SY_CBSTW1",
         "name": "CB Plascrete Tower",
         "redStructures": [
             "Sys-CB-Tower01"
@@ -1403,6 +1412,7 @@
     "R-Defense-CB-Tower03": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-CB-Tower03",
+        "msgName": "RES_SY_CBSTW1",
         "name": "CB Sky Tower",
         "redStructures": [
             "Sys-CB-Tower02"
@@ -1421,6 +1431,7 @@
     "R-Defense-Cannon4AUTOMk1-Full-Aslt": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Cannon4AUTOMk1-Full-Aslt",
+        "msgName": "RES_ABC_1",
         "name": "Full Assault Cannon Emplacement",
         "requiredResearch": [
             "R-Wpn-Cannon-Mount03",
@@ -1436,6 +1447,7 @@
     "R-Defense-Cannon4AUTOMk1-Hvy-Aslt": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Cannon4AUTOMk1-Hvy-Aslt",
+        "msgName": "RES_ABC_1",
         "name": "Heavy HVC Emplacement",
         "requiredResearch": [
             "R-Wpn-Cannon-Mount02",
@@ -1451,6 +1463,7 @@
     "R-Defense-Cannon4AUTOMk1-Hvy-Inc": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Cannon4AUTOMk1-Hvy-Inc",
+        "msgName": "RES_ABC_1",
         "name": "Heavy Incendiary HVC Hardpoint",
         "requiredResearch": [
             "R-Wpn-Cannon4AMk1-Hvy-Inc",
@@ -1466,6 +1479,7 @@
     "R-Defense-Tower-VulcanCan": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Tower-VulcanCan",
+        "msgName": "RES_ABC_1",
         "name": "Assault Cannon Tower",
         "requiredResearch": [
             "R-Wpn-Cannon5",
@@ -1481,7 +1495,7 @@
     "R-Defense-Tower2-Cannon5VulcanMk1-Inc": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Defense-Tower2-Cannon5VulcanMk1-Inc",
-        "msgName": "RES_W_CN6_T_AI",
+        "msgName": "RES_ABC_1",
         "name": "Incendiary Assault Cannon Tower",
         "requiredResearch": [
             "R-Wpn-Cannon5-Inc",
@@ -1497,6 +1511,7 @@
     "R-Defense-Cannon5VulcanMk1-Gat": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Cannon5VulcanMk1-Gat",
+        "msgName": "RES_ABC_1",
         "name": "Rotary Cannon Emplacement",
         "requiredResearch": [
             "R-Wpn-Cannon-Mount02",
@@ -1512,6 +1527,7 @@
     "R-Defense-Cannon5VulcanMk1-Hvy": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Cannon5VulcanMk1-Hvy",
+        "msgName": "RES_ABC_1",
         "name": "Heavy Assault Cannon Emplacement",
         "requiredResearch": [
             "R-Wpn-Cannon5-Hvy-Aslt",
@@ -1527,6 +1543,7 @@
     "R-Defense-Cannon6": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Cannon6",
+        "msgName": "RES_ABC_1",
         "name": "Twin Assault Cannon Bunker",
         "requiredResearch": [
             "R-Defense-WallUpgrade04",
@@ -1542,6 +1559,7 @@
     "R-Defense-Cannon6TwinAslt-Rail": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Cannon6TwinAslt-Rail",
+        "msgName": "RES_ABC_1",
         "name": "Twin Rail Hardpoint",
         "requiredResearch": [
             "R-Wpn-Cannon6TwinAslt-Rail",
@@ -1557,6 +1575,7 @@
     "R-Defense-ECM1PylonMk1": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-ECM1PylonMk1",
+        "msgName": "RES_SY_ECM1",
         "name": "Jammer Tower",
         "requiredResearch": [
             "R-Sys-ECM-Upgrade01",
@@ -1572,6 +1591,7 @@
     "R-Defense-ECM1PylonMk2": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-ECM1PylonMk2",
+        "msgName": "RES_SY_ECM1",
         "name": "Supercrete Jammer Tower",
         "redStructures": [
             "ECM1PylonMk1"
@@ -1590,6 +1610,7 @@
     "R-Defense-ECM1PylonMk3": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-ECM1PylonMk3",
+        "msgName": "RES_SY_ECM1",
         "name": "Plascrete Jammer Tower",
         "redStructures": [
             "ECM1PylonMk2"
@@ -1608,6 +1629,7 @@
     "R-Defense-ECM1PylonMk4": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-ECM1PylonMk4",
+        "msgName": "RES_SY_ECM1",
         "name": "Jammer Sky Tower",
         "redStructures": [
             "ECM1PylonMk3"
@@ -1626,6 +1648,7 @@
     "R-Defense-EMPCannon": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-EMPCannon",
+        "msgName": "RES_DEF_EMP",
         "name": "EMP Cannon Hardpoint",
         "requiredResearch": [
             "R-Wpn-EMPCannon"
@@ -1640,6 +1663,7 @@
     "R-Defense-EMPMortar": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-EMPMortar",
+        "msgName": "RES_DEF_EMPM",
         "name": "EMP Mortar Pit",
         "requiredResearch": [
             "R-Defense-EMPCannon",
@@ -1655,6 +1679,7 @@
     "R-Defense-Emplacement-HPVcannon": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Emplacement-HPVcannon",
+        "msgName": "RES_ABC_1",
         "name": "Hyper Velocity Cannon Bunker",
         "redStructures": [
             "PillBox4"
@@ -1672,6 +1697,7 @@
     "R-Defense-GuardTower-ATMiss": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-GuardTower-ATMiss",
+        "msgName": "RES_ABC_1",
         "name": "Scourge Missile Tower",
         "redStructures": [
             "GuardTower5"
@@ -1690,6 +1716,7 @@
     "R-Defense-GuardTower-Rail1": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-GuardTower-Rail1",
+        "msgName": "RES_EMP_RL1TOW",
         "name": "Needle Gun Tower",
         "redStructures": [
             "GuardTower1"
@@ -1708,6 +1735,7 @@
     "R-Defense-GuardTower-RotMg": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-GuardTower-RotMg",
+        "msgName": "RES_ABC_1",
         "name": "Twin Assault Gun Tower",
         "requiredResearch": [
             "R-Wpn-MG5",
@@ -1771,6 +1799,7 @@
     "R-Defense-HeavyLas": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-HeavyLas",
+        "msgName": "RES_EMP_HEAVYLAS",
         "name": "Heavy Laser Emplacement",
         "requiredResearch": [
             "R-Wpn-HvyLaser"
@@ -1785,6 +1814,7 @@
     "R-Defense-HeavyLaser-Gat": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-HeavyLaser-Gat",
+        "msgName": "RES_EMP_HEAVYLASGAT",
         "name": "Heavy Rotary Laser Emplacement",
         "requiredResearch": [
             "R-Wpn-HvyLaser-Gat",
@@ -1800,6 +1830,7 @@
     "R-Defense-HeavyLaser-Inc-Aslt": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-HeavyLaser-Inc-Aslt",
+        "msgName": "RES_ABC_1",
         "name": "Heavy Incendiary Laser Hardpoint",
         "requiredResearch": [
             "R-Wpn-HvyLaser-Inc-Aslt",
@@ -1815,7 +1846,7 @@
     "R-Defense-Laser02-Inc-Aslt": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Defense-Laser02-Inc-Aslt",
-        "msgName": "RES_W_LAS2_IA",
+        "msgName": "RES_ABC_1",
         "name": "Incendiary Assault Laser Hardpoint",
         "requiredResearch": [
             "R-Wpn-Laser02-Inc-Aslt",
@@ -1831,6 +1862,7 @@
     "R-Defense-Howitzer": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Howitzer",
+        "msgName": "RES_EMP_HOW",
         "name": "Howitzer Emplacement",
         "requiredResearch": [
             "R-Wpn-HowitzerMk1"
@@ -1845,6 +1877,7 @@
     "R-Defense-Howitzer-Incendiary": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Howitzer-Incendiary",
+        "msgName": "RES_EMP_INH",
         "name": "Incendiary Howitzer Emplacement",
         "redStructures": [
             "Emplacement-MortarPit-Incendiary"
@@ -1864,6 +1897,7 @@
     "R-Defense-Howitzer-Rail": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Howitzer-Rail",
+        "msgName": "RES_ABC_1",
         "name": "Howitzer Rail Emplacement",
         "requiredResearch": [
             "R-Defense-Howitzer",
@@ -1879,6 +1913,7 @@
     "R-Defense-Howitzer-Rail-Inc": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Howitzer-Rail-Inc",
+        "msgName": "RES_ABC_1",
         "name": "Incendiary Howitzer Rail Emplacement",
         "redStructures": [
             "Emplacement-Howitzer105Mk1-Rail"
@@ -1897,6 +1932,7 @@
     "R-Defense-Howitzer-Rail-Ram": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Howitzer-Rail-Ram",
+        "msgName": "RES_ABC_1",
         "name": "Stabilized Howitzer Rail Emplacement",
         "redStructures": [
             "Emplacement-Howitzer105Mk1-Ram"
@@ -1915,6 +1951,7 @@
     "R-Defense-Howitzer-Ram": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Howitzer-Ram",
+        "msgName": "RES_ABC_1",
         "name": "Stabilized Howitzer Emplacement",
         "redStructures": [
             "Empl3-Mortar2Mk1-Ram"
@@ -1933,7 +1970,8 @@
     "R-Defense-HvyA-Trocket": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-HvyA-Trocket",
-        "name": "Tank Killer Emplacement",
+        "msgName": "RES_ABC_1",
+        "name": "Quad Tank Killer Emplacement",
         "requiredResearch": [
             "R-Wpn-Rocket07-Tank-Killer-Quad"
         ],
@@ -1947,6 +1985,7 @@
     "R-Defense-HvyArtMissile": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-HvyArtMissile",
+        "msgName": "RES_EMP_HvAM",
         "name": "Archangel Missile Battery",
         "redStructures": [
             "Emplacement-Howitzer105",
@@ -1966,6 +2005,7 @@
     "R-Defense-HvyFlamer": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-HvyFlamer",
+        "msgName": "RES_EMP_HVFL",
         "name": "Inferno Bunker",
         "redStructures": [
             "PillBox5"
@@ -1985,6 +2025,7 @@
     "R-Defense-WallTower-Projector": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-WallTower-Projector",
+        "msgName": "RES_EMP_HVFLE",
         "name": "Inferno Hardpoint",
         "requiredResearch": [
             "R-Wpn-Flame2",
@@ -2001,6 +2042,7 @@
     "R-Defense-HvyHowitzer": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-HvyHowitzer",
+        "msgName": "RES_EMP_HvHOW",
         "name": "Ground Shaker Emplacement",
         "redStructures": [
             "Emplacement-MortarPit02"
@@ -2019,6 +2061,7 @@
     "R-Defense-HvyHowitzer-Gat": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-HvyHowitzer-Gat",
+        "msgName": "RES_ABC_1",
         "name": "Ground Shaker Assault Emplacement",
         "requiredResearch": [
             "R-Defense-HvyHowitzer",
@@ -2034,6 +2077,7 @@
     "R-Defense-HvyHowitzer-Gat-Rail": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-HvyHowitzer-Gat-Rail",
+        "msgName": "RES_ABC_1",
         "name": "Ground Shaker Rail Assault Emplacement",
         "requiredResearch": [
             "R-Defense-HvyHowitzer-Gat",
@@ -2049,6 +2093,7 @@
     "R-Defense-HvyHowitzer-Inc": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-HvyHowitzer-Inc",
+        "msgName": "RES_ABC_1",
         "name": "Incendiary Ground Shaker Emplacement",
         "redStructures": [
             "Empl3-Mortar2Mk1-Inc"
@@ -2067,6 +2112,7 @@
     "R-Defense-HvyHowitzer-Rail": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-HvyHowitzer-Rail",
+        "msgName": "RES_ABC_1",
         "name": "Ground Shaker Rail Emplacement",
         "redStructures": [
             "Emplacement-Howitzer150"
@@ -2085,6 +2131,7 @@
     "R-Defense-HvyHowitzer-Rail-Hvy-Ram": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-HvyHowitzer-Rail-Hvy-Ram",
+        "msgName": "RES_ABC_1",
         "name": "Heavy Stabilized Ground Shaker Rail Emplacement",
         "redStructures": [
             "Emplacement-Howitzer150Mk1-Rail-Ram"
@@ -2102,6 +2149,7 @@
     "R-Defense-HvyHowitzer-Rail-Inc": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-HvyHowitzer-Rail-Inc",
+        "msgName": "RES_ABC_1",
         "name": "Incendiary Ground Shaker Rail Emplacement",
         "redStructures": [
             "Emplacement-Howitzer150Mk1-Inc"
@@ -2120,6 +2168,7 @@
     "R-Defense-HvyHowitzer-Rail-Ram": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-HvyHowitzer-Rail-Ram",
+        "msgName": "RES_ABC_1",
         "name": "Stabilized Ground Shaker Rail Emplacement",
         "redStructures": [
             "Emplacement-Howitzer150Mk1-Ram-Hvy"
@@ -2138,6 +2187,7 @@
     "R-Defense-HvyHowitzer-Ram": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-HvyHowitzer-Ram",
+        "msgName": "RES_ABC_1",
         "name": "Stabilized Ground Shaker Emplacement",
         "redStructures": [
             "Emplacement-Howitzer105Mk1-Ram"
@@ -2157,6 +2207,7 @@
     "R-Defense-HvyHowitzer-Ram-Hvy": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-HvyHowitzer-Ram-Hvy",
+        "msgName": "RES_ABC_1",
         "name": "Heavy Stabilized Ground Shaker Emplacement",
         "redStructures": [
             "Emplacement-Howitzer150Mk1-Ram"
@@ -2174,6 +2225,7 @@
     "R-Defense-HvyMor": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-HvyMor",
+        "msgName": "RES_EMP_HvyMor",
         "name": "Bombard Pit",
         "redStructures": [
             "Emplacement-MortarPit01"
@@ -2192,6 +2244,7 @@
     "R-Defense-HvyMor-Inc": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-HvyMor-Inc",
+        "msgName": "RES_EMP_HvyMorInc",
         "name": "Incendiary Bombard Pit",
         "redStructures": [
             "Emplacement-MortarPit-Incendiary"
@@ -2210,6 +2263,7 @@
     "R-Defense-HvyMor-Rail": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-HvyMor-Rail",
+        "msgName": "RES_EMP_HvyMorRail",
         "name": "Bombard Rail Pit",
         "redStructures": [
             "Emplacement-MortarPit02"
@@ -2228,6 +2282,7 @@
     "R-Defense-HvyMor-Rail-Inc": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-HvyMor-Rail-Inc",
+        "msgName": "RES_EMP_HvyMorRailInc",
         "name": "Incendiary Bombard Rail Pit",
         "redStructures": [
             "Empl3-Mortar2Mk1-Inc",
@@ -2247,6 +2302,7 @@
     "R-Defense-HvyMor-Rail-Ram": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-HvyMor-Rail-Ram",
+        "msgName": "RES_EMP_HvyMorRailStab",
         "name": "Stabilized Bombard Rail Pit",
         "redStructures": [
             "Empl3-Mortar2Mk1-Ram",
@@ -2266,6 +2322,7 @@
     "R-Defense-HvyMor-Ram": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-HvyMor-Ram",
+        "msgName": "RES_EMP_HvyMorStab",
         "name": "Stabilized Bombard Pit",
         "redStructures": [
             "Empl3-Mortar1Mk1-Ram"
@@ -2284,6 +2341,7 @@
     "R-Defense-IDFRocket": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-IDFRocket",
+        "msgName": "RES_EMP_IDFR",
         "name": "Ripple Rocket Battery",
         "requiredResearch": [
             "R-Wpn-Rocket06-IDF",
@@ -2299,6 +2357,7 @@
     "R-Defense-Laser2PULSEMk1-Inc": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Laser2PULSEMk1-Inc",
+        "msgName": "RES_ABC_1",
         "name": "Incendiary Pulse Laser Bunker",
         "requiredResearch": [
             "R-Wpn-Laser02-Inc",
@@ -2314,6 +2373,7 @@
     "R-Defense-Laser3BEAMMk1-Gat": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Laser3BEAMMk1-Gat",
+        "msgName": "RES_ABC_1",
         "name": "Flashlight Tower",
         "requiredResearch": [
             "R-Wpn-Laser01",
@@ -2329,6 +2389,7 @@
     "R-Defense-Laser4-PlasmaCannon-Hvy-Aslt": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Laser4-PlasmaCannon-Hvy-Aslt",
+        "msgName": "RES_ABC_1",
         "name": "Heavy Plasma Cannon Emplacement",
         "requiredResearch": [
             "R-Wpn-PlasmaCannon-Hvy-Aslt",
@@ -2344,6 +2405,7 @@
     "R-Defense-Laser4-PlasmaCannon-Hvy-Lsr-Aslt": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Laser4-PlasmaCannon-Hvy-Lsr-Aslt",
+        "msgName": "RES_ABC_1",
         "name": "Super Heavy Plasma Cannon Emplacement",
         "requiredResearch": [
             "R-Wpn-PlasmaCannon-Hvy-Lsr-Aslt",
@@ -2359,6 +2421,7 @@
     "R-Defense-MG3Mk1-Aslt": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-MG3Mk1-Aslt",
+        "msgName": "RES_ABC_1",
         "name": "Heavy Machinegun Assault Tower",
         "requiredResearch": [
             "R-Wpn-MG3Mk1-Aslt",
@@ -2374,6 +2437,7 @@
     "R-Defense-MG3Mk1-Twn": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-MG3Mk1-Twn",
+        "msgName": "RES_ABC_1",
         "name": "Twin Heavy Machinegun Bunker",
         "requiredResearch": [
             "R-Wpn-MG3Mk1-Twn",
@@ -2389,6 +2453,7 @@
     "R-Defense-MG5TWINROTARY-Hvy": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-MG5TWINROTARY-Hvy",
+        "msgName": "RES_ABC_1",
         "name": "Twin Heavy Assault Gun Bunker",
         "requiredResearch": [
             "R-Wpn-MG5-Hvy",
@@ -2404,6 +2469,7 @@
     "R-Defense-MG5TWINROTARY-Hvy-Inc": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-MG5TWINROTARY-Hvy-Inc",
+        "msgName": "RES_ABC_1",
         "name": "Incendiary Twin Assault Gun Bunker",
         "requiredResearch": [
             "R-Wpn-MG5-Hvy-Inc",
@@ -2435,6 +2501,7 @@
     "R-Defense-MassDriver": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-MassDriver",
+        "msgName": "RES_EMP_MD",
         "name": "Mass Driver Fortress",
         "requiredResearch": [
             "R-Wpn-RailGun03",
@@ -2451,6 +2518,7 @@
     "R-Defense-MdArtMissile": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-MdArtMissile",
+        "msgName": "RES_EMP_MdAM",
         "name": "Seraph Missile Battery",
         "redStructures": [
             "Emplacement-MRL-pit"
@@ -2468,6 +2536,7 @@
     "R-Defense-Mortar3ROTARYMk1-Inc": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Mortar3ROTARYMk1-Inc",
+        "msgName": "RES_EMP_RotMor",
         "name": "Incendiary Pepperpot Pit",
         "requiredResearch": [
             "R-Wpn-Mortar03-Incendiary"
@@ -2482,6 +2551,7 @@
     "R-Defense-Mortar3ROTARYMk1-Ram-Rot": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Mortar3ROTARYMk1-Ram-Rot",
+        "msgName": "RES_EMP_RotMor",
         "name": "Stabilized Pepperpot Pit",
         "requiredResearch": [
             "R-Wpn-Mortar-Range03"
@@ -2512,6 +2582,7 @@
     "R-Defense-MortarPit-Incendiary": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-MortarPit-Incendiary",
+        "msgName": "RES_EMP_IMP",
         "name": "Incendiary Mortar Pit",
         "requiredResearch": [
             "R-Wpn-Mortar-Incendiary",
@@ -2527,6 +2598,7 @@
     "R-Defense-MortarPit-Rail": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-MortarPit-Rail",
+        "msgName": "RES_EMP_Mpit",
         "name": "Mortar Rail Pit",
         "redStructures": [
             "Emplacement-MortarPit01"
@@ -2545,6 +2617,7 @@
     "R-Defense-MortarPit-Rail-Inc": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-MortarPit-Rail-Inc",
+        "msgName": "RES_EMP_IMP",
         "name": "Incendiary Mortar Rail Pit",
         "redStructures": [
             "Emplacement-MortarPit-Incendiary",
@@ -2564,6 +2637,7 @@
     "R-Defense-MortarPit-Rail-Ram": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-MortarPit-Rail-Ram",
+        "msgName": "RES_EMP_Mpit",
         "name": "Stabilized Mortar Rail Pit",
         "redStructures": [
             "Empl3-Mortar1Mk1-Ram",
@@ -2583,6 +2657,7 @@
     "R-Defense-MortarPit-Ram": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-MortarPit-Ram",
+        "msgName": "RES_EMP_Mpit",
         "name": "Stabilized Mortar Pit",
         "redStructures": [
             "Emplacement-MortarPit01"
@@ -2636,6 +2711,7 @@
     "R-Defense-Pillbox03": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Pillbox03",
+        "msgName": "RES_DF_P2",
         "name": "Heavy Machinegun Bunker",
         "requiredResearch": [
             "R-Defense-Pillbox01",
@@ -2700,7 +2776,7 @@
     "R-Defense-Pillbox06-Bun": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Pillbox06-Bun",
-        "msgName": "RES_PB_ATR",
+        "msgName": "RES_ABC_1",
         "name": "Lancer Bunker",
         "requiredResearch": [
             "R-Defense-HardcreteWall",
@@ -2716,7 +2792,7 @@
     "R-Defense-Tower-RotMg": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Tower-RotMg",
-        "msgName": "RES_PB_FL",
+        "msgName": "RES_ABC_1",
         "name": "Assault Gun Emplacement",
         "requiredResearch": [
             "R-Wpn-MG4"
@@ -2731,6 +2807,7 @@
     "R-Defense-PlasmaCannon": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-PlasmaCannon",
+        "msgName": "RES_EMP_PLASCAN",
         "name": "Plasma Cannon Emplacement",
         "requiredResearch": [
             "R-Wpn-PlasmaCannon"
@@ -2745,6 +2822,7 @@
     "R-Defense-PlasmiteFlamer": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-PlasmiteFlamer",
+        "msgName": "RES_EMP_PFL",
         "name": "Plasmite Flamer Bunker",
         "redStructures": [
             "WallTower-Projector",
@@ -2764,6 +2842,7 @@
     "R-Defense-PlasmiteFlamer-Hvy": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-PlasmiteFlamer-Hvy",
+        "msgName": "RES_EMP_PFL",
         "name": "Heavy Plasmite Bunker",
         "requiredResearch": [
             "R-Wpn-Flamer-Damage09",
@@ -2779,6 +2858,7 @@
     "R-Defense-PlasmiteFlamer-Rail": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-PlasmiteFlamer-Rail",
+        "msgName": "RES_EMP_PFL",
         "name": "Heavy Plasmite Rail Bunker",
         "requiredResearch": [
             "R-Wpn-Flame3-Rail",
@@ -2794,6 +2874,7 @@
     "R-Defense-Plasteel-Atmiss": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Plasteel-Atmiss",
+        "msgName": "RES_EMP_ATMTOW",
         "name": "Plasteel Scourge Missile",
         "requiredResearch": [
             "R-Wpn-Missile2A-T",
@@ -2809,6 +2890,7 @@
     "R-Defense-Plasteel-Cannon6TwinAslt-Rail": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Plasteel-Cannon6TwinAslt-Rail",
+        "msgName": "RES_ABC_1",
         "name": "Plasteel Twin Assault Rail",
         "requiredResearch": [
             "R-Defense-Cannon6TwinAslt-Rail",
@@ -2824,6 +2906,7 @@
     "R-Defense-Plasteel-EMP": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Plasteel-EMP",
+        "msgName": "RES_DEF_EMP",
         "name": "Plasteel EMP Cannon Tower",
         "requiredResearch": [
             "R-Defense-EMPCannon",
@@ -2839,6 +2922,7 @@
     "R-Defense-Plasteel-HeavyLaser-Gat": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Plasteel-HeavyLaser-Gat",
+        "msgName": "RES_ABC_1",
         "name": "Plasteel Heavy Laser Rotary",
         "requiredResearch": [
             "R-Defense-HeavyLaser-Gat",
@@ -2854,6 +2938,7 @@
     "R-Defense-Plasteel-HeavyLaser-Inc-Aslt": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Plasteel-HeavyLaser-Inc-Aslt",
+        "msgName": "RES_ABC_1",
         "name": "Plasteel Heavy Laser Incendiary Assault",
         "requiredResearch": [
             "R-Defense-HeavyLaser-Inc-Aslt",
@@ -2869,6 +2954,7 @@
     "R-Defense-Plasteel-Laser2PULSEMk1-Inc": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Plasteel-Laser2PULSEMk1-Inc",
+        "msgName": "RES_ABC_1",
         "name": "Plasteel Incendiary Pulse Laser",
         "requiredResearch": [
             "R-Defense-Laser2PULSEMk1-Inc",
@@ -2884,6 +2970,7 @@
     "R-Defense-Plasteel-PulseLas": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Plasteel-PulseLas",
+        "msgName": "RES_ABC_1",
         "name": "Plasteel Pulse Laser",
         "requiredResearch": [
             "R-Defense-WallTower-PulseLas",
@@ -2899,6 +2986,7 @@
     "R-Defense-Plasteel-Rail2": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Plasteel-Rail2",
+        "msgName": "RES_ABC_1",
         "name": "Plasteel Rail Gun",
         "requiredResearch": [
             "R-Defense-WallTower-Rail2",
@@ -2914,6 +3002,7 @@
     "R-Defense-Plasteel-Rail3": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Plasteel-Rail3",
+        "msgName": "RES_ABC_1",
         "name": "Plasteel Gauss Cannon",
         "requiredResearch": [
             "R-Defense-WallTower-Rail3",
@@ -2929,6 +3018,7 @@
     "R-Defense-Plasteel-RailGun1Mk1-Gat-Twn": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Plasteel-RailGun1Mk1-Gat-Twn",
+        "msgName": "RES_ABC_1",
         "name": "Plasteel Twin Needle Gun",
         "requiredResearch": [
             "R-Defense-RailGun1Mk1-Gat-Twn",
@@ -2944,6 +3034,7 @@
     "R-Defense-Plasteel-RailGun2Mk1-Twn-Inc": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Plasteel-RailGun2Mk1-Twn-Inc",
+        "msgName": "RES_ABC_1",
         "name": "Plasteel Incendiary Twin Rail Gun",
         "requiredResearch": [
             "R-Defense-RailGun2Mk1-Twn-Inc",
@@ -2959,6 +3050,7 @@
     "R-Defense-Plasteel-Railgun-Flak": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Plasteel-Railgun-Flak",
+        "msgName": "RES_ABC_1",
         "name": "Plasteel Flak AA Railgun",
         "requiredResearch": [
             "R-Defense-Railgun-Flak",
@@ -2974,6 +3066,7 @@
     "R-Defense-Plasteel-TwinAssaultGun": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Plasteel-TwinAssaultGun",
+        "msgName": "RES_ABC_1",
         "name": "Plasteel Twin Assault Gun",
         "requiredResearch": [
             "R-Defense-WallTower-TwinAGun",
@@ -2989,6 +3082,7 @@
     "R-Defense-PrisLas": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-PrisLas",
+        "msgName": "RES_EMP_PrisLas",
         "name": "Flashlight Emplacement",
         "requiredResearch": [
             "R-Wpn-Laser01"
@@ -3002,6 +3096,7 @@
     },
     "R-Defense-PulseLas-Emp": {
         "iconID": "IMAGE_RES_DEFENCE",
+        "msgName": "RES_ABC_1",
         "id": "R-Defense-PulseLas-Emp",
         "name": "Pulse Laser Emplacement",
         "requiredResearch": [
@@ -3017,6 +3112,7 @@
     "R-Defense-PulseLas": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-PulseLas",
+        "msgName": "RES_EMP_PulseLas",
         "name": "Pulse Laser Tower",
         "requiredResearch": [
             "R-Wpn-Laser02",
@@ -3032,6 +3128,7 @@
     "R-Defense-Rail2": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Rail2",
+        "msgName": "RES_EMP_Rail2",
         "name": "Rail Gun Emplacement",
         "requiredResearch": [
             "R-Wpn-RailGun02"
@@ -3046,6 +3143,7 @@
     "R-Defense-Rail3": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Rail3",
+        "msgName": "RES_EMP_Rail3",
         "name": "Gauss Cannon Emplacement",
         "redStructures": [
             "Emplacement-Rail2"
@@ -3063,6 +3161,7 @@
     "R-Defense-RailGun1Mk1-Gat-Twn": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-RailGun1Mk1-Gat-Twn",
+        "msgName": "RES_ABC_1",
         "name": "Twin Needle Gun Hardpoint",
         "requiredResearch": [
             "R-Wpn-RailGun04",
@@ -3078,6 +3177,7 @@
     "R-Defense-RailGun1Mk1-GatAA": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-RailGun1Mk1-GatAA",
+        "msgName": "RES_ABC_1",
         "name": "Railgun AA Emplacement",
         "requiredResearch": [
             "R-Wpn-AAGun07",
@@ -3093,6 +3193,7 @@
     "R-Defense-RailGun2Mk1-GatAT": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-RailGun2Mk1-GatAT",
+        "msgName": "RES_ABC_1",
         "name": "Heavy Rail Gun Emplacement",
         "requiredResearch": [
             "R-Wpn-RailGun03-Aslt",
@@ -3108,6 +3209,7 @@
     "R-Defense-RailGun2Mk1-Twn-Inc": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-RailGun2Mk1-Twn-Inc",
+        "msgName": "RES_ABC_1",
         "name": "Twin Rail Gun Emplacement",
         "requiredResearch": [
             "R-Wpn-RailGun08",
@@ -3123,6 +3225,7 @@
     "R-Defense-RailGun3Mk1-Aslt": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-RailGun3Mk1-Aslt",
+        "msgName": "RES_ABC_1",
         "name": "Heavy Gauss Cannon Emplacement",
         "requiredResearch": [
             "R-Wpn-RailGun05",
@@ -3138,6 +3241,7 @@
     "R-Defense-RailGun3Mk1-Hvy": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-RailGun3Mk1-Hvy",
+        "msgName": "RES_ABC_1",
         "name": "Heavy Gauss Cannon Assault Emplacement",
         "requiredResearch": [
             "R-Wpn-RailGun06",
@@ -3153,6 +3257,7 @@
     "R-Defense-Railgun-Flak": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Railgun-Flak",
+        "msgName": "RES_ABC_1",
         "name": "Railgun Flak AA Emplacement",
         "requiredResearch": [
             "R-Wpn-AAGun08",
@@ -3168,6 +3273,7 @@
     "R-Defense-Rocket-Arch-Hvy-Aslt-Gat": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Rocket-Arch-Hvy-Aslt-Gat",
+        "msgName": "RES_ABC_1",
         "name": "Heavy Thermal Rocket Emplacement",
         "requiredResearch": [
             "R-Wpn-Rocket-Arch-Hvy-Aslt-Gat",
@@ -3183,6 +3289,7 @@
     "R-Defense-RotHow": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-RotHow",
+        "msgName": "RES_EMP_RotHOW",
         "name": "Hellstorm Emplacement",
         "redStructures": [
             "Emplacement-Howitzer105"
@@ -3200,6 +3307,7 @@
     "R-Defense-RotHow-Inc": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-RotHow-Inc",
+        "msgName": "RES_ABC_1",
         "name": "Incendiary Hellstorm Emplacement",
         "redStructures": [
             "Emplacement-Howitzer105"
@@ -3218,6 +3326,7 @@
     "R-Defense-RotHow-Rail": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-RotHow-Rail",
+        "msgName": "RES_ABC_1",
         "name": "Railstorm Emplacement",
         "redStructures": [
             "Emplacement-Howitzer105Mk1-Rail"
@@ -3236,6 +3345,7 @@
     "R-Defense-RotHow-Rail-Inc": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-RotHow-Rail-Inc",
+        "msgName": "RES_ABC_1",
         "name": "Incendiary Railstorm Emplacement",
         "requiredResearch": [
             "R-Defense-RotHow-Rail",
@@ -3251,6 +3361,7 @@
     "R-Defense-RotHow-Rail-Ram": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-RotHow-Rail-Ram",
+        "msgName": "RES_ABC_1",
         "name": "Stabilized Railstorm Emplacement",
         "requiredResearch": [
             "R-Defense-RotHow-Rail",
@@ -3266,6 +3377,7 @@
     "R-Defense-RotHow-Ram": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-RotHow-Ram",
+        "msgName": "RES_ABC_1",
         "name": "Stabilized Hellstorm Emplacement",
         "requiredResearch": [
             "R-Defense-RotHow",
@@ -3281,6 +3393,7 @@
     "R-Defense-RotMG": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-RotMG",
+        "msgName": "RES_DEF_RotMG",
         "name": "Rotary MG Bunker",
         "redStructures": [
             "PillBox1",
@@ -3300,6 +3413,7 @@
     "R-Defense-RotMor": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-RotMor",
+        "msgName": "RES_EMP_RotMor",
         "name": "Pepperpot Pit",
         "redStructures": [
             "Emplacement-MortarPit01"
@@ -3317,6 +3431,7 @@
     "R-Defense-RotMor-Rail": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-RotMor-Rail",
+        "msgName": "RES_EMP_RotMor",
         "name": "Railpot Pit",
         "requiredResearch": [
             "R-Wpn-Mortar3-Rail",
@@ -3332,6 +3447,7 @@
     "R-Defense-RotMor-Rail-Inc": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-RotMor-Rail-Inc",
+        "msgName": "RES_EMP_RotMor",
         "name": "Incendiary Railpot Pit",
         "requiredResearch": [
             "R-Defense-RotMor-Rail",
@@ -3347,6 +3463,7 @@
     "R-Defense-RotMor-Rail-Ram": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-RotMor-Rail-Ram",
+        "msgName": "RES_EMP_RotMor",
         "name": "Stabilized Railpot Pit",
         "requiredResearch": [
             "R-Defense-RotMor-Rail",
@@ -3362,6 +3479,7 @@
     "R-Defense-SamHvy-Arch": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-SamHvy-Arch",
+        "msgName": "RES_EMP_SAM2",
         "name": "Thermal Vindicator SAM Tower",
         "requiredResearch": [
             "R-Wpn-Missile-HvSAM-Arch",
@@ -3377,6 +3495,7 @@
     "R-Defense-SamSite-Arch": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-SamSite-Arch",
+        "msgName": "RES_EMP_SAM1",
         "name": "Thermal Avenger SAM Tower",
         "requiredResearch": [
             "R-Wpn-Missile-LtSAM2-Arch",
@@ -3392,6 +3511,7 @@
     "R-Defense-SamSite1": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-SamSite1",
+        "msgName": "RES_EMP_SAM1",
         "name": "Avenger SAM Emplacement",
         "requiredResearch": [
             "R-Wpn-Missile-LtSAM",
@@ -3407,6 +3527,7 @@
     "R-Defense-SamSite2": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-SamSite2",
+        "msgName": "RES_EMP_SAM2",
         "name": "Vindicator SAM Tower",
         "redStructures": [
             "P0-AASite-SAM1"
@@ -3426,6 +3547,7 @@
     "R-Defense-SensoTower04": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-SensoTower04",
+        "msgName": "RES_SY_STW2",
         "name": "Supercrete Sensor Tower",
         "requiredResearch": [
             "R-Sys-Sensor-Tower02",
@@ -3441,6 +3563,7 @@
     "R-Defense-SensoTower05": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-SensoTower05",
+        "msgName": "RES_SY_STW2",
         "name": "Plascrete Sensor Tower",
         "requiredResearch": [
             "R-Defense-SensoTower04",
@@ -3456,6 +3579,7 @@
     "R-Defense-Sunburst": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Sunburst",
+        "msgName": "RES_ABC_1",
         "name": "Sunburst AA Tower",
         "requiredResearch": [
             "R-Defense-HardcreteWall",
@@ -3471,6 +3595,7 @@
     "R-Defense-Sunburst-Arch": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Sunburst-Arch",
+        "msgName": "RES_ABC_1",
         "name": "Thermal Sunburst AA Tower",
         "requiredResearch": [
             "R-Defense-HardcreteWall",
@@ -3502,6 +3627,7 @@
     "R-Defense-Super-EMP-Fort": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Super-EMP-Fort",
+        "msgName": "RES_DEF_EMP",
         "name": "EMP Fortress",
         "requiredResearch": [
             "R-Wpn-EMPCannon",
@@ -3517,6 +3643,7 @@
     "R-Defense-Super-FlamerPlasma-Fort": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Super-FlamerPlasma-Fort",
+        "msgName": "RES_ABC_1",
         "name": "Plasmite Rail Fortress",
         "requiredResearch": [
             "R-Wpn-Flame3-Rail",
@@ -3532,6 +3659,7 @@
     "R-Defense-Super-Laser2-Fort": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Super-Laser2-Fort",
+        "msgName": "RES_ABC_1",
         "name": "Laser Fortress",
         "requiredResearch": [
             "R-Wpn-RailGun03",
@@ -3548,6 +3676,7 @@
     "R-Defense-Super-LaserPlasma-Fort": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Super-LaserPlasma-Fort",
+        "msgName": "RES_ABC_1",
         "name": "Plasma Cannon Fortress",
         "requiredResearch": [
             "R-Wpn-PlasmaCannon",
@@ -3563,6 +3692,7 @@
     "R-Defense-Super-MG-Fort": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Super-MG-Fort",
+        "msgName": "RES_ABC_1",
         "name": "Assault Gun Fortress",
         "requiredResearch": [
             "R-Wpn-MG5",
@@ -3595,6 +3725,7 @@
     "R-Defense-Super-NEXUS-Fort": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Super-NEXUS-Fort",
+        "msgName": "RES_ABC_1",
         "name": "Nexus Link Fortress",
         "requiredResearch": [
             "R-Sys-SpyTurret",
@@ -3627,6 +3758,7 @@
     "R-Defense-SuperIncHowitzer": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-SuperIncHowitzer",
+        "msgName": "RES_ABC_1",
         "name": "Super Incendiary Howitzer",
         "redStructures": [
             "Super-MortarPlas-Empl"
@@ -3645,6 +3777,7 @@
     "R-Defense-SuperIncMortar": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-SuperIncMortar",
+        "msgName": "RES_ABC_1",
         "name": "Super Incendiary Mortar",
         "requiredResearch": [
             "R-Defense-MortarPit-Incendiary",
@@ -3660,6 +3793,7 @@
     "R-Defense-SuperIncRailHowitzer": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-SuperIncRailHowitzer",
+        "msgName": "RES_ABC_1",
         "name": "Super Incendiary Rail Howitzer",
         "redStructures": [
             "Super-HowitzerPlas-Empl"
@@ -3678,6 +3812,7 @@
     "R-Defense-SuperIncRailMortar": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-SuperIncRailMortar",
+        "msgName": "RES_ABC_1",
         "name": "Super Incendiary Rail Mortar",
         "redStructures": [
             "Super-MortarPlas-Empl"
@@ -3696,6 +3831,7 @@
     "R-Defense-SuperRailHowitzer": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-SuperRailHowitzer",
+        "msgName": "RES_ABC_1",
         "name": "Super Rail Howitzer",
         "redStructures": [
             "Super-MortarGaussRamjet-Empl"
@@ -3714,6 +3850,7 @@
     "R-Defense-SuperRailMortar": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-SuperRailMortar",
+        "msgName": "RES_ABC_1",
         "name": "Super Rail Mortar",
         "requiredResearch": [
             "R-Defense-MortarPit-Rail",
@@ -3729,6 +3866,7 @@
     "R-Defense-SuperRamjetHowitzer": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-SuperRamjetHowitzer",
+        "msgName": "RES_ABC_1",
         "name": "Super Stabilized Howitzer",
         "redStructures": [
             "Super-MortarRamjet-Empl"
@@ -3748,6 +3886,7 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-SuperRamjetMortar",
         "keyTopic": 1,
+        "msgName": "RES_ABC_1",
         "name": "Super Stabilized Mortar",
         "requiredResearch": [
             "R-Defense-MortarPit-Ram",
@@ -3816,7 +3955,7 @@
     "R-Defense-Tower03": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Tower03",
-        "msgName": "RES_TOWER2",
+        "msgName": "RES_TOWER1",
         "name": "Heavy Machinegun Tower",
         "redStructures": [
             "GuardTower1",
@@ -3837,7 +3976,7 @@
     "R-Defense-Tower04": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Tower04",
-        "msgName": "RES_TOWER2",
+        "msgName": "RES_ABC_1",
         "name": "Flamer Tower",
         "requiredResearch": [
             "R-Defense-HardcreteWall",
@@ -3853,6 +3992,7 @@
     "R-Defense-Tower06": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Tower06",
+        "msgName": "RES_ABC_1",
         "name": "Quad Rocket Tower",
         "redStructures": [
             "GuardTower8"
@@ -3887,6 +4027,7 @@
     "R-Defense-Tower09": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Tower09",
+        "msgName": "RES_ABC_1",
         "name": "Quad Rocket Array Tower",
         "requiredResearch": [
             "R-Defense-HardcreteWall",
@@ -3902,6 +4043,7 @@
     "R-Defense-Tower10": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Tower10",
+        "msgName": "RES_ABC_1",
         "name": "Quad Thermal Rocket Tower",
         "requiredResearch": [
             "R-Defense-HardcreteWall",
@@ -3917,6 +4059,7 @@
     "R-Defense-Wall-RotMg": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-Wall-RotMg",
+        "msgName": "RES_WT7_RMG",
         "name": "Assault Gun Hardpoint",
         "redStructures": [
             "WallTower01"
@@ -3954,6 +4097,7 @@
     "R-Defense-WallTower-A-Tmiss": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-WallTower-A-Tmiss",
+        "msgName": "RES_WT9_ATM",
         "name": "Scourge Missile Hardpoint",
         "redStructures": [
             "WallTower-HvATrocket"
@@ -3972,6 +4116,7 @@
     "R-Defense-WallTower-DoubleAAgun": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-WallTower-DoubleAAgun",
+        "msgName": "RES_WT_DOUBLEAA",
         "name": "AA Flak Cannon Hardpoint",
         "requiredResearch": [
             "R-Wpn-AAGun02",
@@ -3987,6 +4132,7 @@
     "R-Defense-WallTower-HPVcannon": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-WallTower-HPVcannon",
+        "msgName": "RES_WT13_HPV",
         "name": "Hyper Velocity Cannon Hardpoint",
         "redStructures": [
             "WallTower02"
@@ -4005,6 +4151,7 @@
     "R-Defense-WallTower-HeavyLaser-Gat": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-WallTower-HeavyLaser-Gat",
+        "msgName": "RES_ABC_1",
         "name": "Heavy Laser Hardpoint",
         "requiredResearch": [
             "R-Wpn-HvyLaser-Gat",
@@ -4020,6 +4167,7 @@
     "R-Defense-WallTower-HvyA-Trocket": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-WallTower-HvyA-Trocket",
+        "msgName": "RES_ABC_1",
         "name": "Tank Killer Tower",
         "redStructures": [
             "WallTower06"
@@ -4038,6 +4186,7 @@
     "R-Defense-WallTower-Laser2PULSEMk1-Inc": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-WallTower-Laser2PULSEMk1-Inc",
+        "msgName": "RES_ABC_1",
         "name": "Incendiary Pulse Laser Hardpoint",
         "requiredResearch": [
             "R-Wpn-Laser02-Inc",
@@ -4053,6 +4202,7 @@
     "R-Defense-WallTower-PulseLas": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-WallTower-PulseLas",
+        "msgName": "RES_WT14_PLS",
         "name": "Pulse Laser Hardpoint",
         "requiredResearch": [
             "R-Wpn-Laser02",
@@ -4068,6 +4218,7 @@
     "R-Defense-WallTower-QuadRotAA": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-WallTower-QuadRotAA",
+        "msgName": "RES_WT_QUADAA",
         "name": "Whirlwind Hardpoint",
         "requiredResearch": [
             "R-Defense-AASite-QuadRotMg",
@@ -4083,6 +4234,7 @@
     "R-Defense-WallTower-Rail2": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-WallTower-Rail2",
+        "msgName": "RES_WT15_RL2",
         "name": "Rail Gun Hardpoint",
         "requiredResearch": [
             "R-Wpn-RailGun02",
@@ -4098,6 +4250,7 @@
     "R-Defense-WallTower-Rail3": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-WallTower-Rail3",
+        "msgName": "RES_WT15_RL3",
         "name": "Gauss Cannon Hardpoint",
         "redStructures": [
             "WallTower-Rail2"
@@ -4116,6 +4269,7 @@
     "R-Defense-WallTower-RailGun1Mk1-GatAA": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-WallTower-RailGun1Mk1-GatAA",
+        "msgName": "RES_ABC_1",
         "name": "Railgun AA Reinforced Hardpoint",
         "requiredResearch": [
             "R-Wpn-AAGun08",
@@ -4131,6 +4285,7 @@
     "R-Defense-WallTower-RailGun2Mk1-Twn-Inc": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-WallTower-RailGun2Mk1-Twn-Inc",
+        "msgName": "RES_ABC_1",
         "name": "Twin Rail Gun Incendiary Hardpoint",
         "requiredResearch": [
             "R-Wpn-RailGun08",
@@ -4146,6 +4301,7 @@
     "R-Defense-WallTower-Railgun-Flak": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-WallTower-Railgun-Flak",
+        "msgName": "RES_ABC_1",
         "name": "Railgun Flak AA Hardpoint",
         "requiredResearch": [
             "R-Wpn-AAGun08",
@@ -4161,6 +4317,7 @@
     "R-Defense-WallTower-SamHvy": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-WallTower-SamHvy",
+        "msgName": "RES_MS_SAM2WT",
         "name": "Vindicator Hardpoint",
         "redStructures": [
             "WallTower-SamSite"
@@ -4179,6 +4336,7 @@
     "R-Defense-WallTower-SamSite": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-WallTower-SamSite",
+        "msgName": "RES_ABC_1",
         "name": "Avenger Tower",
         "requiredResearch": [
             "R-Defense-WallUpgrade07",
@@ -4194,6 +4352,7 @@
     "R-Defense-WallTower-TwinAGun": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-WallTower-TwinAGun",
+        "msgName": "RES_WT_TWINAGHP",
         "name": "Twin Assault Gun Hardpoint",
         "redStructures": [
             "Wall-RotMg"
@@ -4212,6 +4371,7 @@
     "R-Defense-WallTower01": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-WallTower01",
+        "msgName": "RES_DF_WT1",
         "name": "Heavy Machinegun Hardpoint",
         "requiredResearch": [
             "R-Defense-Pillbox01",
@@ -4228,6 +4388,7 @@
     "R-Defense-WallTower02": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-WallTower02",
+        "msgName": "RES_WT2_LC",
         "name": "Light Cannon Hardpoint",
         "requiredResearch": [
             "R-Defense-HardcreteWall",
@@ -4243,6 +4404,7 @@
     "R-Defense-WallTower03": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-WallTower03",
+        "msgName": "RES_WT3_MC",
         "name": "Medium Cannon Hardpoint",
         "redStructures": [
             "WallTower02"
@@ -4262,6 +4424,7 @@
     "R-Defense-WallTower04": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-WallTower04",
+        "msgName": "RES_WT4_HC",
         "name": "Heavy Cannon Hardpoint",
         "requiredResearch": [
             "R-Defense-WallTower03",
@@ -4295,6 +4458,7 @@
     "R-Defense-WallTower06": {
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-WallTower06",
+        "msgName": "RES_WT6_ATR",
         "name": "Lancer Hardpoint",
         "requiredResearch": [
             "R-Wpn-Rocket01-LtAT",
@@ -4678,7 +4842,7 @@
     "R-Struc-CC-AR": {
         "iconID": "IMAGE_RES_STRUCTURETECH",
         "id": "R-Struc-CC-AR",
-        "msgName": "RES_ST_MAT10",
+        "msgName": "RES_ABC_1",
         "name": "Fortified Command Center",
         "requiredResearch": [
             "R-Defense-WallUpgrade10"
@@ -5829,7 +5993,7 @@
         "id": "R-Sys-ECM-Upgrade01",
         "imdName": "GNHSNSR3.PIE",
         "keyTopic": 1,
-        "msgName": "RES_SY_ECM1",
+        "msgName": "RES_SY_ECM2",
         "name": "Jammer Turret",
         "requiredResearch": [
             "R-Struc-Research-Module",
@@ -6021,8 +6185,8 @@
         "id": "R-Sys-Resistance",
         "imdName": "ICCCCONS.PIE",
         "keyTopic": 1,
-        "msgName": "RES_SY_RC",
-        "name": "Nexus Resistance Circuits",
+        "msgName": "RES_SY_RESU1",
+        "name": "Nexus Intruder Program",
         "requiredResearch": [
             "R-Struc-Research-Upgrade09"
         ],
@@ -6051,7 +6215,7 @@
         "id": "R-Sys-Resistance-Upgrade01",
         "imdName": "ICCCCONS.PIE",
         "keyTopic": 1,
-        "msgName": "RES_SY_RC1",
+        "msgName": "RES_SY_RESU2",
         "name": "NEXUS Resistance Circuits",
         "requiredResearch": [
             "R-Sys-Resistance"
@@ -6080,7 +6244,7 @@
         "iconID": "IMAGE_RES_SYSTEMTECH",
         "id": "R-Sys-Resistance-Upgrade02",
         "imdName": "ICCCCONS.PIE",
-        "msgName": "RES_SY_RC2",
+        "msgName": "RES_SY_RESU3",
         "name": "NEXUS Resistance Circuits Mk2",
         "requiredResearch": [
             "R-Sys-Resistance-Upgrade01"
@@ -6109,7 +6273,7 @@
         "iconID": "IMAGE_RES_SYSTEMTECH",
         "id": "R-Sys-Resistance-Upgrade03",
         "imdName": "ICCCCONS.PIE",
-        "msgName": "RES_SY_RC3",
+        "msgName": "RES_SY_RESU4",
         "name": "NEXUS Resistance Circuits Mk3",
         "requiredResearch": [
             "R-Sys-Resistance-Upgrade02"
@@ -6134,6 +6298,35 @@
         ],
         "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
+    "R-Sys-Resistance-Upgrade04": {
+		"iconID": "IMAGE_RES_SYSTEMTECH",
+		"id": "R-Sys-Resistance-Upgrade04",
+		"imdName": "ICCCCONS.PIE",
+		"msgName": "RES_SY_RESU5",
+		"name": "NEXUS Immunization System",
+		"requiredResearch": [
+			"R-Sys-Resistance-Upgrade03"
+		],
+		"researchPoints": 35000,
+		"researchPower": 450,
+		"results": [
+			{
+				"class": "Building",
+				"filterParameter": "Type",
+				"filterValue": "Structure",
+				"parameter": "Resistance",
+				"value": 5
+			},
+			{
+				"class": "Body",
+				"filterParameter": "BodyClass",
+				"filterValue": "Droids",
+				"parameter": "Resistance",
+				"value": 5
+			}
+		],
+		"subgroupIconID": "IMAGE_RES_GRPUPG"
+	},
     "R-Sys-Sensor-Tower01": {
         "iconID": "IMAGE_RES_SYSTEMTECH",
         "id": "R-Sys-Sensor-Tower01",
@@ -6153,7 +6346,7 @@
     "R-Sys-Sensor-Tower02": {
         "iconID": "IMAGE_RES_SYSTEMTECH",
         "id": "R-Sys-Sensor-Tower02",
-        "msgName": "RES_POWU7",
+        "msgName": "RES_SY_STW2",
         "name": "Hardened Sensor Tower",
         "redStructures": [
             "Sys-SensoTower01",
@@ -6352,6 +6545,7 @@
         "iconID": "IMAGE_RES_SYSTEMTECH",
         "id": "R-Sys-SpySkyTower",
         "imdName": "icmolql.pie",
+        "msgName": "RES_SY_SPTT",
         "name": "Nexus Link Sky Tower",
         "requiredResearch": [
             "R-Sys-SpyTower",
@@ -6368,6 +6562,7 @@
         "iconID": "IMAGE_RES_SYSTEMTECH",
         "id": "R-Sys-SpyTower",
         "imdName": "icmolql.pie",
+        "msgName": "RES_SY_SPTT",
         "name": "Nexus Link Tower",
         "requiredResearch": [
             "R-Sys-SpyTurret",
@@ -7029,7 +7224,7 @@
         "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-Vehicle-Body20",
         "keyTopic": 1,
-        "msgName": "RES_NULL_PLACE_HOL01",
+        "msgName": "RES_V_B20",
         "name": "Hardened Alloys",
         "requiredResearch": [
             "R-Vehicle-Body26",
@@ -7045,6 +7240,7 @@
     "R-Vehicle-Body21": {
         "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-Vehicle-Body21",
+        "msgName": "RES_V_B21",
         "name": "Cobra Hardened Alloys",
         "requiredResearch": [
             "R-Vehicle-Body20",
@@ -7060,6 +7256,7 @@
     "R-Vehicle-Body22": {
         "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-Vehicle-Body22",
+        "msgName": "RES_V_B22",
         "name": "Python Hardened Alloys",
         "requiredResearch": [
             "R-Vehicle-Body21",
@@ -7076,6 +7273,7 @@
     "R-Vehicle-Body26": {
         "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-Vehicle-Body26",
+        "msgName": "RES_V_B04",
         "name": "NASDA Viper",
         "requiredResearch": [
             "R-Vehicle-Body01"
@@ -8073,6 +8271,7 @@
     "R-Wpn-AAGun04": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-AAGun04",
+        "msgName": "RES_W_AA4",
         "name": "Whirlwind AA Turret",
         "redComponents": [
             "QuadMg1AAGun"
@@ -8093,7 +8292,7 @@
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-AAGun05",
         "keyTopic": 1,
-        "msgName": "RES_EMP_SAM1",
+        "msgName": "RES_W_AA5",
         "name": "AA Turret",
         "requiredResearch": [
             "R-Wpn-MG2Mk1"
@@ -8108,6 +8307,7 @@
     "R-Wpn-AAGun06": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-AAGun06",
+        "msgName": "RES_W_AA6",
         "name": "Cyclone AA Turret",
         "requiredResearch": [
             "R-Wpn-AAGun05",
@@ -8124,6 +8324,7 @@
     "R-Wpn-AAGun07": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-AAGun07",
+        "msgName": "RES_W_AA7",
         "name": "Rail Gun AA Turret",
         "requiredResearch": [
             "R-Wpn-AAGun08",
@@ -8139,6 +8340,7 @@
     "R-Wpn-AAGun08": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-AAGun08",
+        "msgName": "RES_W_AA8",
         "name": "Needle Gun Flak AA Turret",
         "requiredResearch": [
             "R-Wpn-AAGun04",
@@ -8521,6 +8723,7 @@
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Bomb06",
         "imdName": "trmvtlin.PIE",
+        "msgName": "RES_W_BMB6",
         "name": "EMP Bomb Bay",
         "requiredResearch": [
             "R-Wpn-EMPCannon",
@@ -8536,6 +8739,7 @@
     "R-Wpn-Bomb07": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Bomb07",
+        "msgName": "RES_W_BMB7",
         "name": "VTOL Heavy Bunker Buster",
         "requiredResearch": [
             "R-Wpn-Rocket03-HvAT",
@@ -9112,7 +9316,7 @@
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Cannon375mmMk1-Twn",
         "keyTopic": 1,
-        "msgName": "RES_CN7",
+        "msgName": "RES_CN3MK12",
         "name": "Twin Heavy Cannon",
         "requiredResearch": [
             "R-Wpn-Cannon3Mk1"
@@ -9677,6 +9881,7 @@
     "R-Wpn-Flame2-Rail": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Flame2-Rail",
+        "msgName": "RES_FLAME2_R",
         "name": "Inferno Rail",
         "requiredResearch": [
             "R-Wpn-Flame2",
@@ -9692,6 +9897,7 @@
     "R-Wpn-Flame3-Rail": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Flame3-Rail",
+        "msgName": "RES_PLFL_R",
         "name": "Plasmite Rail Flamer",
         "requiredResearch": [
             "R-Wpn-Flame2-Rail",
@@ -11672,7 +11878,7 @@
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-MG3Mk1",
         "keyTopic": 1,
-        "msgName": "RES_W_MG_MN1",
+        "msgName": "RES_MG3MK1",
         "name": "Heavy Machinegun",
         "requiredResearch": [
             "R-Wpn-MG-Damage03",
@@ -11690,6 +11896,7 @@
     "R-Wpn-MG3Mk1-Aslt": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-MG3Mk1-Aslt",
+        "msgName": "RES_MG3MK1H",
         "name": "Augmented Heavy MG",
         "requiredResearch": [
             "R-Wpn-MG3Mk1",
@@ -11752,6 +11959,7 @@
     "R-Wpn-MG4-Hvy": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-MG4-Hvy",
+        "msgName": "RES_W_MG4A",
         "name": "Augmented Assault Gun",
         "redComponents": [
             "MG4ROTARYMk1"
@@ -11770,6 +11978,7 @@
     "R-Wpn-MG4-Hvy-Inc": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-MG4-Hvy-Inc",
+        "msgName": "RES_W_MG4I",
         "name": "Incendiary Assault Gun",
         "requiredResearch": [
             "R-Wpn-MG4-Hvy",
@@ -11805,6 +12014,7 @@
     "R-Wpn-MG5-Hvy": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-MG5-Hvy",
+        "msgName": "RES_WT_TWINAGUNA",
         "name": "Augmented Twin Assault Gun",
         "redComponents": [
             "MG4ROTARYMk1-Hvy"
@@ -11823,6 +12033,7 @@
     "R-Wpn-MG5-Hvy-Inc": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-MG5-Hvy-Inc",
+        "msgName": "RES_WT_TWINAGUNI",
         "name": "Incendiary Twin Assault Gun",
         "redComponents": [
             "MG4ROTARYMk1-Hvy-Inc"
@@ -11841,7 +12052,7 @@
     "R-Wpn-MdArtMissile": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-MdArtMissile",
-        "msgName": "RES_NULL_PLACE_HOL04",
+        "msgName": "RES_W_MS_MART",
         "name": "Seraph Missile Array",
         "requiredResearch": [
             "R-Wpn-Missile2A-T",
@@ -11859,6 +12070,7 @@
     "R-Wpn-MdArtMissile-Hvy": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-MdArtMissile-Hvy",
+        "msgName": "RES_W_MS_MARTI",
         "name": "Full Seraph Missile Array",
         "requiredResearch": [
             "R-Wpn-MdArtMissile"
@@ -12007,6 +12219,7 @@
     "R-Wpn-Missile-HvSAM": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Missile-HvSAM",
+        "msgName": "RES_W_MS_HvSAM1",
         "name": "Vindicator SAM",
         "redComponents": [
             "Missile-LtSAM"
@@ -12025,6 +12238,7 @@
     "R-Wpn-Missile-HvSAM-Arch": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Missile-HvSAM-Arch",
+        "msgName": "RES_W_MS_HvSAM1",
         "name": "Thermal Vindicator SAM",
         "redComponents": [
             "Missile-LtSAM2-Arch"
@@ -12044,7 +12258,7 @@
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Missile-LtSAM",
         "keyTopic": 1,
-        "msgName": "RES_NULL_PLACE_HOL03",
+        "msgName": "RES_W_MS_LtSAM1",
         "name": "Avenger SAM",
         "requiredResearch": [
             "R-Sys-Sensor-Upgrade02",
@@ -12061,6 +12275,7 @@
     "R-Wpn-Missile-LtSAM2-Arch": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Missile-LtSAM2-Arch",
+        "msgName": "RES_W_MS_LtSAM1",
         "name": "Thermal Avenger SAM",
         "requiredResearch": [
             "R-Wpn-Missile-LtSAM",
@@ -12518,6 +12733,7 @@
     "R-Wpn-Mortar-Incendiary": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Mortar-Incendiary",
+        "msgName": "RES_IMORT",
         "name": "Incendiary Mortar",
         "redComponents": [
             "Cyb-Wpn-Grenade"
@@ -12733,6 +12949,7 @@
     "R-Wpn-Mortar01Lt-Rail": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Mortar01Lt-Rail",
+        "msgName": "RES_MORTA1",
         "name": "Mortar Rail",
         "redComponents": [
             "Mortar1Mk1"
@@ -12752,6 +12969,7 @@
     "R-Wpn-Mortar01Lt-Rail-Inc": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Mortar01Lt-Rail-Inc",
+        "msgName": "RES_MORTA1",
         "name": "Incendiary Rail Mortar",
         "redComponents": [
             "Mortar-Incendiary"
@@ -12769,6 +12987,7 @@
     "R-Wpn-Mortar01Lt-Rail-Ram": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Mortar01Lt-Rail-Ram",
+        "msgName": "RES_MORTA1",
         "name": "Stabilized Rail Mortar",
         "redComponents": [
             "Mortar1Mk1-Ram"
@@ -12786,6 +13005,7 @@
     "R-Wpn-Mortar02-Incendiary": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Mortar02-Incendiary",
+        "msgName": "RES_W_M2",
         "name": "Incendiary Bombard",
         "redComponents": [
             "Mortar-Incendiary"
@@ -12822,6 +13042,7 @@
     "R-Wpn-Mortar02Hvy-Rail": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Mortar02Hvy-Rail",
+        "msgName": "RES_W_M2",
         "name": "Bombard Rail",
         "redComponents": [
             "Mortar2Mk1"
@@ -12841,6 +13062,7 @@
     "R-Wpn-Mortar02Hvy-Rail-Inc": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Mortar02Hvy-Rail-Inc",
+        "msgName": "RES_W_M2",
         "name": "Incendiary Rail Bombard",
         "redComponents": [
             "Mortar2Mk1-Inc"
@@ -12859,6 +13081,7 @@
     "R-Wpn-Mortar02Hvy-Rail-Ram": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Mortar02Hvy-Rail-Ram",
+        "msgName": "RES_W_M2",
         "name": "Stabilized Rail Bombard",
         "redComponents": [
             "Mortar2Mk1-Ram"
@@ -12877,6 +13100,7 @@
     "R-Wpn-Mortar03-Incendiary": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Mortar03-Incendiary",
+        "msgName": "RES_W_M3",
         "name": "Incendiary Pepperpot",
         "redComponents": [
             "Mortar-Incendiary"
@@ -12896,7 +13120,7 @@
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Mortar3",
         "keyTopic": 1,
-        "msgName": "RES_NULL_PLACE_HOL02",
+        "msgName": "RES_W_M3",
         "name": "Rotary Mortar - Pepperpot",
         "redComponents": [
             "Mortar1Mk1"
@@ -12915,6 +13139,7 @@
     "R-Wpn-Mortar3-Rail": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Mortar3-Rail",
+        "msgName": "RES_W_M3",
         "name": "Railpot",
         "redComponents": [
             "Mortar3ROTARYMk1"
@@ -12934,6 +13159,7 @@
     "R-Wpn-Mortar3-Rail-Inc": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Mortar3-Rail-Inc",
+        "msgName": "RES_W_M3",
         "name": "Incendiary Railpot",
         "redComponents": [
             "Mortar3ROTARYMk1-Inc"
@@ -12952,6 +13178,7 @@
     "R-Wpn-Mortar3-Rail-Ram": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Mortar3-Rail-Ram",
+        "msgName": "RES_W_M3",
         "name": "Stabilized Railpot",
         "redComponents": [
             "Mortar3ROTARYMk1-Ram-Rot"
@@ -12987,7 +13214,7 @@
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-PlasmaCannon",
         "keyTopic": 1,
-        "msgName": "RES_NULL_PLACE_HOL05",
+        "msgName": "RES_W_PLASCAN",
         "name": "Plasma Cannon",
         "requiredResearch": [
             "R-Wpn-Cannon4AMk1",
@@ -13004,6 +13231,7 @@
     "R-Wpn-PlasmaCannon-Hvy-Aslt": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-PlasmaCannon-Hvy-Aslt",
+        "msgName": "RES_W_PLASCAN",
         "name": "Heavy Plasma Cannon",
         "redComponents": [
             "Laser4-PlasmaCannon"
@@ -13023,6 +13251,7 @@
     "R-Wpn-PlasmaCannon-Hvy-Lsr-Aslt": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-PlasmaCannon-Hvy-Lsr-Aslt",
+        "msgName": "RES_W_PLASCAN",
         "name": "Super Heavy Plasma Cannon",
         "redComponents": [
             "Laser4-PlasmaCannon"
@@ -13347,7 +13576,7 @@
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-RailGun03",
         "keyTopic": 1,
-        "msgName": "RES_NULL_PLACE_HOL06",
+        "msgName": "RES_W_RAIL3",
         "name": "Gauss Cannon",
         "requiredResearch": [
             "R-Wpn-Rail-Damage03",
@@ -13363,6 +13592,7 @@
     "R-Wpn-RailGun03-Aslt": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-RailGun03-Aslt",
+        "msgName": "RES_W_RAIL3",
         "name": "Augmented Gauss Cannon",
         "requiredResearch": [
             "R-Wpn-RailGun03"
@@ -13377,6 +13607,7 @@
     "R-Wpn-RailGun04": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-RailGun04",
+        "msgName": "RES_W_RAIL1",
         "name": "Twin Needle Gun",
         "requiredResearch": [
             "R-Wpn-Rail-Damage01"
@@ -13391,6 +13622,7 @@
     "R-Wpn-RailGun05": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-RailGun05",
+        "msgName": "RES_W_RAIL3",
         "name": "Heavy Gauss Cannon",
         "requiredResearch": [
             "R-Wpn-RailGun03-Aslt"
@@ -13405,6 +13637,7 @@
     "R-Wpn-RailGun06": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-RailGun06",
+        "msgName": "RES_W_RAIL3",
         "name": "Heavy Gauss Assault Cannon",
         "requiredResearch": [
             "R-Wpn-RailGun05"
@@ -13419,6 +13652,7 @@
     "R-Wpn-RailGun07": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-RailGun07",
+        "msgName": "RES_W_RAIL2",
         "name": "Incendiary Railgun",
         "requiredResearch": [
             "R-Wpn-RailGun02",
@@ -13435,6 +13669,7 @@
     "R-Wpn-RailGun08": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-RailGun08",
+        "msgName": "RES_W_RAIL2",
         "name": "Incendiary Twin Rail Gun",
         "requiredResearch": [
             "R-Wpn-RailGun07"
@@ -13449,6 +13684,7 @@
     "R-Defense-PillBox-Rail6": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Defense-PillBox-Rail6",
+        "msgName": "RES_ABC_1",
         "name": "Incendiary Twin Rail Gun Bunker",
         "requiredResearch": [
             "R-Wpn-RailGun08",
@@ -13464,7 +13700,7 @@
     "R-Wpn-RailGun2Mk1TwinAslt-Inc": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-RailGun2Mk1TwinAslt-Inc",
-        "msgName": "RES_W_CN6_T_AI",
+        "msgName": "RES_ABC_1",
         "name": "Incendiary Twin Assault Cannon",
         "requiredResearch": [
             "R-Wpn-Cannon6TwinAslt",
@@ -13804,7 +14040,7 @@
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket-Pod-MRA",
         "keyTopic": 1,
-        "msgName": "RES_NULL_PLACE_HOL10",
+        "msgName": "RES_W_RK_MRL1",
         "name": "Rocket Array",
         "requiredResearch": [
             "R-Wpn-Rocket-Accuracy01"
@@ -13835,6 +14071,7 @@
     "R-Wpn-Rocket-Pod-MRA-Twin": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket-Pod-MRA-Twin",
+        "msgName": "RES_W_RK_MRL1",
         "name": "Twin Rocket Array",
         "requiredResearch": [
             "R-Wpn-Rocket-Pod-MRA"
@@ -13849,6 +14086,7 @@
     "R-Wpn-Rocket-Pod-Quad": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket-Pod-Quad",
+        "msgName": "RES_W_RK_MP1",
         "name": "Quad Rocket Pod",
         "requiredResearch": [
             "R-Wpn-Rocket-Pod-Twn"
@@ -13863,6 +14101,7 @@
     "R-Wpn-Rocket-Pod-Quad-Arch": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket-Pod-Quad-Arch",
+        "msgName": "RES_W_RK_MP1",
         "name": "Quad Thermal Rockets",
         "requiredResearch": [
             "R-Wpn-Rocket-Pod-Twn-Arch"
@@ -13877,6 +14116,7 @@
     "R-Wpn-Rocket-Pod-Twn": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket-Pod-Twn",
+        "msgName": "RES_W_RK_MP1",
         "name": "Twin Rocket Pod",
         "requiredResearch": [
             "R-Wpn-Rocket-ROF01"
@@ -13891,6 +14131,7 @@
     "R-Wpn-Rocket-Pod-Twn-Arch": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket-Pod-Twn-Arch",
+        "msgName": "RES_W_RK_MP1",
         "name": "Twin Thermal Rockets",
         "requiredResearch": [
             "R-Wpn-Rocket05-MiniPod-Arch"
@@ -14048,7 +14289,7 @@
     "R-Wpn-Rocket01-LtAT": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket01-LtAT",
-        "msgName": "RES_NULL_PLACE_HOL08",
+        "msgName": "RES_W_RK_LTAT1",
         "name": "Lancer AT Rocket",
         "requiredResearch": [
             "R-Wpn-Rocket-Damage03",
@@ -14066,6 +14307,7 @@
     "R-Wpn-Rocket01-LtAT-Quad": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket01-LtAT-Quad",
+        "msgName": "RES_W_RK_LTAT1",
         "name": "Quad Lancer Rocket",
         "requiredResearch": [
             "R-Wpn-Rocket-Accuracy02",
@@ -14098,6 +14340,7 @@
     "R-Wpn-Rocket03-HvAT": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket03-HvAT",
+        "msgName": "RES_W_RK_HVAT1",
         "name": "Bunker Buster Rocket",
         "requiredResearch": [
             "R-Struc-Research-Upgrade03",
@@ -14115,6 +14358,7 @@
     "R-Wpn-Rocket03-HvAT-Arch": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket03-HvAT-Arch",
+        "msgName": "RES_W_RK_HVAT1",
         "name": "Incendiary Bunker Buster",
         "requiredResearch": [
             "R-Wpn-Rocket03-HvAT",
@@ -14133,7 +14377,7 @@
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket05-MiniPod",
         "keyTopic": 1,
-        "msgName": "RES_W_MG_MN3",
+        "msgName": "RES_W_RK_MP1",
         "name": "Mini-Rocket Pod",
         "requiredResearch": [
             "R-Vehicle-Engine01"
@@ -14150,7 +14394,7 @@
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket05-MiniPod-Arch",
         "keyTopic": 1,
-        "msgName": "RES_NULL_PLACE_HOL09",
+        "msgName": "RES_W_RK_MP1",
         "name": "Thermal Rockets",
         "requiredResearch": [
             "R-Wpn-Rocket-Accuracy01",
@@ -14167,6 +14411,7 @@
     "R-Wpn-Rocket05-MiniPod-EMP": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket05-MiniPod-EMP",
+        "msgName": "RES_EMP_CANT",
         "name": "EMP Rocket Pod",
         "requiredResearch": [
             "R-Wpn-Rocket05-MiniPod",
@@ -14201,7 +14446,7 @@
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket07-Tank-Killer",
         "keyTopic": 1,
-        "msgName": "RES_NULL_PLACE_HOL07",
+        "msgName": "RES_W_RK_HvAT",
         "name": "Tank Killer Rocket",
         "redComponents": [
             "CyborgRocket"
@@ -14223,6 +14468,7 @@
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket07-Tank-Killer-Quad",
         "keyTopic": 1,
+        "msgName": "RES_W_RK_HvAT",
         "name": "Quad Tank Killer",
         "requiredResearch": [
             "R-Wpn-Rocket07-Tank-Killer",
@@ -14284,7 +14530,7 @@
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Sunburst",
         "keyTopic": 1,
-        "msgName": "RES_NULL_PLACE_HOL11",
+        "msgName": "RES_ABC_1",
         "name": "Sunburst AA Rocket Array",
         "requiredResearch": [
             "R-Wpn-Rocket01-LtAT"
@@ -14301,6 +14547,7 @@
     "R-Wpn-Sunburst-Arch": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Sunburst-Arch",
+        "msgName": "RES_ABC_1",
         "name": "Sunburst AA Thermal Rocket",
         "requiredResearch": [
             "R-Wpn-Sunburst",

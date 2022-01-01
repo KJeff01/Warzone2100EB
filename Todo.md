@@ -1,7 +1,6 @@
 
 General:
 - [low] Add updated stats to the non-NullBot family of AIs.
-- [medium] check descriptions for ALL research.
 - [medium] Check all muzzle effects for ALL non-vanilla weapons...
 
 Campaign:
