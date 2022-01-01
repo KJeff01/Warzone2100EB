@@ -1,7 +1,6 @@
 
 General:
 - [low] Add updated stats to the non-NullBot family of AIs.
-- [medium] Check all muzzle effects for ALL non-vanilla weapons...
 
 Campaign:
 - [low] Test campaign and see if it can be beaten on Insane difficulty (likely tone down Ultscav enemy production rates).
