@@ -10156,7 +10156,7 @@
         "weaponEffect": "ALL ROUNDER",
         "weaponSubClass": "GAUSS",
         "weaponWav": "gaussgun.ogg",
-        "weight": 79980
+        "weight": 52000
     },
     "RailGun2Mk1": {
         "buildPoints": 1200,
