@@ -14302,7 +14302,7 @@
         "mountModel": "TRHMG.PIE",
         "movement": "DIRECT",
         "muzzleGfx": "FXMgnVic.PIE",
-        "name": "Hardpoint Heavy Machinegun",
+        "name": "Hardpoint Twin Heavy Machinegun",
         "numExplosions": 1,
         "recoilValue": 20,
         "rotate": 180,
