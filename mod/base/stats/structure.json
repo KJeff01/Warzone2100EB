@@ -1367,7 +1367,7 @@
         "hitpoints": 300,
         "id": "A0VtolPad",
         "name": "VTOL Rearming Pad",
-        "rearmPoints": 500,
+        "rearmPoints": 1200,
         "repairPoints": 100,
         "resistance": 150,
         "sensorID": "DefaultSensor1Mk1",
