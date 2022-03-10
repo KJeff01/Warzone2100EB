@@ -74,11 +74,10 @@ function __camDispatchTransporterUnsafe()
 	__camTransporterQueue.shift(); // what could possibly go wrong?
 	if (!camDef(__camPlayerTransports[player]))
 	{
-		var transporter_body = "SuperTransportNAS-campaign";
 		camTrace("Creating a transporter for player", player);
 		__camPlayerTransports[player] = addDroid(player, -1, -1,
 		                                         "Transporter",
-		                                         transporter_body,
+		                                         "SuperTransportNAS-campaign",
 		                                         "V-Tol", "", "",
 		                                         "MG3-VTOL");
 	}

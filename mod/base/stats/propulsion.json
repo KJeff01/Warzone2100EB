@@ -150,6 +150,22 @@
         "type": "Lift",
         "weight": 90
     },
+    "V-TolNAS": {
+        "acceleration": 215,
+        "buildPoints": 112,
+        "buildPower": 430,
+        "deceleration": 1075,
+        "designable": 0,
+        "hitpointPctOfBody": 112,
+        "id": "V-TolNAS",
+        "model": "DPVTOL.PIE",
+        "name": "NASDA VTOL",
+        "speed": 1378,
+        "spinSpeed": 215,
+        "turnSpeed": 107,
+        "type": "Lift",
+        "weight": 72
+    },
     "ZNULLPROP": {
         "id": "ZNULLPROP",
         "model": "MIBNKDRL.PIE",
