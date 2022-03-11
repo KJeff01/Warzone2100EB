@@ -1,9 +1,20 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
-include("script/campaign/transitionTech.js");
-include ("script/campaign/ultScav.js");
 
 const UPLINK = 1; //The satellite uplink player number.
+const COLLECTIVE_RES = [
+	"R-Defense-WallUpgrade06", "R-Struc-Materials06", "R-Sys-Engineering02",
+	"R-Vehicle-Engine04", "R-Vehicle-Metals05", "R-Cyborg-Metals05",
+	"R-Wpn-Cannon-Accuracy02", "R-Wpn-Cannon-Damage05","R-Wpn-Cannon-ROF02",
+	"R-Wpn-Flamer-Damage06", "R-Wpn-Flamer-ROF03", "R-Wpn-MG-Damage07",
+	"R-Wpn-MG-ROF03", "R-Wpn-Mortar-Acc02", "R-Wpn-Mortar-Damage05",
+	"R-Wpn-Mortar-ROF02", "R-Wpn-Rocket-Accuracy02", "R-Wpn-Rocket-Damage06",
+	"R-Wpn-Rocket-ROF03", "R-Wpn-RocketSlow-Accuracy03", "R-Wpn-RocketSlow-Damage05",
+	"R-Sys-Sensor-Upgrade01", "R-Wpn-RocketSlow-ROF02", "R-Wpn-Howitzer-ROF02",
+	"R-Wpn-Howitzer-Damage08", "R-Cyborg-Armor-Heat01", "R-Vehicle-Armor-Heat01",
+	"R-Wpn-Bomb-Damage02", "R-Wpn-AAGun-Damage03", "R-Wpn-AAGun-ROF03",
+	"R-Wpn-AAGun-Accuracy02", "R-Wpn-Howitzer-Accuracy01", "R-Struc-VTOLPad-Upgrade03",
+];
 
 camAreaEvent("vtolRemoveZone", function(droid)
 {
@@ -65,7 +76,7 @@ function eventStartLevel()
 	camSetStandardWinLossConditions(CAM_VICTORY_OFFWORLD, "SUB_2_6S", {
 		area: "RTLZ",
 		message: "C2D_LZ",
-		reinforcements: camMinutesToSeconds(3),
+		reinforcements: camMinutesToSeconds(5),
 		callback: "checkNASDACentral",
 		annihilate: true,
 		retlz: true
@@ -79,26 +90,22 @@ function eventStartLevel()
 	setNoGoArea(lz.x, lz.y, lz.x2, lz.y2, CAM_HUMAN_PLAYER);
 	startTransporterEntry(tent.x, tent.y, CAM_HUMAN_PLAYER);
 	setTransporterExit(text.x, text.y, CAM_HUMAN_PLAYER);
-	setAlliance(THE_COLLECTIVE, ULTSCAV, true);
 
 	var enemyLz = getObject("COLandingZone");
 	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, THE_COLLECTIVE);
 
 	camSetArtifacts({
 		"COCommandCenter": { tech: "R-Struc-VTOLPad-Upgrade01" },
-		"COResearchLab": { tech: "R-Defense-WallUpgrade07" },
+		"COResearchLab": { tech: "R-Struc-Research-Upgrade04" },
 		"COCommandRelay": { tech: "R-Wpn-Bomb02" },
 		"COHeavyFactory": { tech: "R-Wpn-Howitzer-Accuracy01" },
-		"ScavFact": { tech: "R-Wpn-Missile2A-T" },
+		"COHowitzerEmplacement": { tech: "R-Wpn-Howitzer-Damage02" },
 	});
 
 	setAlliance(CAM_HUMAN_PLAYER, UPLINK, true);
 	setAlliance(THE_COLLECTIVE, UPLINK, true);
-	setAlliance(7, UPLINK, true);
-	setAlliance(7, THE_COLLECTIVE, true);
 
-	camCompleteRequiredResearch(CAM2D_RES_COL, THE_COLLECTIVE);
-	camCompleteRequiredResearch(CAM2D_RES_COL, ULTSCAV);
+	camCompleteRequiredResearch(COLLECTIVE_RES, THE_COLLECTIVE);
 
 	camSetEnemyBases({
 		"COSouthEastBase": {
@@ -138,31 +145,11 @@ function eventStartLevel()
 
 	camManageTrucks(THE_COLLECTIVE);
 	truckDefense();
-	hackAddMessage("C2D_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, true);
+	hackAddMessage("C2D_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, false);
 
 	camEnableFactory("COHeavyFactory");
 	camEnableFactory("COSouthCyborgFactory");
 
-	queue("vtolAttack", camMinutesToMilliseconds(2));
-	setTimer("truckDefense", camSecondsToMilliseconds(160));
-	ultScav_eventStartLevel(
-		-1, // vtols on/off. -1 = off
-		30, // build defense every x seconds
-		50, // build factories every x seconds
-		45, // build cyborg factories every x seconds
-		25, // produce trucks every x seconds
-		55, // produce droids every x seconds
-		35, // produce cyborgs every x seconds
-		-1, // produce VTOLs every x seconds
-		2, // min factories
-		-1, // min vtol factories
-		3, // min cyborg factories
-		5, // min number of trucks
-		3, // min number of sensor droids
-		5, // min number of attack droids
-		3, // min number of defend droids
-		135, // ground attack every x seconds
-		-1, // VTOL attack every x seconds
-		2.5 // tech level
-	);
+	queue("vtolAttack", camChangeOnDiff(camMinutesToMilliseconds(3)));
+	setTimer("truckDefense", camChangeOnDiff(camMinutesToMilliseconds(4)));
 }

@@ -1,14 +1,17 @@
 
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
-include("script/campaign/transitionTech.js");
-include("script/campaign/ultScav.js");
 
+const SCAVENGER_RES = [
+	"R-Wpn-Flamer-Damage02", "R-Wpn-Flamer-Range01", "R-Wpn-Flamer-ROF01",
+	"R-Wpn-MG-Damage02", "R-Wpn-MG-ROF01", "R-Wpn-Mortar-Damage02",
+	"R-Wpn-Mortar-ROF01", "R-Wpn-Rocket-ROF03",
+];
 
 function exposeNorthBase()
 {
 	camDetectEnemyBase("NorthGroup"); // no problem if already detected
-	camPlayVideos("SB1_2_MSG2");
+	camPlayVideos({video: "SB1_2_MSG2", type: MISS_MSG});
 }
 
 function camArtifactPickup_ScavLab()
@@ -27,8 +30,8 @@ function camArtifactPickup_ScavLab()
 		},
 		groupSize: 5,
 		maxSize: 9,
-		throttle: camChangeOnDiff(camSecondsToMilliseconds(10)),
-		templates: [ cTempl.trike, cTempl.bloke, cTempl.buggy, cTempl.bjeep ]
+		throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty === EASY || difficulty === MEDIUM) ? 13 : 10)),
+		templates: [ cTempl.trikeheavy, cTempl.blokeheavy, cTempl.buggyheavy, cTempl.bjeepheavy ]
 	});
 	camEnableFactory("WestFactory");
 }
@@ -54,16 +57,6 @@ function enableWestFactory()
 	});
 }
 
-function vtolPatrol()
-{
-	camManageGroup(camMakeGroup("HelicopterGroup"), CAM_ORDER_PATROL, {
-		pos: [
-			camMakePos("waypoint1"),
-			camMakePos("waypoint2")
-		]
-	});
-}
-
 function eventStartLevel()
 {
 	camSetStandardWinLossConditions(CAM_VICTORY_OFFWORLD, "SUB_1_3S", {
@@ -82,7 +75,12 @@ function eventStartLevel()
 	startTransporterEntry(tent.x, tent.y, CAM_HUMAN_PLAYER);
 	setTransporterExit(text.x, text.y, CAM_HUMAN_PLAYER);
 
-	setAlliance(ULTSCAV, SCAVS, true);
+	camCompleteRequiredResearch(SCAVENGER_RES, SCAV_7);
+
+	camUpgradeOnMapTemplates(cTempl.bloke, cTempl.blokeheavy, SCAV_7);
+	camUpgradeOnMapTemplates(cTempl.trike, cTempl.triketwin, SCAV_7);
+	camUpgradeOnMapTemplates(cTempl.buggy, cTempl.buggytwin, SCAV_7);
+	camUpgradeOnMapTemplates(cTempl.bjeep, cTempl.bjeeptwin, SCAV_7);
 
 	camSetEnemyBases({
 		"NorthGroup": {
@@ -106,11 +104,10 @@ function eventStartLevel()
 	camDetectEnemyBase("ScavLabGroup");
 
 	camSetArtifacts({
-		"ScavLab": { tech: "R-Wpn-Mortar01Lt" },
-		"NorthFactory": { tech: "R-Vehicle-Prop-Halftracks" },
-		"ScavAA": { tech: "R-Wpn-AAGun05" },
+		"ScavLab": { tech: ["R-Wpn-Mortar01Lt", "R-Wpn-Flamer-Damage02"] },
+		"NorthFactory": { tech: ["R-Vehicle-Prop-Halftracks", "R-Wpn-Cannon1Mk1"] },
 	});
-	
+
 	camSetFactories({
 		"NorthFactory": {
 			assembly: "NorthAssembly",
@@ -125,9 +122,9 @@ function eventStartLevel()
 			},
 			groupSize: 5,
 			maxSize: 9,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(15)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty === EASY || difficulty === MEDIUM) ? 20 : 15)),
 			group: camMakeGroup("NorthTankGroup"),
-			templates: [ cTempl.trike, cTempl.bloke, cTempl.buggy, cTempl.bjeep ]
+			templates: [ cTempl.trikeheavy, cTempl.blokeheavy, cTempl.buggyheavy, cTempl.bjeepheavy ]
 		},
 		"WestFactory": {
 			assembly: "WestAssembly",
@@ -142,30 +139,10 @@ function eventStartLevel()
 			},
 			groupSize: 5,
 			maxSize: 9,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(10)),
-			templates: [ cTempl.trike, cTempl.bloke, cTempl.buggy, cTempl.bjeep ]
+			throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty === EASY || difficulty === MEDIUM) ? 13 : 10)),
+			templates: [ cTempl.trikeheavy, cTempl.blokeheavy, cTempl.buggyheavy, cTempl.bjeepheavy ]
 		},
 	});
-	setTimer("vtolPatrol", camSecondsToMilliseconds(120));
+
 	queue("enableWestFactory", camSecondsToMilliseconds(30));
-	ultScav_eventStartLevel(
-		1, // vtols on/off. -1 = off
-		65, // build defense every x seconds
-		75, // build factories every x seconds
-		-1, // build cyborg factories every x seconds
-		25, // produce trucks every x seconds
-		50, // produce droids every x seconds
-		-1, // produce cyborgs every x seconds
-		55, // produce VTOLs every x seconds
-		2, // min factories
-		2, // min vtol factories
-		-1, // min cyborg factories
-		3, // min number of trucks
-		-1, // min number of sensor droids
-		6, // min number of attack droids
-		3, // min number of defend droids
-		75, // ground attack every x seconds
-		210, // VTOL attack every x seconds
-		1 // tech level
-	);
 }

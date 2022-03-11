@@ -3,11 +3,8 @@ General:
 - [low] Add updated stats to the non-NullBot family of AIs.
 
 Campaign:
-- [low] Test campaign and see if it can be beaten on Insane difficulty (likely tone down Ultscav enemy production rates).
-- [medium] Merge camBalance script updates when it is finally finished.
-- [high] campaign map updates that are needed: https://github.com/Warzone2100/warzone2100/commit/8b9a32690d7a0e1e44f0d0de9709b2d6101f6bd9#diff-9c41e03aacc85622c1cdeffb8e593b0201f090888de4f4ea618ed4b511de0b2d
-
-Or start all over for campaign and base it off 4.2.0.
+- Add camBalance scavenger weapons (twin, heavy, mra8 weapons)
+- Fix up maps with new structures to drop new artifacts (temp put them in a random on-map object for now to make sure the tree is intact)
 
 Warzone:
 - [medium] Super tall structures block visibility in build menus.

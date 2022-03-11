@@ -1,13 +1,18 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
-include("script/campaign/transitionTech.js");
-include("script/campaign/ultScav.js");
 
+const PLAYER_RES = [
+	"R-Wpn-MG1Mk1", "R-Vehicle-Body01", "R-Sys-Spade1Mk1", "R-Vehicle-Prop-Wheels",
+];
+
+const SCAVENGER_RES = [
+	"R-Wpn-MG-Damage01", "R-Wpn-MG-ROF01",
+];
 
 // Player zero's droid enters area next to first oil patch.
 camAreaEvent("launchScavAttack", function(droid)
 {
-	camPlayVideos(["pcv456.ogg", "MB1A_MSG"]);
+	camPlayVideos(["pcv456.ogg", {video: "MB1A_MSG", type: MISS_MSG}]);
 	hackAddMessage("C1A_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, false);
 	// Send scavengers on war path if triggered above.
 	camManageGroup(camMakeGroup("scavAttack1", ENEMIES), CAM_ORDER_ATTACK, {
@@ -18,14 +23,14 @@ camAreaEvent("launchScavAttack", function(droid)
 	// Activate mission timer, unlike the original campaign.
 	if (difficulty !== HARD && difficulty !== INSANE)
 	{
-		setMissionTime(camChangeOnDiff(camMinutesToSeconds(30)));
+		setMissionTime(camChangeOnDiff(camHoursToSeconds(1)));
 	}
 });
 
 function runAway()
 {
 	var oilPatch = getObject("oilPatch");
-	var droids = enumRange(oilPatch.x, oilPatch.y, 7, SCAVS, false);
+	var droids = enumRange(oilPatch.x, oilPatch.y, 7, SCAV_7, false);
 	camManageGroup(camMakeGroup(droids), CAM_ORDER_ATTACK, {
 		pos: camMakePos("scavAttack1"),
 		fallback: camMakePos("retreat1"),
@@ -65,9 +70,6 @@ function raidAttack()
 	camManageGroup(camMakeGroup("raidGroup", ENEMIES), CAM_ORDER_ATTACK, {
 		pos: camMakePos("scavBase3Cleanup")
 	});
-	camManageGroup(camMakeGroup("raidGroup2", ENEMIES), CAM_ORDER_ATTACK, {
-		pos: camMakePos("scavBase3Cleanup")
-	});
 	camManageGroup(camMakeGroup("scavBase3Cleanup", ENEMIES), CAM_ORDER_DEFEND, {
 		pos: camMakePos("scavBase3Cleanup")
 	});
@@ -99,7 +101,7 @@ function eventStructureBuilt(structure, droid)
 	}
 }
 
-camAreaEvent("scavBase3Cleanup", function(droid)
+camAreaEvent("factoryTrigger", function(droid)
 {
 	camEnableFactory("base4Factory");
 });
@@ -114,34 +116,22 @@ function camEnemyBaseEliminated_scavGroup2()
 	queue("camDetectEnemyBase", camSecondsToMilliseconds(2), "scavGroup3");
 }
 
-function eventGameInit()
+function enableBaseStructures()
 {
-	// if completed in eventStartLevel() the sensor range is normal for a split second. Prefer to run this before map is loaded
-	// only needed in cam1a and cam1b
-	completeResearch("R-Sys-Sensor-Upgrade00", CAM_HUMAN_PLAYER);
-}
-
-function cam1setup()
-{
-	enableResearch("R-Wpn-MG1Mk1", CAM_HUMAN_PLAYER);
-	camCompleteRequiredResearch(CAM1A_RESEARCH, CAM_HUMAN_PLAYER);
-	camCompleteRequiredResearch(CAM1A_RES_SCAV, ULTSCAV);
-	camCompleteRequiredResearch(CAM1A_RES_SCAV, SCAVS);
-
-	const BASE_STRUCTURES = [
+	const STRUCTS = [
 		"A0CommandCentre", "A0PowerGenerator", "A0ResourceExtractor",
 		"A0ResearchFacility", "A0LightFactory",
 	];
 
-	for (var i = 0; i < BASE_STRUCTURES.length; ++i)
+	for (var i = 0; i < STRUCTS.length; ++i)
 	{
-		enableStructure(BASE_STRUCTURES[i], CAM_HUMAN_PLAYER);
+		enableStructure(STRUCTS[i], CAM_HUMAN_PLAYER);
 	}
 }
 
 function eventStartLevel()
 {
-	const PLAYER_POWER = 2500;
+	const PLAYER_POWER = 1300;
 	var startpos = getObject("startPosition");
 	var lz = getObject("landingZone");
 
@@ -150,23 +140,39 @@ function eventStartLevel()
 	centreView(startpos.x, startpos.y);
 	setNoGoArea(lz.x, lz.y, lz.x2, lz.y2, CAM_HUMAN_PLAYER);
 
-	cam1setup()
-	setPower(PLAYER_POWER, CAM_HUMAN_PLAYER);
-	setAlliance(ULTSCAV, SCAVS, true);
-
-	// Give player briefing.
-	hackAddMessage("CMB1_MSG", CAMP_MSG, CAM_HUMAN_PLAYER, false);
 	if (difficulty === HARD)
 	{
-		setMissionTime(camMinutesToSeconds(25));
+		setPower(600, CAM_HUMAN_PLAYER);
 	}
 	else if (difficulty === INSANE)
 	{
-		setMissionTime(camMinutesToSeconds(20));
+		setPower(300, CAM_HUMAN_PLAYER);
 	}
 	else
 	{
-		setMissionTime(camMinutesToSeconds(30)); // will start mission timer later
+		setPower(PLAYER_POWER, CAM_HUMAN_PLAYER);
+	}
+
+	setAlliance(SCAV_6, SCAV_7, true);
+
+	enableBaseStructures();
+	camCompleteRequiredResearch(PLAYER_RES, CAM_HUMAN_PLAYER);
+	camCompleteRequiredResearch(SCAVENGER_RES, 6);
+	camCompleteRequiredResearch(SCAVENGER_RES, 7);
+
+	// Give player briefing.
+	camPlayVideos({video: "CMB1_MSG", type: CAMP_MSG, immediate: false});
+	if (difficulty === HARD)
+	{
+		setMissionTime(camMinutesToSeconds(40));
+	}
+	else if (difficulty === INSANE)
+	{
+		setMissionTime(camMinutesToSeconds(30));
+	}
+	else
+	{
+		setMissionTime(-1); // will start mission timer later
 	}
 
 	// Feed libcampaign.js with data to do the rest.
@@ -198,10 +204,10 @@ function eventStartLevel()
 	});
 
 	camSetArtifacts({
-		"base1ArtifactPos": { tech: "R-Wpn-MG-Damage01" },
-		"base2Factory": { tech: "R-Wpn-Flamer01Mk1" },
-		"base3Factory": { tech: "R-Defense-Tower01" },
-		"base4Factory": { tech: "R-Sys-Engineering01" },
+		"base1ArtifactPos": { tech: "R-Sys-Engineering01" },
+		"base2Factory": { tech: ["R-Wpn-Flamer01Mk1", "R-Sys-MobileRepairTurret01"] },
+		"base3Factory": { tech: "R-Wpn-MG-Damage01" },
+		"base4Factory": { tech: "R-Wpn-MG-ROF01" },
 	});
 
 	camSetFactories({
@@ -211,7 +217,7 @@ function eventStartLevel()
 			data: { pos: "playerBase" },
 			groupSize: 3,
 			maxSize: 3,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(20)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty === EASY || difficulty === MEDIUM) ? 24 : 18)),
 			templates: [ cTempl.trike, cTempl.bloke ]
 		},
 		"base3Factory": {
@@ -220,7 +226,7 @@ function eventStartLevel()
 			data: { pos: "playerBase" },
 			groupSize: 4,
 			maxSize: 4,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(16)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty === EASY || difficulty === MEDIUM) ? 20 : 14)),
 			templates: [ cTempl.bloke, cTempl.buggy, cTempl.bloke ]
 		},
 		"base4Factory": {
@@ -229,35 +235,8 @@ function eventStartLevel()
 			data: { pos: "playerBase" },
 			groupSize: 4,
 			maxSize: 4,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(13)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty === EASY || difficulty === MEDIUM) ? 16 : 12)),
 			templates: [ cTempl.bjeep, cTempl.bloke, cTempl.trike, cTempl.bloke ]
 		},
 	});
-	ultScav_eventStartLevel(
-		-1, // vtols on/off. -1 = off
-		140, // build defense every x seconds
-		75, // build factories every x seconds
-		-1, // build cyborg factories every x seconds
-		25, // produce trucks every x seconds
-		30, // produce droids every x seconds
-		-1, // produce cyborgs every x seconds
-		-1, // produce VTOLs every x seconds
-		3, // min factories
-		-1, // min vtol factories
-		-1, // min cyborg factories
-		3, // min number of trucks
-		-1, // min number of sensor droids
-		3, // min number of attack droids
-		2, // min number of defend droids
-		120, // ground attack every x seconds
-		-1, // VTOL attack every x seconds
-		1 // tech level
-	);
-
-	// Delete scav rockets and mortars (cam1a only)
-	delete ultScav_templates.rbjeep;
-	delete ultScav_templates.rbuggy;
-	delete ultScav_defenses.RocketPit;
-	delete ultScav_defenses.LancerPit;
-	delete ultScav_defenses.MortarPit;
 }

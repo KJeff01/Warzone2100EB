@@ -5,7 +5,7 @@
 	},
 	"position_1": {
 		"label": "ScavSouthFactoryAssembly",
-		"pos": [13248, 13632]
+		"pos": [12736, 14016]
 	},
 	"position_2": {
 		"label": "ScavCentralFactoryAssembly",
@@ -161,11 +161,6 @@
 		"pos1": [7616, 4800],
 		"pos2": [9408, 5696]
 	},
-	"area_26": {
-		"label": "HelicopterForce",
-		"pos1": [7150, 5650],
-		"pos2": [7575, 6550]
-	},
 
 	"object_0": {
 		"label": "NPResearchFacility",
@@ -221,18 +216,7 @@
 		"player": 1,
 		"type": 0
 	},
-	"object_9": {
-		"label": "NPPowGenerator",
-		"id": 3556,
-		"player": 1,
-		"type": 1
-	},
-	"object_10": {
-		"label": "ThermalDroid",
-		"id": 3653,
-		"player": 1,
-		"type": 0
-	},
+
 	"radius_0": {
 		"label": "ScavCentralFactoryTrigger",
 		"subscriber": 0,

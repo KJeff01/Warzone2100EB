@@ -25,7 +25,7 @@
 	},
 	"position_6": {
 		"label": "base2Assembly",
-		"pos": [5056, 2496]
+		"pos": [5056, 2752]
 	},
 	"position_7": {
 		"label": "base3Assembly",
@@ -35,6 +35,7 @@
 		"label": "base4Assembly",
 		"pos": [2112, 3648]
 	},
+
 	"area_0": {
 		"label": "raidGroup",
 		"pos1": [3392, 576],
@@ -59,8 +60,8 @@
 	},
 	"area_4": {
 		"label": "scavBase1Cleanup",
-		"pos1": [3072, 3840],
-		"pos2": [5504, 5888]
+		"pos1": [3520, 4416],
+		"pos2": [4416, 5056]
 	},
 	"area_5": {
 		"label": "scavBase2Cleanup",
@@ -85,9 +86,10 @@
 		"pos2": [3800, 3200]
 	},
 	"area_9": {
-		"label": "raidGroup2",
-		"pos1": [775, 1275],
-		"pos2": [1175, 2190]
+		"label": "factoryTrigger",
+		"pos1": [2880, 1600],
+		"pos2": [3136, 2112],
+		"subscriber": 0
 	},
 
 	"object_0": {
@@ -99,13 +101,13 @@
 	"object_1": {
 		"label": "base3Factory",
 		"id": 20,
-		"player": 7,
+		"player": 6,
 		"type": 1
 	},
 	"object_2": {
 		"label": "base4Factory",
 		"id": 1256,
-		"player": 7,
+		"player": 6,
 		"type": 1
 	},
 

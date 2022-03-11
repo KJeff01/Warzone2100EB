@@ -1,14 +1,24 @@
 
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
-include("script/campaign/transitionTech.js");
-include ("script/campaign/ultScav.js");
 
-const CIVILIAN = 6; //Civilian player number.
 var capturedCivCount; //How many civilians have been captured. 59 for defeat.
 var civilianPosIndex; //Current location of civilian groups.
 var shepardGroup; //Enemy group that protects civilians.
 var lastSoundTime; //Only play the "civilian rescued" sound every so often.
+const COLLECTIVE_RES = [
+	"R-Defense-WallUpgrade06", "R-Struc-Materials06", "R-Sys-Engineering02",
+	"R-Vehicle-Engine04", "R-Vehicle-Metals05", "R-Cyborg-Metals05",
+	"R-Wpn-Cannon-Accuracy02", "R-Wpn-Cannon-Damage05","R-Wpn-Cannon-ROF01",
+	"R-Wpn-Flamer-Damage06", "R-Wpn-Flamer-ROF03", "R-Wpn-MG-Damage06",
+	"R-Wpn-MG-ROF03", "R-Wpn-Mortar-Acc02", "R-Wpn-Mortar-Damage05",
+	"R-Wpn-Mortar-ROF02", "R-Wpn-Rocket-Accuracy02", "R-Wpn-Rocket-Damage05",
+	"R-Wpn-Rocket-ROF03", "R-Wpn-RocketSlow-Accuracy03", "R-Wpn-RocketSlow-Damage05",
+	"R-Sys-Sensor-Upgrade01", "R-Wpn-RocketSlow-ROF01", "R-Wpn-Howitzer-ROF01",
+	"R-Wpn-Howitzer-Damage07", "R-Cyborg-Armor-Heat01", "R-Vehicle-Armor-Heat01",
+	"R-Wpn-Bomb-Damage01", "R-Wpn-AAGun-Damage03", "R-Wpn-AAGun-ROF02",
+	"R-Wpn-AAGun-Accuracy01", "R-Struc-VTOLPad-Upgrade01"
+];
 
 //Play video about civilians being captured by the Collective. Triggered
 //by destroying the air base or crossing the base3Trigger area.
@@ -21,8 +31,8 @@ function videoTrigger()
 	setTimer("captureCivilians", camChangeOnDiff(camSecondsToMilliseconds(10)));
 
 	hackRemoveMessage("C2C_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER);
-	camPlayVideos("MB2_C_MSG2");
-	hackAddMessage("C2C_OBJ2", PROX_MSG, CAM_HUMAN_PLAYER, true);
+	camPlayVideos({video: "MB2_C_MSG2", type: MISS_MSG});
+	hackAddMessage("C2C_OBJ2", PROX_MSG, CAM_HUMAN_PLAYER, false);
 }
 
 //Enable heavy factories and make groups do what they need to.
@@ -116,7 +126,7 @@ function truckDefense()
 		return;
 	}
 
-	const LIST = ["CO-Tower-LtATRkt", "PillBox1", "CO-Tower-MdCan"];
+	const LIST = ["CO-Tower-LtATRkt", "PillBox1", "CO-WallTower-HvCan"];
 	camQueueBuilding(THE_COLLECTIVE, LIST[camRand(LIST.length)]);
 }
 
@@ -139,12 +149,12 @@ function captureCivilians()
 		var num = 1 + camRand(3);
 		for (i = 0; i < num; ++i)
 		{
-			addDroid(CIVILIAN, currPos.x, currPos.y, "Civilian",
+			addDroid(SCAV_7, currPos.x, currPos.y, "Civilian",
 					"B1BaBaPerson01", "BaBaLegs", "", "", "BabaMG");
 		}
 
 		//Only count civilians that are not in the the transporter base.
-		var civs = enumArea(0, 0, 35, mapHeight, CIVILIAN, false);
+		var civs = enumArea(0, 0, 35, mapHeight, SCAV_7, false);
 		//Move them
 		for (i = 0; i < civs.length; ++i)
 		{
@@ -177,7 +187,7 @@ function civilianOrders()
 {
 	var lz = getObject("startPosition");
 	var rescueSound = "pcv612.ogg";	//"Civilian Rescued".
-	var civs = enumDroid(CIVILIAN);
+	var civs = enumDroid(SCAV_7);
 	var rescued = false;
 
 	//Check if a civilian is close to a player droid.
@@ -208,7 +218,7 @@ function eventTransporterLanded(transport)
 {
 	var escaping = "pcv632.ogg"; //"Enemy escaping".
 	var position = getObject("COTransportPos");
-	var civs = enumRange(position.x, position.y, 15, CIVILIAN, false);
+	var civs = enumRange(position.x, position.y, 15, SCAV_7, false);
 
 	if (civs.length)
 	{
@@ -252,7 +262,7 @@ function extraVictoryCondition()
 	else
 	{
 		var lz = getObject("startPosition");
-		var civs = enumRange(lz.x, lz.y, 30, CIVILIAN, false);
+		var civs = enumRange(lz.x, lz.y, 30, SCAV_7, false);
 
 		for (var i = 0; i < civs.length; ++i)
 		{
@@ -282,7 +292,7 @@ function eventStartLevel()
 		"rippleRocket": { tech: "R-Wpn-Rocket06-IDF" },
 		"quadbof": { tech: "R-Wpn-AAGun02" },
 		"howitzer": { tech: "R-Wpn-HowitzerMk1" },
-		"COHeavyFac-Leopard": { tech: "R-Vehicle-Body06" }, //panther
+		"COHeavyFac-Leopard": { tech: "R-Vehicle-Body06" }, //Panther
 		"COHeavyFac-Upgrade": { tech: "R-Struc-Factory-Upgrade04" },
 		"COVtolFacLeft-Prop": { tech: "R-Vehicle-Prop-VTOL" },
 		"COInfernoEmplacement-Arti": { tech: "R-Wpn-Flamer-ROF02" },
@@ -290,12 +300,9 @@ function eventStartLevel()
 
 	setMissionTime(camChangeOnDiff(camHoursToSeconds(2)));
 
-	setAlliance(THE_COLLECTIVE, ULTSCAV, true);
-	setAlliance(THE_COLLECTIVE, CIVILIAN, true);
-	setAlliance(CAM_HUMAN_PLAYER, CIVILIAN, true);
-	setAlliance(ULTSCAV, CIVILIAN, true);
-	camCompleteRequiredResearch(CAM2C_RES_COL, THE_COLLECTIVE);
-	camCompleteRequiredResearch(CAM2C_RES_COL, ULTSCAV);
+	setAlliance(THE_COLLECTIVE, SCAV_7, true);
+	setAlliance(CAM_HUMAN_PLAYER, SCAV_7, true);
+	camCompleteRequiredResearch(COLLECTIVE_RES, THE_COLLECTIVE);
 
 	camSetEnemyBases({
 		"COAirBase": {
@@ -397,29 +404,9 @@ function eventStartLevel()
 	shepardGroup = camMakeGroup("heavyGroup2");
 	enableFactories();
 
-	camPlayVideos("MB2_C_MSG");
-	hackAddMessage("C2C_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, true);
+	camPlayVideos({video: "MB2_C_MSG", type: MISS_MSG});
+	hackAddMessage("C2C_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, false);
 
 	queue("activateGroups", camChangeOnDiff(camMinutesToMilliseconds(8)));
-	setTimer("truckDefense", camSecondsToMilliseconds(160));
-	ultScav_eventStartLevel(
-		1, // vtols on/off. -1 = off
-		35, // build defense every x seconds
-		50, // build factories every x seconds
-		45, // build cyborg factories every x seconds
-		25, // produce trucks every x seconds
-		55, // produce droids every x seconds
-		45, // produce cyborgs every x seconds
-		60, // produce VTOLs every x seconds
-		5, // min factories
-		5, // min vtol factories
-		5, // min cyborg factories
-		10, // min number of trucks
-		3, // min number of sensor droids
-		6, // min number of attack droids
-		6, // min number of defend droids
-		135, // ground attack every x seconds
-		165, // VTOL attack every x seconds
-		2 // tech level
-	);
+	setTimer("truckDefense", camChangeOnDiff(camMinutesToMilliseconds(3)));
 }

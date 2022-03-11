@@ -153,25 +153,25 @@
 	},
 	"object_1": {
 		"label": "NXMissileSilo1",
-		"id": 918,
+		"id": 735,
 		"player": 3,
 		"type": 1
 	},
 	"object_2": {
 		"label": "NXMissileSilo2",
-		"id": 914,
+		"id": 686,
 		"player": 3,
 		"type": 1
 	},
 	"object_3": {
 		"label": "NXMissileSilo3",
-		"id": 916,
+		"id": 733,
 		"player": 3,
 		"type": 1
 	},
 	"object_4": {
 		"label": "NXMissileSilo4",
-		"id": 917,
+		"id": 278,
 		"player": 3,
 		"type": 1
 	},

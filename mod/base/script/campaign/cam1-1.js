@@ -1,42 +1,93 @@
 
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
-include("script/campaign/ultScav.js");
-include("script/campaign/transitionTech.js");
 
+const SCAVENGER_RES = [
+	"R-Wpn-Flamer-Damage01", "R-Wpn-Flamer-Range01", "R-Wpn-MG-Damage02", "R-Wpn-MG-ROF01",
+];
 
 //Ambush player from scav base - triggered from middle path
 camAreaEvent("scavBaseTrigger", function()
 {
-	var ambushGroup = camMakeGroup(enumArea("eastScavs", SCAVS, false));
-	camManageGroup(ambushGroup, CAM_ORDER_DEFEND, {
-		pos: camMakePos("artifactLocation")
+	var ambushGroup = camMakeGroup(enumArea("eastScavsNorth", SCAV_7, false));
+	camManageGroup(ambushGroup, CAM_ORDER_ATTACK, {
+		count: -1,
+		regroup: false
 	});
 });
 
 //Moves west scavs units closer to the base - triggered from right path
 camAreaEvent("ambush1Trigger", function()
 {
-	var ambushGroup = camMakeGroup(enumArea("westScavs", SCAVS, false));
-	camManageGroup(ambushGroup, CAM_ORDER_DEFEND, {
-		pos: camMakePos("ambush1")
-	});
+	camCallOnce("westScavAction");
 });
 
 //Sends some units towards player LZ - triggered from left path
 camAreaEvent("ambush2Trigger", function()
 {
-	var ambushGroup = camMakeGroup(enumArea("northWestScavs", SCAVS, false));
+	camCallOnce("northwestScavAction");
+});
+
+camAreaEvent("factoryTrigger", function()
+{
+	camEnableFactory("scavFactory1");
+});
+
+function westScavAction()
+{
+	var ambushGroup = camMakeGroup(enumArea("westScavs", SCAV_7, false));
+	camManageGroup(ambushGroup, CAM_ORDER_DEFEND, {
+		pos: camMakePos("ambush1")
+	});
+}
+
+function northwestScavAction()
+{
+	var ambushGroup = camMakeGroup(enumArea("northWestScavs", SCAV_7, false));
 	camManageGroup(ambushGroup, CAM_ORDER_DEFEND, {
 		pos: camMakePos("ambush2")
 	});
-});
+}
 
 function eventPickup(feature, droid)
 {
 	if (droid.player === CAM_HUMAN_PLAYER && feature.stattype === ARTIFACT)
 	{
 		hackRemoveMessage("C1-1_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER);
+	}
+}
+
+function eventAttacked(victim, attacker)
+{
+	if (victim.player === CAM_HUMAN_PLAYER)
+	{
+		return;
+	}
+	if (!victim)
+	{
+		return;
+	}
+
+	if (victim.type === STRUCTURE && victim.id === 146)
+	{
+		camCallOnce("westScavAction");
+	}
+}
+
+//Send the south-eastern scavs in the main base on an attack run when the front bunkers get destroyed.
+function checkFrontBunkers()
+{
+	if (getObject("frontBunkerLeft") === null && getObject("frontBunkerRight") === null)
+	{
+		var ambushGroup = camMakeGroup(enumArea("eastScavsSouth", SCAV_7, false));
+		camManageGroup(ambushGroup, CAM_ORDER_ATTACK, {
+			count: -1,
+			regroup: false
+		});
+	}
+	else
+	{
+		queue("checkFrontBunkers", camSecondsToMilliseconds(5));
 	}
 }
 
@@ -59,34 +110,36 @@ function eventStartLevel()
 	startTransporterEntry(tent.x, tent.y, CAM_HUMAN_PLAYER);
 	setTransporterExit(text.x, text.y, CAM_HUMAN_PLAYER);
 
-	setAlliance(ULTSCAV, SCAVS, true);
+	camCompleteRequiredResearch(SCAVENGER_RES, SCAV_7);
+
+	camUpgradeOnMapTemplates(cTempl.bloke, cTempl.blokeheavy, SCAV_7);
+	camUpgradeOnMapTemplates(cTempl.trike, cTempl.triketwin, SCAV_7);
+	camUpgradeOnMapTemplates(cTempl.buggy, cTempl.buggytwin, SCAV_7);
+	camUpgradeOnMapTemplates(cTempl.bjeep, cTempl.bjeeptwin, SCAV_7);
 
 	//Get rid of the already existing crate and replace with another
 	camSafeRemoveObject("artifact1", false);
 	camSetArtifacts({
-		"artifactLocation": { tech: "R-Wpn-MG3Mk1" }, //Heavy machine gun
+		"scavFactory1": { tech: "R-Wpn-MG3Mk1" }, //Heavy machine gun
 	});
 
-	camPlayVideos("FLIGHT");
-	hackAddMessage("C1-1_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, true);
-	ultScav_eventStartLevel(
-		1, // vtols on/off. -1 = off
-		30, // build defense every x seconds
-		35, // build factories every x seconds
-		-1, // build cyborg factories every x seconds
-		25, // produce trucks every x seconds
-		30, // produce droids every x seconds
-		-1, // produce cyborgs every x seconds
-		35, // produce VTOLs every x seconds
-		2, // min factories
-		4, // min vtol factories
-		-1, // min cyborg factories
-		3, // min number of trucks
-		2, // min number of sensor droids
-		5, // min number of attack droids
-		4, // min number of defend droids
-		210, // ground attack every x seconds
-		230, // VTOL attack every x seconds
-		1 // tech level
-	);
+	camSetFactories({
+		"scavFactory1": {
+			assembly: "Assembly",
+			order: CAM_ORDER_ATTACK,
+			data: {
+				regroup: false,
+				repair: 66,
+				count: -1,
+			},
+			groupSize: 4,
+			throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty === EASY || difficulty === MEDIUM) ? 40 : 30)),
+			templates: [ ((difficulty === EASY || difficulty === MEDIUM) ? cTempl.triketwin : cTempl.trikeheavy), cTempl.blokeheavy, ((difficulty === EASY || difficulty === MEDIUM) ? cTempl.buggytwin : cTempl.buggyheavy), cTempl.bjeepheavy ]
+		},
+	});
+
+	camPlayVideos({video: "FLIGHT", type: CAMP_MSG});
+	hackAddMessage("C1-1_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, false);
+
+	queue("checkFrontBunkers", camSecondsToMilliseconds(5));
 }

@@ -1,8 +1,19 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
-include("script/campaign/transitionTech.js");
-include ("script/campaign/ultScav.js");
 
+const COLLECTIVE_RES = [
+	"R-Defense-WallUpgrade06", "R-Struc-Materials06", "R-Sys-Engineering02",
+	"R-Vehicle-Engine04", "R-Vehicle-Metals05", "R-Cyborg-Metals05",
+	"R-Wpn-Cannon-Accuracy02", "R-Wpn-Cannon-Damage05","R-Wpn-Cannon-ROF02",
+	"R-Wpn-Flamer-Damage06", "R-Wpn-Flamer-ROF03", "R-Wpn-MG-Damage07",
+	"R-Wpn-MG-ROF03", "R-Wpn-Mortar-Acc02", "R-Wpn-Mortar-Damage06",
+	"R-Wpn-Mortar-ROF03", "R-Wpn-Rocket-Accuracy02", "R-Wpn-Rocket-Damage06",
+	"R-Wpn-Rocket-ROF03", "R-Wpn-RocketSlow-Accuracy03", "R-Wpn-RocketSlow-Damage05",
+	"R-Sys-Sensor-Upgrade01", "R-Wpn-RocketSlow-ROF02", "R-Wpn-Howitzer-ROF02",
+	"R-Wpn-Howitzer-Damage08", "R-Cyborg-Armor-Heat01", "R-Vehicle-Armor-Heat01",
+	"R-Wpn-Bomb-Damage02", "R-Wpn-AAGun-Damage03", "R-Wpn-AAGun-ROF03",
+	"R-Wpn-AAGun-Accuracy02", "R-Wpn-Howitzer-Accuracy01", "R-Struc-VTOLPad-Upgrade03",
+];
 
 function camEnemyBaseDetected_COMainBase()
 {
@@ -12,23 +23,20 @@ function camEnemyBaseDetected_COMainBase()
 		regroup: false,
 	});
 
-	camManageGroup(camMakeGroup("southEastGroup"), CAM_ORDER_PATROL, {
-		pos: [
-			camMakePos("playerLZ"),
-			camMakePos("grp2Pos2"),
-			camMakePos("uplinkBaseCorner"),
-		],
-		interval: camSecondsToMilliseconds(40),
-		//fallback: camMakePos("heavyFacAssembly"),
-		repair: 40,
-		regroup: false,
-	});
-
 	camEnableFactory("COCyborgFactory-b1");
 	camEnableFactory("COCyborgFactory-b2");
 	camEnableFactory("COHeavyFactory-b2R");
-	enableTimeBasedFactories(); //Might as well since the player is attacking.
 }
+
+camAreaEvent("factoryTriggerWest", function(droid)
+{
+	enableTimeBasedFactories();
+});
+
+camAreaEvent("factoryTriggerEast", function(droid)
+{
+	enableTimeBasedFactories();
+});
 
 function camEnemyBaseEliminated_COUplinkBase()
 {
@@ -43,6 +51,30 @@ function camEnemyBaseDetected_COMediumBase()
 	});
 
 	camManageGroup(camMakeGroup(droids), CAM_ORDER_ATTACK, {
+		regroup: false,
+	});
+}
+
+function truckDefense()
+{
+	if (enumDroid(THE_COLLECTIVE, DROID_CONSTRUCT).length === 0)
+	{
+		removeTimer("truckDefense");
+		return;
+	}
+
+	var list = ["Emplacement-Howitzer105", "Emplacement-Rocket06-IDF", "Sys-CB-Tower01", "Emplacement-Howitzer105", "Emplacement-Rocket06-IDF", "Sys-SensoTower02"];
+	camQueueBuilding(THE_COLLECTIVE, list[camRand(list.length)], camMakePos("buildPos1"));
+	camQueueBuilding(THE_COLLECTIVE, list[camRand(list.length)], camMakePos("buildPos2"));
+}
+
+function southEastAttack()
+{
+	camManageGroup(camMakeGroup("southEastGroup"), CAM_ORDER_COMPROMISE, {
+		pos: [
+			camMakePos("playerLZ"),
+		],
+		repair: 40,
 		regroup: false,
 	});
 }
@@ -82,7 +114,7 @@ function eventStartLevel()
 	camSetStandardWinLossConditions(CAM_VICTORY_OFFWORLD, "SUB_2_7S", {
 		area: "RTLZ",
 		message: "C26_LZ",
-		reinforcements: camMinutesToSeconds(2)
+		reinforcements: camMinutesToSeconds(3)
 	});
 
 	var startpos = getObject("startPosition");
@@ -99,14 +131,13 @@ function eventStartLevel()
 
 	camSetArtifacts({
 		"COCyborgFactory-Arti": { tech: "R-Wpn-Rocket07-Tank-Killer" },
-		"COCommandCenter": { tech: "R-Wpn-Mortar-ROF04" },
+		"COCommandCenter": { tech: "R-Wpn-Mortar3" },
 		"uplink": { tech: "R-Sys-VTOLCBS-Tower01" },
-		"COCyborgFactory-b1": { tech: ["R-Cyborg-HvyBody", "R-Cyborg-Engine02"] },
+		"COMediumFactory": { tech: "R-Wpn-Cannon4AMk1" },
+		"COWhirlwindSite": { tech: "R-Wpn-AAGun04" },
 	});
 
-	setAlliance(THE_COLLECTIVE, ULTSCAV, true);
-	camCompleteRequiredResearch(CAM2_6_RES_COL, THE_COLLECTIVE);
-	camCompleteRequiredResearch(CAM2_6_RES_COL, ULTSCAV);
+	camCompleteRequiredResearch(COLLECTIVE_RES, THE_COLLECTIVE);
 
 	camSetEnemyBases({
 		"COUplinkBase": {
@@ -204,29 +235,18 @@ function eventStartLevel()
 		},
 	});
 
-	hackAddMessage("C26_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, true);
+	hackAddMessage("C26_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, false);
 
-	queue("northWestAttack", camMinutesToMilliseconds(2));
-	queue("mainBaseAttackGroup", camMinutesToMilliseconds(3));
-	queue("enableTimeBasedFactories", camChangeOnDiff(camMinutesToMilliseconds(10)));
-	ultScav_eventStartLevel(
-		-1, // vtols on/off. -1 = off
-		45, // build defense every x seconds
-		75, // build factories every x seconds
-		-1, // build cyborg factories every x seconds
-		25, // produce trucks every x seconds
-		115, // produce droids every x seconds
-		-1, // produce cyborgs every x seconds
-		-1, // produce VTOLs every x seconds
-		1, // min factories
-		-1, // min vtol factories
-		-1, // min cyborg factories
-		7, // min number of trucks
-		-1, // min number of sensor droids
-		6, // min number of attack droids
-		3, // min number of defend droids
-		75, // ground attack every x seconds
-		-1, // VTOL attack every x seconds
-		2.5 // tech level
-	);
+	if (difficulty >= HARD)
+	{
+		addDroid(THE_COLLECTIVE, 26, 27, "Truck Panther Tracks", "Body6SUPP", "tracked01", "", "", "Spade1Mk1");
+		addDroid(THE_COLLECTIVE, 42, 4, "Truck Panther Tracks", "Body6SUPP", "tracked01", "", "", "Spade1Mk1");
+		camManageTrucks(THE_COLLECTIVE);
+		setTimer("truckDefense", camChangeOnDiff(camMinutesToMilliseconds(6)));
+	}
+
+	queue("northWestAttack", camChangeOnDiff(camMinutesToMilliseconds(3)));
+	queue("mainBaseAttackGroup", camChangeOnDiff(camMinutesToMilliseconds(4.5)));
+	queue("southEastAttack", camChangeOnDiff(camMinutesToMilliseconds(5)));
+	queue("enableTimeBasedFactories", camChangeOnDiff(camMinutesToMilliseconds(6)));
 }

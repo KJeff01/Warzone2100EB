@@ -1,8 +1,19 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
-include("script/campaign/transitionTech.js");
-include ("script/campaign/ultScav.js");
 
+const COLLECTIVE_RES = [
+	"R-Defense-WallUpgrade06", "R-Struc-Materials06", "R-Sys-Engineering02",
+	"R-Vehicle-Engine05", "R-Vehicle-Metals05", "R-Cyborg-Metals05",
+	"R-Wpn-Cannon-Accuracy02", "R-Wpn-Cannon-Damage06","R-Wpn-Cannon-ROF03",
+	"R-Wpn-Flamer-Damage06", "R-Wpn-Flamer-ROF03", "R-Wpn-MG-Damage07",
+	"R-Wpn-MG-ROF03", "R-Wpn-Mortar-Acc02", "R-Wpn-Mortar-Damage06",
+	"R-Wpn-Mortar-ROF03", "R-Wpn-Rocket-Accuracy02", "R-Wpn-Rocket-Damage06",
+	"R-Wpn-Rocket-ROF03", "R-Wpn-RocketSlow-Accuracy03", "R-Wpn-RocketSlow-Damage06",
+	"R-Sys-Sensor-Upgrade01", "R-Wpn-RocketSlow-ROF03", "R-Wpn-Howitzer-ROF02",
+	"R-Wpn-Howitzer-Damage08", "R-Cyborg-Armor-Heat02", "R-Vehicle-Armor-Heat02",
+	"R-Wpn-Bomb-Damage02", "R-Wpn-AAGun-Damage03", "R-Wpn-AAGun-ROF03",
+	"R-Wpn-AAGun-Accuracy02", "R-Wpn-Howitzer-Accuracy01", "R-Struc-VTOLPad-Upgrade03",
+];
 
 function camEnemyBaseDetected_COBase1()
 {
@@ -73,13 +84,26 @@ function enableFactoriesAndHovers()
 	});
 }
 
+function truckDefense()
+{
+	if (enumDroid(THE_COLLECTIVE, DROID_CONSTRUCT).length === 0)
+	{
+		removeTimer("truckDefense");
+		return;
+	}
+
+	var list = ["Emplacement-Howitzer105", "Emplacement-Rocket06-IDF", "Sys-CB-Tower01", "Emplacement-Howitzer105", "Emplacement-Rocket06-IDF", "Sys-SensoTower02"];
+	camQueueBuilding(THE_COLLECTIVE, list[camRand(list.length)], camMakePos("buildPos1"));
+	camQueueBuilding(THE_COLLECTIVE, list[camRand(list.length)], camMakePos("buildPos2"));
+}
+
 function eventStartLevel()
 {
 	camSetStandardWinLossConditions(CAM_VICTORY_OFFWORLD, "SUB_2_8S", {
 		eliminateBases: true,
 		area: "RTLZ",
 		message: "C27_LZ",
-		reinforcements: camMinutesToSeconds(2)
+		reinforcements: camMinutesToSeconds(3)
 	});
 
 	var startpos = getObject("startPosition");
@@ -95,15 +119,12 @@ function eventStartLevel()
 	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, THE_COLLECTIVE);
 
 	camSetArtifacts({
-		"COCyborgFac-b2": { tech: "R-Wpn-Cannon5" },
-		"COTankKillerHardpoint": { tech: "R-Wpn-Rocket07-Tank-Killer-Quad" },
-		"COCyborgFac-b3": { tech: "R-Wpn-Cannon-Damage07" },
-		"COHeavyFac-b4": { tech: "R-Wpn-Cannon-ROF04" },
+		"COHeavyFac-Arti-b2": { tech: "R-Wpn-Cannon5" },
+		"COTankKillerHardpoint": { tech: "R-Wpn-RocketSlow-Damage06" },
+		"COVtolFactory-b4": { tech: "R-Wpn-Bomb-Damage02" },
 	});
 
-	setAlliance(THE_COLLECTIVE, ULTSCAV, true);
-	camCompleteRequiredResearch(CAM2_7_RES_COL, THE_COLLECTIVE);
-	camCompleteRequiredResearch(CAM2_7_RES_COL, ULTSCAV);
+	camCompleteRequiredResearch(COLLECTIVE_RES, THE_COLLECTIVE);
 
 	camSetEnemyBases({
 		"COBase1": {
@@ -179,7 +200,7 @@ function eventStartLevel()
 				repair: 20,
 				count: -1,
 			},
-			templates: [cTempl.comrotmh, cTempl.comhltat, cTempl.cohct]
+			templates: [cTempl.comrotmh, cTempl.comhltat, cTempl.cohact, cTempl.cohhpv]
 		},
 		"COCyborgFac-b4": {
 			assembly: "base4CybAssembly",
@@ -209,32 +230,21 @@ function eventStartLevel()
 	//This mission shows you the approximate base locations at the start.
 	//These are removed once the base it is close to is seen and is replaced
 	//with a more precise proximity blip.
-	hackAddMessage("C27_OBJECTIVE1", PROX_MSG, CAM_HUMAN_PLAYER, true);
-	hackAddMessage("C27_OBJECTIVE2", PROX_MSG, CAM_HUMAN_PLAYER, true);
-	hackAddMessage("C27_OBJECTIVE3", PROX_MSG, CAM_HUMAN_PLAYER, true);
-	hackAddMessage("C27_OBJECTIVE4", PROX_MSG, CAM_HUMAN_PLAYER, true);
+	hackAddMessage("C27_OBJECTIVE1", PROX_MSG, CAM_HUMAN_PLAYER, false);
+	hackAddMessage("C27_OBJECTIVE2", PROX_MSG, CAM_HUMAN_PLAYER, false);
+	hackAddMessage("C27_OBJECTIVE3", PROX_MSG, CAM_HUMAN_PLAYER, false);
+	hackAddMessage("C27_OBJECTIVE4", PROX_MSG, CAM_HUMAN_PLAYER, false);
 
-	queue("baseThreeVtolAttack", camSecondsToMilliseconds(30));
-	queue("baseFourVtolAttack", camMinutesToMilliseconds(1));
-	queue("enableFactoriesAndHovers", camChangeOnDiff(camMinutesToMilliseconds(1.5)));
-	ultScav_eventStartLevel(
-		1, // vtols on/off. -1 = off
-		20, // build defense every x seconds
-		50, // build factories every x seconds
-		45, // build cyborg factories every x seconds
-		25, // produce trucks every x seconds
-		35, // produce droids every x seconds
-		25, // produce cyborgs every x seconds
-		40, // produce VTOLs every x seconds
-		5, // min factories
-		5, // min vtol factories
-		5, // min cyborg factories
-		10, // min number of trucks
-		3, // min number of sensor droids
-		5, // min number of attack droids
-		3, // min number of defend droids
-		135, // ground attack every x seconds
-		135, // VTOL attack every x seconds
-		2.5 // tech level
-	);
+	if (difficulty >= HARD)
+	{
+		addDroid(THE_COLLECTIVE, 55, 25, "Truck Panther Tracks", "Body6SUPP", "tracked01", "", "", "Spade1Mk1");
+
+		camManageTrucks(THE_COLLECTIVE);
+
+		setTimer("truckDefense", camChangeOnDiff(camMinutesToMilliseconds(4.5)));
+	}
+
+	queue("baseThreeVtolAttack", camChangeOnDiff(camSecondsToMilliseconds(90)));
+	queue("baseFourVtolAttack", camChangeOnDiff(camMinutesToMilliseconds(2)));
+	queue("enableFactoriesAndHovers", camChangeOnDiff(camMinutesToMilliseconds(2)));
 }

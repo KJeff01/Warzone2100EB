@@ -111,11 +111,12 @@
 		"type": 1
 	},
 	"object_6": {
-		"label": "ScavFact",
-		"id": 4212,
-		"player": 9,
+		"label": "COHowitzerEmplacement",
+		"id": 4207,
+		"player": 2,
 		"type": 1
 	},
+
 	"radius_0": {
 		"label": "vtolRemoveZone",
 		"subscriber": 2,

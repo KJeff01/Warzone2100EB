@@ -1,9 +1,17 @@
 
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
-include("script/campaign/transitionTech.js");
-include("script/campaign/ultScav.js");
 
+const NEW_PARADIGM_RES = [
+	"R-Wpn-MG1Mk1", "R-Vehicle-Body01", "R-Sys-Spade1Mk1", "R-Vehicle-Prop-Wheels",
+	"R-Sys-Engineering01", "R-Wpn-MG-Damage04", "R-Wpn-MG-ROF02", "R-Wpn-Cannon-Damage03",
+	"R-Wpn-Flamer-Damage03", "R-Wpn-Flamer-Range01", "R-Wpn-Flamer-ROF01",
+	"R-Defense-WallUpgrade03","R-Struc-Materials03", "R-Vehicle-Engine03",
+	"R-Struc-RprFac-Upgrade03", "R-Wpn-Rocket-Damage03", "R-Wpn-Rocket-ROF03",
+	"R-Vehicle-Metals03", "R-Wpn-Mortar-Damage03", "R-Wpn-Rocket-Accuracy02",
+	"R-Wpn-RocketSlow-Damage03", "R-Wpn-Mortar-ROF01", "R-Cyborg-Metals03",
+	"R-Wpn-Mortar-Acc01", "R-Wpn-RocketSlow-Accuracy01", "R-Wpn-Cannon-Accuracy01",
+];
 
 camAreaEvent("tankTrapTrig", function(droid)
 {
@@ -69,7 +77,7 @@ function HoverGroupPatrol()
 		pos: camMakePos("attackPoint2"),
 		fallback: camMakePos("cybRetreatPoint"),
 		morale: 50,
-		regroup: true
+		regroup: false
 	});
 	camManageGroup(camMakeGroup("hoversDefense"), CAM_ORDER_PATROL, {
 		pos: [
@@ -149,8 +157,6 @@ function eventStartLevel()
 	startTransporterEntry(tent.x, tent.y, CAM_HUMAN_PLAYER);
 	setTransporterExit(text.x, text.y, CAM_HUMAN_PLAYER);
 
-	setAlliance(ULTSCAV, NEW_PARADIGM, true);
-
 	//Get rid of the already existing crate and replace with another
 	camSafeRemoveObject("artifact1", false);
 	camSetArtifacts({
@@ -159,8 +165,7 @@ function eventStartLevel()
 		"NPFactoryNE": { tech: "R-Vehicle-Body12" }, //Main base factory
 	});
 
-	camCompleteRequiredResearch(CAM1D_RES_NP, NEW_PARADIGM);
-	camCompleteRequiredResearch(CAM1D_RES_NP, ULTSCAV);
+	camCompleteRequiredResearch(NEW_PARADIGM_RES, NEW_PARADIGM);
 
 	camSetEnemyBases({
 		"NPSouthEastGroup": {
@@ -192,15 +197,22 @@ function eventStartLevel()
 	camSetFactories({
 		"NPFactoryW": {
 			assembly: "NPFactoryWAssembly",
-			order: CAM_ORDER_ATTACK,
-			groupSize: 4,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(65)),
+			order: CAM_ORDER_PATROL,
+			groupSize: 6,
+			throttle: camChangeOnDiff(camSecondsToMilliseconds(60)),
 			data: {
+				pos: [
+					camMakePos("hoverDefense5"),
+					camMakePos("hoverDefense6"),
+					camMakePos("hoverDefense7"),
+					camMakePos("hoverDefense8")
+				],
+				interval: camSecondsToMilliseconds(45),
 				regroup: false,
 				repair: 66,
 				count: -1,
 			},
-			templates: [ cTempl.nphmgh, cTempl.npltath, cTempl.nphch ] //Hover factory
+			templates: [ cTempl.nphmgh, cTempl.npltath, cTempl.nphch, cTempl.nphbb ] //Hover factory
 		},
 		"NPFactoryE": {
 			assembly: "NPFactoryEAssembly",
@@ -264,27 +276,7 @@ function eventStartLevel()
 		},
 	});
 
-	hackAddMessage("C1D_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, true);
+	hackAddMessage("C1D_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, false);
 
 	queue("setupPatrols", camMinutesToMilliseconds(2.5));
-	ultScav_eventStartLevel(
-		1, // vtols on/off. -1 = off
-		85, // build defense every x seconds
-		75, // build factories every x seconds
-		90, // build cyborg factories every x seconds
-		35, // produce trucks every x seconds
-		55, // produce droids every x seconds
-		55, // produce cyborgs every x seconds
-		45, // produce VTOLs every x seconds
-		3, // min factories
-		3, // min vtol factories
-		3, // min cyborg factories
-		4, // min number of trucks
-		5, // min number of sensor droids
-		5, // min number of attack droids
-		3, // min number of defend droids
-		220, // ground attack every x seconds
-		210, // VTOL attack every x seconds
-		1.5 // tech level
-	);
 }

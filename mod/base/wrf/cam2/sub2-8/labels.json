@@ -51,6 +51,18 @@
 		"label": "WCybPos3",
 		"pos": [6592, 7104]
 	},
+	"position_13": {
+		"label": "buildPos1",
+		"pos": [768, 3328]
+	},
+	"position_14": {
+		"label": "buildPos2",
+		"pos": [2176, 4352]
+	},
+	"position_15": {
+		"label": "buildPos3",
+		"pos": [2304, 3072]
+	},
 
 	"area_0": {
 		"label": "landingZone",
@@ -119,24 +131,6 @@
 	"object_3": {
 		"label": "COVtolFac-b3",
 		"id": 227,
-		"player": 2,
-		"type": 1
-	},
-	"object_4": {
-		"label": "PlasmaCannonEmpl",
-		"id": 284,
-		"player": 2,
-		"type": 1
-	},
-	"object_5": {
-		"label": "ScavFact",
-		"id": 281,
-		"player": 9,
-		"type": 1
-	},
-	"object_6": {
-		"label": "GroundShaker",
-		"id": 294,
 		"player": 2,
 		"type": 1
 	}

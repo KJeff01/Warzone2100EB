@@ -76,12 +76,12 @@
 	"area_5": {
 		"label": "enemy1Force1",
 		"pos1": [4288, 9024],
-		"pos2": [6000, 10800]
+		"pos2": [5568, 9920]
 	},
 	"area_6": {
 		"label": "hillForce",
-		"pos1": [790, 8700],
-		"pos2": [1600, 9700]
+		"pos1": [1088, 8891],
+		"pos2": [1600, 9536]
 	},
 	"area_7": {
 		"label": "AttackArea1",
@@ -111,7 +111,7 @@
 	"object_0": {
 		"label": "base1factory",
 		"id": 43,
-		"player": 7,
+		"player": 6,
 		"type": 1
 	},
 	"object_1": {
@@ -128,7 +128,7 @@
 	},
 	"object_3": {
 		"label": "base4gen",
-		"id": 3614,
+		"id": 3576,
 		"player": 7,
 		"type": 1
 	},
@@ -140,8 +140,8 @@
 	},
 	"object_5": {
 		"label": "npscout",
-		"id": 3690,
-		"player": 7,
+		"id": 3577,
+		"player": 1,
 		"type": 0
 	}
 }

@@ -1,10 +1,9 @@
 include("script/campaign/transitionTech.js");
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
-include ("script/campaign/ultScav.js");
 
 const TRANSPORT_LIMIT = 4;
-var index; //Number of transport loads sent into the level
+var transporterIndex; //Number of transport loads sent into the level
 var startedFromMenu;
 
 
@@ -17,7 +16,7 @@ camAreaEvent("vtolRemoveZone", function(droid)
 //Attack and destroy all those who resist the Machine! -The Collective
 function secondVideo()
 {
-	camPlayVideos("MB2A_MSG2");
+	camPlayVideos({video: "MB2A_MSG2", type: CAMP_MSG});
 }
 
 //Damage the base and droids for the player
@@ -57,7 +56,7 @@ function getDroidsForCOLZ()
 	}
 	else
 	{
-		templates = [cTempl.cohct, cTempl.comct, cTempl.comorb];
+		templates = [cTempl.cohct, cTempl.commrl, cTempl.comorb];
 		usingHeavy = true;
 	}
 
@@ -102,12 +101,12 @@ function sendCOTransporter()
 //from the main menu. Otherwise a player can just bring in there Alpha units
 function sendPlayerTransporter()
 {
-	if (!camDef(index))
+	if (!camDef(transporterIndex))
 	{
-		index = 0;
+		transporterIndex = 0;
 	}
 
-	if (index === TRANSPORT_LIMIT)
+	if (transporterIndex === TRANSPORT_LIMIT)
 	{
 		downTransporter();
 		return;
@@ -133,7 +132,7 @@ function sendPlayerTransporter()
 function mapEdgeDroids()
 {
 	var TankNum = 8 + camRand(6);
-	var list = [cTempl.npcybm, cTempl.npcybr, cTempl.comct, cTempl.cohct];
+	var list = [cTempl.npcybm, cTempl.npcybr, cTempl.commrp, cTempl.cohct];
 
 	var droids = [];
 	for (var i = 0; i < TankNum; ++i)
@@ -147,17 +146,12 @@ function mapEdgeDroids()
 function vtolAttack()
 {
 	var list = [cTempl.colcbv];
-	camSetVtolData(THE_COLLECTIVE, "vtolAppearPos", "vtolRemoveZone", list, camChangeOnDiff(camMinutesToMilliseconds(1.5)), "COCommandCenter");
+	camSetVtolData(THE_COLLECTIVE, "vtolAppearPos", "vtolRemoveZone", list, camChangeOnDiff(camMinutesToMilliseconds(3)), "COCommandCenter");
 }
 
 function groupPatrol()
 {
 	camManageGroup(camMakeGroup("edgeGroup"), CAM_ORDER_ATTACK, {
-		regroup: true,
-		count: -1,
-	});
-
-	camManageGroup(camMakeGroup("mediumGroup"), CAM_ORDER_ATTACK, {
 		regroup: true,
 		count: -1,
 	});
@@ -186,57 +180,67 @@ function truckDefense()
 		return;
 	}
 
-	const DEFENSES = ["CO-Tower-LtATRkt", "PillBox1", "CO-Tower-MdCan"];
+	const DEFENSES = ["CO-Tower-LtATRkt", "PillBox1", "CO-WallTower-HvCan"];
 	camQueueBuilding(THE_COLLECTIVE, DEFENSES[camRand(DEFENSES.length)]);
 }
 
 //Gives starting tech and research.
 function cam2Setup()
 {
-	var x = 0;
-
-	camCompleteRequiredResearch(CAM1A_RESEARCH, THE_COLLECTIVE);
-	camCompleteRequiredResearch(CAM1A_RESEARCH, CAM_HUMAN_PLAYER);
-	camCompleteRequiredResearch(CAM1A_RESEARCH, ULTSCAV);
-
-	camCompleteRequiredResearch(CAM2A_RESEARCH, THE_COLLECTIVE);
-	camCompleteRequiredResearch(CAM2A_RESEARCH, CAM_HUMAN_PLAYER);
-	camCompleteRequiredResearch(CAM2A_RESEARCH, ULTSCAV);
-
-	camCompleteRequiredResearch(CAM2A_RES_COL, THE_COLLECTIVE);
-	camCompleteRequiredResearch(CAM2A_RES_COL, ULTSCAV);
-
-	enableResearch("R-Wpn-Mortar-Damage04", CAM_HUMAN_PLAYER);
-	enableResearch("R-Wpn-Rocket-Damage05", CAM_HUMAN_PLAYER);
-
-	const BASE_STRUCTURES = [
-		"A0CommandCentre", "A0PowerGenerator", "A0ResourceExtractor",
-		"A0ResearchFacility", "A0LightFactory",
+	const COLLECTIVE_RES = [
+		"R-Wpn-MG1Mk1", "R-Sys-Engineering02",
+		"R-Defense-WallUpgrade06", "R-Struc-Materials06",
+		"R-Vehicle-Engine03", "R-Vehicle-Metals03", "R-Cyborg-Metals03",
+		"R-Wpn-Cannon-Accuracy02", "R-Wpn-Cannon-Damage04",
+		"R-Wpn-Cannon-ROF01", "R-Wpn-Flamer-Damage03", "R-Wpn-Flamer-ROF01",
+		"R-Wpn-MG-Damage05", "R-Wpn-MG-ROF02", "R-Wpn-Mortar-Acc01",
+		"R-Wpn-Mortar-Damage03", "R-Wpn-Mortar-ROF01",
+		"R-Wpn-Rocket-Accuracy02", "R-Wpn-Rocket-Damage04",
+		"R-Wpn-Rocket-ROF03", "R-Wpn-RocketSlow-Accuracy03",
+		"R-Wpn-RocketSlow-Damage04", "R-Sys-Sensor-Upgrade01"
 	];
 
-	for (var i = 0; i < BASE_STRUCTURES.length; ++i)
+	for (var x = 0, l = STRUCTS_ALPHA.length; x < l; ++x)
 	{
-		enableStructure(BASE_STRUCTURES[i], CAM_HUMAN_PLAYER);
+		enableStructure(STRUCTS_ALPHA[x], CAM_HUMAN_PLAYER);
 	}
 
+	camCompleteRequiredResearch(PLAYER_RES_BETA, CAM_HUMAN_PLAYER);
+	camCompleteRequiredResearch(ALPHA_RESEARCH_NEW, THE_COLLECTIVE);
+	camCompleteRequiredResearch(COLLECTIVE_RES, THE_COLLECTIVE);
+	camCompleteRequiredResearch(ALPHA_RESEARCH_NEW, CAM_HUMAN_PLAYER);
+
+	enableResearch("R-Wpn-Cannon-Damage04", CAM_HUMAN_PLAYER);
+	enableResearch("R-Wpn-Rocket-Damage04", CAM_HUMAN_PLAYER);
 	preDamageStuff();
 }
 
-//Get some higher rank droids at start and first Transport drop.
-function setUnitRank()
+//Get some higher rank droids.
+function setUnitRank(transport)
 {
-	const DROID_EXP = 32;
-	const MIN_TO_AWARD = 16;
-	var droids = enumDroid(CAM_HUMAN_PLAYER).filter(function(dr) {
-		return (!camIsSystemDroid(dr) && !camIsTransporter(dr));
-	});
+	const DROID_EXP = [128, 64, 32, 16];
+	var droids;
+	var mapRun = false;
 
-	for (var j = 0, i = droids.length; j < i; ++j)
+	if (transport)
 	{
-		var droid = droids[j];
-		if (Math.floor(droid.experience) < MIN_TO_AWARD)
+		droids = enumCargo(transport);
+	}
+	else
+	{
+		mapRun = true;
+		//These are the units in the base already at the start.
+		droids = enumDroid(CAM_HUMAN_PLAYER).filter(function(dr) {
+			return !camIsTransporter(dr);
+		});
+	}
+
+	for (var i = 0, len = droids.length; i < len; ++i)
+	{
+		var droid = droids[i];
+		if (!camIsSystemDroid(droid))
 		{
-			setDroidExperience(droids[j], DROID_EXP);
+			setDroidExperience(droid, DROID_EXP[mapRun ? 0 : (transporterIndex - 1)]);
 		}
 	}
 }
@@ -246,18 +250,19 @@ function eventTransporterLanded(transport)
 {
 	if (transport.player === CAM_HUMAN_PLAYER)
 	{
+		if (!camDef(transporterIndex))
+		{
+			transporterIndex = 0;
+		}
+
+		transporterIndex = transporterIndex + 1;
+
 		if (startedFromMenu)
 		{
-			camCallOnce("setUnitRank");
+			setUnitRank(transport);
 		}
 
-		if (!camDef(index))
-		{
-			index = 0;
-		}
-
-		index = index + 1;
-		if (index >= TRANSPORT_LIMIT)
+		if (transporterIndex >= TRANSPORT_LIMIT)
 		{
 			queue("downTransporter", camMinutesToMilliseconds(1));
 		}
@@ -282,7 +287,7 @@ function downTransporter()
 
 function eventTransporterLaunch(transport)
 {
-	if (index >= TRANSPORT_LIMIT)
+	if (transporterIndex >= TRANSPORT_LIMIT)
 	{
 		queue("downTransporter", camMinutesToMilliseconds(1));
 	}
@@ -290,7 +295,7 @@ function eventTransporterLaunch(transport)
 
 function eventGameLoaded()
 {
-	if (index >= TRANSPORT_LIMIT)
+	if (transporterIndex >= TRANSPORT_LIMIT)
 	{
 		setReinforcementTime(LZ_COMPROMISED_TIME);
 	}
@@ -314,12 +319,10 @@ function eventStartLevel()
 	startTransporterEntry(tent.x, tent.y, CAM_HUMAN_PLAYER);
 	setTransporterExit(text.x, text.y, CAM_HUMAN_PLAYER);
 
-	setAlliance(THE_COLLECTIVE, ULTSCAV, true);
 	camSetArtifacts({
 		"COCommandCenter": { tech: "R-Sys-Engineering02" },
-		"COArtiPillbox": { tech: ["R-Wpn-MG-ROF02", "R-Wpn-MG-Damage05"] },
+		"COArtiPillbox": { tech: "R-Wpn-MG-ROF02" },
 		"COArtiCBTower": { tech: "R-Sys-Sensor-Upgrade01" },
-		"SuperMortar": { tech: "R-Defense-SuperRamjetMortar" },
 	});
 
 	setMissionTime(camChangeOnDiff(camHoursToSeconds(1)));
@@ -345,7 +348,7 @@ function eventStartLevel()
 	camManageTrucks(THE_COLLECTIVE);
 	truckDefense();
 	setUnitRank(); //All pre-placed player droids are ranked.
-	camPlayVideos("MB2A_MSG");
+	camPlayVideos({video: "MB2A_MSG", type: MISS_MSG});
 	startedFromMenu = false;
 
 	//Only if starting Beta directly rather than going through Alpha
@@ -360,31 +363,10 @@ function eventStartLevel()
 		setReinforcementTime(camMinutesToSeconds(5)); // 5 min.
 	}
 
-
 	queue("secondVideo", camSecondsToMilliseconds(12));
 	queue("groupPatrol", camChangeOnDiff(camMinutesToMilliseconds(1)));
-	queue("vtolAttack", camChangeOnDiff(camMinutesToMilliseconds(7)));
-	setTimer("truckDefense", camSecondsToMilliseconds(160));
+	queue("vtolAttack", camChangeOnDiff(camMinutesToMilliseconds(3)));
+	setTimer("truckDefense", camChangeOnDiff(camMinutesToMilliseconds(3)));
 	setTimer("sendCOTransporter", camChangeOnDiff(camMinutesToMilliseconds(4)));
 	setTimer("mapEdgeDroids", camChangeOnDiff(camMinutesToMilliseconds(7)));
-	ultScav_eventStartLevel(
-		-1, // vtols on/off. -1 = off
-		135, // build defense every x seconds
-		75, // build factories every x seconds
-		115, // build cyborg factories every x seconds
-		65, // produce trucks every x seconds
-		115, // produce droids every x seconds
-		95, // produce cyborgs every x seconds
-		-1, // produce VTOLs every x seconds
-		2, // min factories
-		-1, // min vtol factories
-		4, // min cyborg factories
-		4, // min number of trucks
-		-3, // min number of sensor droids
-		2, // min number of attack droids
-		2, // min number of defend droids
-		170, // ground attack every x seconds
-		-1, // VTOL attack every x seconds
-		2 // tech level
-	);
 }

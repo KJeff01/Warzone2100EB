@@ -1,8 +1,19 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
-include("script/campaign/transitionTech.js");
-include ("script/campaign/ultScav.js");
 
+const COLLECTIVE_RES = [
+	"R-Defense-WallUpgrade06", "R-Struc-Materials06", "R-Sys-Engineering02",
+	"R-Vehicle-Engine04", "R-Vehicle-Metals05", "R-Cyborg-Metals05",
+	"R-Wpn-Cannon-Accuracy02", "R-Wpn-Cannon-Damage05","R-Wpn-Cannon-ROF02",
+	"R-Wpn-Flamer-Damage06", "R-Wpn-Flamer-ROF03", "R-Wpn-MG-Damage07",
+	"R-Wpn-MG-ROF03", "R-Wpn-Mortar-Acc02", "R-Wpn-Mortar-Damage05",
+	"R-Wpn-Mortar-ROF02", "R-Wpn-Rocket-Accuracy02", "R-Wpn-Rocket-Damage06",
+	"R-Wpn-Rocket-ROF03", "R-Wpn-RocketSlow-Accuracy03", "R-Wpn-RocketSlow-Damage05",
+	"R-Sys-Sensor-Upgrade01", "R-Wpn-RocketSlow-ROF02", "R-Wpn-Howitzer-ROF01",
+	"R-Wpn-Howitzer-Damage07", "R-Cyborg-Armor-Heat01", "R-Vehicle-Armor-Heat01",
+	"R-Wpn-Bomb-Damage01", "R-Wpn-AAGun-Damage03", "R-Wpn-AAGun-ROF03",
+	"R-Wpn-AAGun-Accuracy01", "R-Struc-VTOLPad-Upgrade02"
+];
 
 camAreaEvent("factoryTrigger", function(droid)
 {
@@ -82,7 +93,7 @@ function eventStartLevel()
 	camSetStandardWinLossConditions(CAM_VICTORY_OFFWORLD, "SUB_2DS",{
 		area: "RTLZ",
 		message: "C25_LZ",
-		reinforcements: camMinutesToSeconds(2)
+		reinforcements: camMinutesToSeconds(3)
 	});
 
 	var startpos = getObject("startPosition");
@@ -99,13 +110,12 @@ function eventStartLevel()
 
 	camSetArtifacts({
 		"NuclearReactor": { tech: "R-Struc-Power-Upgrade01" },
-		"COMediumFactory": { tech: "R-Wpn-Cannon4AMk1" },
+		"COMediumFactory": { tech: "R-Wpn-Cannon-ROF02" },
 		"COCyborgFactoryL": { tech: "R-Wpn-MG4" },
+		"COTankKillerHardpoint": { tech: "R-Wpn-RocketSlow-ROF02" },
 	});
 
-	setAlliance(THE_COLLECTIVE, ULTSCAV, true);
-	camCompleteRequiredResearch(CAM2_5_RES_COL, THE_COLLECTIVE);
-	camCompleteRequiredResearch(CAM2_5_RES_COL, ULTSCAV);
+	camCompleteRequiredResearch(COLLECTIVE_RES, THE_COLLECTIVE);
 
 	camSetEnemyBases({
 		"COEastBase": {
@@ -127,19 +137,19 @@ function eventStartLevel()
 			assembly: "COMediumFactoryAssembly",
 			order: CAM_ORDER_ATTACK,
 			groupSize: 4,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(50)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds(55)),
 			data: {
 				regroup: false,
 				repair: 20,
 				count: -1,
 			},
-			templates: [cTempl.comct, cTempl.comatt, cTempl.comhpv]
+			templates: [cTempl.commrp, cTempl.comatt, cTempl.comhpv]
 		},
 		"COCyborgFactoryL": {
 			assembly: "COCyborgFactoryLAssembly",
 			order: CAM_ORDER_ATTACK,
 			groupSize: 5,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(30)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds(35)),
 			data: {
 				regroup: false,
 				repair: 30,
@@ -151,7 +161,7 @@ function eventStartLevel()
 			assembly: "COCyborgFactoryRAssembly",
 			order: CAM_ORDER_ATTACK,
 			groupSize: 5,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(30)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds(45)),
 			data: {
 				regroup: false,
 				repair: 30,
@@ -161,30 +171,10 @@ function eventStartLevel()
 		},
 	});
 
-	hackAddMessage("C25_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, true);
+	hackAddMessage("C25_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, false);
 
 	queue("setupDamHovers", camSecondsToMilliseconds(3));
 	queue("setupCyborgsEast", camChangeOnDiff(camMinutesToMilliseconds(3)));
 	queue("enableFactories", camChangeOnDiff(camMinutesToMilliseconds(8)));
 	queue("setupCyborgsNorth", camChangeOnDiff(camMinutesToMilliseconds(10)));
-	ultScav_eventStartLevel(
-		1, // vtols on/off. -1 = off
-		40, // build defense every x seconds
-		50, // build factories every x seconds
-		45, // build cyborg factories every x seconds
-		25, // produce trucks every x seconds
-		45, // produce droids every x seconds
-		25, // produce cyborgs every x seconds
-		40, // produce VTOLs every x seconds
-		1, // min factories
-		1, // min vtol factories
-		2, // min cyborg factories
-		5, // min number of trucks
-		3, // min number of sensor droids
-		6, // min number of attack droids
-		4, // min number of defend droids
-		135, // ground attack every x seconds
-		175, // VTOL attack every x seconds
-		2.5 // tech level
-	);
 }

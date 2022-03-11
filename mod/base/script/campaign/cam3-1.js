@@ -1,9 +1,19 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
-include("script/campaign/transitionTech.js");
-include ("script/campaign/ultScav.js");
 
-
+const NEXUS_RES = [
+	"R-Sys-Engineering03", "R-Defense-WallUpgrade07", "R-Struc-Materials07",
+	"R-Struc-VTOLPad-Upgrade06", "R-Wpn-Bomb-Damage03", "R-Sys-NEXUSrepair",
+	"R-Vehicle-Prop-Hover02", "R-Vehicle-Prop-VTOL02", "R-Cyborg-Legs02",
+	"R-Wpn-Mortar-Acc03", "R-Wpn-MG-Damage09", "R-Wpn-Mortar-ROF04",
+	"R-Vehicle-Engine07", "R-Vehicle-Metals07", "R-Vehicle-Armor-Heat04",
+	"R-Cyborg-Metals07", "R-Cyborg-Armor-Heat04", "R-Wpn-RocketSlow-ROF05",
+	"R-Wpn-AAGun-Damage06", "R-Wpn-AAGun-ROF05", "R-Wpn-Howitzer-Damage09",
+	"R-Wpn-Howitzer-ROF04", "R-Wpn-Cannon-Damage08", "R-Wpn-Cannon-ROF04",
+	"R-Wpn-Missile-Damage01", "R-Wpn-Missile-ROF01", "R-Wpn-Missile-Accuracy01",
+	"R-Wpn-Rail-Damage01", "R-Wpn-Rail-ROF01", "R-Wpn-Rail-Accuracy01",
+	"R-Wpn-Energy-Damage02", "R-Wpn-Energy-ROF01", "R-Wpn-Energy-Accuracy01",
+];
 var launchInfo;
 var detonateInfo;
 
@@ -154,7 +164,7 @@ function setupNextMission()
 	{
 		camSetExtraObjectiveMessage(_("Move all units into the valley"));
 
-		camPlayVideos(["labort.ogg", "MB3_1B_MSG", "MB3_1B_MSG2"]);
+		camPlayVideos(["labort.ogg", {video: "MB3_1B_MSG", type: CAMP_MSG}, {video: "MB3_1B_MSG2", type: MISS_MSG}]);
 
 		setScrollLimits(0, 0, 64, 64); //Reveal the whole map.
 		setMissionTime(camChangeOnDiff(camMinutesToSeconds(30)));
@@ -171,6 +181,7 @@ function setupNextMission()
 //Play countdown sounds. Elements are shifted out of the missile launch/detonation arrays as they play.
 function getCountdown()
 {
+	const ACCEPTABLE_TIME_DIFF = 2;
 	var silosDestroyed = missileSilosDestroyed();
 	var countdownObject = silosDestroyed ? detonateInfo : launchInfo;
 	var skip = false;
@@ -180,7 +191,7 @@ function getCountdown()
 		var currentTime = getMissionTime();
 		if (currentTime <= countdownObject[0].time)
 		{
-			if (len > 1 && (currentTime <= countdownObject[1].time))
+			if (currentTime < (countdownObject[0].time - ACCEPTABLE_TIME_DIFF))
 			{
 				skip = true; //Huge time jump?
 			}
@@ -279,7 +290,7 @@ function eventStartLevel()
 
 	camSetStandardWinLossConditions(CAM_VICTORY_OFFWORLD, "CAM_3B", {
 		area: "RTLZ",
-		reinforcements: camMinutesToSeconds(2),
+		reinforcements: camMinutesToSeconds(3),
 		callback: "unitsInValley"
 	});
 
@@ -292,9 +303,11 @@ function eventStartLevel()
 	var enemyLz = getObject("NXlandingZone");
 	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, NEXUS);
 
-	setAlliance(ULTSCAV, NEXUS, true);
-	camCompleteRequiredResearch(CAM3_1_RES_NEXUS, NEXUS);
-	camCompleteRequiredResearch(CAM3_1_RES_NEXUS, ULTSCAV);
+	camCompleteRequiredResearch(NEXUS_RES, NEXUS);
+
+	camSetArtifacts({
+		"NXMediumFac": { tech: "R-Wpn-MG-Damage09" },
+	});
 
 	camSetEnemyBases({
 		"NX-SWBase": {
@@ -361,24 +374,4 @@ function eventStartLevel()
 	queue("hoverAttack", camChangeOnDiff(camMinutesToMilliseconds(4)));
 	queue("vtolAttack", camChangeOnDiff(camMinutesToMilliseconds(5)));
 	queue("enableAllFactories", camChangeOnDiff(camMinutesToMilliseconds(5)));
-	ultScav_eventStartLevel(
-		-1, // vtols on/off. -1 = off
-		50, // build defense every x seconds
-		50, // build factories every x seconds
-		45, // build cyborg factories every x seconds
-		25, // produce trucks every x seconds
-		55, // produce droids every x seconds
-		45, // produce cyborgs every x seconds
-		-1, // produce VTOLs every x seconds
-		2, // min factories
-		-1, // min vtol factories
-		2, // min cyborg factories
-		6, // min number of trucks
-		3, // min number of sensor droids
-		5, // min number of attack droids
-		3, // min number of defend droids
-		135, // ground attack every x seconds
-		-1, // VTOL attack every x seconds
-		3 // tech level
-	);
 }

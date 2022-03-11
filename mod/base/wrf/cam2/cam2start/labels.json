@@ -79,11 +79,6 @@
 		"pos1": [9344, 9344],
 		"pos2": [11520, 10880]
 	},
-	"area_7": {
-		"label": "mediumGroup",
-		"pos1": [13400, 11200],
-		"pos2": [14400, 12000]
-	},
 
 	"object_0": {
 		"label": "COCommandCenter",
@@ -93,19 +88,13 @@
 	},
 	"object_1": {
 		"label": "COArtiPillbox",
-		"id": 4551,
+		"id": 4710,
 		"player": 2,
 		"type": 1
 	},
 	"object_2": {
 		"label": "COArtiCBTower",
 		"id": 4576,
-		"player": 2,
-		"type": 1
-	},
-	"object_3": {
-		"label": "SuperMortar",
-		"id": 4739,
 		"player": 2,
 		"type": 1
 	},

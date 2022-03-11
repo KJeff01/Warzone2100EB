@@ -1,10 +1,19 @@
 
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
-include("script/campaign/transitionTech.js");
-include ("script/campaign/ultScav.js");
 
 const warning = "pcv632.ogg"; // Collective commander escaping
+const COLLEVTIVE_RES = [
+	"R-Defense-WallUpgrade06", "R-Struc-Materials06", "R-Sys-Engineering02",
+	"R-Vehicle-Engine04", "R-Vehicle-Metals04", "R-Cyborg-Metals04",
+	"R-Wpn-Cannon-Accuracy02", "R-Wpn-Cannon-Damage05",
+	"R-Wpn-Cannon-ROF01", "R-Wpn-Flamer-Damage06", "R-Wpn-Flamer-ROF01",
+	"R-Wpn-MG-Damage06", "R-Wpn-MG-ROF03", "R-Wpn-Mortar-Acc02",
+	"R-Wpn-Mortar-Damage04", "R-Wpn-Mortar-ROF01",
+	"R-Wpn-Rocket-Accuracy02", "R-Wpn-Rocket-Damage05",
+	"R-Wpn-Rocket-ROF03", "R-Wpn-RocketSlow-Accuracy03",
+	"R-Wpn-RocketSlow-Damage05", "R-Sys-Sensor-Upgrade01", "R-Wpn-RocketSlow-ROF01"
+];
 var commandGroup;
 
 camAreaEvent("vtolRemoveZone", function(droid)
@@ -103,7 +112,7 @@ function truckDefense()
 		return;
 	}
 
-	const list = ["CO-Tower-LtATRkt", "PillBox1", "CO-Tower-MdCan"];
+	const list = ["CO-Tower-LtATRkt", "PillBox1", "CO-WallTower-HvCan"];
 	camQueueBuilding(THE_COLLECTIVE, list[camRand(list.length)]);
 }
 
@@ -146,7 +155,8 @@ function eventStartLevel()
 	camSetStandardWinLossConditions(CAM_VICTORY_OFFWORLD, "CAM_2C",{
 		area: "RTLZ",
 		message: "C22_LZ",
-		reinforcements: camMinutesToSeconds(2)
+		reinforcements: camMinutesToSeconds(3),
+		retlz: true
 	});
 
 	var startpos = getObject("startPosition");
@@ -158,19 +168,14 @@ function eventStartLevel()
 	startTransporterEntry(tent.x, tent.y, CAM_HUMAN_PLAYER);
 	setTransporterExit(text.x, text.y, CAM_HUMAN_PLAYER);
 
-	setAlliance(THE_COLLECTIVE, ULTSCAV, true);
 	var enemyLz = getObject("COLandingZone");
 	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, THE_COLLECTIVE);
 
 	camSetArtifacts({
-		"COCommander": { tech: "R-Wpn-Rocket-Accuracy02" },
-		"COFactoryEast": { tech: "R-Struc-Materials04" },
-		"PepperPotEmp": { tech: "R-Wpn-Mortar3" },
-		"RoboticRepair": { tech: "R-Struc-RprFac-Upgrade04" },
+		"COCommander": { tech: "R-Wpn-RocketSlow-Accuracy03" },
 	});
 
-	camCompleteRequiredResearch(CAM2_2_RES_COL, THE_COLLECTIVE);
-	camCompleteRequiredResearch(CAM2_2_RES_COL, ULTSCAV);
+	camCompleteRequiredResearch(COLLEVTIVE_RES, THE_COLLECTIVE);
 
 	camSetEnemyBases({
 		"COEastBase": {
@@ -221,28 +226,8 @@ function eventStartLevel()
 	truckDefense();
 	camEnableFactory("COFactoryWest");
 
-	hackAddMessage("C22_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, true);
+	hackAddMessage("C22_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, false);
 
-	queue("vtolAttack", camMinutesToMilliseconds(2));
-	setTimer("truckDefense", camSecondsToMilliseconds(160));
-	ultScav_eventStartLevel(
-		-1, // vtols on/off. -1 = off
-		45, // build defense every x seconds
-		75, // build factories every x seconds
-		35, // build cyborg factories every x seconds
-		25, // produce trucks every x seconds
-		50, // produce droids every x seconds
-		25, // produce cyborgs every x seconds
-		-1, // produce VTOLs every x seconds
-		2, // min factories
-		-1, // min vtol factories
-		3, // min cyborg factories
-		3, // min number of trucks
-		-1, // min number of sensor droids
-		20, // min number of attack droids
-		10, // min number of defend droids
-		210, // ground attack every x seconds
-		-1, // VTOL attack every x seconds
-		2 // tech level
-	);
+	queue("vtolAttack", camMinutesToMilliseconds(3));
+	setTimer("truckDefense", camChangeOnDiff(camMinutesToMilliseconds(3)));
 }

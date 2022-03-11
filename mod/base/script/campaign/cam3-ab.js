@@ -1,9 +1,22 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
-include("script/campaign/transitionTech.js");
-include ("script/campaign/ultScav.js");
 
+const NEXUS_RES = [
+	"R-Sys-Engineering03", "R-Defense-WallUpgrade09", "R-Struc-Materials09",
+	"R-Struc-VTOLPad-Upgrade06", "R-Wpn-Bomb-Damage03", "R-Sys-NEXUSrepair",
+	"R-Vehicle-Prop-Hover02", "R-Vehicle-Prop-VTOL02", "R-Cyborg-Legs02",
+	"R-Wpn-Mortar-Acc03", "R-Wpn-MG-Damage09", "R-Wpn-Mortar-ROF04",
+	"R-Vehicle-Engine08", "R-Vehicle-Metals08", "R-Vehicle-Armor-Heat05",
+	"R-Cyborg-Metals08", "R-Cyborg-Armor-Heat05", "R-Wpn-RocketSlow-ROF06",
+	"R-Wpn-AAGun-Damage06", "R-Wpn-AAGun-ROF06", "R-Wpn-Howitzer-Damage09",
+	"R-Wpn-Howitzer-ROF04", "R-Wpn-Cannon-Damage09", "R-Wpn-Cannon-ROF06",
+	"R-Wpn-Missile-Damage01", "R-Wpn-Missile-ROF01", "R-Wpn-Missile-Accuracy01",
+	"R-Wpn-Rail-Damage01", "R-Wpn-Rail-ROF01", "R-Wpn-Rail-Accuracy01",
+	"R-Wpn-Energy-Damage03", "R-Wpn-Energy-ROF03", "R-Wpn-Energy-Accuracy01",
+	"R-Wpn-AAGun-Accuracy03", "R-Wpn-Howitzer-Accuracy03",
+];
 var edgeMapCounter; //how many Nexus reinforcement runs have happened.
+var hackFailChance; //chance the Nexus Intruder Program will fail
 var winFlag;
 
 //Remove Nexus VTOL droids.
@@ -22,13 +35,21 @@ camAreaEvent("vtolRemoveZone", function(droid)
 
 function sendEdgeMapDroids()
 {
-	const COUNT = 16 + camRand(5); // 16 - 20.
+	var unitCount = 16 + camRand(5); // 16 - 20.
+	if (difficulty === INSANE)
+	{
+		unitCount = 14 + camRand(3); // 14 - 16.
+	}
 	const EDGE = ["SWPhantomFactory", "NWPhantomFactory"];
 	var list = [
 		cTempl.nxcyrail, cTempl.nxcyscou, cTempl.nxcylas,
 		cTempl.nxlflash, cTempl.nxmrailh, cTempl.nxmlinkh,
-		cTempl.nxmscouh, cTempl.nxmsamh, cTempl.nxmsens,
+		cTempl.nxmscouh, cTempl.nxmsamh,
 	];
+	if (difficulty >= HARD)
+	{
+		list = list.concat(cTempl.nxmangel);
+	}
 	var droids = [];
 
 	if (!camDef(edgeMapCounter))
@@ -36,10 +57,12 @@ function sendEdgeMapDroids()
 		edgeMapCounter = 0;
 	}
 
-	for (var i = 0; i < COUNT; ++i)
+	for (var i = 0; i < unitCount; ++i)
 	{
 		droids.push(list[camRand(list.length)]);
 	}
+
+	droids = droids.concat(cTempl.nxmsens);
 
 	camSendReinforcement(NEXUS, camMakePos(EDGE[camRand(EDGE.length)]), droids,
 		CAM_REINFORCE_GROUND, {
@@ -59,7 +82,7 @@ function vtolAttack()
 		alternate: true,
 		altIdx: 0
 	};
-	camSetVtolData(NEXUS, "vtolAppearPos", "vtolRemovePos", list, camChangeOnDiff(camMinutesToMilliseconds(2)), undefined, ext);
+	camSetVtolData(NEXUS, (difficulty === INSANE) ? undefined : "vtolAppearPos", "vtolRemovePos", list, camChangeOnDiff(camMinutesToMilliseconds(2)), undefined, ext);
 }
 
 // Order any absorbed trucks to start building defenses near themselves.
@@ -102,9 +125,9 @@ function nexusManufacture()
 		return;
 	}
 	var factoryType = [
-		{structure: "A0LightFactory", temps: [cTempl.nxmrailh, cTempl.nxmlinkh, cTempl.nxmscouh, cTempl.nxlflash,]},
-		{structure: "A0CyborgFactory", temps: [cTempl.nxcyrail, cTempl.nxcyscou, cTempl.nxcylas,]},
-		{structure: "A0VTolFactory1", temps: [cTempl.nxlscouv, cTempl.nxmtherv, cTempl.nxmheapv,]},
+		{structure: FACTORY, temps: [cTempl.nxmrailh, cTempl.nxmlinkh, cTempl.nxmscouh, cTempl.nxlflash,]},
+		{structure: CYBORG_FACTORY, temps: [cTempl.nxcyrail, cTempl.nxcyscou, cTempl.nxcylas,]},
+		{structure: VTOL_FACTORY, temps: [cTempl.nxlscouv, cTempl.nxmtherv, cTempl.nxmheapv,]},
 	];
 
 	for (var i = 0; i < factoryType.length; ++i)
@@ -168,11 +191,21 @@ function eventResearched(research, structure, player)
 {
 	if (research.name === "R-Sys-Resistance-Upgrade01")
 	{
-		camSetNexusState(false);
+		hackFailChance = 55;
 	}
-	if (research.name === "R-Sys-Resistance-Upgrade03")
+	else if (research.name === "R-Sys-Resistance-Upgrade02")
+	{
+		hackFailChance = 70;
+	}
+	else if (research.name === "R-Sys-Resistance-Upgrade03")
+	{
+		hackFailChance = 85;
+	}
+	else if (research.name === "R-Sys-Resistance-Upgrade04")
 	{
 		winFlag = true;
+		hackFailChance = 100;
+		camSetNexusState(false);
 	}
 }
 
@@ -181,6 +214,10 @@ function hackPlayer()
 	if (!camGetNexusState())
 	{
 		removeTimer("hackPlayer");
+		return;
+	}
+	if (camRand(100) < hackFailChance)
+	{
 		return;
 	}
 
@@ -215,50 +252,29 @@ function eventStartLevel()
 	});
 
 	camSetNexusState(true);
-	camPlayVideos(["MB3_AB_MSG", "MB3_AB_MSG2", "MB3_AB_MSG3"]);
+	camPlayVideos([{video: "MB3_AB_MSG", type: CAMP_MSG}, {video: "MB3_AB_MSG2", type: CAMP_MSG}, {video: "MB3_AB_MSG3", type: MISS_MSG}]);
 
 	centreView(startpos.x, startpos.y);
 	setNoGoArea(lz.x, lz.y, lz.x2, lz.y2, CAM_HUMAN_PLAYER);
 	setMissionTime(camChangeOnDiff(camHoursToSeconds(1)));
-	setAlliance(ULTSCAV, NEXUS, true);
-	
+
 	var enemyLz = getObject("NXlandingZone");
 	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, NEXUS);
 
-	camCompleteRequiredResearch(CAM3AB_RES_NEXUS, NEXUS);
-	camCompleteRequiredResearch(CAM3AB_RES_NEXUS, ULTSCAV);
+	camCompleteRequiredResearch(NEXUS_RES, NEXUS);
 
 	enableResearch("R-Sys-Resistance-Upgrade01", CAM_HUMAN_PLAYER);
 	winFlag = false;
+	hackFailChance = 30;
 
-	vtolAttack();
+	queue("vtolAttack", camChangeOnDiff(camMinutesToMilliseconds(2)));
 
 	queue("powerTransfer", camSecondsToMilliseconds(0.8));
 	queue("synapticsSound", camSecondsToMilliseconds(2.5));
 	queue("sendEdgeMapDroids", camSecondsToMilliseconds(15));
 
 	setTimer("truckDefense", camSecondsToMilliseconds(2));
-	setTimer("hackPlayer", camSecondsToMilliseconds(8));
+	setTimer("hackPlayer", camSecondsToMilliseconds((difficulty <= HARD) ? 8 : 5));
 	setTimer("nexusManufacture", camSecondsToMilliseconds(10));
 	setTimer("sendEdgeMapDroids", camChangeOnDiff(camMinutesToMilliseconds(3)));
-	ultScav_eventStartLevel(
-		1, // vtols on/off. -1 = off
-		20, // build defense every x seconds
-		50, // build factories every x seconds
-		45, // build cyborg factories every x seconds
-		25, // produce trucks every x seconds
-		35, // produce droids every x seconds
-		25, // produce cyborgs every x seconds
-		40, // produce VTOLs every x seconds
-		5, // min factories
-		5, // min vtol factories
-		5, // min cyborg factories
-		10, // min number of trucks
-		3, // min number of sensor droids
-		2, // min number of attack droids
-		3, // min number of defend droids
-		135, // ground attack every x seconds
-		135, // VTOL attack every x seconds
-		3 // tech level
-	);
 }

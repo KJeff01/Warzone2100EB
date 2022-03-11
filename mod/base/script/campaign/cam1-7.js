@@ -1,10 +1,25 @@
 
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
-include("script/campaign/transitionTech.js");
-include("script/campaign/ultScav.js");
 
-
+const NEW_PARADIGM_RES = [
+	"R-Wpn-MG1Mk1", "R-Vehicle-Body01", "R-Sys-Spade1Mk1", "R-Vehicle-Prop-Wheels",
+	"R-Sys-Engineering01", "R-Wpn-MG-Damage04", "R-Wpn-MG-ROF02", "R-Wpn-Cannon-Damage03",
+	"R-Wpn-Flamer-Damage03", "R-Wpn-Flamer-Range01", "R-Wpn-Flamer-ROF01",
+	"R-Defense-WallUpgrade03","R-Struc-Materials03", "R-Vehicle-Engine03",
+	"R-Struc-RprFac-Upgrade03", "R-Wpn-Rocket-Damage03", "R-Wpn-Rocket-ROF03",
+	"R-Vehicle-Metals03", "R-Wpn-Mortar-Damage03", "R-Wpn-Rocket-Accuracy02",
+	"R-Wpn-RocketSlow-Damage03", "R-Wpn-Mortar-ROF01", "R-Cyborg-Metals03",
+	"R-Wpn-Mortar-Acc01", "R-Wpn-RocketSlow-Accuracy01", "R-Wpn-Cannon-Accuracy01",
+];
+const SCAVENGER_RES = [
+	"R-Wpn-Flamer-Damage03", "R-Wpn-Flamer-Range01", "R-Wpn-Flamer-ROF01",
+	"R-Wpn-MG-Damage04", "R-Wpn-MG-ROF01", "R-Wpn-Rocket-Damage03",
+	"R-Wpn-Cannon-Damage03", "R-Wpn-Mortar-Damage03", "R-Wpn-Mortar-ROF01",
+	"R-Wpn-Rocket-Accuracy02", "R-Wpn-Rocket-ROF03", "R-Vehicle-Metals02",
+	"R-Defense-WallUpgrade03", "R-Struc-Materials03", "R-Wpn-Cannon-Accuracy01",
+	"R-Wpn-Mortar-Acc01",
+];
 var artiGroup; //Droids that take the artifact
 var enemyHasArtifact; //Do they have the artifact
 var enemyStoleArtifact; //Reached the LZ with the artifact
@@ -56,7 +71,7 @@ camAreaEvent("NPTransportTrigger", function(droid)
 //Only called once when the New Paradigm takes the artifact for the first time.
 function artifactVideoSetup()
 {
-	camPlayVideos("SB1_7_MSG3");
+	camPlayVideos({video: "SB1_7_MSG3", type: MISS_MSG});
 	camCallOnce("removeCanyonBlip");
 	artiMovePos = "NPWayPoint";
 }
@@ -89,7 +104,7 @@ function eventGroupLoss(obj, group, newsize)
 			addLabel(acrate, "newArtiLabel");
 
 			camSetArtifacts({
-				"newArtiLabel": { tech: "R-Wpn-Cannon3Mk1" }
+				"newArtiLabel": { tech: ["R-Wpn-Cannon3Mk1", "R-Wpn-RocketSlow-Damage03", "R-Wpn-Rocket-Damage03"] }
 			});
 
 			droidWithArtiID = undefined;
@@ -148,7 +163,7 @@ function getArtifact()
 		if (camDist(artiMembers[idx], artiLoc) < GRAB_RADIUS)
 		{
 			camCallOnce("artifactVideoSetup");
-			hackAddMessage("C1-7_LZ2", PROX_MSG, CAM_HUMAN_PLAYER, true); //NPLZ blip
+			hackAddMessage("C1-7_LZ2", PROX_MSG, CAM_HUMAN_PLAYER, false); //NPLZ blip
 			droidWithArtiID = artiMembers[idx].id;
 			enemyHasArtifact = true;
 			camSafeRemoveObject(realCrate, false);
@@ -248,19 +263,27 @@ function eventStartLevel()
 	});
 
 	//Make sure the New Paradigm and Scavs are allies
-	setAlliance(NEW_PARADIGM, SCAVS, true);
-	setAlliance(NEW_PARADIGM, ULTSCAV, true);
-	setAlliance(ULTSCAV, SCAVS, true);
+	setAlliance(NEW_PARADIGM, SCAV_7, true);
 
 	//Get rid of the already existing crate and replace with another
 	camSafeRemoveObject("artifact1", false);
 	camSetArtifacts({
-		"artifactLocation": { tech: "R-Wpn-Cannon3Mk1" },
+		"artifactLocation": { tech: ["R-Wpn-Cannon3Mk1", "R-Wpn-RocketSlow-Damage03"] },
 	});
 
-	camCompleteRequiredResearch(CAM1_7_RES_NP, NEW_PARADIGM);
-	camCompleteRequiredResearch(CAM1_7_RES_SCAV, SCAVS);
-	camCompleteRequiredResearch(CAM1_7_RES_SCAV, ULTSCAV);
+	camCompleteRequiredResearch(NEW_PARADIGM_RES, NEW_PARADIGM);
+	camCompleteRequiredResearch(SCAVENGER_RES, SCAV_7);
+
+	camUpgradeOnMapTemplates(cTempl.bloke, cTempl.blokeheavy, SCAV_7);
+	camUpgradeOnMapTemplates(cTempl.trike, cTempl.trikeheavy, SCAV_7);
+	camUpgradeOnMapTemplates(cTempl.buggy, cTempl.buggyheavy, SCAV_7);
+	camUpgradeOnMapTemplates(cTempl.bjeep, cTempl.bjeepheavy, SCAV_7);
+	camUpgradeOnMapTemplates(cTempl.rbjeep, cTempl.rbjeep8, SCAV_7);
+
+	// New MRA Mantis Tracks units on the hill
+	addDroid(NEW_PARADIGM, 29, 16, "MRA Mantis Tracks", "Body12SUP", "tracked01", "", "", "Rocket-MRL");
+	addDroid(NEW_PARADIGM, 29, 17, "MRA Mantis Tracks", "Body12SUP", "tracked01", "", "", "Rocket-MRL");
+	addDroid(NEW_PARADIGM, 29, 18, "MRA Mantis Tracks", "Body12SUP", "tracked01", "", "", "Rocket-MRL");
 
 	camSetEnemyBases({
 		"ScavMiddleGroup": {
@@ -293,7 +316,7 @@ function eventStartLevel()
 				regroup: true,
 				count: -1,
 			},
-			templates: [ cTempl.firecan, cTempl.rbjeep, cTempl.rbuggy, cTempl.bloke ]
+			templates: [ cTempl.firecan, cTempl.rbjeep8, cTempl.rbuggy, cTempl.blokeheavy ]
 		},
 		"scavSouthEastFactory": {
 			assembly: "southAssembly",
@@ -304,7 +327,7 @@ function eventStartLevel()
 				regroup: true,
 				count: -1,
 			},
-			templates: [ cTempl.firecan, cTempl.rbjeep, cTempl.rbuggy, cTempl.bloke ]
+			templates: [ cTempl.firecan, cTempl.rbjeep8, cTempl.rbuggy, cTempl.blokeheavy ]
 		},
 		"scavNorthEastFactory": {
 			assembly: "northAssembly",
@@ -315,7 +338,7 @@ function eventStartLevel()
 				regroup: true,
 				count: -1,
 			},
-			templates: [ cTempl.firecan, cTempl.rbjeep, cTempl.rbuggy, cTempl.bloke ]
+			templates: [ cTempl.firecan, cTempl.rbjeep8, cTempl.rbuggy, cTempl.blokeheavy ]
 		},
 	});
 
@@ -324,26 +347,6 @@ function eventStartLevel()
 	camManageTrucks(NEW_PARADIGM);
 	buildLancers();
 
-	hackAddMessage("C1-7_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, true); //Canyon
+	hackAddMessage("C1-7_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, false); //Canyon
 	queue("startArtifactCollection", camChangeOnDiff(camMinutesToMilliseconds(1.5)));
-	ultScav_eventStartLevel(
-		1, // vtols on/off. -1 = off
-		55, // build defense every x seconds
-		45, // build factories every x seconds
-		-1, // build cyborg factories every x seconds
-		20, // produce trucks every x seconds
-		65, // produce droids every x seconds
-		-1, // produce cyborgs every x seconds
-		35, // produce VTOLs every x seconds
-		2, // min factories
-		4, // min vtol factories
-		-1, // min cyborg factories
-		3, // min number of trucks
-		2, // min number of sensor droids
-		5, // min number of attack droids
-		3, // min number of defend droids
-		135, // ground attack every x seconds
-		230, // VTOL attack every x seconds
-		1 // tech level
-	);
 }

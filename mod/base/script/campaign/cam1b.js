@@ -1,30 +1,31 @@
 
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
-include("script/campaign/ultScav.js");
-include("script/campaign/transitionTech.js");
 
 var NPScout; // Sensor scout
+const SCAVENGER_RES = [
+	"R-Wpn-Flamer-Damage01", "R-Wpn-Flamer-Range01", "R-Wpn-MG-Damage01", "R-Wpn-MG-ROF01",
+];
 
 camAreaEvent("AttackArea1", function(droid)
 {
 	queue("camCallOnce", camSecondsToMilliseconds(2), "doNPRetreat");
-	camManageGroup(camMakeGroup("enemy1Force1", SCAVS), CAM_ORDER_ATTACK, {
+	camManageGroup(camMakeGroup("enemy1Force1", SCAV_6), CAM_ORDER_ATTACK, {
 		pos: camMakePos("enemy1Force1Pos"),
 		fallback: camMakePos("enemy1Force1Fallback"),
-		morale: 100
+		morale: 50
 	});
 	// pink factory
 	camEnableFactory("base1factory");
 	// sic! hill factory
 	camSetFactoryData("base2factory", {
  		assembly: "assembly2",
-		order: CAM_ORDER_ATTACK,  // changes
+		order: CAM_ORDER_ATTACK, // changes
 		data: { pos: "playerBase" }, // changes
 		groupSize: 10, // changes
 		maxSize: 10,
-		throttle: camChangeOnDiff(camSecondsToMilliseconds(25)),
-		templates: [ cTempl.trike, cTempl.bloke, cTempl.buggy, cTempl.bloke, ] // changes
+		throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty === EASY || difficulty === MEDIUM) ? 20 : 15)),
+		templates: [ cTempl.triketwin, cTempl.bloketwin, cTempl.buggytwin, cTempl.bloketwin, ] // changes
 	});
 	camEnableFactory("base2factory"); // re-enable
 });
@@ -77,15 +78,17 @@ function eventStartLevel()
 	centreView(startpos.x, startpos.y);
 	setNoGoArea(lz.x, lz.y, lz.x2, lz.y2, CAM_HUMAN_PLAYER);
 
-	camCompleteRequiredResearch(CAM1B_RES_SCAV, SCAVS);
-	camCompleteRequiredResearch(CAM1B_RES_SCAV, ULTSCAV);
-	setMissionTime(camChangeOnDiff(camHoursToSeconds(.5)));
-	setAlliance(ULTSCAV, SCAVS, true);
+	setMissionTime(camChangeOnDiff(camHoursToSeconds(1)));
+	setAlliance(NEW_PARADIGM, SCAV_6, true);
+	setAlliance(NEW_PARADIGM, SCAV_7, true);
+	setAlliance(SCAV_6, SCAV_7, true);
+
+	camCompleteRequiredResearch(SCAVENGER_RES, 6);
+	camCompleteRequiredResearch(SCAVENGER_RES, 7);
 
 	camSetArtifacts({
 		"base1factory": { tech: "R-Wpn-Flamer-Damage01" },
 		"base2factory": { tech: "R-Wpn-MG2Mk1" },
-		"base4factory": { tech: "R-Vehicle-Engine01" },
 		"base3sensor": { tech: "R-Sys-Sensor-Turret01" },
 		"base4gen": { tech: "R-Struc-PowerModuleMk1" },
 	});
@@ -117,7 +120,7 @@ function eventStartLevel()
 		},
 	});
 
-	camPlayVideos("MB1B_MSG");
+	camPlayVideos({video: "MB1B_MSG", type: MISS_MSG});
 	camDetectEnemyBase("base4group"); // power surge detected
 
 	camSetFactories({
@@ -127,8 +130,8 @@ function eventStartLevel()
 			data: { pos: "playerBase" },
 			groupSize: 6,
 			maxSize: 6,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(25)),
-			templates: [ cTempl.trike, cTempl.bloke, cTempl.buggy, cTempl.bloke ]
+			throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty === EASY || difficulty === MEDIUM) ? 11 : 8)),
+			templates: [ cTempl.triketwin, cTempl.bloketwin, cTempl.buggytwin, cTempl.bloketwin ]
 		},
 		"base2factory": { // the hill harass factory
 			assembly: "assembly2",
@@ -140,8 +143,8 @@ function eventStartLevel()
 			group: camMakeGroup("hillForce"), // will override later
 			groupSize: 4, // will override later
 			maxSize: 10,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(25)),
-			templates: [ cTempl.bloke ] // will override later
+			throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty === EASY || difficulty === MEDIUM) ? 24 : 18)),
+			templates: [ cTempl.bloketwin ] // will override later
 		},
 		"base4factory": {
 			assembly: "assembly4",
@@ -149,8 +152,8 @@ function eventStartLevel()
 			data: { pos: "playerBase" },
  			groupSize: 8,
 			maxSize: 8,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(25)),
-			templates: [ cTempl.trike, cTempl.bloke, cTempl.buggy, cTempl.bjeep ]
+			throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty === EASY || difficulty === MEDIUM) ? 16 : 12)),
+			templates: [ cTempl.trike, cTempl.bloketwin, cTempl.buggytwin, cTempl.bjeeptwin ]
 		},
 	});
 	camEnableFactory("base2factory");
@@ -163,24 +166,4 @@ function eventStartLevel()
 	camNeverGroupDroid(NPScout);
 	var pos = getObject("NPSensorWatch");
 	orderDroidLoc(NPScout, DORDER_MOVE, pos.x, pos.y);
-	ultScav_eventStartLevel(
-		-1, // vtols on/off. -1 = off
-		110, // build defense every x seconds
-		75, // build factories every x seconds
-		-1, // build cyborg factories every x seconds
-		25, // produce trucks every x seconds
-		30, // produce droids every x seconds
-		-1, // produce cyborgs every x seconds
-		-1, // produce VTOLs every x seconds
-		5, // min factories
-		-1, // min vtol factories
-		-1, // min cyborg factories
-		3, // min number of trucks
-		3, // min number of sensor droids
-		4, // min number of attack droids
-		2, // min number of defend droids
-		140, // ground attack every x seconds
-		-1, // VTOL attack every x seconds
-		1 // tech level
-	);
 }

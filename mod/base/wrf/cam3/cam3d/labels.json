@@ -51,6 +51,14 @@
 		"label": "NXcyborgFac2Assembly",
 		"pos": [5568, 31040]
 	},
+	"position_13": {
+		"label": "buildPos1",
+		"pos": [960, 28864]
+	},
+	"position_14": {
+		"label": "buildPos2",
+		"pos": [2752, 29888]
+	},
 
 	"area_0": {
 		"label": "landingZone",
@@ -127,18 +135,6 @@
 	"object_4": {
 		"id": 1494,
 		"label": "NXcyborgFac2Arti",
-		"player": 3,
-		"type": 1
-	},
-	"object_5": {
-		"id": 1598,
-		"label": "ScavFact",
-		"player": 3,
-		"type": 1
-	},
-	"object_6": {
-		"label": "SouthEastFac",
-		"id": 1386,
 		"player": 3,
 		"type": 1
 	}

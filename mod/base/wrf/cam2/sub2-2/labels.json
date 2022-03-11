@@ -129,18 +129,7 @@
 		"player": 2,
 		"type": 1
 	},
-	"object_4": {
-		"label": "RoboticRepair",
-		"id": 658,
-		"player": 2,
-		"type": 1
-	},
-	"object_5": {
-		"label": "PepperPotEmp",
-		"id": 645,
-		"player": 2,
-		"type": 1
-	},
+
 	"radius_0": {
 		"label": "failZone",
 		"subscriber": 2,

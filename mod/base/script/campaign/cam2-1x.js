@@ -5,10 +5,20 @@ Authors: Cristian Odorico (Alpha93) / KJeff01
 include ("script/campaign/libcampaign.js");
 include ("script/campaign/templates.js");
 include ("script/campaign/transitionTech.js");
-include ("script/campaign/ultScav.js");
 var victoryFlag;
 
 const TRANSPORT_TEAM = 1;
+const COLLECTIVE_RES = [
+	"R-Defense-WallUpgrade06", "R-Struc-Materials06", "R-Sys-Engineering02",
+	"R-Vehicle-Engine03", "R-Vehicle-Metals03", "R-Cyborg-Metals03",
+	"R-Wpn-Cannon-Accuracy02", "R-Wpn-Cannon-Damage04",
+	"R-Wpn-Cannon-ROF01", "R-Wpn-Flamer-Damage03", "R-Wpn-Flamer-ROF01",
+	"R-Wpn-MG-Damage05", "R-Wpn-MG-ROF02", "R-Wpn-Mortar-Acc01",
+	"R-Wpn-Mortar-Damage03", "R-Wpn-Mortar-ROF01",
+	"R-Wpn-Rocket-Accuracy02", "R-Wpn-Rocket-Damage04",
+	"R-Wpn-Rocket-ROF03", "R-Wpn-RocketSlow-Accuracy03",
+	"R-Wpn-RocketSlow-Damage04", "R-Sys-Sensor-Upgrade01"
+];
 
 //trigger event when droid reaches the downed transport.
 camAreaEvent("crashSite", function(droid)
@@ -60,14 +70,8 @@ function setupCyborgGroups()
 		regroup: false
 	});
 
-	//East cyborg group patrols around the bombard pits
-	camManageGroup(camMakeGroup("cyborgPositionEast"), CAM_ORDER_PATROL, {
-		pos: [
-			camMakePos ("cybEastPatrol1"),
-			camMakePos ("cybEastPatrol2"),
-			camMakePos ("cybEastPatrol3"),
-		],
-		interval: camSecondsToMilliseconds(20),
+	//create group of cyborgs and send them on war path
+	camManageGroup(camMakeGroup("cyborgPositionEast"), CAM_ORDER_ATTACK, {
 		regroup: false
 	});
 }
@@ -126,20 +130,15 @@ function eventStartLevel()
 	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, THE_COLLECTIVE);
 
 	//Add crash site blip and from an alliance with the crashed team.
-	hackAddMessage("C21_OBJECTIVE", PROX_MSG, CAM_HUMAN_PLAYER, true);
+	hackAddMessage("C21_OBJECTIVE", PROX_MSG, CAM_HUMAN_PLAYER, false);
 	setAlliance(CAM_HUMAN_PLAYER, TRANSPORT_TEAM, true);
-	setAlliance(THE_COLLECTIVE, ULTSCAV, true);
 
 	//set downed transport team colour to be Project Green.
 	changePlayerColour(TRANSPORT_TEAM, 0);
 
-	camCompleteRequiredResearch(CAM2_1_RES_COL, THE_COLLECTIVE);
-	camCompleteRequiredResearch(CAM2_1_RES_HUMAN, TRANSPORT_TEAM);
-	camCompleteRequiredResearch(CAM2_1_RES_COL, ULTSCAV);
-
-	camSetArtifacts({
-		"base1ArtifactPos": { tech: "R-Vehicle-Body20" }, //hardened alloys, blue bodies
-	});
+	camCompleteRequiredResearch(COLLECTIVE_RES, THE_COLLECTIVE);
+	camCompleteRequiredResearch(ALPHA_RESEARCH_NEW, TRANSPORT_TEAM);
+	camCompleteRequiredResearch(PLAYER_RES_BETA, TRANSPORT_TEAM);
 
 	camSetEnemyBases({
 		"COHardpointBase": {
@@ -165,24 +164,4 @@ function eventStartLevel()
 	setCrashedTeamExp();
 	victoryFlag = false;
 	queue("setupCyborgGroups", camSecondsToMilliseconds(5));
-	ultScav_eventStartLevel(
-		-1, // vtols on/off. -1 = off
-		75, // build defense every x seconds
-		85, // build factories every x seconds
-		55, // build cyborg factories every x seconds
-		25, // produce trucks every x seconds
-		45, // produce droids every x seconds
-		35, // produce cyborgs every x seconds
-		-1, // produce VTOLs every x seconds
-		1, // min factories
-		-1, // min vtol factories
-		1, // min cyborg factories
-		3, // min number of trucks
-		-1, // min number of sensor droids
-		4, // min number of attack droids
-		2, // min number of defend droids
-		210, // ground attack every x seconds
-		-1, // VTOL attack every x seconds
-		2 // tech level
-	);
 }

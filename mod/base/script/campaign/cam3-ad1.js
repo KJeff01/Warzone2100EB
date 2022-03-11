@@ -1,13 +1,25 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
-include("script/campaign/transitionTech.js");
-include ("script/campaign/ultScav.js");
 
 const SILO_PLAYER = 1;
 const LASSAT_FIRING = "pcv650.ogg"; // LASER SATELLITE FIRING!!!
-
+const NEXUS_RES = [
+	"R-Sys-Engineering03", "R-Defense-WallUpgrade10", "R-Struc-Materials10",
+	"R-Struc-VTOLPad-Upgrade06", "R-Wpn-Bomb-Damage03", "R-Sys-NEXUSrepair",
+	"R-Vehicle-Prop-Hover02", "R-Vehicle-Prop-VTOL02", "R-Cyborg-Legs02",
+	"R-Wpn-Mortar-Acc03", "R-Wpn-MG-Damage09", "R-Wpn-Mortar-ROF04",
+	"R-Vehicle-Engine09", "R-Vehicle-Metals10", "R-Vehicle-Armor-Heat07",
+	"R-Cyborg-Metals10", "R-Cyborg-Armor-Heat07", "R-Wpn-RocketSlow-ROF06",
+	"R-Wpn-AAGun-Damage06", "R-Wpn-AAGun-ROF06", "R-Wpn-Howitzer-Damage09",
+	"R-Wpn-Howitzer-ROF04", "R-Wpn-Cannon-Damage09", "R-Wpn-Cannon-ROF06",
+	"R-Wpn-Missile-Damage03", "R-Wpn-Missile-ROF03", "R-Wpn-Missile-Accuracy02",
+	"R-Wpn-Rail-Damage03", "R-Wpn-Rail-ROF03", "R-Wpn-Rail-Accuracy01",
+	"R-Wpn-Energy-Damage03", "R-Wpn-Energy-ROF03", "R-Wpn-Energy-Accuracy01",
+	"R-Wpn-AAGun-Accuracy03", "R-Wpn-Howitzer-Accuracy03",
+];
 var capturedSilos; // victory flag letting us know if we captured any silos.
 var mapLimit; //LasSat slowly creeps toward missile silos.
+var truckLocCounter;
 
 camAreaEvent("NEDefenseZone", function(droid) {
 	camEnableFactory("NXcyborgFac2Arti");
@@ -70,6 +82,31 @@ function enableAllFactories()
 	camEnableFactory("NXcyborgFac2Arti");
 }
 
+function truckDefense()
+{
+	if (enumDroid(NEXUS, DROID_CONSTRUCT).length === 0)
+	{
+		removeTimer("truckDefense");
+		return;
+	}
+
+	var list = ["Emplacement-Howitzer150", "Emplacement-MdART-pit"];
+	var position;
+
+	if (truckLocCounter === 0)
+	{
+		position = camMakePos("buildPos1");
+		truckLocCounter += 1;
+	}
+	else
+	{
+		position = camMakePos("buildPos2");
+		truckLocCounter = 0;
+	}
+
+	camQueueBuilding(NEXUS, list[camRand(list.length)], position);
+}
+
 //Choose a target to fire the LasSat at. Automatically increases the limits
 //when no target is found in the area.
 function vaporizeTarget()
@@ -83,18 +120,23 @@ function vaporizeTarget()
 	{
 		//Choose random coordinate within the limits.
 		target = {
-			"x": camRand(mapWidth),
-			"y": camRand(Math.floor(mapLimit)),
+			x: camRand(mapWidth),
+			y: camRand(Math.floor(mapLimit)),
 		};
 	}
 	else
 	{
-		var dr = targets.filter(function(obj) { return obj.type === DROID; });
+		var dr = targets.filter(function(obj) { return obj.type === DROID && !isVTOL(obj); });
+		var vt = targets.filter(function(obj) { return obj.type === DROID && isVTOL(obj); });
 		var st = targets.filter(function(obj) { return obj.type === STRUCTURE; });
 
 		if (dr.length)
 		{
 			target = dr[0];
+		}
+		if (vt.length && (camRand(100) < 15))
+		{
+			target = vt[0]; //don't care about VTOLs as much
 		}
 		if (st.length && !camRand(2)) //chance to focus on a structure
 		{
@@ -225,20 +267,15 @@ function eventStartLevel()
 	var enemyLz = getObject("NXlandingZone");
 	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, NEXUS);
 
-	camCompleteRequiredResearch(CAM3AD_RES_NEXUS, NEXUS);
-	camCompleteRequiredResearch(CAM3AD_RES_NEXUS, ULTSCAV);
+	camCompleteRequiredResearch(NEXUS_RES, NEXUS);
 
-
-	setAlliance(SILO_PLAYER, CAM_HUMAN_PLAYER, true);
-	setAlliance(SILO_PLAYER, ULTSCAV, true);
-	setAlliance(SILO_PLAYER, NEXUS, true);
-	setAlliance(ULTSCAV, NEXUS, true);
+	setAlliance(CAM_HUMAN_PLAYER, SILO_PLAYER, true);
+	setAlliance(NEXUS, SILO_PLAYER, true);
 
 	camSetArtifacts({
-		"NXbase1VtolFacArti": { tech: "R-Wpn-RailGun02" },
-		"NXcommandCenter": { tech: "R-Wpn-LasSat" },
-		"NXcyborgFac2Arti": { tech: "R-Struc-Factory-Upgrade09" },
-		"SouthEastFac": { tech: ["R-Vehicle-Body16", "R-Vehicle-Body07"] },
+		"NXbase1VtolFacArti": { tech: "R-Wpn-MdArtMissile" },
+		"NXcommandCenter": { tech: "R-Wpn-Laser02" },
+		"NXcyborgFac2Arti": { tech: "R-Wpn-RailGun02" },
 	});
 
 	camSetEnemyBases({
@@ -285,7 +322,7 @@ function eventStartLevel()
 			assembly: "NXcyborgFac1Assembly",
 			order: CAM_ORDER_ATTACK,
 			groupSize: 5,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(30)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds(35)),
 			data: {
 				regroup: true,
 				repair: 45,
@@ -297,7 +334,7 @@ function eventStartLevel()
 			assembly: "NXcyborgFac2Assembly",
 			order: CAM_ORDER_ATTACK,
 			groupSize: 5,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(30)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds(40)),
 			data: {
 				regroup: true,
 				repair: 50,
@@ -307,34 +344,24 @@ function eventStartLevel()
 		},
 	});
 
-	camPlayVideos(["MB3_AD1_MSG", "MB3_AD1_MSG2", "MB3_AD1_MSG3"]);
+	if (difficulty >= HARD)
+	{
+		addDroid(NEXUS, 15, 234, "Truck Retribution Hover", "Body7ABT", "hover02", "", "", "Spade1Mk1");
+
+		camManageTrucks(NEXUS);
+
+		setTimer("truckDefense", camChangeOnDiff(camMinutesToMilliseconds(4.5)));
+	}
+
+	camPlayVideos([{video: "MB3_AD1_MSG", type: CAMP_MSG}, {video: "MB3_AD1_MSG2", type: CAMP_MSG}, {video: "MB3_AD1_MSG3", type: MISS_MSG}]);
 	hackAddMessage("CM3D1_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER);
 	camEnableFactory("NXbase1VtolFacArti");
 	camEnableFactory("NXcyborgFac1");
+	truckLocCounter = 0;
 
 	queue("vaporizeTarget", camSecondsToMilliseconds(2));
 	queue("setupGroups", camSecondsToMilliseconds(5));
 	queue("enableAllFactories", camChangeOnDiff(camMinutesToMilliseconds(5)));
 
 	setTimer("vaporizeTarget", camSecondsToMilliseconds(10));
-	ultScav_eventStartLevel(
-		1, // vtols on/off. -1 = off
-		65, // build defense every x seconds
-		50, // build factories every x seconds
-		45, // build cyborg factories every x seconds
-		25, // produce trucks every x seconds
-		30, // produce droids every x seconds
-		45, // produce cyborgs every x seconds
-		40, // produce VTOLs every x seconds
-		3, // min factories
-		3, // min vtol factories
-		3, // min cyborg factories
-		5, // min number of trucks
-		3, // min number of sensor droids
-		5, // min number of attack droids
-		6, // min number of defend droids
-		135, // ground attack every x seconds
-		155, // VTOL attack every x seconds
-		4 // tech level
-	);
 }
