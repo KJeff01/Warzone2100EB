@@ -3,7 +3,6 @@ General:
 - [low] Add updated stats to the non-NullBot family of AIs.
 
 Campaign:
-- Add camBalance scavenger weapons (twin, heavy, mra8 weapons)
 - Fix up maps with new structures to drop new artifacts (temp put them in a random on-map object for now to make sure the tree is intact)
 
 Warzone:

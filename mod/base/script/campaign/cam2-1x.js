@@ -140,6 +140,10 @@ function eventStartLevel()
 	camCompleteRequiredResearch(ALPHA_RESEARCH_NEW, TRANSPORT_TEAM);
 	camCompleteRequiredResearch(PLAYER_RES_BETA, TRANSPORT_TEAM);
 
+	camSetArtifacts({
+		"base1ArtifactPos": { tech: "R-Vehicle-Body20" }, //hardened alloys, blue bodies
+	});
+
 	camSetEnemyBases({
 		"COHardpointBase": {
 			cleanup: "hardpointBaseCleanup",

@@ -119,9 +119,10 @@ function eventStartLevel()
 	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, THE_COLLECTIVE);
 
 	camSetArtifacts({
-		"COHeavyFac-Arti-b2": { tech: "R-Wpn-Cannon5" },
-		"COTankKillerHardpoint": { tech: "R-Wpn-RocketSlow-Damage06" },
-		"COVtolFactory-b4": { tech: "R-Wpn-Bomb-Damage02" },
+		"COCyborgFac-b2": { tech: "R-Wpn-Cannon5" },
+		"COTankKillerHardpoint": { tech: "R-Wpn-Rocket07-Tank-Killer-Quad" },
+		"COCyborgFac-b3": { tech: "R-Wpn-Cannon-Damage07" },
+		"COHeavyFac-b4": { tech: "R-Wpn-Cannon-ROF04" },
 	});
 
 	camCompleteRequiredResearch(COLLECTIVE_RES, THE_COLLECTIVE);

@@ -110,9 +110,8 @@ function eventStartLevel()
 
 	camSetArtifacts({
 		"NuclearReactor": { tech: "R-Struc-Power-Upgrade01" },
-		"COMediumFactory": { tech: "R-Wpn-Cannon-ROF02" },
+		"COMediumFactory": { tech: "R-Wpn-Cannon4AMk1" },
 		"COCyborgFactoryL": { tech: "R-Wpn-MG4" },
-		"COTankKillerHardpoint": { tech: "R-Wpn-RocketSlow-ROF02" },
 	});
 
 	camCompleteRequiredResearch(COLLECTIVE_RES, THE_COLLECTIVE);

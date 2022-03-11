@@ -128,12 +128,10 @@ function eventStartLevel()
 	camPlayVideos([{video: "MB2_B_MSG", type: CAMP_MSG}, {video: "MB2_B_MSG2", type: MISS_MSG}]);
 
 	camSetArtifacts({
-		"COResearchLab": { tech: "R-Wpn-Flame2" },
-		"COHeavyFac-b4": { tech: "R-Wpn-RocketSlow-ROF01" },
+		"COResearchLab": { tech: "R-Struc-Research-Upgrade04" },
+		"COHeavyFac-b4": { tech: ["R-Wpn-Flame2", "R-Wpn-Flamer-Damage04"] },
 		"COHeavyFacL-b1": { tech: "R-Wpn-MG-ROF03" },
 		"COCommandCenter": { tech: "R-Vehicle-Body02" }, //Leopard
-		"COCybFac-b4": { tech: "R-Wpn-Cannon-ROF01" },
-		"COBombardPit": { tech: "R-Wpn-Mortar-Damage04" },
 	});
 
 	camCompleteRequiredResearch(COLLECTIVE_RES, THE_COLLECTIVE);

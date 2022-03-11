@@ -273,9 +273,10 @@ function eventStartLevel()
 	setAlliance(NEXUS, SILO_PLAYER, true);
 
 	camSetArtifacts({
-		"NXbase1VtolFacArti": { tech: "R-Wpn-MdArtMissile" },
-		"NXcommandCenter": { tech: "R-Wpn-Laser02" },
-		"NXcyborgFac2Arti": { tech: "R-Wpn-RailGun02" },
+		"NXbase1VtolFacArti": { tech: "R-Wpn-RailGun02" },
+		"NXcommandCenter": { tech: "R-Wpn-LasSat" },
+		"NXcyborgFac2Arti": { tech: "R-Struc-Factory-Upgrade09" },
+		"NXbase2HeavyFac": { tech: ["R-Vehicle-Body16", "R-Vehicle-Body07"] },
 	});
 
 	camSetEnemyBases({

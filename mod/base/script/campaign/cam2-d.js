@@ -96,9 +96,9 @@ function eventStartLevel()
 
 	camSetArtifacts({
 		"COCommandCenter": { tech: "R-Struc-VTOLPad-Upgrade01" },
-		"COResearchLab": { tech: "R-Struc-Research-Upgrade04" },
+		"COResearchLab": { tech: ["R-Defense-WallUpgrade07", "R-Wpn-Howitzer-Accuracy01"] },
 		"COCommandRelay": { tech: "R-Wpn-Bomb02" },
-		"COHeavyFactory": { tech: "R-Wpn-Howitzer-Accuracy01" },
+		"COHeavyFactory": { tech: ["R-Wpn-Missile2A-T"] },
 		"COHowitzerEmplacement": { tech: "R-Wpn-Howitzer-Damage02" },
 	});
 

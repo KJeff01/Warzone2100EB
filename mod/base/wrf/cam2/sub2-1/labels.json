@@ -23,6 +23,10 @@
 		"label": "cybEastPatrol3",
 		"pos": [7232, 3904]
 	},
+	"position_6": {
+		"label": "base1ArtifactPos",
+		"pos": [6400, 1500]
+	},
 
 	"area_0": {
 		"label": "crashSite",

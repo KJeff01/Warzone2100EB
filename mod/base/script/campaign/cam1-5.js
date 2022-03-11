@@ -235,9 +235,10 @@ function eventStartLevel()
 	});
 
 	camSetArtifacts({
-		"NPRightFactory": { tech: "R-Vehicle-Engine02" },
-		"NPLeftFactory": { tech: "R-Struc-Factory-Upgrade03" },
-		"NPResearchFacility": { tech: "R-Comp-SynapticLink" },
+		"NPRightFactory": { tech: ["R-Vehicle-Engine03", "R-Wpn-Sunburst"] },
+		"NPLeftFactory": { tech: "R-Vehicle-Body08" }, //scorpion body
+		"NPResearchFacility": { tech: ["R-Comp-SynapticLink", "R-Wpn-Rocket-Range01"] },
+		"NPCyborgFactory": { tech: "R-Struc-Factory-Cyborg" },
 	});
 
 	camSetFactories({

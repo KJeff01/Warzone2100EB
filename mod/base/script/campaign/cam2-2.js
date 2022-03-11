@@ -172,7 +172,10 @@ function eventStartLevel()
 	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, THE_COLLECTIVE);
 
 	camSetArtifacts({
-		"COCommander": { tech: "R-Wpn-RocketSlow-Accuracy03" },
+		"COCommander": { tech: "R-Wpn-Rocket-Accuracy02" },
+		"COFactoryEast": { tech: "R-Wpn-Mortar3" },
+		"COFactoryWest": { tech: "R-Struc-Materials04" },
+		"COCommandCenter": { tech: "R-Struc-RprFac-Upgrade04" },
 	});
 
 	camCompleteRequiredResearch(COLLEVTIVE_RES, THE_COLLECTIVE);

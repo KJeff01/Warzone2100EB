@@ -292,7 +292,7 @@ function eventStartLevel()
 		"rippleRocket": { tech: "R-Wpn-Rocket06-IDF" },
 		"quadbof": { tech: "R-Wpn-AAGun02" },
 		"howitzer": { tech: "R-Wpn-HowitzerMk1" },
-		"COHeavyFac-Leopard": { tech: "R-Vehicle-Body06" }, //Panther
+		"COHeavyFac-Leopard": { tech: "R-Vehicle-Body06" }, //panther
 		"COHeavyFac-Upgrade": { tech: "R-Struc-Factory-Upgrade04" },
 		"COVtolFacLeft-Prop": { tech: "R-Vehicle-Prop-VTOL" },
 		"COInfernoEmplacement-Arti": { tech: "R-Wpn-Flamer-ROF02" },

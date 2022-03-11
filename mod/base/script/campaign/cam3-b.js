@@ -295,9 +295,9 @@ function eventStartLevel()
 	camSetArtifacts({
 		"NXCommandCenter": { tech: "R-Struc-Research-Upgrade07" },
 		"NXBeamTowerArti": { tech: "R-Wpn-Laser01" },
-		"gammaResLabArti": { tech: "R-Wpn-Mortar-Acc03" },
+		"gammaResLabArti": { tech: ["R-Vehicle-Body15", "R-Wpn-Bomb05"] }, // leopard superior alloys
 		"gammaCommandArti": { tech: "R-Vehicle-Body03" }, //retalitation
-		"gammaFactory": { tech: "R-Wpn-Cannon-ROF04" },
+		"gammaFactory": { tech: ["R-Wpn-Cannon-ROF04", "R-Cyborg-MechaBody"] },
 	});
 
 	camSetEnemyBases({

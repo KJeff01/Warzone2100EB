@@ -320,8 +320,8 @@ function eventStartLevel()
 	setTransporterExit(text.x, text.y, CAM_HUMAN_PLAYER);
 
 	camSetArtifacts({
-		"COCommandCenter": { tech: "R-Sys-Engineering02" },
-		"COArtiPillbox": { tech: "R-Wpn-MG-ROF02" },
+		"COCommandCenter": { tech: ["R-Sys-Engineering02", "R-Defense-SuperRamjetMortar"] },
+		"COArtiPillbox": { tech: ["R-Wpn-MG-ROF02", "R-Wpn-MG-Damage05"] },
 		"COArtiCBTower": { tech: "R-Sys-Sensor-Upgrade01" },
 	});
 

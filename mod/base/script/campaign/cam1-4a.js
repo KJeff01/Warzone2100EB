@@ -158,9 +158,9 @@ function eventStartLevel()
 
 	camSetArtifacts({
 		"NPCommandCenter": { tech: "R-Vehicle-Metals01" },
-		"NPResearchFacility": { tech: "R-Wpn-MG-Damage04" },
-		"MediumNPFactory": { tech: "R-Wpn-Rocket02-MRL" },
-		"HeavyNPFactory": { tech: "R-Wpn-Rocket-Damage02" },
+		"NPResearchFacility": { tech: ["R-Vehicle-Body04", "R-Wpn-Rocket05-MiniPod-Arch"] },
+		"MediumNPFactory": { tech: ["R-Wpn-Rocket-Pod-MRA", "R-Wpn-Rocket-Pod-MRA-Twin"] },
+		"HeavyNPFactory": { tech: ["R-Vehicle-Body17", "R-Wpn-Cannon2Mk1"] },
 	});
 
 	camSetFactories({

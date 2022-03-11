@@ -208,8 +208,8 @@ function eventStartLevel()
 
 	camSetArtifacts({
 		"NX-NWCyborgFactory": { tech: "R-Wpn-RailGun03" },
-		"NX-NEFactory": { tech: "R-Vehicle-Body10" }, //Vengeance
-		"NX-MissileEmplacement": { tech: "R-Wpn-HvArtMissile" },
+		"NX-NEFactory": { tech: "R-Vehicle-Body13" }, // Wyvern - Dragon
+		"NX-MissileEmplacement": { tech: "R-Defense-WallUpgrade10" },
 	});
 
 	camSetEnemyBases({

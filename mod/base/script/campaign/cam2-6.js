@@ -131,10 +131,9 @@ function eventStartLevel()
 
 	camSetArtifacts({
 		"COCyborgFactory-Arti": { tech: "R-Wpn-Rocket07-Tank-Killer" },
-		"COCommandCenter": { tech: "R-Wpn-Mortar3" },
+		"COCommandCenter": { tech: "R-Wpn-Mortar-ROF04" },
 		"uplink": { tech: "R-Sys-VTOLCBS-Tower01" },
-		"COMediumFactory": { tech: "R-Wpn-Cannon4AMk1" },
-		"COWhirlwindSite": { tech: "R-Wpn-AAGun04" },
+		"COCyborgFactory-b1": { tech: ["R-Cyborg-HvyBody", "R-Cyborg-Engine02"] },
 	});
 
 	camCompleteRequiredResearch(COLLECTIVE_RES, THE_COLLECTIVE);

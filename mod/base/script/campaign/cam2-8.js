@@ -106,7 +106,8 @@ function eventStartLevel()
 
 	camSetArtifacts({
 		"COVtolFac-b3": { tech: "R-Vehicle-Body09" }, //Tiger body
-		"COHeavyFacL-b2": { tech: "R-Wpn-HvyHowitzer" },
+		"COHeavyFacL-b2": { tech: ["R-Wpn-Cannon4AMk1-Hvy", "R-Wpn-PlasmaCannon"] },
+		"COHeavyFacR-b2": { tech: ["R-Wpn-Cannon375mmMk1-Twn", "R-Wpn-HvyHowitzer"] },
 	});
 
 	camCompleteRequiredResearch(COLLECTIVE_RES, THE_COLLECTIVE);
