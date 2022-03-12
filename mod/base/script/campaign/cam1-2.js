@@ -1,12 +1,7 @@
 
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
-
-const SCAVENGER_RES = [
-	"R-Wpn-Flamer-Damage02", "R-Wpn-Flamer-Range01", "R-Wpn-Flamer-ROF01",
-	"R-Wpn-MG-Damage02", "R-Wpn-MG-ROF01", "R-Wpn-Mortar-Damage02",
-	"R-Wpn-Mortar-ROF01", "R-Wpn-Rocket-ROF03",
-];
+include("script/campaign/transitionTech.js");
 
 function exposeNorthBase()
 {
@@ -75,7 +70,7 @@ function eventStartLevel()
 	startTransporterEntry(tent.x, tent.y, CAM_HUMAN_PLAYER);
 	setTransporterExit(text.x, text.y, CAM_HUMAN_PLAYER);
 
-	camCompleteRequiredResearch(SCAVENGER_RES, SCAV_7);
+	camCompleteRequiredResearch(CAM1_2_RES_SCAV, SCAV_7);
 
 	camUpgradeOnMapTemplates(cTempl.bloke, cTempl.blokeheavy, SCAV_7);
 	camUpgradeOnMapTemplates(cTempl.trike, cTempl.triketwin, SCAV_7);

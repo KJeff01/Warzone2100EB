@@ -1,5 +1,14 @@
 //Contains the campaign transition technology definitions.
 
+//Basic base structures.
+const STRUCTS_ALPHA = [
+	"A0CommandCentre",
+	"A0PowerGenerator",
+	"A0ResourceExtractor",
+	"A0ResearchFacility",
+	"A0LightFactory",
+];
+
 // 				*** CAMPAIGN 1 ***
 // Alpha Campaign - New Paradigm and Scavenger AI's
 // Starting research for all players in campaign 1, except scavengers

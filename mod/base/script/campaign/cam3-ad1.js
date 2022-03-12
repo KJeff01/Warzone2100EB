@@ -1,22 +1,9 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
+include("script/campaign/transitionTech.js");
 
 const SILO_PLAYER = 1;
 const LASSAT_FIRING = "pcv650.ogg"; // LASER SATELLITE FIRING!!!
-const NEXUS_RES = [
-	"R-Sys-Engineering03", "R-Defense-WallUpgrade10", "R-Struc-Materials10",
-	"R-Struc-VTOLPad-Upgrade06", "R-Wpn-Bomb-Damage03", "R-Sys-NEXUSrepair",
-	"R-Vehicle-Prop-Hover02", "R-Vehicle-Prop-VTOL02", "R-Cyborg-Legs02",
-	"R-Wpn-Mortar-Acc03", "R-Wpn-MG-Damage09", "R-Wpn-Mortar-ROF04",
-	"R-Vehicle-Engine09", "R-Vehicle-Metals10", "R-Vehicle-Armor-Heat07",
-	"R-Cyborg-Metals10", "R-Cyborg-Armor-Heat07", "R-Wpn-RocketSlow-ROF06",
-	"R-Wpn-AAGun-Damage06", "R-Wpn-AAGun-ROF06", "R-Wpn-Howitzer-Damage09",
-	"R-Wpn-Howitzer-ROF04", "R-Wpn-Cannon-Damage09", "R-Wpn-Cannon-ROF06",
-	"R-Wpn-Missile-Damage03", "R-Wpn-Missile-ROF03", "R-Wpn-Missile-Accuracy02",
-	"R-Wpn-Rail-Damage03", "R-Wpn-Rail-ROF03", "R-Wpn-Rail-Accuracy01",
-	"R-Wpn-Energy-Damage03", "R-Wpn-Energy-ROF03", "R-Wpn-Energy-Accuracy01",
-	"R-Wpn-AAGun-Accuracy03", "R-Wpn-Howitzer-Accuracy03",
-];
 var capturedSilos; // victory flag letting us know if we captured any silos.
 var mapLimit; //LasSat slowly creeps toward missile silos.
 var truckLocCounter;
@@ -267,7 +254,7 @@ function eventStartLevel()
 	var enemyLz = getObject("NXlandingZone");
 	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, NEXUS);
 
-	camCompleteRequiredResearch(NEXUS_RES, NEXUS);
+	camCompleteRequiredResearch(CAM3AD_RES_NEXUS, NEXUS);
 
 	setAlliance(CAM_HUMAN_PLAYER, SILO_PLAYER, true);
 	setAlliance(NEXUS, SILO_PLAYER, true);
@@ -347,7 +334,7 @@ function eventStartLevel()
 
 	if (difficulty >= HARD)
 	{
-		addDroid(NEXUS, 15, 234, "Truck Retribution Hover", "Body7ABT", "hover02", "", "", "Spade1Mk1");
+		addDroid(NEXUS, 15, 234, "Truck Retribution Hover", "Body7ABT", "hover01NAS", "", "", "Spade1Mk1");
 
 		camManageTrucks(NEXUS);
 

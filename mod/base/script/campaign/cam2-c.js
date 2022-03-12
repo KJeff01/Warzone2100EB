@@ -1,24 +1,12 @@
 
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
+include("script/campaign/transitionTech.js");
 
 var capturedCivCount; //How many civilians have been captured. 59 for defeat.
 var civilianPosIndex; //Current location of civilian groups.
 var shepardGroup; //Enemy group that protects civilians.
 var lastSoundTime; //Only play the "civilian rescued" sound every so often.
-const COLLECTIVE_RES = [
-	"R-Defense-WallUpgrade06", "R-Struc-Materials06", "R-Sys-Engineering02",
-	"R-Vehicle-Engine04", "R-Vehicle-Metals05", "R-Cyborg-Metals05",
-	"R-Wpn-Cannon-Accuracy02", "R-Wpn-Cannon-Damage05","R-Wpn-Cannon-ROF01",
-	"R-Wpn-Flamer-Damage06", "R-Wpn-Flamer-ROF03", "R-Wpn-MG-Damage06",
-	"R-Wpn-MG-ROF03", "R-Wpn-Mortar-Acc02", "R-Wpn-Mortar-Damage05",
-	"R-Wpn-Mortar-ROF02", "R-Wpn-Rocket-Accuracy02", "R-Wpn-Rocket-Damage05",
-	"R-Wpn-Rocket-ROF03", "R-Wpn-RocketSlow-Accuracy03", "R-Wpn-RocketSlow-Damage05",
-	"R-Sys-Sensor-Upgrade01", "R-Wpn-RocketSlow-ROF01", "R-Wpn-Howitzer-ROF01",
-	"R-Wpn-Howitzer-Damage07", "R-Cyborg-Armor-Heat01", "R-Vehicle-Armor-Heat01",
-	"R-Wpn-Bomb-Damage01", "R-Wpn-AAGun-Damage03", "R-Wpn-AAGun-ROF02",
-	"R-Wpn-AAGun-Accuracy01", "R-Struc-VTOLPad-Upgrade01"
-];
 
 //Play video about civilians being captured by the Collective. Triggered
 //by destroying the air base or crossing the base3Trigger area.
@@ -302,7 +290,7 @@ function eventStartLevel()
 
 	setAlliance(THE_COLLECTIVE, SCAV_7, true);
 	setAlliance(CAM_HUMAN_PLAYER, SCAV_7, true);
-	camCompleteRequiredResearch(COLLECTIVE_RES, THE_COLLECTIVE);
+	camCompleteRequiredResearch(CAM2C_RES_COL, THE_COLLECTIVE);
 
 	camSetEnemyBases({
 		"COAirBase": {

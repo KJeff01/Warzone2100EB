@@ -1,6 +1,7 @@
 
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
+include("script/campaign/transitionTech.js");
 
 const landingZoneList = [ "npPos1", "npPos2", "npPos3", "npPos4", "npPos5" ];
 const landingZoneMessages = [ "C1A-C_LZ1", "C1A-C_LZ2", "C1A-C_LZ3", "C1A-C_LZ4", "C1A-C_LZ5" ];
@@ -10,16 +11,6 @@ const cyborgPatrolList = [
 	"canyonCybPos2", "canyonCybPos3", "hillCybPos1",
 	"hillCybPos2", "hillCybPos3", "1aCybPos1",
 	"1aCybPos2", "1aCybPos3",
-];
-const NEW_PARADIGM_RES = [
-	"R-Wpn-MG1Mk1", "R-Vehicle-Body01", "R-Sys-Spade1Mk1", "R-Vehicle-Prop-Wheels",
-	"R-Sys-Engineering01", "R-Wpn-MG-Damage04", "R-Wpn-MG-ROF02", "R-Wpn-Cannon-Damage03",
-	"R-Wpn-Flamer-Damage03", "R-Wpn-Flamer-Range01", "R-Wpn-Flamer-ROF01",
-	"R-Defense-WallUpgrade03","R-Struc-Materials03", "R-Vehicle-Engine03",
-	"R-Struc-RprFac-Upgrade03", "R-Wpn-Rocket-Damage03", "R-Wpn-Rocket-ROF03",
-	"R-Vehicle-Metals03", "R-Wpn-Mortar-Damage03", "R-Wpn-Rocket-Accuracy02",
-	"R-Wpn-RocketSlow-Damage03", "R-Wpn-Mortar-ROF01", "R-Cyborg-Metals03",
-	"R-Wpn-Mortar-Acc01", "R-Wpn-RocketSlow-Accuracy01", "R-Wpn-Cannon-Accuracy01",
 ];
 var index; //Current LZ (SE, N, canyon, south hill, road north of base)
 var switchLZ; //Counter for incrementing index every third landing
@@ -157,7 +148,7 @@ function eventStartLevel()
 		setNoGoArea(ph.x, ph.y, ph.x2, ph.y2, NEW_PARADIGM);
 	}
 
-	camCompleteRequiredResearch(NEW_PARADIGM_RES, NEW_PARADIGM);
+	camCompleteRequiredResearch(CAM1AC_RES_NP, NEW_PARADIGM);
 	camPlayVideos([{video: "MB1A-C_MSG", type: CAMP_MSG}, {video: "MB1A-C_MSG2", type: MISS_MSG}]);
 
 	index = 0;

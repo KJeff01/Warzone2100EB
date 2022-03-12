@@ -6,19 +6,6 @@ var trapActive;
 var gammaAttackCount;
 var truckLocCounter;
 const GAMMA = 1; // Player 1 is Gamma team.
-const NEXUS_RES = [
-	"R-Sys-Engineering03", "R-Defense-WallUpgrade08", "R-Struc-Materials08",
-	"R-Struc-VTOLPad-Upgrade06", "R-Wpn-Bomb-Damage03", "R-Sys-NEXUSrepair",
-	"R-Vehicle-Prop-Hover02", "R-Vehicle-Prop-VTOL02", "R-Cyborg-Legs02",
-	"R-Wpn-Mortar-Acc03", "R-Wpn-MG-Damage09", "R-Wpn-Mortar-ROF04",
-	"R-Vehicle-Engine07", "R-Vehicle-Metals07", "R-Vehicle-Armor-Heat04",
-	"R-Cyborg-Metals07", "R-Cyborg-Armor-Heat04", "R-Wpn-RocketSlow-ROF05",
-	"R-Wpn-AAGun-Damage06", "R-Wpn-AAGun-ROF06", "R-Wpn-Howitzer-Damage09",
-	"R-Wpn-Howitzer-ROF04", "R-Wpn-Cannon-Damage09", "R-Wpn-Cannon-ROF06",
-	"R-Wpn-Missile-Damage01", "R-Wpn-Missile-ROF01", "R-Wpn-Missile-Accuracy01",
-	"R-Wpn-Rail-Damage01", "R-Wpn-Rail-ROF01", "R-Wpn-Rail-Accuracy01",
-	"R-Wpn-Energy-Damage03", "R-Wpn-Energy-ROF03", "R-Wpn-Energy-Accuracy01",
-];
 
 //Remove Nexus VTOL droids.
 camAreaEvent("vtolRemoveZone", function(droid)
@@ -285,9 +272,9 @@ function eventStartLevel()
 	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, NEXUS);
 	setNoGoArea(enemyLz2.x, enemyLz2.y, enemyLz2.x2, enemyLz2.y2, 5);
 
-	camCompleteRequiredResearch(NEXUS_RES, NEXUS);
-	camCompleteRequiredResearch(GAMMA_ALLY_RES, GAMMA);
-	camCompleteRequiredResearch(NEXUS_RES, GAMMA); //They get even more research.
+	camCompleteRequiredResearch(CAM3B_RES_NEXUS, NEXUS);
+	camCompleteRequiredResearch(CAM3_RES_ALLY, GAMMA);
+	camCompleteRequiredResearch(CAM3B_RES_NEXUS, GAMMA); //They get even more research.
 
 	setAlliance(GAMMA, CAM_HUMAN_PLAYER, false);
 	setAlliance(GAMMA, NEXUS, true);

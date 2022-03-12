@@ -3,20 +3,6 @@ include("script/campaign/templates.js");
 include("script/campaign/transitionTech.js");
 
 const ALPHA = 1; //Team alpha units belong to player 1.
-const NEXUS_RES = [
-	"R-Sys-Engineering03", "R-Defense-WallUpgrade08", "R-Struc-Materials08",
-	"R-Struc-VTOLPad-Upgrade06", "R-Wpn-Bomb-Damage03", "R-Sys-NEXUSrepair",
-	"R-Vehicle-Prop-Hover02", "R-Vehicle-Prop-VTOL02", "R-Cyborg-Legs02",
-	"R-Wpn-Mortar-Acc03", "R-Wpn-MG-Damage09", "R-Wpn-Mortar-ROF04",
-	"R-Vehicle-Engine08", "R-Vehicle-Metals08", "R-Vehicle-Armor-Heat05",
-	"R-Cyborg-Metals08", "R-Cyborg-Armor-Heat05", "R-Wpn-RocketSlow-ROF06",
-	"R-Wpn-AAGun-Damage06", "R-Wpn-AAGun-ROF06", "R-Wpn-Howitzer-Damage09",
-	"R-Wpn-Howitzer-ROF04", "R-Wpn-Cannon-Damage09", "R-Wpn-Cannon-ROF06",
-	"R-Wpn-Missile-Damage01", "R-Wpn-Missile-ROF01", "R-Wpn-Missile-Accuracy01",
-	"R-Wpn-Rail-Damage01", "R-Wpn-Rail-ROF01", "R-Wpn-Rail-Accuracy01",
-	"R-Wpn-Energy-Damage03", "R-Wpn-Energy-ROF03", "R-Wpn-Energy-Accuracy01",
-	"R-Wpn-AAGun-Accuracy03", "R-Wpn-Howitzer-Accuracy03",
-];
 var alphaUnitIDs;
 var startExtraLoss;
 
@@ -285,8 +271,8 @@ function eventStartLevel()
 	var enemyLz = getObject("NXlandingZone");
 	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, NEXUS);
 
-	camCompleteRequiredResearch(NEXUS_RES, NEXUS);
-	camCompleteRequiredResearch(GAMMA_ALLY_RES, ALPHA);
+	camCompleteRequiredResearch(CAM3_2_RES_NEXUS, NEXUS);
+	camCompleteRequiredResearch(CAM3_RES_ALLY, ALPHA);
 	setAlliance(ALPHA, NEXUS, true);
 	setAlliance(ALPHA, CAM_HUMAN_PLAYER, true);
 	changePlayerColour(ALPHA, 0);

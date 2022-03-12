@@ -1,23 +1,9 @@
 
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
+include("script/campaign/transitionTech.js");
 
 //New base blip, new base area, new factory data
-
-const NEW_PARADIGM_RES = [
-	"R-Wpn-MG1Mk1", "R-Vehicle-Body01", "R-Sys-Spade1Mk1", "R-Vehicle-Prop-Wheels",
-	"R-Sys-Engineering01", "R-Wpn-MG-Damage03", "R-Wpn-MG-ROF01", "R-Wpn-Cannon-Damage01",
-	"R-Wpn-Flamer-Damage03", "R-Wpn-Flamer-Range01", "R-Wpn-Flamer-ROF01",
-	"R-Defense-WallUpgrade02","R-Struc-Materials02", "R-Vehicle-Engine01",
-	"R-Struc-RprFac-Upgrade01", "R-Wpn-Rocket-Damage01", "R-Wpn-Rocket-ROF02",
-	"R-Wpn-Mortar-Damage02", "R-Wpn-Mortar-ROF01",
-];
-const SCAVENGER_RES = [
-	"R-Wpn-Flamer-Damage02", "R-Wpn-Flamer-Range01", "R-Wpn-Flamer-ROF01",
-	"R-Wpn-MG-Damage03", "R-Wpn-MG-ROF01", "R-Wpn-Cannon-Damage01",
-	"R-Wpn-Mortar-Damage02", "R-Wpn-Mortar-ROF01", "R-Wpn-Rocket-ROF03",
-	"R-Defense-WallUpgrade02","R-Struc-Materials02",
-];
 var NPDefenseGroup, NPScoutGroup, NPFactory;
 
 camAreaEvent("RemoveBeacon", function(droid)
@@ -219,8 +205,8 @@ function eventStartLevel()
 	startTransporterEntry(tent.x, tent.y, CAM_HUMAN_PLAYER);
 	setTransporterExit(text.x, text.y, CAM_HUMAN_PLAYER);
 
-	camCompleteRequiredResearch(NEW_PARADIGM_RES, NEW_PARADIGM);
-	camCompleteRequiredResearch(SCAVENGER_RES, SCAV_7);
+	camCompleteRequiredResearch(CAM1_3_RES_NP, NEW_PARADIGM);
+	camCompleteRequiredResearch(CAM1_3_RES_SCAV, SCAV_7);
 	setAlliance(NEW_PARADIGM, SCAV_7, true);
 
 	camUpgradeOnMapTemplates(cTempl.bloke, cTempl.blokeheavy, 7);

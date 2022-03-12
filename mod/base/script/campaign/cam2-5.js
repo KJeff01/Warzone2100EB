@@ -1,19 +1,6 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
-
-const COLLECTIVE_RES = [
-	"R-Defense-WallUpgrade06", "R-Struc-Materials06", "R-Sys-Engineering02",
-	"R-Vehicle-Engine04", "R-Vehicle-Metals05", "R-Cyborg-Metals05",
-	"R-Wpn-Cannon-Accuracy02", "R-Wpn-Cannon-Damage05","R-Wpn-Cannon-ROF02",
-	"R-Wpn-Flamer-Damage06", "R-Wpn-Flamer-ROF03", "R-Wpn-MG-Damage07",
-	"R-Wpn-MG-ROF03", "R-Wpn-Mortar-Acc02", "R-Wpn-Mortar-Damage05",
-	"R-Wpn-Mortar-ROF02", "R-Wpn-Rocket-Accuracy02", "R-Wpn-Rocket-Damage06",
-	"R-Wpn-Rocket-ROF03", "R-Wpn-RocketSlow-Accuracy03", "R-Wpn-RocketSlow-Damage05",
-	"R-Sys-Sensor-Upgrade01", "R-Wpn-RocketSlow-ROF02", "R-Wpn-Howitzer-ROF01",
-	"R-Wpn-Howitzer-Damage07", "R-Cyborg-Armor-Heat01", "R-Vehicle-Armor-Heat01",
-	"R-Wpn-Bomb-Damage01", "R-Wpn-AAGun-Damage03", "R-Wpn-AAGun-ROF03",
-	"R-Wpn-AAGun-Accuracy01", "R-Struc-VTOLPad-Upgrade02"
-];
+include("script/campaign/transitionTech.js");
 
 camAreaEvent("factoryTrigger", function(droid)
 {
@@ -114,7 +101,7 @@ function eventStartLevel()
 		"COCyborgFactoryL": { tech: "R-Wpn-MG4" },
 	});
 
-	camCompleteRequiredResearch(COLLECTIVE_RES, THE_COLLECTIVE);
+	camCompleteRequiredResearch(CAM2_5_RES_COL, THE_COLLECTIVE);
 
 	camSetEnemyBases({
 		"COEastBase": {

@@ -1,13 +1,6 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
-
-const PLAYER_RES = [
-	"R-Wpn-MG1Mk1", "R-Vehicle-Body01", "R-Sys-Spade1Mk1", "R-Vehicle-Prop-Wheels",
-];
-
-const SCAVENGER_RES = [
-	"R-Wpn-MG-Damage01", "R-Wpn-MG-ROF01",
-];
+include("script/campaign/transitionTech.js");
 
 // Player zero's droid enters area next to first oil patch.
 camAreaEvent("launchScavAttack", function(droid)
@@ -118,15 +111,17 @@ function camEnemyBaseEliminated_scavGroup2()
 
 function enableBaseStructures()
 {
-	const STRUCTS = [
-		"A0CommandCentre", "A0PowerGenerator", "A0ResourceExtractor",
-		"A0ResearchFacility", "A0LightFactory",
-	];
-
-	for (var i = 0; i < STRUCTS.length; ++i)
+	for (var i = 0; i < STRUCTS_ALPHA.length; ++i)
 	{
-		enableStructure(STRUCTS[i], CAM_HUMAN_PLAYER);
+		enableStructure(STRUCTS_ALPHA[i], CAM_HUMAN_PLAYER);
 	}
+}
+
+function eventGameInit()
+{
+	// if completed in eventStartLevel() the sensor range is normal for a split second. Prefer to run this before map is loaded
+	// only needed in cam1a and cam1b
+	completeResearch("R-Sys-Sensor-Upgrade00", CAM_HUMAN_PLAYER);
 }
 
 function eventStartLevel()
@@ -155,10 +150,12 @@ function eventStartLevel()
 
 	setAlliance(SCAV_6, SCAV_7, true);
 
+	enableResearch("R-Wpn-MG1Mk1", CAM_HUMAN_PLAYER);
+
 	enableBaseStructures();
-	camCompleteRequiredResearch(PLAYER_RES, CAM_HUMAN_PLAYER);
-	camCompleteRequiredResearch(SCAVENGER_RES, 6);
-	camCompleteRequiredResearch(SCAVENGER_RES, 7);
+	camCompleteRequiredResearch(CAM1A_RESEARCH, CAM_HUMAN_PLAYER);
+	camCompleteRequiredResearch(CAM1A_RES_SCAV, 6);
+	camCompleteRequiredResearch(CAM1A_RES_SCAV, 7);
 
 	// Give player briefing.
 	camPlayVideos({video: "CMB1_MSG", type: CAMP_MSG, immediate: false});

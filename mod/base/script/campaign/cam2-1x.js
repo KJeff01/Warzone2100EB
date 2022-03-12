@@ -8,17 +8,6 @@ include ("script/campaign/transitionTech.js");
 var victoryFlag;
 
 const TRANSPORT_TEAM = 1;
-const COLLECTIVE_RES = [
-	"R-Defense-WallUpgrade06", "R-Struc-Materials06", "R-Sys-Engineering02",
-	"R-Vehicle-Engine03", "R-Vehicle-Metals03", "R-Cyborg-Metals03",
-	"R-Wpn-Cannon-Accuracy02", "R-Wpn-Cannon-Damage04",
-	"R-Wpn-Cannon-ROF01", "R-Wpn-Flamer-Damage03", "R-Wpn-Flamer-ROF01",
-	"R-Wpn-MG-Damage05", "R-Wpn-MG-ROF02", "R-Wpn-Mortar-Acc01",
-	"R-Wpn-Mortar-Damage03", "R-Wpn-Mortar-ROF01",
-	"R-Wpn-Rocket-Accuracy02", "R-Wpn-Rocket-Damage04",
-	"R-Wpn-Rocket-ROF03", "R-Wpn-RocketSlow-Accuracy03",
-	"R-Wpn-RocketSlow-Damage04", "R-Sys-Sensor-Upgrade01"
-];
 
 //trigger event when droid reaches the downed transport.
 camAreaEvent("crashSite", function(droid)
@@ -136,9 +125,8 @@ function eventStartLevel()
 	//set downed transport team colour to be Project Green.
 	changePlayerColour(TRANSPORT_TEAM, 0);
 
-	camCompleteRequiredResearch(COLLECTIVE_RES, THE_COLLECTIVE);
-	camCompleteRequiredResearch(ALPHA_RESEARCH_NEW, TRANSPORT_TEAM);
-	camCompleteRequiredResearch(PLAYER_RES_BETA, TRANSPORT_TEAM);
+	camCompleteRequiredResearch(CAM2_1_RES_COL, THE_COLLECTIVE);
+	camCompleteRequiredResearch(CAM2_1_RES_HUMAN, TRANSPORT_TEAM);
 
 	camSetArtifacts({
 		"base1ArtifactPos": { tech: "R-Vehicle-Body20" }, //hardened alloys, blue bodies
