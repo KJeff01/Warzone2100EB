@@ -1,9 +1,9 @@
-# Warzone2100 Enhanced Balance Mod
+# Warzone 2100 Enhanced Balance Mod
 ![alt text](https://github.com/jbreija/Warzone2100EB/blob/master/screenshots/mainpage.png)
 
-This mod fixes many imbalances in Warzone2100 gameplay and adds hundreds of additional weapons, bodies, structures, propulsions and strategies that are balanced and functioning.
+This mod fixes many imbalances in Warzone 2100 gameplay and adds hundreds of additional weapons, bodies, structures, propulsions and strategies that are balanced and functioning.
 
-Compatible with Warzone2100 version 3.3.0.
+Compatible with Warzone 2100 version 3.3.0.
 
 Warzone 2100, the actual game: (Parent Project)
 https://github.com/Warzone2100/warzone2100
@@ -38,10 +38,13 @@ See art/README.md for the list of art assets being used in this mod (models, tex
 
 ### Installation
 
-Place EB-Mod.wz in the global mod folder and start Warzone2100 with the command line parameter --mod=EB-Mod.wz
+Place EB-Mod.wz in the global mod folder and start Warzone 2100 with the command line parameter --mod=EB-Mod.wz where "EB-Mod" is the name of your .wz file.
+
+The global mods folder can be found by going into Options from the main menu, and then clicking
+the link "open configuration directory" in the bottom left corner of that menu. Then open the "mods" folder.
 
 See Warzone 2100 command line parameters for additional help
 http://developer.wz2100.net/wiki/CommandLineOptions
 
-The global mods folder for Windows can be located at:
-C:\Users\UserName\AppData\Roaming\Warzone 2100 Project\Warzone 2100 master\mods\global
+Placing it in the mods/autoload folder will instead automatically load the mod whenever Warzone 2100 starts, if you don't want
+to mess with the command line stuff.
