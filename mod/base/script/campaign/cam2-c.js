@@ -38,9 +38,9 @@ camAreaEvent("base3Trigger", function(droid)
 //Send idle droids in this base to attack when the player spots the base
 function camEnemyBaseDetected_COAirBase()
 {
-	var droids = enumArea("airBaseCleanup", THE_COLLECTIVE, false).filter(function(obj) {
-		return obj.type === DROID && obj.group === null;
-	});
+	var droids = enumArea("airBaseCleanup", THE_COLLECTIVE, false).filter((obj) => (
+		obj.type === DROID && obj.group === null
+	));
 
 	camManageGroup(camMakeGroup(droids), CAM_ORDER_ATTACK, {
 		count: -1,
@@ -54,7 +54,6 @@ function camEnemyBaseEliminated_COAirBase()
 {
 	camCallOnce("videoTrigger");
 }
-
 
 function enableFactories()
 {
@@ -179,10 +178,10 @@ function civilianOrders()
 	var rescued = false;
 
 	//Check if a civilian is close to a player droid.
-	for (var i = 0; i < civs.length; ++i)
+	for (let i = 0; i < civs.length; ++i)
 	{
 		var objs = enumRange(civs[i].x, civs[i].y, 6, CAM_HUMAN_PLAYER, false);
-		for (var j = 0; j < objs.length; ++j)
+		for (let j = 0; j < objs.length; ++j)
 		{
 			if (objs[j].type === DROID)
 			{
@@ -212,7 +211,7 @@ function eventTransporterLanded(transport)
 	{
 		playSound(escaping);
 		capturedCivCount += civs.length - 1;
-		for (var i = 0; i < civs.length; ++i)
+		for (let i = 0; i < civs.length; ++i)
 		{
 			camSafeRemoveObject(civs[i], false);
 		}
@@ -252,7 +251,7 @@ function extraVictoryCondition()
 		var lz = getObject("startPosition");
 		var civs = enumRange(lz.x, lz.y, 30, SCAV_7, false);
 
-		for (var i = 0; i < civs.length; ++i)
+		for (let i = 0; i < civs.length; ++i)
 		{
 			camSafeRemoveObject(civs[i], false);
 		}
@@ -274,13 +273,13 @@ function eventStartLevel()
 	setNoGoArea(lz.x, lz.y, lz.x2, lz.y2, CAM_HUMAN_PLAYER);
 
 	var enemyLz = getObject("COLandingZone");
-	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, THE_COLLECTIVE);
+	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, 5);
 
 	camSetArtifacts({
 		"rippleRocket": { tech: "R-Wpn-Rocket06-IDF" },
 		"quadbof": { tech: "R-Wpn-AAGun02" },
 		"howitzer": { tech: "R-Wpn-HowitzerMk1" },
-		"COHeavyFac-Leopard": { tech: "R-Vehicle-Body06" }, //panther
+		"COHeavyFac-Leopard": { tech: "R-Vehicle-Body06" }, //Panther
 		"COHeavyFac-Upgrade": { tech: "R-Struc-Factory-Upgrade04" },
 		"COVtolFacLeft-Prop": { tech: "R-Vehicle-Prop-VTOL" },
 		"COInfernoEmplacement-Arti": { tech: "R-Wpn-Flamer-ROF02" },
@@ -291,6 +290,8 @@ function eventStartLevel()
 	setAlliance(THE_COLLECTIVE, SCAV_7, true);
 	setAlliance(CAM_HUMAN_PLAYER, SCAV_7, true);
 	camCompleteRequiredResearch(CAM2C_RES_COL, THE_COLLECTIVE);
+
+	camUpgradeOnMapTemplates(cTempl.commc, cTempl.commrp, THE_COLLECTIVE);
 
 	camSetEnemyBases({
 		"COAirBase": {
@@ -385,7 +386,6 @@ function eventStartLevel()
 	});
 
 	camManageTrucks(THE_COLLECTIVE);
-	truckDefense();
 	capturedCivCount = 0;
 	civilianPosIndex = 0;
 	lastSoundTime = 0;
@@ -397,4 +397,6 @@ function eventStartLevel()
 
 	queue("activateGroups", camChangeOnDiff(camMinutesToMilliseconds(8)));
 	setTimer("truckDefense", camChangeOnDiff(camMinutesToMilliseconds(3)));
+
+	truckDefense();
 }

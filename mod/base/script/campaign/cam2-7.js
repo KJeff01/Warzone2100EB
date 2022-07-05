@@ -11,9 +11,9 @@ function camEnemyBaseDetected_COBase2()
 {
 	hackRemoveMessage("C27_OBJECTIVE2", PROX_MSG, CAM_HUMAN_PLAYER);
 
-	var vt = enumArea("COBase2Cleanup", THE_COLLECTIVE, false).filter(function(obj) {
-		return obj.type === DROID && isVTOL(obj);
-	});
+	var vt = enumArea("COBase2Cleanup", THE_COLLECTIVE, false).filter((obj) => (
+		obj.type === DROID && isVTOL(obj)
+	));
 	camManageGroup(camMakeGroup(vt), CAM_ORDER_ATTACK, {
 		regroup: false,
 	});
@@ -31,9 +31,9 @@ function camEnemyBaseDetected_COBase4()
 
 function baseThreeVtolAttack()
 {
-	var vt = enumArea("vtolGroupBase3", THE_COLLECTIVE, false).filter(function(obj) {
-		return obj.type === DROID && isVTOL(obj);
-	});
+	var vt = enumArea("vtolGroupBase3", THE_COLLECTIVE, false).filter((obj) => (
+		obj.type === DROID && isVTOL(obj)
+	));
 	camManageGroup(camMakeGroup(vt), CAM_ORDER_ATTACK, {
 		regroup: false,
 	});
@@ -41,9 +41,9 @@ function baseThreeVtolAttack()
 
 function baseFourVtolAttack()
 {
-	var vt = enumArea("vtolGroupBase4", THE_COLLECTIVE, false).filter(function(obj) {
-		return obj.type === DROID && isVTOL(obj);
-	});
+	var vt = enumArea("vtolGroupBase4", THE_COLLECTIVE, false).filter((obj) => (
+		obj.type === DROID && isVTOL(obj)
+	));
 	camManageGroup(camMakeGroup(vt), CAM_ORDER_ATTACK, {
 		regroup: false,
 	});
@@ -113,6 +113,8 @@ function eventStartLevel()
 	});
 
 	camCompleteRequiredResearch(CAM2_7_RES_COL, THE_COLLECTIVE);
+	
+	camUpgradeOnMapTemplates(cTempl.commc, cTempl.cohact, THE_COLLECTIVE);
 
 	camSetEnemyBases({
 		"COBase1": {
@@ -146,7 +148,7 @@ function eventStartLevel()
 			assembly: "base2HeavyAssembly",
 			order: CAM_ORDER_ATTACK,
 			groupSize: 4,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(60)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty === EASY || difficulty === MEDIUM) ? 54 : 60)),
 			data: {
 				regroup: false,
 				repair: 20,
@@ -158,7 +160,7 @@ function eventStartLevel()
 			assembly: "base2CybAssembly",
 			order: CAM_ORDER_ATTACK,
 			groupSize: 4,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(40)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty === EASY || difficulty === MEDIUM) ? 36 : 40)),
 			data: {
 				regroup: false,
 				repair: 40,
@@ -170,7 +172,7 @@ function eventStartLevel()
 			assembly: "base3CybAssembly",
 			order: CAM_ORDER_ATTACK,
 			groupSize: 4,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(40)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty === EASY || difficulty === MEDIUM) ? 36 : 40)),
 			data: {
 				regroup: false,
 				repair: 40,
@@ -182,7 +184,7 @@ function eventStartLevel()
 			assembly: "base4HeavyAssembly",
 			order: CAM_ORDER_ATTACK,
 			groupSize: 4,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(70)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty === EASY || difficulty === MEDIUM) ? 63 : 70)),
 			data: {
 				regroup: false,
 				repair: 20,
@@ -194,7 +196,7 @@ function eventStartLevel()
 			assembly: "base4CybAssembly",
 			order: CAM_ORDER_ATTACK,
 			groupSize: 5,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(40)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty === EASY || difficulty === MEDIUM) ? 36 : 40)),
 			data: {
 				regroup: false,
 				repair: 40,
@@ -206,7 +208,7 @@ function eventStartLevel()
 			assembly: "base4VTOLAssembly",
 			order: CAM_ORDER_ATTACK,
 			groupSize: 5,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(60)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty === EASY || difficulty === MEDIUM) ? 54 : 60)),
 			data: {
 				regroup: false,
 				count: -1,
@@ -223,7 +225,7 @@ function eventStartLevel()
 	hackAddMessage("C27_OBJECTIVE3", PROX_MSG, CAM_HUMAN_PLAYER, false);
 	hackAddMessage("C27_OBJECTIVE4", PROX_MSG, CAM_HUMAN_PLAYER, false);
 
-	if (difficulty >= HARD)
+	if (difficulty >= MEDIUM)
 	{
 		addDroid(THE_COLLECTIVE, 55, 25, "Truck Panther Tracks", "Body6SUPP", "tracked01", "", "", "Spade1Mk1");
 
@@ -234,5 +236,5 @@ function eventStartLevel()
 
 	queue("baseThreeVtolAttack", camChangeOnDiff(camSecondsToMilliseconds(90)));
 	queue("baseFourVtolAttack", camChangeOnDiff(camMinutesToMilliseconds(2)));
-	queue("enableFactoriesAndHovers", camChangeOnDiff(camMinutesToMilliseconds(2)));
+	queue("enableFactoriesAndHovers", camSecondsToMilliseconds(90));
 }

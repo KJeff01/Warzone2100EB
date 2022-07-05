@@ -9,11 +9,9 @@ const startpos = {x: 88, y: 101};
 function checkEnemyVtolArea()
 {
 	var pos = {x: 127, y: 64};
-	var vtols = enumRange(pos.x, pos.y, 2, THE_COLLECTIVE, false).filter(function(obj) {
-		return isVTOL(obj);
-	});
+	var vtols = enumRange(pos.x, pos.y, 2, THE_COLLECTIVE, false).filter((obj) => (isVTOL(obj)));
 
-	for (var i = 0, l = vtols.length; i < l; ++i)
+	for (let i = 0, l = vtols.length; i < l; ++i)
 	{
 		if ((vtols[i].weapons[0].armed < 20) || (vtols[i].health < 60))
 		{
@@ -35,7 +33,7 @@ function eventTransporterLaunch(transporter)
 	{
 		var cargoDroids = enumCargo(transporter);
 
-		for (var i = 0, len = cargoDroids.length; i < len; ++i)
+		for (let i = 0, len = cargoDroids.length; i < len; ++i)
 		{
 			var virDroid = cargoDroids[i];
 
@@ -64,7 +62,7 @@ function randomTemplates(list, transporterAmount, useWhirlwinds)
 		size = (difficulty === INSANE) ? (15 + camRand(3)) : (18 + camRand(8));
 	}
 
-	for (var i = 0; i < size; ++i)
+	for (let i = 0; i < size; ++i)
 	{
 		droids.push(list[camRand(list.length)]);
 	}
@@ -72,7 +70,7 @@ function randomTemplates(list, transporterAmount, useWhirlwinds)
 	if (useWhirlwinds)
 	{
 		// Include Whirlwinds for ground reinforcements.
-		for (var i = 0; i < WHIRLWIND_AMOUNT; ++i)
+		for (let i = 0; i < WHIRLWIND_AMOUNT; ++i)
 		{
 			droids.push(cTempl.cowwt);
 		}
@@ -158,9 +156,9 @@ function transporterAttack()
 //NOTE: this is only called once from the library's eventMissionTimeout().
 function checkIfLaunched()
 {
-	var transporters = enumArea(0, 0, mapWidth, mapHeight, CAM_HUMAN_PLAYER, false).filter(function(obj) {
-		return (obj.type === DROID && camIsTransporter(obj));
-	});
+	var transporters = enumArea(0, 0, mapWidth, mapHeight, CAM_HUMAN_PLAYER, false).filter((obj) => (
+		obj.type === DROID && camIsTransporter(obj)
+	));
 	if (transporters.length > 0)
 	{
 		allowWin = false;

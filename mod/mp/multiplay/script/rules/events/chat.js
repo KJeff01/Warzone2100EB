@@ -1,8 +1,8 @@
 function eventChat(from, to, message)
 {
-	if (message == "bettertogether" && cheatmode)
+	if (message === "bettertogether" && cheatmode)
 	{
-		for (var i in Upgrades[from].Brain)
+		for (const i in Upgrades[from].Brain)
 		{
 			if (Upgrades[from].Brain[i].BaseCommandLimit > 0) // is commander
 			{
@@ -15,9 +15,9 @@ function eventChat(from, to, message)
 		}
 		console("Made player " + from + "'s commanders SUPERIOR!");
 	}
-	if (message == "makesuperior" && cheatmode)
+	if (message === "makesuperior" && cheatmode)
 	{
-		for (var i in Upgrades[from].Body)
+		for (const i in Upgrades[from].Body)
 		{
 			if (Upgrades[from].Body[i].bodyClass === 'Droids' || Upgrades[from].Body[i].bodyClass === 'Cyborgs')
 			{

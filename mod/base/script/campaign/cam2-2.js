@@ -16,7 +16,6 @@ camAreaEvent("vtolRemoveZone", function(droid)
 	resetLabel("vtolRemoveZone", THE_COLLECTIVE);
 });
 
-
 camAreaEvent("group1Trigger", function(droid)
 {
 	hackRemoveMessage("C22_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER);
@@ -54,9 +53,9 @@ camAreaEvent("wayPoint2Rad", function(droid)
 	}
 
 	var point = getObject("wayPoint3");
-	var defGroup = enumRange(point.x, point.y, 10, THE_COLLECTIVE, false).filter(function(obj) {
-		return (obj.droidType === DROID_WEAPON);
-	});
+	var defGroup = enumRange(point.x, point.y, 10, THE_COLLECTIVE, false).filter((obj) => (
+		obj.droidType === DROID_WEAPON
+	));
 
 	camManageGroup(commandGroup, CAM_ORDER_DEFEND, {
 		pos: camMakePos("wayPoint4"),
@@ -170,6 +169,8 @@ function eventStartLevel()
 
 	camCompleteRequiredResearch(CAM2_2_RES_COL, THE_COLLECTIVE);
 
+	camUpgradeOnMapTemplates(cTempl.commc, cTempl.commrp, THE_COLLECTIVE);
+
 	camSetEnemyBases({
 		"COEastBase": {
 			cleanup: "eastBaseCleanup",
@@ -216,11 +217,11 @@ function eventStartLevel()
 
 	commandGroup = camMakeGroup("group1NBase");
 	camManageTrucks(THE_COLLECTIVE);
-	truckDefense();
 	camEnableFactory("COFactoryWest");
 
 	hackAddMessage("C22_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, false);
 
 	queue("vtolAttack", camMinutesToMilliseconds(3));
 	setTimer("truckDefense", camChangeOnDiff(camMinutesToMilliseconds(3)));
+	truckDefense();
 }

@@ -66,10 +66,10 @@ function eventTransporterLanded(transport)
 	if (transport.player === NEW_PARADIGM && enemyHasArtifact)
 	{
 		enemyStoleArtifact = true;
-		var crew = enumRange(transport.x, transport.y, 6, NEW_PARADIGM, false).filter(function(obj) {
-			return obj.type === DROID && obj.group === artiGroup;
-		});
-		for (var i = 0, l = crew.length; i < l; ++i)
+		var crew = enumRange(transport.x, transport.y, 6, NEW_PARADIGM, false).filter((obj) => (
+			obj.type === DROID && obj.group === artiGroup
+		));
+		for (let i = 0, l = crew.length; i < l; ++i)
 		{
 			camSafeRemoveObject(crew[i], false);
 		}
@@ -112,9 +112,9 @@ function getArtifact()
 	}
 
 	const GRAB_RADIUS = 2;
-	var artifact = camGetArtifacts().filter(function(label) {
-		return enemyCanTakeArtifact(label) && getObject(label) !== null;
-	});
+	var artifact = camGetArtifacts().filter((label) => (
+		enemyCanTakeArtifact(label) && getObject(label) !== null
+	));
 	var artiLoc = artiMovePos;
 
 	if (!enemyHasArtifact && !enemyStoleArtifact && artifact.length > 0)
@@ -132,7 +132,7 @@ function getArtifact()
 		var idx = 0;
 		var dist = Infinity;
 
-		for (var i = 0, l = artiMembers.length; i < l; ++i)
+		for (let i = 0, l = artiMembers.length; i < l; ++i)
 		{
 			var drDist = camDist(artiMembers[i], artiLoc);
 			if (drDist < dist)
@@ -166,7 +166,7 @@ function getArtifact()
 //New Paradigm truck builds six lancer hardpoints around LZ
 function buildLancers()
 {
-	for (var i = 1; i <= 6; ++i)
+	for (let i = 1; i <= 6; ++i)
 	{
 		camQueueBuilding(NEW_PARADIGM, "WallTower06", "hardPoint" + i);
 	}
@@ -176,7 +176,7 @@ function buildLancers()
 function extraVictory()
 {
 	var npTransportFound = false;
-	enumDroid(NEW_PARADIGM).forEach(function(dr) {
+	enumDroid(NEW_PARADIGM).forEach((dr) => {
 		if (camIsTransporter(dr))
 		{
 			npTransportFound = true;

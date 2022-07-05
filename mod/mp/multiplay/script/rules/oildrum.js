@@ -1,6 +1,6 @@
 function placeOilDrum()
 {
-	var drums = enumFeature(-1, "OilDrum").length;
+	var drums = enumFeature(ALL_PLAYERS, "OilDrum").length;
 	if (drums >= oilDrumData.maxOilDrums)
 	{
 		return;
@@ -14,7 +14,7 @@ function placeOilDrum()
 	var nearbyTruck = false;
 	const SCAN_RANGE_TRUCKS = 6;
 	var nearbyObjects = enumRange(x, y, SCAN_RANGE_TRUCKS, ALL_PLAYERS, false);
-	for (var i = 0, len = nearbyObjects.length; i < len; ++i)
+	for (let i = 0, len = nearbyObjects.length; i < len; ++i)
 	{
 		var object = nearbyObjects[i];
 		if (object.type === DROID && object.droidType === DROID_CONSTRUCT)
@@ -31,7 +31,7 @@ function placeOilDrum()
 	// see if the random position is valid
 	var occupied = (enumRange(x, y, SCAN_RANGE_OCCUPIED, ALL_PLAYERS, false).length > 0);
 	var unreachable = true;
-	for (var i = 0; i < maxPlayers; ++i)
+	for (let i = 0; i < maxPlayers; ++i)
 	{
 		if (propulsionCanReach("hover01", x, y, startPositions[i].x, startPositions[i].y))
 		{
@@ -41,7 +41,7 @@ function placeOilDrum()
 	}
 
 	var terrain = terrainType(x, y);
-	if (terrain == TER_WATER || terrain == TER_CLIFFFACE)
+	if (terrain === TER_WATER || terrain === TER_CLIFFFACE)
 	{
 		unreachable = true;
 	}
@@ -59,13 +59,13 @@ function placeOilDrum()
 
 function eventPickup(feature, droid)
 {
-	if (feature.stattype == OIL_DRUM)
+	if (feature.stattype === OIL_DRUM)
 	{
 		var delay;
 		// generate Geom(1/6) distribution for oil drum respawn delay
 		for (delay = 0; ; ++delay)
 		{
-			if (syncRandom(6) == 0)
+			if (syncRandom(6) === 0)
 			{
 				break;
 			}
@@ -74,7 +74,7 @@ function eventPickup(feature, droid)
 		{
 			oilDrumData.delay = 0;
 		}
-		oilDrumData.delay = oilDrumData.delay + 100;
+		oilDrumData.delay += 100;
 		// amounts to 10 minutes average respawn time
 		queue("placeOilDrum", (delay * 120000) + oilDrumData.delay);
 	}
@@ -84,7 +84,7 @@ function oilDrumInit()
 {
 	// always at least one oil drum, and one more for every 64x64 tiles of map area
 	oilDrumData.maxOilDrums = (mapWidth * mapHeight) >> 12; // replace float division with shift for sync-safety
-	for (var i = 0; i < oilDrumData.maxOilDrums; ++i)
+	for (let i = 0; i < oilDrumData.maxOilDrums; ++i)
 	{
 		queue("placeOilDrum", 10000 * i);
 	}

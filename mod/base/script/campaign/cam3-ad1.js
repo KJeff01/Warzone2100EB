@@ -99,9 +99,9 @@ function truckDefense()
 function vaporizeTarget()
 {
 	var target;
-	var targets = enumArea(0, 0, mapWidth, Math.floor(mapLimit), CAM_HUMAN_PLAYER, false).filter(function(obj) {
-		return obj.type === DROID || obj.type === STRUCTURE;
-	});
+	var targets = enumArea(0, 0, mapWidth, Math.floor(mapLimit), CAM_HUMAN_PLAYER, false).filter((obj) => (
+		obj.type === DROID || obj.type === STRUCTURE
+	));
 
 	if (!targets.length)
 	{
@@ -113,9 +113,9 @@ function vaporizeTarget()
 	}
 	else
 	{
-		var dr = targets.filter(function(obj) { return obj.type === DROID && !isVTOL(obj); });
-		var vt = targets.filter(function(obj) { return obj.type === DROID && isVTOL(obj); });
-		var st = targets.filter(function(obj) { return obj.type === STRUCTURE; });
+		var dr = targets.filter((obj) => (obj.type === DROID && !isVTOL(obj)));
+		var vt = targets.filter((obj) => (obj.type === DROID && isVTOL(obj)));
+		var st = targets.filter((obj) => (obj.type === STRUCTURE));
 
 		if (dr.length)
 		{
@@ -142,7 +142,7 @@ function vaporizeTarget()
 		//total tiles = 256. 256 / 2 = 128 tiles. 128 / 60 = 2.13 tiles per minute.
 		//2.13 / 60 = 0.0355 tiles per second. 0.0355 * 10 = ~0.36 tiles every 10 seconds.
 		//This assumes an hour to completely cover the upper half of the home map.
-		mapLimit = mapLimit + 0.36; //sector clear; move closer
+		mapLimit += 0.36; //sector clear; move closer
 	}
 	laserSatFuzzyStrike(target);
 }
@@ -223,8 +223,8 @@ function checkMissileSilos()
 
 	var siloArea = camMakePos(getObject("missileSilos"));
 	var safe = enumRange(siloArea.x, siloArea.y, 10, ALL_PLAYERS, false);
-	var enemies = safe.filter(function(obj) { return obj.player === NEXUS; });
-	var player = safe.filter(function(obj) { return obj.player === CAM_HUMAN_PLAYER; });
+	var enemies = safe.filter((obj) => (obj.player === NEXUS));
+	var player = safe.filter((obj) => (obj.player === CAM_HUMAN_PLAYER));
 	if (!enemies.length && player.length)
 	{
 		camCallOnce("allySiloWithPlayer");
@@ -238,7 +238,7 @@ function eventStartLevel()
 	var siloZone = getObject("missileSilos");
 	var startpos = getObject("startPosition");
 	var lz = getObject("landingZone");
-	var lz2 = getObject("landingZone2");
+	var lz2 = getObject("landingZone2"); //LZ for cam3-4s.
 	mapLimit = 1.0;
 
 	camSetStandardWinLossConditions(CAM_VICTORY_STANDARD, "CAM3A-D2", {
@@ -247,12 +247,10 @@ function eventStartLevel()
 
 	centreView(startpos.x, startpos.y);
 	setNoGoArea(lz.x, lz.y, lz.x2, lz.y2, CAM_HUMAN_PLAYER);
-	setNoGoArea(lz2.x, lz2.y, lz2.x2, lz2.y2, NEXUS); //LZ for cam3-4s.
+	setNoGoArea(lz2.x, lz2.y, lz2.x2, lz2.y2, 5);
+	setNoGoArea(lz2.x, lz2.y, lz2.x2, lz2.y2, NEXUS);
 	setNoGoArea(siloZone.x, siloZone.y, siloZone.x2, siloZone.y2, SILO_PLAYER);
 	setMissionTime(camChangeOnDiff(camHoursToSeconds(2)));
-
-	var enemyLz = getObject("NXlandingZone");
-	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, NEXUS);
 
 	camCompleteRequiredResearch(CAM3AD_RES_NEXUS, NEXUS);
 

@@ -6,7 +6,6 @@ const TRANSPORT_LIMIT = 4;
 var transporterIndex; //Number of transport loads sent into the level
 var startedFromMenu;
 
-
 camAreaEvent("vtolRemoveZone", function(droid)
 {
 	camSafeRemoveObject(droid, false);
@@ -60,7 +59,7 @@ function getDroidsForCOLZ()
 		usingHeavy = true;
 	}
 
-	for (var i = 0; i < count; ++i)
+	for (let i = 0; i < count; ++i)
 	{
 		if (!i && usingHeavy)
 		{
@@ -115,7 +114,7 @@ function sendPlayerTransporter()
 	var droids = [];
 	var list = [cTempl.prhct, cTempl.prhct, cTempl.prhct, cTempl.prltat, cTempl.prltat, cTempl.npcybr, cTempl.prrept];
 
-	for (var i = 0; i < 10; ++i)
+	for (let i = 0; i < 10; ++i)
 	{
 		droids.push(list[camRand(list.length)]);
 	}
@@ -135,7 +134,7 @@ function mapEdgeDroids()
 	var list = [cTempl.npcybm, cTempl.npcybr, cTempl.commrp, cTempl.cohct];
 
 	var droids = [];
-	for (var i = 0; i < TankNum; ++i)
+	for (let i = 0; i < TankNum; ++i)
 	{
 		droids.push(list[camRand(list.length)]);
 	}
@@ -187,7 +186,7 @@ function truckDefense()
 //Gives starting tech and research.
 function cam2Setup()
 {
-	for (var x = 0, l = STRUCTS_ALPHA.length; x < l; ++x)
+	for (let x = 0, l = STRUCTS_ALPHA.length; x < l; ++x)
 	{
 		enableStructure(STRUCTS_ALPHA[x], CAM_HUMAN_PLAYER);
 	}
@@ -201,6 +200,7 @@ function cam2Setup()
 	enableResearch("R-Wpn-Mortar-Damage04", CAM_HUMAN_PLAYER);
 	enableResearch("R-Wpn-Rocket-Damage05", CAM_HUMAN_PLAYER);
 
+	camUpgradeOnMapTemplates(cTempl.commc, cTempl.commrp, THE_COLLECTIVE);
 	preDamageStuff();
 }
 
@@ -219,12 +219,10 @@ function setUnitRank(transport)
 	{
 		mapRun = true;
 		//These are the units in the base already at the start.
-		droids = enumDroid(CAM_HUMAN_PLAYER).filter(function(dr) {
-			return !camIsTransporter(dr);
-		});
+		droids = enumDroid(CAM_HUMAN_PLAYER).filter((dr) => (!camIsTransporter(dr)));
 	}
 
-	for (var i = 0, len = droids.length; i < len; ++i)
+	for (let i = 0, len = droids.length; i < len; ++i)
 	{
 		var droid = droids[i];
 		if (!camIsSystemDroid(droid))
@@ -244,7 +242,7 @@ function eventTransporterLanded(transport)
 			transporterIndex = 0;
 		}
 
-		transporterIndex = transporterIndex + 1;
+		transporterIndex += 1;
 
 		if (startedFromMenu)
 		{
@@ -304,7 +302,7 @@ function eventStartLevel()
 
 	centreView(startpos.x, startpos.y);
 	setNoGoArea(lz.x, lz.y, lz.x2, lz.y2, CAM_HUMAN_PLAYER);
-	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, THE_COLLECTIVE);
+	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, 5);
 	startTransporterEntry(tent.x, tent.y, CAM_HUMAN_PLAYER);
 	setTransporterExit(text.x, text.y, CAM_HUMAN_PLAYER);
 
@@ -335,7 +333,6 @@ function eventStartLevel()
 	});
 
 	camManageTrucks(THE_COLLECTIVE);
-	truckDefense();
 	setUnitRank(); //All pre-placed player droids are ranked.
 	camPlayVideos({video: "MB2A_MSG", type: MISS_MSG});
 	startedFromMenu = false;
@@ -358,4 +355,6 @@ function eventStartLevel()
 	setTimer("truckDefense", camChangeOnDiff(camMinutesToMilliseconds(3)));
 	setTimer("sendCOTransporter", camChangeOnDiff(camMinutesToMilliseconds(4)));
 	setTimer("mapEdgeDroids", camChangeOnDiff(camMinutesToMilliseconds(7)));
+
+	truckDefense();
 }

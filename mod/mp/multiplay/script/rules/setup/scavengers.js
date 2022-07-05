@@ -3,7 +3,7 @@ function setupScavenger()	// inside hackNetOff()
 	// Returns true if something is defined
 	function isDefined(data)
 	{
-		return typeof(data) !== "undefined";
+		return typeof data !== "undefined";
 	}
 
 	const derrick = "A0ResourceExtractor";
@@ -83,7 +83,7 @@ function setupScavenger()	// inside hackNetOff()
 		["HeavyChopper", "Rocket-VTOL-Pod-SCAVS"],
 	];
 
-	for (var i = 0, len = templates.length; i < len; ++i)
+	for (let i = 0, len = templates.length; i < len; ++i)
 	{
 		makeComponentAvailable(templates[i][0], scavengerPlayer);
 		makeComponentAvailable(templates[i][1], scavengerPlayer);
@@ -99,7 +99,7 @@ function setupScavenger()	// inside hackNetOff()
 		}
 	}
 
-	for (var i = 0, len = vtolTemplates.length; i < len; ++i)
+	for (let i = 0, len = vtolTemplates.length; i < len; ++i)
 	{
 
 		makeComponentAvailable(vtolTemplates[i][0], scavengerPlayer);
@@ -159,7 +159,7 @@ function setupScavenger()	// inside hackNetOff()
 		"Mortar1Mk1",
 	];
 
-	for (var i = 0, len = SCAV_COMPONENTS.length; i < len; ++i)
+	for (let i = 0, len = SCAV_COMPONENTS.length; i < len; ++i)
 	{
 		makeComponentAvailable(SCAV_COMPONENTS[i], scavengerPlayer);
 	}
@@ -171,7 +171,7 @@ function setupScavenger()	// inside hackNetOff()
 	enableStructure(repair, scavengerPlayer);
 	enableStructure(vtolpad, scavengerPlayer);
 
-	for (var i = 0, len = defenses.length; i < len; ++i)
+	for (let i = 0, len = defenses.length; i < len; ++i)
 	{
 		enableStructure(defenses[i], scavengerPlayer);
 	}

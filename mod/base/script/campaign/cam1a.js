@@ -57,7 +57,7 @@ camAreaEvent("roadblockArea", function(droid)
 // Scavengers hiding in the split canyon area between base two and three.
 function raidAttack()
 {
-	camManageGroup( camMakeGroup("raidTrigger", ENEMIES), CAM_ORDER_ATTACK, {
+	camManageGroup(camMakeGroup("raidTrigger", ENEMIES), CAM_ORDER_ATTACK, {
 		pos: camMakePos("scavBase3Cleanup")
 	});
 	camManageGroup(camMakeGroup("raidGroup", ENEMIES), CAM_ORDER_ATTACK, {
@@ -82,7 +82,7 @@ function eventStructureBuilt(structure, droid)
 	{
 		// Is it in the base two area?
 		var objs = enumArea("scavBase2Cleanup", CAM_HUMAN_PLAYER);
-		for (var i = 0, l = objs.length; i < l; ++i)
+		for (let i = 0, l = objs.length; i < l; ++i)
 		{
 			var obj = objs[i];
 			if (obj.type === STRUCTURE && obj.stattype === RESOURCE_EXTRACTOR)
@@ -111,7 +111,7 @@ function camEnemyBaseEliminated_scavGroup2()
 
 function enableBaseStructures()
 {
-	for (var i = 0; i < STRUCTS_ALPHA.length; ++i)
+	for (let i = 0; i < STRUCTS_ALPHA.length; ++i)
 	{
 		enableStructure(STRUCTS_ALPHA[i], CAM_HUMAN_PLAYER);
 	}

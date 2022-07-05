@@ -104,7 +104,6 @@ function getDroidsForNPLZ(args)
 	var heavies = [ cTempl.npslc, cTempl.npsmct ];
 	var useArtillery = (camRand(100) < 50);
 
-
 	var numScouts = camRand(5) + 1;
 	var heavy = heavies[camRand(heavies.length)];
 	var list = [];
@@ -112,16 +111,16 @@ function getDroidsForNPLZ(args)
 	if (useArtillery)
 	{
 		list[list.length] = cTempl.npsens; //sensor will count towards scout total
-		numScouts = numScouts - 1;
+		numScouts -= 1;
 		heavy = cTempl.npmor;
 	}
 
-	for (var i = 0; i < numScouts; ++i)
+	for (let i = 0; i < numScouts; ++i)
 	{
 		list[list.length] = scouts[camRand(scouts.length)];
 	}
 
-	for (var a = numScouts; a < 8; ++a)
+	for (let a = numScouts; a < 8; ++a)
 	{
 		list[list.length] = heavy;
 	}
@@ -166,7 +165,7 @@ function eventStartLevel()
 	setNoGoArea(lz.x, lz.y, lz.x2, lz.y2, CAM_HUMAN_PLAYER);
 
 	// make sure player doesn't build on enemy LZs of the next level
-	for (var i = 1; i <= 5; ++i)
+	for (let i = 1; i <= 5; ++i)
 	{
 		var ph = getObject("PhantomLZ" + i);
 		// HACK: set LZs of bad players, namely 2...6,

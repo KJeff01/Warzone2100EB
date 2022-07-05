@@ -2,9 +2,9 @@
 SUB_2_1 Script
 Authors: Cristian Odorico (Alpha93) / KJeff01
  */
-include ("script/campaign/libcampaign.js");
-include ("script/campaign/templates.js");
-include ("script/campaign/transitionTech.js");
+include("script/campaign/libcampaign.js");
+include("script/campaign/templates.js");
+include("script/campaign/transitionTech.js");
 var victoryFlag;
 
 const TRANSPORT_TEAM = 1;
@@ -25,7 +25,7 @@ camAreaEvent("crashSite", function(droid)
 	hackRemoveMessage("C21_OBJECTIVE", PROX_MSG, CAM_HUMAN_PLAYER);
 
 	var droids = enumDroid(TRANSPORT_TEAM);
-	for (var i = 0; i < droids.length; ++i)
+	for (let i = 0; i < droids.length; ++i)
 	{
 		donateObject(droids[i], CAM_HUMAN_PLAYER);
 	}
@@ -40,7 +40,7 @@ function preDamageUnits()
 {
 	setHealth(getObject("transporter"), 40);
 	var droids = enumDroid(TRANSPORT_TEAM);
-	for (var j = 0; j < droids.length; ++j)
+	for (let j = 0; j < droids.length; ++j)
 	{
 		setHealth(droids[j], 40 + camRand(20));
 	}
@@ -68,11 +68,11 @@ function setupCyborgGroups()
 function setCrashedTeamExp()
 {
 	const DROID_EXP = 32;
-	var droids = enumDroid(TRANSPORT_TEAM).filter(function(dr) {
-		return !camIsSystemDroid(dr) && !camIsTransporter(dr);
-	});
+	var droids = enumDroid(TRANSPORT_TEAM).filter((dr) => (
+		!camIsSystemDroid(dr) && !camIsTransporter(dr)
+	));
 
-	for (var i = 0; i < droids.length; ++i)
+	for (let i = 0; i < droids.length; ++i)
 	{
 		var droid = droids[i];
 		setDroidExperience(droid, DROID_EXP);
@@ -111,7 +111,7 @@ function eventStartLevel()
 	var tent = getObject("transporterEntry");
 	var text = getObject("transporterExit");
 	centreView(startpos.x, startpos.y);
-	setNoGoArea(subLandingZone.x, subLandingZone.y, subLandingZone.x2, subLandingZone.y2);
+	setNoGoArea(subLandingZone.x, subLandingZone.y, subLandingZone.x2, subLandingZone.y2, CAM_HUMAN_PLAYER);
 	startTransporterEntry(tent.x, tent.y, CAM_HUMAN_PLAYER);
 	setTransporterExit(text.x, text.y, CAM_HUMAN_PLAYER);
 
@@ -131,6 +131,7 @@ function eventStartLevel()
 	camSetArtifacts({
 		"base1ArtifactPos": { tech: "R-Vehicle-Body20" }, //hardened alloys, blue bodies
 	});
+	camUpgradeOnMapTemplates(cTempl.commc, cTempl.commrp, THE_COLLECTIVE);
 
 	camSetEnemyBases({
 		"COHardpointBase": {

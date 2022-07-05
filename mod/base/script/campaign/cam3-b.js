@@ -73,7 +73,7 @@ function getDroidsForNXLZ(isTransport)
 	var units = [cTempl.nxcyrail, cTempl.nxcyscou, cTempl.nxcylas, cTempl.nxmlinkh, cTempl.nxmrailh, cTempl.nxmsamh];
 
 	var droids = [];
-	for (var i = 0; i < COUNT; ++i)
+	for (let i = 0; i < COUNT; ++i)
 	{
 		droids.push(units[camRand(units.length)]);
 	}
@@ -249,7 +249,7 @@ function eventAttacked(victim, attacker)
 
 	if (victim.player === GAMMA && attacker.player === NEXUS)
 	{
-		gammaAttackCount = gammaAttackCount + 1;
+		gammaAttackCount += 1;
 	}
 }
 

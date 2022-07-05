@@ -23,9 +23,9 @@ function camEnemyBaseDetected_COMiddleBase()
 {
 	hackRemoveMessage("C2B_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER);
 
-	var droids = enumArea("base4Cleanup", THE_COLLECTIVE, false).filter(function(obj) {
-		return obj.type === DROID && obj.group === null;
-	});
+	var droids = enumArea("base4Cleanup", THE_COLLECTIVE, false).filter((obj) => (
+		obj.type === DROID && obj.group === null
+	));
 
 	camManageGroup(camMakeGroup(droids), CAM_ORDER_ATTACK, {
 		count: -1,
@@ -124,6 +124,8 @@ function eventStartLevel()
 	});
 
 	camCompleteRequiredResearch(CAM2B_RES_COL, THE_COLLECTIVE);
+
+	camUpgradeOnMapTemplates(cTempl.commc, cTempl.commrp, THE_COLLECTIVE);
 
 	// New HMG Tiger Tracks units in first attack group
 	addDroid(THE_COLLECTIVE, 92, 59, "Heavy Machinegun Tiger Tracks", "Body9REC", "tracked01", "", "", "MG3Mk1");
@@ -227,7 +229,6 @@ function eventStartLevel()
 	});
 
 	camManageTrucks(THE_COLLECTIVE);
-	truckDefense();
 	hackAddMessage("C2B_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, false);
 
 	camEnableFactory("COHeavyFac-b4");
@@ -239,4 +240,6 @@ function eventStartLevel()
 	queue("activateBase1Defenders2", camChangeOnDiff(camMinutesToMilliseconds(20)));
 	queue("activateBase1Defenders", camChangeOnDiff(camMinutesToMilliseconds(30)));
 	setTimer("truckDefense", camChangeOnDiff(camMinutesToMilliseconds(3)));
+
+	truckDefense();
 }

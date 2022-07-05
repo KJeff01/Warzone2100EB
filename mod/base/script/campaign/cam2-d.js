@@ -109,7 +109,7 @@ function eventStartLevel()
 			assembly: "COHeavyFactoryAssembly",
 			order: CAM_ORDER_ATTACK,
 			groupSize: 5,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(60)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty === EASY || difficulty === MEDIUM) ? 54 : 60)),
 			data: {
 				regroup: false,
 				repair: 20,
@@ -121,7 +121,7 @@ function eventStartLevel()
 			assembly: "COSouthCyborgFactoryAssembly",
 			order: CAM_ORDER_ATTACK,
 			groupSize: 5,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(40)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty === EASY || difficulty === MEDIUM) ? 36 : 40)),
 			data: {
 				regroup: false,
 				repair: 40,
@@ -132,7 +132,6 @@ function eventStartLevel()
 	});
 
 	camManageTrucks(THE_COLLECTIVE);
-	truckDefense();
 	hackAddMessage("C2D_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, false);
 
 	camEnableFactory("COHeavyFactory");
@@ -140,4 +139,6 @@ function eventStartLevel()
 
 	queue("vtolAttack", camChangeOnDiff(camMinutesToMilliseconds(3)));
 	setTimer("truckDefense", camChangeOnDiff(camMinutesToMilliseconds(4)));
+
+	truckDefense();
 }
