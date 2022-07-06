@@ -1,7 +1,8 @@
 PIE 3
 TYPE 200
 TEXTURE 0 command_comp.png 0 0
-NORMALMAP 0 command_nor_spec.png
+NORMALMAP 0 command_nor.png
+SPECULARMAP 0 command_spec.png
 LEVELS 1
 LEVEL 1
 POINTS 53
