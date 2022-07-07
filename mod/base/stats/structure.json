@@ -989,7 +989,7 @@
         "breadth": 1,
         "buildPoints": 1500,
         "buildPower": 112,
-        "ecmID": "RepairCentre",
+        "ecmID": "ZNULLECM",
         "height": 2,
         "hitpoints": 1000,
         "id": "A0RepairCentre2",
@@ -1016,7 +1016,7 @@
         "breadth": 1,
         "buildPoints": 1000,
         "buildPower": 62,
-        "ecmID": "RepairCentre",
+        "ecmID": "ZNULLECM",
         "height": 2,
         "hitpoints": 600,
         "id": "A0RepairCentre3",
@@ -1043,7 +1043,7 @@
         "breadth": 2,
         "buildPoints": 2000,
         "buildPower": 162,
-        "ecmID": "RoboticRepairCentre",
+        "ecmID": "ZNULLECM",
         "height": 3,
         "hitpoints": 1000,
         "id": "A0RepairCentre4",
@@ -1688,7 +1688,7 @@
         "breadth": 1,
         "buildPoints": 500,
         "buildPower": 50,
-        "ecmID": "ZNULLECM",
+        "ecmID": "ECMBunker",
         "height": 1,
         "hitpoints": 300,
         "id": "CO-Tower-HvFlame",
@@ -1920,8 +1920,8 @@
         "type": "DEFENSE",
         "userLimits": [
             0,
-            100,
-            100
+            0,
+            0
         ],
         "width": 1
     },
@@ -1945,19 +1945,19 @@
         "type": "DEFENSE",
         "userLimits": [
             0,
-            100,
-            100
+            0,
+            0
         ],
         "width": 1
     },
     "ECM1PylonMk3": {
-        "armour": 10,
+        "armour": 20,
         "breadth": 1,
         "buildPoints": 2400,
         "buildPower": 30,
         "ecmID": "ECM1TurretMk1",
         "height": 3,
-        "hitpoints": 300,
+        "hitpoints": 500,
         "id": "ECM1PylonMk3",
         "name": "Plascrete Jammer Tower",
         "resistance": 150,
@@ -1966,23 +1966,23 @@
         "structureModel": [
             "Blgrdnex.PIE"
         ],
-        "thermal": 30,
+        "thermal": 15,
         "type": "DEFENSE",
         "userLimits": [
             0,
-            100,
-            100
+            0,
+            0
         ],
         "width": 1
     },
     "ECM1PylonMk4": {
-        "armour": 10,
+        "armour": 25,
         "breadth": 1,
         "buildPoints": 2800,
         "buildPower": 150,
         "ecmID": "ECM1TurretMk1",
         "height": 6,
-        "hitpoints": 300,
+        "hitpoints": 700,
         "id": "ECM1PylonMk4",
         "name": "Jammer Sky Tower",
         "resistance": 150,
@@ -1991,12 +1991,12 @@
         "structureModel": [
             "blguardrar.pie"
         ],
-        "thermal": 10,
+        "thermal": 20,
         "type": "DEFENSE",
         "userLimits": [
             0,
-            100,
-            100
+            0,
+            0
         ],
         "width": 1
     },
@@ -4001,7 +4001,7 @@
         "breadth": 1,
         "buildPoints": 1000,
         "buildPower": 50,
-        "ecmID": "ZNULLECM",
+        "ecmID": "ECMBunker",
         "height": 3,
         "hitpoints": 700,
         "id": "GuardTower4",
@@ -5107,7 +5107,7 @@
         "breadth": 1,
         "buildPoints": 100,
         "buildPower": 10,
-        "ecmID": "RepairCentre",
+        "ecmID": "ZNULLECM",
         "height": 2,
         "hitpoints": 300,
         "id": "ScavRepairCentre",
@@ -5642,7 +5642,7 @@
         "breadth": 1,
         "buildPoints": 400,
         "buildPower": 50,
-        "ecmID": "ECM1TurretMk1",
+        "ecmID": "ZNULLECM",
         "height": 3,
         "hitpoints": 400,
         "id": "Sys-NX-VTOL-CB-Tow",
@@ -6361,7 +6361,7 @@
         "breadth": 1,
         "buildPoints": 450,
         "buildPower": 75,
-        "ecmID": "ZNULLECM",
+        "ecmID": "ECMBunker",
         "height": 1,
         "hitpoints": 500,
         "id": "WallTower-Projector",
@@ -6683,7 +6683,7 @@
         "breadth": 1,
         "buildPoints": 1000,
         "buildPower": 50,
-        "ecmID": "ZNULLECM",
+        "ecmID": "ECMBunker",
         "height": 2,
         "hitpoints": 1400,
         "id": "WallTower05",

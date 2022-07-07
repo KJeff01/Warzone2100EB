@@ -2,7 +2,7 @@
     "ECM1TurretMk1": {
         "buildPoints": 450,
         "buildPower": 285,
-        "designable": 1,
+        "designable": 0,
         "droidType": "DROID_ECM",
         "hitpoints": 50,
         "id": "ECM1TurretMk1",
@@ -11,7 +11,7 @@
         "name": "Jammer Turret",
         "range": 1280,
         "sensorModel": "GNHSNSR3.PIE",
-        "weight": 2000
+        "weight": 20000
     },
     "ECMBunker": {
         "buildPoints": 100,
