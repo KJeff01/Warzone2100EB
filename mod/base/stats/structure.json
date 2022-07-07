@@ -5648,7 +5648,7 @@
         "id": "Sys-NX-VTOL-CB-Tow",
         "name": "*Sys-NX-VTOL-CB-Tow*",
         "resistance": 150,
-        "sensorID": "DefaultSensor1Mk1",
+        "sensorID": "Sys-VTOLCBTower01",
         "strength": "HARD",
         "structureModel": [
             "Blgrdnex.PIE"
