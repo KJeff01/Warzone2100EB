@@ -2206,7 +2206,7 @@
     },
     "Cyb-Wpn-Rocket-Pod": {
         "available": true,
-        "body": "CyborgHeavyNAS",
+        "body": "CyborgLightNAS",
         "id": "Cyb-Wpn-Rocket-Pod",
         "name": "Rocket Cyborg",
         "propulsion": "CyborgLegsNAS",
@@ -2217,7 +2217,7 @@
     },
     "Cyb-Wpn-Rocket-Pod-Arch": {
         "available": true,
-        "body": "CyborgHeavyNAS",
+        "body": "CyborgLightNAS",
         "id": "Cyb-Wpn-Rocket-Pod-Arch",
         "name": "Thermal Rocket Cyborg",
         "propulsion": "CyborgLegsNAS",
@@ -2228,7 +2228,7 @@
     },
     "Cyb-Wpn-Rocket-Pod-MRA": {
         "available": true,
-        "body": "CyborgHeavyNAS",
+        "body": "CyborgLightNAS",
         "id": "Cyb-Wpn-Rocket-Pod-MRA",
         "name": "Mini Rocket Array Cyborg",
         "propulsion": "CyborgLegsNAS",

@@ -36,6 +36,7 @@
         "spinSpeed": 450,
         "turnSpeed": 225,
         "type": "Legged",
+        "usageClass": "Cyborg",
         "weight": 320
     },
     "CyborgLegsNAS": {
@@ -51,6 +52,7 @@
         "spinSpeed": 450,
         "turnSpeed": 225,
         "type": "Legged",
+        "usageClass": "Cyborg",
         "weight": 320
     },
     "HalfTrack": {
@@ -112,20 +114,21 @@
         "buildPoints": 50,
         "buildPower": 5,
         "deceleration": 450,
-        "hitpointPctOfBody": 50,
+        "hitpointPctOfBody": 60,
         "id": "MechLegs",
         "name": "Mech Propulsion",
         "speed": 352,
         "spinAngle": 45,
         "spinSpeed": 450,
         "turnSpeed": 225,
-        "type": "Tracked",
+        "type": "Legged",
+        "usageClass": "Cyborg",
         "weight": 320
     },
     "Naval": {
         "buildPoints": 150,
         "buildPower": 75,
-        "designable": 1,
+        "designable": 0,
         "hitpointPctOfBody": 300,
         "id": "Naval",
         "model": "prhnaval1.pie",

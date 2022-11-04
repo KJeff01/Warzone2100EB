@@ -199,8 +199,11 @@ function cam2Setup()
 
 	enableResearch("R-Wpn-Mortar-Damage04", CAM_HUMAN_PLAYER);
 	enableResearch("R-Wpn-Rocket-Damage05", CAM_HUMAN_PLAYER);
+	if (difficulty >= HARD)
+	{
+		camUpgradeOnMapTemplates(cTempl.commc, cTempl.commrp, THE_COLLECTIVE);
+	}
 
-	camUpgradeOnMapTemplates(cTempl.commc, cTempl.commrp, THE_COLLECTIVE);
 	preDamageStuff();
 }
 

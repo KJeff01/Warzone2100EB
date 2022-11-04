@@ -95,7 +95,7 @@
         "armourKinetic": 10,
         "buildPoints": 60,
         "buildPower": 15,
-        "class": "Droids",
+        "class": "Babas",
         "hitpoints": 180,
         "id": "B2crane1",
         "model": "cranebody1.pie",
@@ -110,7 +110,7 @@
         "armourKinetic": 6,
         "buildPoints": 40,
         "buildPower": 10,
-        "class": "Droids",
+        "class": "Babas",
         "hitpoints": 120,
         "id": "B2crane2",
         "model": "cranebody2.pie",
@@ -125,7 +125,7 @@
         "armourKinetic": 7,
         "buildPoints": 30,
         "buildPower": 5,
-        "class": "Droids",
+        "class": "Babas",
         "hitpoints": 150,
         "id": "B2tractor",
         "model": "tractor.pie",
@@ -2600,7 +2600,7 @@
                 "right": "prmrvtl1.pie"
             },
             "hover01": {
-                "left": "prmhov1.pie"
+                "left": "prmhov2.pie"
             },
             "hover01NAS": {
                 "left": "prmhov1ar.pie"
@@ -2969,6 +2969,7 @@
         "name": "*Cyb-Bod-Atmiss*",
         "powerOutput": 10000,
         "size": "LIGHT",
+        "usageClass": "Cyborg",
         "weaponSlots": 1,
         "weight": 3000
     },
@@ -2985,6 +2986,7 @@
         "name": "*Cyb-Bod-Las1*",
         "powerOutput": 10000,
         "size": "LIGHT",
+        "usageClass": "Cyborg",
         "weaponSlots": 1,
         "weight": 3000
     },
@@ -3001,6 +3003,7 @@
         "name": "*Cyb-Bod-Rail1*",
         "powerOutput": 10000,
         "size": "LIGHT",
+        "usageClass": "Cyborg",
         "weaponSlots": 1,
         "weight": 3000
     },
@@ -3017,6 +3020,7 @@
         "name": "*Cyborg Flamer*",
         "powerOutput": 12000,
         "size": "LIGHT",
+        "usageClass": "Cyborg",
         "weaponSlots": 1,
         "weight": 3000
     },
@@ -3033,6 +3037,7 @@
         "name": "*CybNXMissJmp*",
         "powerOutput": 13500,
         "size": "LIGHT",
+        "usageClass": "Cyborg",
         "weaponSlots": 1,
         "weight": 3000
     },
@@ -3049,6 +3054,7 @@
         "name": "*CybNXPulseLasJ*",
         "powerOutput": 13500,
         "size": "LIGHT",
+        "usageClass": "Cyborg",
         "weaponSlots": 1,
         "weight": 3000
     },
@@ -3065,6 +3071,7 @@
         "name": "*CybNXRail1Jmp*",
         "powerOutput": 13500,
         "size": "LIGHT",
+        "usageClass": "Cyborg",
         "weaponSlots": 1,
         "weight": 3000
     },
@@ -3081,6 +3088,7 @@
         "name": "*Cyborg Assault Gun*",
         "powerOutput": 12000,
         "size": "LIGHT",
+        "usageClass": "Cyborg",
         "weaponSlots": 1,
         "weight": 3000
     },
@@ -3097,6 +3105,7 @@
         "name": "*Cyborg Cannon*",
         "powerOutput": 10000,
         "size": "LIGHT",
+        "usageClass": "Cyborg",
         "weaponSlots": 1,
         "weight": 3000
     },
@@ -3113,6 +3122,7 @@
         "name": "*CyborgChaingun1Ground*",
         "powerOutput": 10000,
         "size": "LIGHT",
+        "usageClass": "Cyborg",
         "weaponSlots": 1,
         "weight": 3000
     },
@@ -3129,6 +3139,7 @@
         "name": "*Cyborg Flamer*",
         "powerOutput": 10000,
         "size": "LIGHT",
+        "usageClass": "Cyborg",
         "weaponSlots": 1,
         "weight": 3000
     },
@@ -3145,6 +3156,7 @@
         "name": "Heavy Cyborg",
         "powerOutput": 24000,
         "size": "LIGHT",
+        "usageClass": "SuperCyborg",
         "weaponSlots": 1,
         "weight": 5200
     },
@@ -3161,6 +3173,7 @@
         "name": "NASDA Heavy Cyborg",
         "powerOutput": 24000,
         "size": "LIGHT",
+        "usageClass": "SuperCyborg",
         "weaponSlots": 1,
         "weight": 5200
     },
@@ -3177,6 +3190,7 @@
         "name": "Cyborg Body",
         "powerOutput": 11200,
         "size": "LIGHT",
+        "usageClass": "Cyborg",
         "weaponSlots": 1,
         "weight": 2000
     },
@@ -3193,6 +3207,7 @@
         "name": "NASDA Cyborg Body",
         "powerOutput": 11200,
         "size": "LIGHT",
+        "usageClass": "Cyborg",
         "weaponSlots": 1,
         "weight": 2000
     },
@@ -3209,6 +3224,7 @@
         "name": "Mecha Cyborg",
         "powerOutput": 680000,
         "size": "LIGHT",
+        "usageClass": "SuperCyborg",
         "weaponSlots": 1,
         "weight": 440000
     },
@@ -3225,6 +3241,7 @@
         "name": "*CyborgRocket1Ground*",
         "powerOutput": 10000,
         "size": "LIGHT",
+        "usageClass": "Cyborg",
         "weaponSlots": 1,
         "weight": 3000
     },
@@ -3263,7 +3280,7 @@
         "armourKinetic": 11,
         "buildPoints": 110,
         "buildPower": 25,
-        "class": "Droids",
+        "class": "Babas",
         "hitpoints": 230,
         "id": "HeavyChopper",
         "model": "hvychop.pie",
@@ -3284,7 +3301,7 @@
         "armourKinetic": 6,
         "buildPoints": 35,
         "buildPower": 7,
-        "class": "Droids",
+        "class": "Babas",
         "hitpoints": 130,
         "id": "ScavCamperBody",
         "model": "camper.pie",
@@ -3299,7 +3316,7 @@
         "armourKinetic": 6,
         "buildPoints": 50,
         "buildPower": 7,
-        "class": "Droids",
+        "class": "Babas",
         "hitpoints": 160,
         "id": "ScavIcevanBody",
         "model": "icevan.pie",
@@ -3314,7 +3331,7 @@
         "armourKinetic": 10,
         "buildPoints": 300,
         "buildPower": 25,
-        "class": "Droids",
+        "class": "Babas",
         "hitpoints": 225,
         "id": "ScavNEXUSbody",
         "model": "scavnexus.pie",
@@ -3329,7 +3346,7 @@
         "armourKinetic": 14,
         "buildPoints": 100,
         "buildPower": 14,
-        "class": "Droids",
+        "class": "Babas",
         "hitpoints": 225,
         "id": "ScavNEXUStrack",
         "model": "nextrack.pie",
@@ -3344,7 +3361,7 @@
         "armourKinetic": 9,
         "buildPoints": 65,
         "buildPower": 7,
-        "class": "Droids",
+        "class": "Babas",
         "hitpoints": 190,
         "id": "ScavTruckBody",
         "model": "scavtruck.pie",
@@ -3359,7 +3376,7 @@
         "armourKinetic": 7,
         "buildPoints": 100,
         "buildPower": 20,
-        "class": "Droids",
+        "class": "Babas",
         "hitpoints": 130,
         "id": "ScavengerChopper",
         "model": "scavchop.pie",

@@ -17,6 +17,7 @@
         "name": "Self-Repairing Heavy Cyborg",
         "repairPoints": 100,
         "time": 1,
+        "usageClass": "SuperCyborg",
         "weight": 7600
     },
     "CyborgRepair": {
@@ -30,6 +31,7 @@
         "name": "Repair Cyborg",
         "repairPoints": 32,
         "time": 7,
+        "usageClass": "Cyborg",
         "weight": 3700
     },
     "CyborgRepairNAS": {
@@ -43,6 +45,7 @@
         "name": "NASDA Repair Cyborg",
         "repairPoints": 37,
         "time": 7,
+        "usageClass": "Cyborg",
         "weight": 3700
     },
     "HeavyRepair": {
@@ -69,7 +72,9 @@
         "mountModel": "scbody.pie",
         "name": "HvyCybRepair",
         "repairPoints": 6,
-        "time": 1
+        "time": 1,
+        "usageClass": "SiperCyborg",
+        "weight": 7600
     },
     "LightRepair1": {
         "buildPoints": 250,

@@ -169,7 +169,10 @@ function eventStartLevel()
 
 	camCompleteRequiredResearch(CAM2_2_RES_COL, THE_COLLECTIVE);
 
-	camUpgradeOnMapTemplates(cTempl.commc, cTempl.commrp, THE_COLLECTIVE);
+	if (difficulty >= MEDIUM)
+	{
+		camUpgradeOnMapTemplates(cTempl.commc, cTempl.commrp, THE_COLLECTIVE);
+	}
 
 	camSetEnemyBases({
 		"COEastBase": {

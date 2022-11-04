@@ -131,7 +131,10 @@ function eventStartLevel()
 	camSetArtifacts({
 		"base1ArtifactPos": { tech: "R-Vehicle-Body20" }, //hardened alloys, blue bodies
 	});
-	camUpgradeOnMapTemplates(cTempl.commc, cTempl.commrp, THE_COLLECTIVE);
+	if (difficulty >= HARD)
+	{
+		camUpgradeOnMapTemplates(cTempl.commc, cTempl.commrp, THE_COLLECTIVE);
+	}
 
 	camSetEnemyBases({
 		"COHardpointBase": {

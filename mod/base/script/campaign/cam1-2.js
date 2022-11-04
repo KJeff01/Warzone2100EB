@@ -25,7 +25,7 @@ function camArtifactPickup_ScavLab()
 		},
 		groupSize: 5,
 		maxSize: 9,
-		throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty === EASY || difficulty === MEDIUM) ? 13 : 10)),
+		throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty <= MEDIUM) ? 13 : 10)),
 		templates: [ cTempl.trikeheavy, cTempl.blokeheavy, cTempl.buggyheavy, cTempl.bjeepheavy ]
 	});
 	camEnableFactory("WestFactory");
@@ -108,7 +108,7 @@ function eventStartLevel()
 			assembly: "NorthAssembly",
 			order: CAM_ORDER_PATROL,
 			groupSize: 5,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty === EASY || difficulty === MEDIUM) ? 20 : 15)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty <= MEDIUM) ? 20 : 15)),
 			data: {
 				pos: [
 					camMakePos("NorthAssembly"),
@@ -126,7 +126,7 @@ function eventStartLevel()
 			assembly: "WestAssembly",
 			order: CAM_ORDER_PATROL,
 			groupSize: 5,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty === EASY || difficulty === MEDIUM) ? 13 : 10)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds((difficulty <= MEDIUM) ? 13 : 10)),
 			data: {
 				pos: [
 					camMakePos("WestAssembly"),

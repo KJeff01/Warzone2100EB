@@ -291,7 +291,10 @@ function eventStartLevel()
 	setAlliance(CAM_HUMAN_PLAYER, SCAV_7, true);
 	camCompleteRequiredResearch(CAM2C_RES_COL, THE_COLLECTIVE);
 
-	camUpgradeOnMapTemplates(cTempl.commc, cTempl.commrp, THE_COLLECTIVE);
+	if (difficulty >= MEDIUM)
+	{
+		camUpgradeOnMapTemplates(cTempl.commc, cTempl.commrp, THE_COLLECTIVE);
+	}
 
 	camSetEnemyBases({
 		"COAirBase": {

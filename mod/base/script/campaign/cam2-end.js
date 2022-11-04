@@ -3,7 +3,7 @@ include("script/campaign/templates.js");
 include("script/campaign/transitionTech.js");
 
 var allowWin;
-const startpos = {x: 88, y: 101};
+const startpos = {x: 92, y: 99};
 
 //Remove enemy vtols when in the remove zone area.
 function checkEnemyVtolArea()
@@ -96,8 +96,15 @@ function vtolAttack()
 		vtolPositions = undefined; //to randomize the spawns each time
 	}
 
-	var list = [cTempl.commorv, cTempl.colcbv, cTempl.colagv, cTempl.comhvat, cTempl.commorvt];
-	camSetVtolData(THE_COLLECTIVE, vtolPositions, vtolRemovePos, list, camChangeOnDiff(camSecondsToMilliseconds(30)));
+	var list = [
+		cTempl.commorv, cTempl.commorv, cTempl.comhvat, cTempl.commorvt
+	];
+	var extras = {
+		minVTOLs: (difficulty >= HARD) ? 5 : 4,
+		maxRandomVTOLs: (difficulty >= HARD) ? 2 : 1
+	};
+
+	camSetVtolData(THE_COLLECTIVE, vtolPositions, vtolRemovePos, list, camChangeOnDiff(camSecondsToMilliseconds(30)), undefined, extras);
 }
 
 //SouthEast attackers which are mostly cyborgs.

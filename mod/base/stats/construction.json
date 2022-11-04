@@ -9,6 +9,7 @@
         "mountModel": "cybodyar.pie",
         "name": "Combat Engineer",
         "sensorModel": "cy_con.pie",
+        "usageClass": "Cyborg",
         "weight": 3500
     },
     "CyborgSpadeNAS": {
@@ -21,6 +22,7 @@
         "mountModel": "cybodyar.pie",
         "name": "NASDA Combat Engineer",
         "sensorModel": "cy_con.pie",
+        "usageClass": "Cyborg",
         "weight": 3500
     },
     "HvyCybSpade": {
@@ -31,7 +33,9 @@
         "id": "HvyCybSpade",
         "mountModel": "scbody.pie",
         "name": "HvyCybSpade",
-        "sensorModel": "cy_con.pie"
+        "sensorModel": "cy_con.pie",
+        "usageClass": "Cyborg",
+        "weight": 3500
     },
     "Spade1Hvy": {
         "buildPoints": 350,

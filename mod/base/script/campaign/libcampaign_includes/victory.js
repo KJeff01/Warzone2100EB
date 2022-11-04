@@ -15,7 +15,7 @@ function camNextLevel(nextLevel)
 	if (__camNeedBonusTime)
 	{
 		var bonusTime = getMissionTime();
-		if (difficulty === EASY || difficulty === MEDIUM)
+		if (difficulty <= MEDIUM)
 		{
 			bonusTime = Math.floor(bonusTime * 0.75);
 		}
@@ -122,7 +122,12 @@ function camSetStandardWinLossConditions(kind, nextLevel, data)
 	__camNextLevel = nextLevel;
 }
 
-//Checks for extra win conditions defined in level scripts, if any.
+//;; ## camCheckExtraObjective()
+//;;
+//;; Checks for extra win conditions defined in level scripts being met, if any.
+//;;
+//;; @returns {boolean|undefined}
+//;;
 function camCheckExtraObjective()
 {
 	var extraObjMet = true;
@@ -146,14 +151,26 @@ function camCheckExtraObjective()
 	return extraObjMet;
 }
 
-//Message(s) the mission script can set to further explain specific victory conditions.
-//Allows a single string or an array of strings.
+//;; ## camSetExtraObjectiveMessage(message)
+//;;
+//;; Message(s) the mission script can set to further explain specific victory conditions.
+//;; Allows a single string or an array of strings.
+//;;
+//;; @param {string|Object[]} message
+//;; @returns {void}
+//;;
 function camSetExtraObjectiveMessage(message)
 {
 	__camExtraObjectiveMessage = message;
 }
 
-//If the script wants to allow __camSetupConsoleForVictoryConditions() to clear the console.
+//;; ## camClearConsoleOnVictoryMessage(clear)
+//;;
+//;; If the script wants to allow `__camSetupConsoleForVictoryConditions()` to clear the console.
+//;;
+//;; @param {boolean} clear
+//;; @returns {void}
+//;;
 function camClearConsoleOnVictoryMessage(clear)
 {
 	__camAllowVictoryMsgClear = clear;
@@ -483,6 +500,24 @@ function __camSetupConsoleForVictoryConditions()
 	queue("__camShowVictoryConditions", camSecondsToMilliseconds(0.5));
 }
 
+function __camShowBetaHint()
+{
+	return ((camDiscoverCampaign() === BETA_CAMPAIGN_NUMBER) && (difficulty === HARD || difficulty === INSANE));
+}
+
+function __camShowBetaHintEarly()
+{
+	if (!camDef(__camWinLossCallback) || (__camWinLossCallback !== CAM_VICTORY_PRE_OFFWORLD))
+	{
+		return;
+	}
+
+	if (__camShowBetaHint())
+	{
+		__camShowVictoryConditions();
+	}
+}
+
 function __camShowVictoryConditions()
 {
 	if (!camDef(__camNextLevel))
@@ -492,7 +527,7 @@ function __camShowVictoryConditions()
 
 	if (__camWinLossCallback === CAM_VICTORY_PRE_OFFWORLD)
 	{
-		if ((camDiscoverCampaign() === BETA_CAMPAIGN_NUMBER) && (difficulty === HARD || difficulty === INSANE))
+		if (__camShowBetaHint())
 		{
 			console(_("Hard / Insane difficulty hint:"));
 			console(_("Fortify a strong base across the map to protect yourself from the Collective"));
