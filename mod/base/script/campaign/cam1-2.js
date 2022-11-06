@@ -100,7 +100,7 @@ function eventStartLevel()
 
 	camSetArtifacts({
 		"ScavLab": { tech: ["R-Wpn-Mortar01Lt", "R-Wpn-AAGun05"] },
-		"NorthFactory": { tech: "R-Vehicle-Prop-Halftracks" },
+		"NorthFactory": { tech: ["R-Vehicle-Prop-Halftracks", "R-Wpn-Cannon1Mk1"] },
 	});
 
 	camSetFactories({

@@ -8917,6 +8917,7 @@
     "R-Wpn-Cannon-Damage05": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Cannon-Damage05",
+        "keyTopic": 1,
         "msgName": "RES_W_CN_D5",
         "name": "APFSDS Cannon Rounds Mk2",
         "requiredResearch": [
@@ -9063,6 +9064,7 @@
     "R-Wpn-Cannon-Mount01": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Cannon-Mount01",
+        "keyTopic": 1,
         "msgName": "RES_W_CN_MN1",
         "name": "Augmented Cannon Turret",
         "requiredResearch": [

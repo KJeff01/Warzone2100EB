@@ -277,7 +277,7 @@ function eventStartLevel()
 	camPlayVideos([{video: "MB1C_MSG", type: CAMP_MSG}, {video: "MB1C2_MSG", type: CAMP_MSG}]);
 
 	camSetArtifacts({
-		"ScavSouthFactory": { tech: "R-Wpn-Rocket05-MiniPod" },
+		"ScavSouthFactory": { tech: ["R-Wpn-Rocket05-MiniPod", "R-Wpn-Cannon2Mk1"] },
 		"NPResearchFacility": { tech: "R-Struc-Research-Module" },
 		"NPCentralFactory": { tech: ["R-Vehicle-Prop-Tracks", "R-Vehicle-Armor-Heat01"] },
 		"NPNorthFactory": { tech: ["R-Struc-Factory-Upgrade01", "R-Vehicle-Engine02"] },

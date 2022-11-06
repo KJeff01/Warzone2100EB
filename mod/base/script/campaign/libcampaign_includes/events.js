@@ -86,6 +86,7 @@ function cam_eventChat(from, to, message)
 			for (let i = 0, len = research.length; i < len; ++i)
 			{
 				var researchName = research[i].name;
+				camTrace(researchName);
 				completeResearch(researchName, CAM_HUMAN_PLAYER);
 			}
 		}
