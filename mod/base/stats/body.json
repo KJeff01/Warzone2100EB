@@ -2283,8 +2283,8 @@
                 "left": "prmwhl1.pie"
             },
             "wheeled01GM": {
-                "left": "prmlwhl1.pie",
-                "right": "prmrwhl1.pie"
+                "left": "prmlwhl1gm.pie",
+                "right": "prmrwhl1gm.pie"
             },
             "wheeled01NAS": {
                 "left": "prmlwhl1ar.pie",
