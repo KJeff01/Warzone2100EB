@@ -102,8 +102,6 @@ function eventStartLevel()
 	});
 
 	camCompleteRequiredResearch(CAM2_5_RES_COL, THE_COLLECTIVE);
-	
-	camCompleteRequiredResearch(COLLECTIVE_RES, THE_COLLECTIVE);
 
 	if (difficulty >= MEDIUM)
 	{

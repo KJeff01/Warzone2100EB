@@ -15577,7 +15577,7 @@
         "mountModel": "TRMRCKTA.PIE",
         "movement": "DIRECT",
         "muzzleGfx": "FXLRocPd.PIE",
-        "name": "Quad Thermal Rockets",
+        "name": "Quad Thermal Rockets Tower",
         "numExplosions": 1,
         "numRounds": 2,
         "radiusLife": 10,
