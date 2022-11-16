@@ -82,8 +82,9 @@ const THE_COLLECTIVE = 2;
 const NEXUS = 3;
 const SCAV_6 = 6;
 const SCAV_7 = 7;
+const ULTSCAV = 9;
 
-const CAM_MAX_PLAYERS = 8;
+const CAM_MAX_PLAYERS = 11;
 const CAM_TICKS_PER_FRAME = 100;
 const AI_POWER = 999999;
 const INCLUDE_PATH = "script/campaign/libcampaign_includes/";

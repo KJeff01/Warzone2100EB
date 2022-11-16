@@ -43,6 +43,10 @@ npmrl: { body: "Body4ABT", prop: "HalfTrack", weap: "Rocket-MRL" },
 npmmct: { body: "Body12SUP", prop: "tracked01", weap: "Cannon2A-TMk1" },
 npsbb: { body: "Body8MBT", prop: "HalfTrack", weap: "Rocket-BB" },
 npltat: { body: "Body4ABT", prop: "HalfTrack", weap: "Rocket-LtA-T" },
+ScavChop: { body: "Body88MBT", prop: "Helicopter", weap: "Cannon1-VTOL" }, // NASDA Scorpion
+HvyChop: { body: "Body88MBT", prop: "Helicopter", weap: "Rocket-VTOL-TopAttackHvy" },
+ScavChopNASDA: { body: "Body45ABT", prop: "Helicopter", weap: "Rocket-VTOL-Pod3" }, // NASDA Bug
+HvyChopNASDA: { body: "Body45ABT", prop: "Helicopter", weap: "Rocket-VTOL-LtA-T" },
 
 // SUB_1_4A
 

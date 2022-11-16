@@ -4475,6 +4475,7 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Defense-WallUpgrade01",
         "imdName": "BLWALLH.PIE",
+        "keyTopic": 1,
         "msgName": "RES_DF_WU1",
         "name": "Improved Hardcrete",
         "requiredResearch": [

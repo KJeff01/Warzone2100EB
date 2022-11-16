@@ -2,6 +2,7 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
 include("script/campaign/transitionTech.js");
+include("script/campaign/ultScav.js");
 
 //New base blip, new base area, new factory data
 var NPDefenseGroup, NPScoutGroup, NPFactory;
@@ -207,7 +208,9 @@ function eventStartLevel()
 
 	camCompleteRequiredResearch(CAM1_3_RES_NP, NEW_PARADIGM);
 	camCompleteRequiredResearch(CAM1_3_RES_SCAV, SCAV_7);
+	camCompleteRequiredResearch(CAM1_3_RES_SCAV, ULTSCAV);
 	setAlliance(NEW_PARADIGM, SCAV_7, true);
+	setAlliance(NEW_PARADIGM, ULTSCAV, true);
 
 	camUpgradeOnMapTemplates(cTempl.bloke, cTempl.blokeheavy, 7);
 	camUpgradeOnMapTemplates(cTempl.trike, cTempl.trikeheavy, 7);
@@ -241,7 +244,7 @@ function eventStartLevel()
 	camSetArtifacts({
 		"ScavFactory": { tech: "R-Wpn-MG3Mk1-Twn" },
 		"NPFactory": { tech: "R-Struc-Factory-Module" },
-		"NPLab": { tech: ["R-Defense-HardcreteWall", "R-Struc-RepairFacility"] },
+		"NPLab": { tech: ["R-Defense-WallUpgrade01", "R-Struc-RepairFacility"] },
 		"NPCRC": { tech: "R-Struc-CommandRelay" },
 		"NPHQ": { tech: "R-Sys-ECM-Upgrade01" },
 	});
@@ -288,6 +291,40 @@ function eventStartLevel()
 	NPScoutGroup = camMakeGroup("NPScoutForce");
 	NPDefenseGroup = camMakeGroup("NPDefense");
 	NPFactory = getObject("NPFactory");
+
+	addDroid(ULTSCAV, 25, 9, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 31, 15, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 10, 21, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 18, 33, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 30, 34, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 22, 44, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 5, 41, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 9, 59, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 32, 56, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 52, 57, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 47, 44, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 52, 32, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+
+	ultScav_eventStartLevel(
+		1, // vtols on/off. -1 = off
+		55, // build defense every x seconds
+		35, // build factories every x seconds
+		-1, // build cyborg factories every x seconds
+		25, // produce trucks every x seconds
+		35, // produce droids every x seconds
+		-1, // produce cyborgs every x seconds
+		30, // produce VTOLs every x seconds
+		10, // min factories
+		6, // min vtol factories
+		-1, // min cyborg factories
+		3, // min number of trucks
+		3, // min number of sensor droids
+		4, // min number of attack droids
+		5, // min number of defend droids
+		85, // ground attack every x seconds
+		180, // VTOL attack every x seconds
+		1 // tech level
+	);
 
 	queue("playNPWarningMessage", camSecondsToMilliseconds(3));
 	queue("sendScouts", camSecondsToMilliseconds(60));

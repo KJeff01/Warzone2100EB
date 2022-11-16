@@ -2,6 +2,7 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
 include("script/campaign/transitionTech.js");
+include("script/campaign/ultScav.js");
 
 const landingZoneList = [ "NPLZ1", "NPLZ2", "NPLZ3", "NPLZ4", "NPLZ5" ];
 const landingZoneMessages = [ "C1CA_LZ1", "C1CA_LZ2", "C1CA_LZ3", "C1CA_LZ4", "C1CA_LZ5" ];
@@ -42,9 +43,9 @@ function baseEstablished()
 // a simple extra victory condition callback
 function extraVictoryCondition()
 {
-	const MIN_TRANSPORT_RUNS = 10;
+	const MIN_TRANSPORT_RUNS = 30;
 	var enemies = enumArea(0, 0, mapWidth, mapHeight, ENEMIES, false);
-	// No enemies on map and at least eleven New Paradigm transport runs.
+	// No enemies on map and at least 31 New Paradigm transport runs.
 	if (baseEstablished() && (totalTransportLoads > MIN_TRANSPORT_RUNS) && !enemies.length)
 	{
 		return true;
@@ -125,13 +126,42 @@ function sendTransport()
 
 function startTransporterAttack()
 {
-	let attackTime = camMinutesToMilliseconds(2.2);
+	let attackTime = camMinutesToMilliseconds(1.5);
 	if (difficulty >= HARD)
 	{
-		attackTime = camChangeOnDiff(camMinutesToMilliseconds(2.2));
+		attackTime = camMinutesToMilliseconds(0.5);
 	}
 	sendTransport();
 	setTimer("sendTransport", attackTime);
+}
+
+function checkEnemyVtolArea()
+{
+	var pos = {x: 2, y: 2};
+	var vtols = enumRange(pos.x, pos.y, 2, ULTSCAV, false).filter((obj) => (obj.prop === "Helicopter" || obj.prop === "V-Tol"));
+
+	for (let i = 0, l = vtols.length; i < l; ++i)
+	{
+		if ((vtols[i].weapons[0].armed < 20) || (vtols[i].health < 20))
+		{
+			camSafeRemoveObject(vtols[i], false);
+		}
+	}
+}
+
+function helicopterAttack()
+{
+	var vtolRemovePos = {x: 2, y: 2};
+	var vtolPositions = undefined; //to randomize the spawns each time
+	var list = [
+		cTempl.ScavChop, cTempl.HvyChop, cTempl.ScavChopNASDA, cTempl.HvyChopNASDA
+	];
+	var extras = {
+		minVTOLs: (difficulty >= HARD) ? 3 : 2,
+		maxRandomVTOLs: (difficulty >= HARD) ? 5 : 4
+	};
+
+	camSetVtolData(ULTSCAV, vtolPositions, vtolRemovePos, list, camChangeOnDiff(camSecondsToMilliseconds(40)), undefined, extras);
 }
 
 function eventStartLevel()
@@ -162,5 +192,7 @@ function eventStartLevel()
 	camPlayVideos({video: "MB1CA_MSG", type: CAMP_MSG});
 
 	// first transport after 10 seconds
-	queue("startTransporterAttack", camSecondsToMilliseconds(10));
+	queue("startTransporterAttack", camSecondsToMilliseconds(90));
+	queue("helicopterAttack", camSecondsToMilliseconds(90));
+	setTimer("checkEnemyVtolArea", camSecondsToMilliseconds(1));
 }

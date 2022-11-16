@@ -154,6 +154,10 @@ function cam_eventDroidBuilt(droid, structure)
 	{
 		return;
 	}
+	if (camPlayerMatchesFilter(droid.player, ULTSCAV))
+	{
+		return;
+	}
 	if (!camDef(__camFactoryInfo))
 	{
 		return;

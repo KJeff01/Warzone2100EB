@@ -2,6 +2,7 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
 include("script/campaign/transitionTech.js");
+include("script/campaign/ultScav.js");
 
 const landingZoneList = [ "npPos1", "npPos2", "npPos3", "npPos4", "npPos5" ];
 const landingZoneMessages = [ "C1A-C_LZ1", "C1A-C_LZ2", "C1A-C_LZ3", "C1A-C_LZ4", "C1A-C_LZ5" ];
@@ -124,6 +125,35 @@ function startTransporterAttack()
 	setTimer("sendTransport", camChangeOnDiff(camMinutesToMilliseconds(1)));
 }
 
+function checkEnemyVtolArea()
+{
+	var pos = {x: 2, y: 2};
+	var vtols = enumRange(pos.x, pos.y, 2, ULTSCAV, false).filter((obj) => (obj.prop === "Helicopter" || obj.prop === "V-Tol"));
+
+	for (let i = 0, l = vtols.length; i < l; ++i)
+	{
+		if ((vtols[i].weapons[0].armed < 20) || (vtols[i].health < 20))
+		{
+			camSafeRemoveObject(vtols[i], false);
+		}
+	}
+}
+
+function helicopterAttack()
+{
+	var vtolRemovePos = {x: 2, y: 2};
+	var vtolPositions = undefined; //to randomize the spawns each time
+	var list = [
+		cTempl.ScavChopNASDA, cTempl.HvyChopNASDA
+	];
+	var extras = {
+		minVTOLs: (difficulty >= HARD) ? 4 : 2,
+		maxRandomVTOLs: (difficulty >= HARD) ? 8 : 4
+	};
+
+	camSetVtolData(ULTSCAV, vtolPositions, vtolRemovePos, list, camChangeOnDiff(camSecondsToMilliseconds(30)), undefined, extras);
+}
+
 function eventStartLevel()
 {
 	camSetExtraObjectiveMessage(_("Destroy all New Paradigm reinforcements"));
@@ -153,4 +183,6 @@ function eventStartLevel()
 	switchLZ = 0;
 
 	queue("startTransporterAttack", camSecondsToMilliseconds(10));
+	queue("helicopterAttack", camSecondsToMilliseconds(10));
+	setTimer("checkEnemyVtolArea", camSecondsToMilliseconds(1));
 }

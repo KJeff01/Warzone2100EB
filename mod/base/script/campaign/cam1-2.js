@@ -2,6 +2,7 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
 include("script/campaign/transitionTech.js");
+include("script/campaign/ultScav.js");
 
 function exposeNorthBase()
 {
@@ -70,6 +71,8 @@ function eventStartLevel()
 	startTransporterEntry(tent.x, tent.y, CAM_HUMAN_PLAYER);
 	setTransporterExit(text.x, text.y, CAM_HUMAN_PLAYER);
 
+	setAlliance(SCAV_7, ULTSCAV, true);
+	camCompleteRequiredResearch(CAM1_2_RES_SCAV, ULTSCAV);
 	camCompleteRequiredResearch(CAM1_2_RES_SCAV, SCAV_7);
 
 	camUpgradeOnMapTemplates(cTempl.bloke, cTempl.blokeheavy, SCAV_7);
@@ -99,7 +102,7 @@ function eventStartLevel()
 	camDetectEnemyBase("ScavLabGroup");
 
 	camSetArtifacts({
-		"ScavLab": { tech: ["R-Wpn-Mortar01Lt", "R-Wpn-AAGun05"] },
+		"ScavLab": { tech: "R-Wpn-Mortar01Lt" },
 		"NorthFactory": { tech: ["R-Vehicle-Prop-Halftracks", "R-Wpn-Cannon1Mk1"] },
 	});
 
@@ -141,6 +144,37 @@ function eventStartLevel()
 			templates: [ cTempl.trikeheavy, cTempl.blokeheavy, cTempl.buggyheavy, cTempl.bjeepheavy ]
 		},
 	});
+
+	addDroid(ULTSCAV, 35, 41, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 23, 56, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 13, 45, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 6, 28, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 21, 29, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 15, 15, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 8, 8, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 40, 16, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 48, 33, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+
+	ultScav_eventStartLevel(
+		1, // vtols on/off. -1 = off
+		65, // build defense every x seconds
+		75, // build factories every x seconds
+		-1, // build cyborg factories every x seconds
+		25, // produce trucks every x seconds
+		50, // produce droids every x seconds
+		-1, // produce cyborgs every x seconds
+		55, // produce VTOLs every x seconds
+		8, // min factories
+		5, // min vtol factories
+		-1, // min cyborg factories
+		3, // min number of trucks
+		-1, // min number of sensor droids
+		6, // min number of attack droids
+		3, // min number of defend droids
+		75, // ground attack every x seconds
+		210, // VTOL attack every x seconds
+		1 // tech level
+	);
 
 	queue("enableWestFactory", camChangeOnDiff(camSecondsToMilliseconds(30)));
 }

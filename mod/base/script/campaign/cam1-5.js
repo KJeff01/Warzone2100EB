@@ -2,6 +2,7 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
 include("script/campaign/transitionTech.js");
+include("script/campaign/ultScav.js");
 
 var useHeavyReinforcement;
 
@@ -179,9 +180,12 @@ function eventStartLevel()
 
 	//Make sure the New Paradigm and Scavs are allies
 	setAlliance(NEW_PARADIGM, SCAV_7, true);
+	setAlliance(NEW_PARADIGM, ULTSCAV, true);
+	setAlliance(ULTSCAV, SCAV_7, true);
 
 	camCompleteRequiredResearch(CAM1_5_RES_NP, NEW_PARADIGM);
 	camCompleteRequiredResearch(CAM1_5_RES_SCAV, SCAV_7);
+	camCompleteRequiredResearch(CAM1_5_RES_SCAV, ULTSCAV);
 
 	camUpgradeOnMapTemplates(cTempl.bloke, cTempl.blokeheavy, SCAV_7);
 	camUpgradeOnMapTemplates(cTempl.trike, cTempl.trikeheavy, SCAV_7);
@@ -295,6 +299,35 @@ function eventStartLevel()
 			},
 		},
 	});
+
+	addDroid(ULTSCAV, 15, 38, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 15, 30, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 7, 36, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 7, 6, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 24, 14, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 23, 26, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 56, 44, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+
+	ultScav_eventStartLevel(
+		1, // vtols on/off. -1 = off
+		85, // build defense every x seconds
+		75, // build factories every x seconds
+		50, // build cyborg factories every x seconds
+		25, // produce trucks every x seconds
+		30, // produce droids every x seconds
+		40, // produce cyborgs every x seconds
+		40, // produce VTOLs every x seconds
+		6, // min factories
+		5, // min vtol factories
+		3, // min cyborg factories
+		4, // min number of trucks
+		2, // min number of sensor droids
+		5, // min number of attack droids
+		3, // min number of defend droids
+		55, // ground attack every x seconds
+		170, // VTOL attack every x seconds
+		1.5 // tech level
+	);
 
 	queue("enableNPFactories", camChangeOnDiff(camMinutesToMilliseconds(10)));
 }

@@ -242,6 +242,12 @@
 		"player": 1,
 		"type": 0
 	},
+	"object_9": {
+		"label": "NPMiddleRepairFacility",
+		"id": 322,
+		"player": 1,
+		"type": 1
+	},
 
 	"radius_0": {
 		"label": "tankTrapTrig",

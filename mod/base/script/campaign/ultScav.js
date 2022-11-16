@@ -25,6 +25,18 @@ var ultScav_factory;
 var ultScav_cybfactory;
 var ultScav_derrick;
 
+function generateRandomTemplates(bodies, propulsions, weapons)
+{
+	let templates = {};
+
+	for (let i = 0; i < 50; ++i)
+	{
+		templates[i] = {body: bodies[camRand(bodies.length)], prop: propulsions[camRand(propulsions.length)], weap: weapons[camRand(weapons.length)]};
+	}
+
+	return templates;
+}
+
 function ultScav_setTech(tech_level)
 {
 	const COL_WHITE = 10;
@@ -201,6 +213,11 @@ function ultScav_setTech(tech_level)
 		ultScav_vtolpad = "A0VtolPad";
 		ultScav_cybfactory = "A0CyborgFactory";
 
+		//"Rocket-Sunburst",
+		//"Rocket-VTOL-Sunburst" vtol sunbursts
+		//"Rocket-VTOL-Cherub",
+		//"Rocket-Sunburst-Arch" sunbursts thermal
+
 		ultScav_defenses = {
 			MGbunker: "Tower2-MG3Mk1-Aslt",
 			CanTow: "WallTower-HvATrocket",
@@ -244,7 +261,7 @@ function ultScav_setTech(tech_level)
 			scavsensor2: { body: "Body20LGT", prop: "HalfTrackNAS", weap: "ScavSensor" },
 		};
 	}
-	else if (tech_level === 1.5)
+	else if (tech_level === 1.5 || tech_level === -1.5)
 	{
 		changePlayerColour(ULTSCAV, COL_RED); // red
 		ultScav_derrick = "A0ResourceExtractor";
@@ -256,40 +273,56 @@ function ultScav_setTech(tech_level)
 		ultScav_cybfactory = "A0CyborgFactory";
 
 		ultScav_defenses = {
-			FlameTow: "Emplacement-MortarPit01",
-			MGTow: "GuardTower5",
-			RocketPit: "GuardTower4",
-			LancerPit: "Tower-Projector",
-			MortarPit: "PillBox5",
+			FlameBunk: "PillBox5",
+			HvyMGBunk: "Bunker-MG3Mk1-Twn",
+			AugHvyMGT: "Tower2-MG3Mk1-Aslt",
+			BallistcM: "Emplacement-MRL-pit",
+			RotaryCan: "Emplacement-Cannon5VulcanMk1-Gat",
+			StabMort: "Empl3-Mortar1Mk1-Ram",
+			StabBomb: "Empl3-Mortar2Mk1-Ram",
+			quadRock: "GuardTower9",
+			quadRock2: "GuardTower6",
+			quadRckT: "GuardTower10",
+			rockAryB: "Emplacement-MRL-pit",
+			RotThRock: "Emplacement-Rocket-Arch-Hvy-Aslt-Gat",
+			sensoTow: "Sys-SensoTower02",
 		};
 
-		ultScav_templates = {
-			bloke: { body: "Body18MED", prop: "hover01NAS", weap: "Flame1Mk1" }, // thermal scorpion flamer
-			trike: { body: "Body18MED", prop: "hover01NAS", weap: "Flame2" },
-			bjeep: { body: "Body19HVY", prop: "hover01NAS", weap: "Flame2" }, // thermal mantis flamer
-		};
+		//"Body26SUP" super heavy mantis thermal
 
-		ultScav_vtoltemplates = {
-			ScavengerChopper: { body: "Body88MBT", prop: "Helicopter", weap: "Cannon1-VTOL" }, // NASDA Scorpion
-			HeavyChopper: { body: "Body88MBT", prop: "Helicopter", weap: "Rocket-VTOL-TopAttackHvy" },
-			ScavengerChopper1: { body: "Body45ABT", prop: "Helicopter", weap: "Rocket-VTOL-Pod3" }, // NASDA Bug
-			HeavyChopper1: { body: "Body45ABT", prop: "Helicopter", weap: "Rocket-VTOL-LtA-T" },
-		};
+		let body = ["Body17LGT", "Body45ABT", "Body18MED", "Body88MBT", "Body19HVY", "Body121SUP"];
+		let prop = ["HalfTrackGM", "HalfTrackNAS", "hover01NAS", "tracked01NAS", "tracked01NAS", "wheeled01GM", "wheeled01NAS" ];
+		let weap = ["MG3Mk1-Twn", "Rocket-Pod-Twn", "Rocket-Pod-Quad", "Rocket-LtA-T-Quad", "Rocket-LtA-T-AR", "Rocket-Pod-MRA-Twin", "Rocket-Pod-Arch",
+				"MG3Mk1-Aslt", "Rocket-Pod-Arch-Twin", "Rocket-MRL-Homing", "Cannon5VulcanMk1-Gat", "Mortar1Mk1-Ram", "Mortar2Mk1-Ram", "Rocket-Pod-MRA-Quad",
+				"Rocket-Pod-Arch-Quad", "Rocket-MRL-Homing-Hvy", "Rocket-Arch-Hvy-Aslt-Gat", "Flame2"
+	 	];
+		if (tech_level === -1.5)
+		{
+			prop = ["hover01NAS"];
+		}
+		ultScav_templates = generateRandomTemplates(body, prop, weap);
 
-		ultScav_cyborgs = {
-			cannon: { body: "CyborgLightBody", prop: "CyborgLegs", weap: "CyborgCannon" },
-			rocket: { body: "CyborgLightBody", prop: "CyborgLegs", weap: "CyborgRocket" },
-			mortar: { body: "CyborgLightBody", prop: "CyborgLegs", weap: "Cyb-Wpn-Thermite" },
-			mg: { body: "CyborgLightBody", prop: "CyborgLegs", weap: "CyborgChaingun" },
-		};
+		body = ["Body17LGT", "Body45ABT", "Body18MED", "Body88MBT", "Body19HVY", "Body121SUP"];
+		prop = ["Helicopter"];
+		weap = ["Cannon1-VTOL", "Rocket-VTOL-TopAttackHvy", "Rocket-VTOL-Pod3", "Rocket-VTOL-LtA-T", "Rocket-MRL-VTOL", "Rocket-VTOL-BB" ];
+		ultScav_vtoltemplates = generateRandomTemplates(body, prop, weap);
 
-		ultScav_trucks = {
-			Truck1: { body: "Body17LGT", prop: "hover01NAS", weap: "Spade1Mk1NAS" },
-		};
+		body = ["CyborgLightNAS"];
+		prop = ["CyborgLegsNAS"];
+		weap = ["CyborgCannon", "Cyb-Wpn-Cannon-Sniper", "CyborgRocket", "Cyb-Wpn-Rocket-Sunburst-Arch",
+			"Cyb-Wpn-Rocket-Sunburst", "Cyb-Wpn-Grenade", "CyborgChaingun", "CyborgFlamer01"
+		];
+		ultScav_cyborgs = generateRandomTemplates(body, prop, weap);
 
-		ultScav_sensors = {
-			scavsensor: { body: "Body17LGT", prop: "hover01NAS", weap: "ScavSensor" },
-		};
+		body = ["Body17LGT", "Body45ABT", "Body18MED", "Body88MBT", "Body19HVY", "Body121SUP"];
+		prop = ["hover01NAS"];
+		weap = ["Spade1Mk1NAS"];
+		ultScav_trucks = generateRandomTemplates(body, prop, weap);
+
+		body = ["Body17LGT", "Body45ABT", "Body18MED", "Body88MBT", "Body19HVY", "Body121SUP"];
+		prop = ["hover01NAS"];
+		weap = ["SensorTurret1Mk1"];
+		ultScav_sensors = generateRandomTemplates(body, prop, weap);
 	}
 	else
 	{
@@ -386,7 +419,7 @@ function ultScav_rangeStep(obj, visibility)
 	const STEP = 1000;
 	var target;
 
-	for (var i = 0; i <= 30000; i += STEP)
+	for (let i = 0; i <= 30000; i += STEP)
 	{
 		var temp = enumRange(obj.x, obj.y, i, CAM_HUMAN_PLAYER, visibility);
 		if (camDef(temp[0]))
@@ -412,7 +445,7 @@ function ultScav_constructbaseInfo(x, y)
 function ultScav_findNearest(list, x, y, flag)
 {
 	var minDist = Infinity, minIdx;
-	for (var i = 0, l = list.length; i < l; ++i)
+	for (let i = 0, l = list.length; i < l; ++i)
 	{
 		var obj = list[i];
 		var d = camDist(obj.x, obj.y, x, y);
@@ -428,7 +461,7 @@ function ultScav_findNearest(list, x, y, flag)
 function ultScav_regroup()
 {
 	var list = enumDroid(ULTSCAV);
-	for (var i = 0; i < list.length; ++i)
+	for (let i = 0; i < list.length; ++i)
 	{
 		var droid = list[i];
 		if (droid.group === null)
@@ -493,7 +526,7 @@ function ultScav_addDroidToSomeGroup(droid)
 
 function ultScav_groupOfTank(droid)
 {
-	for (var i = 0, b = ultScav_baseInfo.length; i < b; ++i)
+	for (let i = 0, b = ultScav_baseInfo.length; i < b; ++i)
 	{
 		if (droid.group === ultScav_baseInfo[i].attackGroup)
 		{
@@ -508,7 +541,9 @@ function ultScav_buildStructure(droid, stat)
 {
 	if ((droid.order !== DORDER_BUILD))
 	{
-		var loc = pickStructLocation(droid, stat, droid.x, droid.y, 0);
+		var randx = (camRand(100) < 50) ? -camRand(2) : camRand(2);
+		var randy = (camRand(100) < 50) ? -camRand(2) : camRand(2);
+		var loc = pickStructLocation(droid, stat, droid.x + randx, droid.y + randy, 0);
 		if (camDef(loc))
 		{
 			if (orderDroidBuild(droid, DORDER_BUILD, stat, loc.x, loc.y));
@@ -583,7 +618,7 @@ function ultScav_buildOils()
 {
 	var list = ultScav_findTruck();
 
-	for (var i = 0, d = list.length; i < d; ++i)
+	for (let i = 0, d = list.length; i < d; ++i)
 	{
 		var droid = list[i];
 		if ((countStruct(ultScav_derrick, ULTSCAV) - ((countStruct(ultScav_gen, ULTSCAV) * 4))) > 0)
@@ -615,7 +650,7 @@ function ultscav_buildFactoryModule(fac)
 	var success = false;
 	var module = "A0FacMod1";
 
-	for (var i = 0, len = facs.length; i < len; ++i)
+	for (let i = 0, len = facs.length; i < len; ++i)
 	{
 		var factory = facs[i];
 		if (factory.status !== BUILT || factory.modules >= MAX_MODS)
@@ -623,7 +658,7 @@ function ultscav_buildFactoryModule(fac)
 			continue;
 		}
 
-		for (var j = 0, len2 = trucks.length; j < len2; ++j)
+		for (let j = 0, len2 = trucks.length; j < len2; ++j)
 		{
 			var truck = trucks[j];
 			var shouldBuild = ((gameTime - factory.born) >= 240000) && camDist(truck.x, truck.y, factory.x, factory.y) <= 20;
@@ -644,7 +679,7 @@ function ultScav_buildFactories()
 	{
 		var list = enumDroid(ULTSCAV, DROID_CONSTRUCT);
 
-		for (var i = 0, d = list.length; i < d; ++i)
+		for (let i = 0, d = list.length; i < d; ++i)
 		{
 			var droid = list[i];
 			var base = ultScav_findNearest(ultScav_baseInfo, droid.x, droid.y, true);
@@ -689,15 +724,15 @@ function ultScav_buildvtolFactories()
 
 		if (countStruct(ultScav_vtolfac, ULTSCAV) < ultScav_MIN_VTOL_FACTORIES)
 		{
-			for (var i = 0, d = list.length; i < d; ++i)
+			for (let i = 0, d = list.length; i < d; ++i)
 			{
 				var droid = list[i];
 				ultScav_buildStructure(droid, ultScav_vtolfac);
 			}
 		}
-		else if (countStruct(ultScav_vtolpad, ULTSCAV < (ultScav_countHelicopters() * 3)))
+		else if (countStruct(ultScav_vtolpad, ULTSCAV) < (ultScav_countHelicopters() * 3))
 		{
-			for (var i = 0, d = list.length; i < d; ++i)
+			for (let i = 0, d = list.length; i < d; ++i)
 			{
 				var droid = list[i];
 				ultScav_buildStructure(droid, ultScav_vtolpad);
@@ -712,7 +747,7 @@ function ultScav_buildCybFactories()
 
 	if (countStruct(ultScav_cybfactory, ULTSCAV) < ultScav_MIN_CYB_FACTORIES)
 	{
-		for (var i = 0, d = list.length; i < d; ++i)
+		for (let i = 0, d = list.length; i < d; ++i)
 		{
 			var droid = list[i];
 			ultScav_buildStructure(droid, ultScav_cybfactory);
@@ -730,7 +765,7 @@ function ultScav_buildThings()
 		return structure.status === BUILT;
 	}
 
-	for (var i = 0, d = list.length; i < d; ++i)
+	for (let i = 0, d = list.length; i < d; ++i)
 	{
 		var droid = list[i];
 		if (!ultScav_checkAndrepair(droid))
@@ -755,7 +790,7 @@ function ultScav_attackOils()
 {
 	var list = ultScav_findTruck();
 
-	for (var i = 0, d = list.length; i < d; ++i)
+	for (let i = 0, d = list.length; i < d; ++i)
 	{
 		var droid = list[i];
 		if (!ultScav_checkAndrepair(droid))
@@ -763,7 +798,7 @@ function ultScav_attackOils()
 			var dlist = enumStruct(CAM_HUMAN_PLAYER, OIL_RESOURCE);
 			if (dlist.length > 0)
 			{
-				for (var r = 0; r < dlist.length; ++r)
+				for (let r = 0; r < dlist.length; ++r)
 				{
 					var enemy_ultScav_derrick = dlist[r];
 					if (camDist(droid.x, droid.y, enemy_ultScav_derrick.x, enemy_ultScav_derrick.y) < 12)
@@ -794,14 +829,14 @@ function ultScav_produce(what)
 	}
 
 	var faclist = enumStruct(ULTSCAV, factoryType);
-	for (var i = 0, len = faclist.length; i < len; ++i)
+	for (let i = 0, len = faclist.length; i < len; ++i)
 	{
 		var fac = faclist[i];
 
 		if (ultScav_structureReady(fac))
 		{
 			var template_list = [];
-			for (var key in templates)
+			for (let key in templates)
 			{
 				template_list.push(key);
 			}
@@ -893,7 +928,7 @@ function ultScav_attackWithDroid(droid, target, force)
 
 function ultScav_helicopterArmed(obj, percent)
 {
-	for (var i = 0; i < obj.weapons.length; ++i)
+	for (let i = 0; i < obj.weapons.length; ++i)
 	{
 		if (obj.weapons[i].armed >= percent)
 		{
@@ -939,7 +974,7 @@ function ultScav_helicopterAttack()
 
 	var target = ultScav_rangeStep(ultScav_baseInfo[camRand(ultScav_baseInfo.length)], true);
 
-	for (var i = 0, l = list.length; i < l; ++i)
+	for (let i = 0, l = list.length; i < l; ++i)
 	{
 		var droid = list[i];
 		var coords = [];
@@ -992,13 +1027,13 @@ function ultScav_groundAttackStuff()
 
 	if (camDef(target))
 	{
-		for (var i = 0, l = ultScav_baseInfo.length; i < l; ++i)
+		for (let i = 0, l = ultScav_baseInfo.length; i < l; ++i)
 		{
 			var base = ultScav_baseInfo[i];
 			var attackDroids = enumGroup(base.attackGroup);
 			if (camDef(target) && (attackDroids.length > ultScav_MIN_ATTACKERS))
 			{
-				for (var j = 0, k = attackDroids.length; j < k; ++j)
+				for (let j = 0, k = attackDroids.length; j < k; ++j)
 				{
 					ultScav_attackWithDroid(attackDroids[j], target, false);
 				}
@@ -1010,7 +1045,7 @@ function ultScav_groundAttackStuff()
 function ultScav_retreat()
 {
 	var list = enumDroid(ULTSCAV);
-	for (var i = 0; i < list.length; ++i)
+	for (let i = 0; i < list.length; ++i)
 	{
 		var droid = list[i];
 		if (!isVTOL(droid))
@@ -1030,12 +1065,12 @@ function ultScav_transporterDroids()
 	var count = 6 + camRand(5);
 
 	var droid_list = [];
-	for (var key in ultScav_templates)
+	for (let key in ultScav_templates)
 	{
 		droid_list.push(key);
 	}
 
-	for (var i = 0; i < count; ++i)
+	for (let i = 0; i < count; ++i)
 	{
 		droids.push(droid_list[camRand(droid_list.length)]);
 	}
@@ -1102,7 +1137,7 @@ function eventAttacked(victim, attacker)
 			return;
 		}
 
-		for (var i = 0, l = list.length; i < l; ++i)
+		for (let i = 0, l = list.length; i < l; ++i)
 		{
 			ultScav_attackWithDroid(list[i], attacker, true);
 		}
@@ -1141,13 +1176,13 @@ function ultScav_eventStartLevel(
 	ultScav_MIN_DEFENDERS = min_defenders;
 
 	var list = enumStruct(ULTSCAV, ultScav_factory);
-	for (var i = 0, l = list.length; i < l; ++i)
+	for (let i = 0, l = list.length; i < l; ++i)
 	{
 		var fac = list[i];
 		ultScav_baseInfo[i] = new ultScav_constructbaseInfo(fac.x, fac.y);
 	}
 
-	for (var k in ultScav_defenses)
+	for (let k in ultScav_defenses)
 	{
 		if (ultScav_defenses.hasOwnProperty(k))
 		{

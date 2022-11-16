@@ -2,6 +2,7 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
 include("script/campaign/transitionTech.js");
+include("script/campaign/ultScav.js");
 
 var artiGroup; //Droids that take the artifact
 var enemyHasArtifact; //Do they have the artifact
@@ -247,6 +248,8 @@ function eventStartLevel()
 
 	//Make sure the New Paradigm and Scavs are allies
 	setAlliance(NEW_PARADIGM, SCAV_7, true);
+	setAlliance(NEW_PARADIGM, ULTSCAV, true);
+	setAlliance(ULTSCAV, SCAV_7, true);
 
 	//Get rid of the already existing crate and replace with another
 	camSafeRemoveObject("artifact1", false);
@@ -256,6 +259,7 @@ function eventStartLevel()
 
 	camCompleteRequiredResearch(CAM1_7_RES_NP, NEW_PARADIGM);
 	camCompleteRequiredResearch(CAM1_7_RES_SCAV, SCAV_7);
+	camCompleteRequiredResearch(CAM1_7_RES_SCAV, ULTSCAV);
 
 	camUpgradeOnMapTemplates(cTempl.bloke, cTempl.blokeheavy, SCAV_7);
 	camUpgradeOnMapTemplates(cTempl.trike, cTempl.trikeheavy, SCAV_7);
@@ -324,6 +328,35 @@ function eventStartLevel()
 			templates: [ cTempl.firecan, cTempl.rbjeep8, cTempl.rbuggy, cTempl.blokeheavy ]
 		},
 	});
+
+	addDroid(ULTSCAV, 5, 45, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 20, 46, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 42, 58, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 45, 45, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 43, 18, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 52, 3, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 9, 21, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+
+	ultScav_eventStartLevel(
+		1, // vtols on/off. -1 = off
+		55, // build defense every x seconds
+		45, // build factories every x seconds
+		35, // build cyborg factories every x seconds
+		20, // produce trucks every x seconds
+		65, // produce droids every x seconds
+		35, // produce cyborgs every x seconds
+		35, // produce VTOLs every x seconds
+		12, // min factories
+		5, // min vtol factories
+		3, // min cyborg factories
+		3, // min number of trucks
+		2, // min number of sensor droids
+		5, // min number of attack droids
+		3, // min number of defend droids
+		135, // ground attack every x seconds
+		230, // VTOL attack every x seconds
+		1.5 // tech level
+	);
 
 	artiGroup = camMakeGroup(enumArea("NPArtiGroup", NEW_PARADIGM, false));
 	droidWithArtiID = 0;

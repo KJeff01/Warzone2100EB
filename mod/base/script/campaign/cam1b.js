@@ -2,6 +2,7 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
 include("script/campaign/transitionTech.js");
+include("script/campaign/ultScav.js");
 
 var NPScout; // Sensor scout
 
@@ -76,17 +77,21 @@ function eventStartLevel()
 	centreView(startpos.x, startpos.y);
 	setNoGoArea(lz.x, lz.y, lz.x2, lz.y2, CAM_HUMAN_PLAYER);
 
-	setMissionTime(camChangeOnDiff(camHoursToSeconds(1)));
+	setMissionTime(camChangeOnDiff(camHoursToSeconds(2)));
 	setAlliance(NEW_PARADIGM, SCAV_6, true);
 	setAlliance(NEW_PARADIGM, SCAV_7, true);
+	setAlliance(NEW_PARADIGM, ULTSCAV, true);
 	setAlliance(SCAV_6, SCAV_7, true);
+	setAlliance(SCAV_6, ULTSCAV, true);
+	setAlliance(SCAV_7, ULTSCAV, true);
 
-	camCompleteRequiredResearch(CAM1B_RES_SCAV, 6);
-	camCompleteRequiredResearch(CAM1B_RES_SCAV, 7);
+	camCompleteRequiredResearch(CAM1B_RES_SCAV, SCAV_6);
+	camCompleteRequiredResearch(CAM1B_RES_SCAV, SCAV_7);
+	camCompleteRequiredResearch(CAM1B_RES_SCAV, ULTSCAV);
 
 	camSetArtifacts({
 		"base1factory": { tech: "R-Wpn-Flamer-Damage01" },
-		"base2factory": { tech: "R-Wpn-MG2Mk1" },
+		"base2factory": { tech: ["R-Wpn-MG2Mk1", "R-Wpn-AAGun05"] },
 		"base4factory": { tech: "R-Vehicle-Engine01" },
 		"base3sensor": { tech: "R-Sys-Sensor-Turret01" },
 		"base4gen": { tech: "R-Struc-PowerModuleMk1" },
@@ -165,4 +170,31 @@ function eventStartLevel()
 	camNeverGroupDroid(NPScout);
 	var pos = getObject("NPSensorWatch");
 	orderDroidLoc(NPScout, DORDER_MOVE, pos.x, pos.y);
+
+	addDroid(ULTSCAV, 42, 87, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 14, 88, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 10, 72, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 19, 66, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 41, 108, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+
+	ultScav_eventStartLevel(
+		-1, // vtols on/off. -1 = off
+		110, // build defense every x seconds
+		75, // build factories every x seconds
+		-1, // build cyborg factories every x seconds
+		25, // produce trucks every x seconds
+		30, // produce droids every x seconds
+		-1, // produce cyborgs every x seconds
+		-1, // produce VTOLs every x seconds
+		7, // min factories
+		-1, // min vtol factories
+		-1, // min cyborg factories
+		3, // min number of trucks
+		3, // min number of sensor droids
+		4, // min number of attack droids
+		2, // min number of defend droids
+		140, // ground attack every x seconds
+		-1, // VTOL attack every x seconds
+		1 // tech level
+	);
 }

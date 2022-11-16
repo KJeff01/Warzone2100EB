@@ -2,6 +2,7 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
 include("script/campaign/transitionTech.js");
+include("script/campaign/ultScav.js");
 
 camAreaEvent("tankTrapTrig", function(droid)
 {
@@ -129,6 +130,11 @@ function setupPatrols()
 	cyborgGroupPatrol();
 }
 
+function blowupRepair()
+{
+	camSafeRemoveObject("NPMiddleRepairFacility", false);
+}
+
 function eventStartLevel()
 {
 	camSetStandardWinLossConditions(CAM_VICTORY_OFFWORLD, "CAM_1END", {
@@ -156,6 +162,8 @@ function eventStartLevel()
 	});
 
 	camCompleteRequiredResearch(CAM1D_RES_NP, NEW_PARADIGM);
+	camCompleteRequiredResearch(CAM1D_RES_NP, ULTSCAV);
+	setAlliance(NEW_PARADIGM, ULTSCAV, true);
 
 	camSetEnemyBases({
 		"NPSouthEastGroup": {
@@ -269,5 +277,40 @@ function eventStartLevel()
 
 	hackAddMessage("C1D_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, false);
 
+	addDroid(ULTSCAV, 45, 120, "Ultscav hover", "Body4ABT", "hover01NAS", "", "", "Spade1Mk1");
+	addDroid(ULTSCAV, 62, 110, "Ultscav hover", "Body4ABT", "hover01NAS", "", "", "Spade1Mk1");
+	addDroid(ULTSCAV, 19, 95, "Ultscav hover", "Body4ABT", "hover01NAS", "", "", "Spade1Mk1");
+	addDroid(ULTSCAV, 7, 84, "Ultscav hover", "Body4ABT", "hover01NAS", "", "", "Spade1Mk1");
+	addDroid(ULTSCAV, 66, 83, "Ultscav hover", "Body4ABT", "hover01NAS", "", "", "Spade1Mk1");
+	addDroid(ULTSCAV, 14, 60, "Ultscav hover", "Body4ABT", "hover01NAS", "", "", "Spade1Mk1");
+	addDroid(ULTSCAV, 7, 43, "Ultscav hover", "Body4ABT", "hover01NAS", "", "", "Spade1Mk1");
+	addDroid(ULTSCAV, 19, 41, "Ultscav hover", "Body4ABT", "hover01NAS", "", "", "Spade1Mk1");
+	addDroid(ULTSCAV, 8, 10, "Ultscav hover", "Body4ABT", "hover01NAS", "", "", "Spade1Mk1");
+	addDroid(ULTSCAV, 32, 16, "Ultscav hover", "Body4ABT", "hover01NAS", "", "", "Spade1Mk1");
+	addDroid(ULTSCAV, 56, 38, "Ultscav hover", "Body4ABT", "hover01NAS", "", "", "Spade1Mk1");
+	addDroid(ULTSCAV, 74, 4, "Ultscav hover", "Body4ABT", "hover01NAS", "", "", "Spade1Mk1");
+
+	ultScav_eventStartLevel(
+		1, // vtols on/off. -1 = off
+		85, // build defense every x seconds
+		75, // build factories every x seconds
+		-1, // build cyborg factories every x seconds
+		35, // produce trucks every x seconds
+		55, // produce droids every x seconds
+		55, // produce cyborgs every x seconds
+		45, // produce VTOLs every x seconds
+		3, // min factories
+		3, // min vtol factories
+		-1, // min cyborg factories
+		4, // min number of trucks
+		5, // min number of sensor droids
+		5, // min number of attack droids
+		3, // min number of defend droids
+		220, // ground attack every x seconds
+		210, // VTOL attack every x seconds
+		-1.5 // tech level
+	);
+
+	queue("blowupRepair", camSecondsToMilliseconds(1));
 	queue("setupPatrols", camMinutesToMilliseconds(2.5));
 }

@@ -1,6 +1,7 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
 include("script/campaign/transitionTech.js");
+include("script/campaign/ultScav.js");
 
 // Player zero's droid enters area next to first oil patch.
 camAreaEvent("launchScavAttack", function(droid)
@@ -149,23 +150,26 @@ function eventStartLevel()
 	}
 
 	setAlliance(SCAV_6, SCAV_7, true);
+	setAlliance(SCAV_6, ULTSCAV, true);
+	setAlliance(SCAV_7, ULTSCAV, true);
 
 	enableResearch("R-Wpn-MG1Mk1", CAM_HUMAN_PLAYER);
 
 	enableBaseStructures();
 	camCompleteRequiredResearch(CAM1A_RESEARCH, CAM_HUMAN_PLAYER);
-	camCompleteRequiredResearch(CAM1A_RES_SCAV, 6);
-	camCompleteRequiredResearch(CAM1A_RES_SCAV, 7);
+	camCompleteRequiredResearch(CAM1A_RES_SCAV, SCAV_6);
+	camCompleteRequiredResearch(CAM1A_RES_SCAV, SCAV_7);
+	camCompleteRequiredResearch(CAM1A_RES_SCAV, ULTSCAV);
 
 	// Give player briefing.
 	camPlayVideos({video: "CMB1_MSG", type: CAMP_MSG, immediate: false});
 	if (difficulty === HARD)
 	{
-		setMissionTime(camMinutesToSeconds(40));
+		setMissionTime(camMinutesToSeconds(90));
 	}
 	else if (difficulty === INSANE)
 	{
-		setMissionTime(camMinutesToSeconds(30));
+		setMissionTime(camMinutesToSeconds(120));
 	}
 	else
 	{
@@ -236,4 +240,37 @@ function eventStartLevel()
 			templates: [ cTempl.bjeep, cTempl.bloke, cTempl.trike, cTempl.bloke ]
 		},
 	});
+
+	addDroid(ULTSCAV, 29, 40, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 34, 16, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 37, 23, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 13, 23, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+
+	ultScav_eventStartLevel(
+		-1, // vtols on/off. -1 = off
+		140, // build defense every x seconds
+		75, // build factories every x seconds
+		-1, // build cyborg factories every x seconds
+		25, // produce trucks every x seconds
+		30, // produce droids every x seconds
+		-1, // produce cyborgs every x seconds
+		-1, // produce VTOLs every x seconds
+		3, // min factories
+		-1, // min vtol factories
+		-1, // min cyborg factories
+		3, // min number of trucks
+		-1, // min number of sensor droids
+		3, // min number of attack droids
+		2, // min number of defend droids
+		120, // ground attack every x seconds
+		-1, // VTOL attack every x seconds
+		1 // tech level
+	);
+
+	// Delete scav rockets and mortars (cam1a only)
+	delete ultScav_templates.rbjeep;
+	delete ultScav_templates.rbuggy;
+	delete ultScav_defenses.RocketPit;
+	delete ultScav_defenses.LancerPit;
+	delete ultScav_defenses.MortarPit;
 }

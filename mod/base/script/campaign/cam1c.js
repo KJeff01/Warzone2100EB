@@ -2,6 +2,7 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
 include("script/campaign/transitionTech.js");
+include("script/campaign/ultScav.js");
 
 function sendRocketForce()
 {
@@ -194,8 +195,11 @@ function eventStartLevel()
 
 	setReinforcementTime(-1);
 	setAlliance(NEW_PARADIGM, SCAV_7, true);
+	setAlliance(NEW_PARADIGM, ULTSCAV, true);
+	setAlliance(SCAV_7, ULTSCAV, true);
 	camCompleteRequiredResearch(CAM1C_RES_NP, NEW_PARADIGM);
 	camCompleteRequiredResearch(CAM1C_RES_SCAV, SCAV_7);
+	camCompleteRequiredResearch(CAM1C_RES_SCAV, ULTSCAV);
 
 	camUpgradeOnMapTemplates(cTempl.bloke, cTempl.blokeheavy, SCAV_7);
 	camUpgradeOnMapTemplates(cTempl.trike, cTempl.trikeheavy, SCAV_7);
@@ -339,6 +343,49 @@ function eventStartLevel()
 		regroup: true,
 		count: -1,
 	});
+
+	addDroid(ULTSCAV, 60, 116, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 73, 115, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 101, 111, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 79, 97, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 119, 112, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 117, 83, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 100, 88, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 89, 82, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 100, 70, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 94, 58, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 108, 55, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 85, 37, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 115, 18, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 98, 12, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 64, 32, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 69, 10, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 70, 56, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 61, 68, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+	addDroid(ULTSCAV, 58, 78, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
+	addDroid(ULTSCAV, 63, 93, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
+
+	ultScav_eventStartLevel(
+		1, // vtols on/off. -1 = off
+		55, // build defense every x seconds
+		75, // build factories every x seconds
+		45, // build cyborg factories every x seconds
+		25, // produce trucks every x seconds
+		45, // produce droids every x seconds
+		35, // produce cyborgs every x seconds
+		30, // produce VTOLs every x seconds
+		20, // min factories
+		10, // min vtol factories
+		15, // min cyborg factories
+		4, // min number of trucks
+		5, // min number of sensor droids
+		4, // min number of attack droids
+		3, // min number of defend droids
+		55, // ground attack every x seconds
+		210, // VTOL attack every x seconds
+		1.5 // tech level
+	);
+
 	queue("sendRocketForce", camSecondsToMilliseconds(25));
 	queue("sendTankScoutForce", camSecondsToMilliseconds(30));
 	queue("sendTankForce", camSecondsToMilliseconds(100)); // in wzcam it moves back and then forward
