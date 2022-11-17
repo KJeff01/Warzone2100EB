@@ -389,9 +389,9 @@ function ultScav_isHeli(propulsion)
 // Make sure a unit does not try to go off map
 function ultScav_mapLimits(x, y, num1, num2, xOffset, yOffset)
 {
-	var coordinates = [];
-	var xPos = x + xOffset + camRand(num1) - num2;
-	var yPos = y + yOffset + camRand(num1) - num2;
+	let coordinates = [];
+	let xPos = x + xOffset + camRand(num1) - num2;
+	let yPos = y + yOffset + camRand(num1) - num2;
 
 	if (xPos < 2)
 	{
@@ -417,11 +417,11 @@ function ultScav_mapLimits(x, y, num1, num2, xOffset, yOffset)
 function ultScav_rangeStep(obj, visibility)
 {
 	const STEP = 1000;
-	var target;
+	let target;
 
 	for (let i = 0; i <= 30000; i += STEP)
 	{
-		var temp = enumRange(obj.x, obj.y, i, CAM_HUMAN_PLAYER, visibility);
+		let temp = enumRange(obj.x, obj.y, i, CAM_HUMAN_PLAYER, visibility);
 		if (camDef(temp[0]))
 		{
 			target = temp[0];
@@ -444,11 +444,11 @@ function ultScav_constructbaseInfo(x, y)
 
 function ultScav_findNearest(list, x, y, flag)
 {
-	var minDist = Infinity, minIdx;
+	let minDist = Infinity, minIdx;
 	for (let i = 0, l = list.length; i < l; ++i)
 	{
-		var obj = list[i];
-		var d = camDist(obj.x, obj.y, x, y);
+		let obj = list[i];
+		let d = camDist(obj.x, obj.y, x, y);
 		if (d < minDist)
 		{
 			minDist = d;
@@ -460,10 +460,10 @@ function ultScav_findNearest(list, x, y, flag)
 
 function ultScav_regroup()
 {
-	var list = enumDroid(ULTSCAV);
+	let list = enumDroid(ULTSCAV);
 	for (let i = 0; i < list.length; ++i)
 	{
-		var droid = list[i];
+		let droid = list[i];
 		if (droid.group === null)
 		{
 			ultScav_addDroidToSomeGroup(droid);
@@ -473,11 +473,11 @@ function ultScav_regroup()
 
 function ultScav_addDroidToSomeGroup(droid)
 {
-	var base = ultScav_findNearest(ultScav_baseInfo, droid.x, droid.y, true);
+	let base = ultScav_findNearest(ultScav_baseInfo, droid.x, droid.y, true);
 
 	if (!camDef(base))
 	{
-		var n = ultScav_baseInfo.length;
+		let n = ultScav_baseInfo.length;
 		if (n === 0 && ultScav_buildStructure(droid, ultScav_factory))
 		{
 			ultScav_baseInfo[n] = new ultScav_constructbaseInfo(droid.x, droid.y);
@@ -509,7 +509,7 @@ function ultScav_addDroidToSomeGroup(droid)
 			}
 			else
 			{
-				var rBase = camRand(ultScav_baseInfo.length);
+				let rBase = camRand(ultScav_baseInfo.length);
 				groupAddDroid(ultScav_baseInfo[rBase].attackGroup, droid);
 			}
 		}
@@ -541,9 +541,9 @@ function ultScav_buildStructure(droid, stat)
 {
 	if ((droid.order !== DORDER_BUILD))
 	{
-		var randx = (camRand(100) < 50) ? -camRand(2) : camRand(2);
-		var randy = (camRand(100) < 50) ? -camRand(2) : camRand(2);
-		var loc = pickStructLocation(droid, stat, droid.x + randx, droid.y + randy, 0);
+		let randx = (camRand(100) < 50) ? -camRand(2) : camRand(2);
+		let randy = (camRand(100) < 50) ? -camRand(2) : camRand(2);
+		let loc = pickStructLocation(droid, stat, droid.x + randx, droid.y + randy, 0);
 		if (camDef(loc))
 		{
 			if (orderDroidBuild(droid, DORDER_BUILD, stat, loc.x, loc.y));
@@ -596,19 +596,19 @@ function ultScav_buildStructure(droid, stat)
 
 function ultScav_randomAttrib(obj)
 {
-	var keys = Object.keys(obj);
+	let keys = Object.keys(obj);
 	return obj[keys[camRand(keys.length)]];
 }
 
 function ultScav_buildTower(droid)
 {
-	var random_defense = ultScav_randomAttrib(ultScav_defenses);
+	let random_defense = ultScav_randomAttrib(ultScav_defenses);
 	return ultScav_buildStructure(droid, random_defense);
 }
 
 function ultScav_findTruck()
 {
-	var list = enumDroid(ULTSCAV, DROID_CONSTRUCT).filter(function(dr) {
+	let list = enumDroid(ULTSCAV, DROID_CONSTRUCT).filter(function(dr) {
 		return (dr.order !== DORDER_BUILD);
 	});
 	return list;
@@ -616,11 +616,11 @@ function ultScav_findTruck()
 
 function ultScav_buildOils()
 {
-	var list = ultScav_findTruck();
+	let list = ultScav_findTruck();
 
 	for (let i = 0, d = list.length; i < d; ++i)
 	{
-		var droid = list[i];
+		let droid = list[i];
 		if ((countStruct(ultScav_derrick, ULTSCAV) - ((countStruct(ultScav_gen, ULTSCAV) * 4))) > 0)
 		{
 			ultScav_buildStructure(droid, ultScav_gen);
@@ -628,7 +628,7 @@ function ultScav_buildOils()
 
 		if (!ultScav_checkAndrepair(droid))
 		{
-			var result = ultScav_findNearest(enumFeature(ALL_PLAYERS, OIL_RESOURCE), droid.x, droid.y, true);
+			let result = ultScav_findNearest(enumFeature(ALL_PLAYERS, OIL_RESOURCE), droid.x, droid.y, true);
 			if (camDef(result))
 			{
 				orderDroidBuild(droid, DORDER_BUILD, ultScav_derrick, result.x, result.y);
@@ -645,14 +645,14 @@ function isUpgradeableFactory(factory)
 function ultscav_buildFactoryModule(fac)
 {
 	const MAX_MODS = 2;
-	var facs = enumStruct(ULTSCAV, fac);
-	var trucks = enumDroid(ULTSCAV, DROID_CONSTRUCT);
-	var success = false;
-	var module = "A0FacMod1";
+	let facs = enumStruct(ULTSCAV, fac);
+	let trucks = enumDroid(ULTSCAV, DROID_CONSTRUCT);
+	let success = false;
+	let module = "A0FacMod1";
 
 	for (let i = 0, len = facs.length; i < len; ++i)
 	{
-		var factory = facs[i];
+		let factory = facs[i];
 		if (factory.status !== BUILT || factory.modules >= MAX_MODS)
 		{
 			continue;
@@ -660,8 +660,8 @@ function ultscav_buildFactoryModule(fac)
 
 		for (let j = 0, len2 = trucks.length; j < len2; ++j)
 		{
-			var truck = trucks[j];
-			var shouldBuild = ((gameTime - factory.born) >= 240000) && camDist(truck.x, truck.y, factory.x, factory.y) <= 20;
+			let truck = trucks[j];
+			let shouldBuild = ((gameTime - factory.born) >= 240000) && camDist(truck.x, truck.y, factory.x, factory.y) <= 20;
 
 			if (shouldBuild && (truck.order !== DORDER_BUILD) && orderDroidBuild(truck, DORDER_BUILD, module, factory.x, factory.y))
 			{
@@ -677,15 +677,15 @@ function ultScav_buildFactories()
 {
 	if (countStruct(ultScav_factory, ULTSCAV) < ultScav_MIN_FACTORIES)
 	{
-		var list = enumDroid(ULTSCAV, DROID_CONSTRUCT);
+		let list = enumDroid(ULTSCAV, DROID_CONSTRUCT);
 
 		for (let i = 0, d = list.length; i < d; ++i)
 		{
-			var droid = list[i];
-			var base = ultScav_findNearest(ultScav_baseInfo, droid.x, droid.y, true);
+			let droid = list[i];
+			let base = ultScav_findNearest(ultScav_baseInfo, droid.x, droid.y, true);
 			if (!camDef(base))
 			{
-				var n = ultScav_baseInfo.length;
+				let n = ultScav_baseInfo.length;
 				if (n === 0 && ultScav_buildStructure(droid, ultScav_factory))
 				{
 					ultScav_baseInfo[n] = new ultScav_constructbaseInfo(droid.x, droid.y);
@@ -695,11 +695,11 @@ function ultScav_buildFactories()
 				return;
 			}
 
-			var dist = camDist(base.x, base.y, droid.x, droid.y);
+			let dist = camDist(base.x, base.y, droid.x, droid.y);
 			//dist makes sure that factories are not built too close to eachother
 			if ((dist > 5) && ultScav_buildStructure(droid, ultScav_factory))
 			{
-				var n = ultScav_baseInfo.length;
+				let n = ultScav_baseInfo.length;
 				ultScav_baseInfo[n] = new ultScav_constructbaseInfo(droid.x, droid.y);
 				groupAddDroid(ultScav_baseInfo[n].builderGroup, droid);
 				return;
@@ -720,13 +720,13 @@ function ultScav_buildvtolFactories()
 	}
 	else
 	{
-		var list = ultScav_findTruck();
+		let list = ultScav_findTruck();
 
 		if (countStruct(ultScav_vtolfac, ULTSCAV) < ultScav_MIN_VTOL_FACTORIES)
 		{
 			for (let i = 0, d = list.length; i < d; ++i)
 			{
-				var droid = list[i];
+				let droid = list[i];
 				ultScav_buildStructure(droid, ultScav_vtolfac);
 			}
 		}
@@ -734,7 +734,7 @@ function ultScav_buildvtolFactories()
 		{
 			for (let i = 0, d = list.length; i < d; ++i)
 			{
-				var droid = list[i];
+				let droid = list[i];
 				ultScav_buildStructure(droid, ultScav_vtolpad);
 			}
 		}
@@ -743,13 +743,13 @@ function ultScav_buildvtolFactories()
 
 function ultScav_buildCybFactories()
 {
-	var list = ultScav_findTruck();
+	let list = ultScav_findTruck();
 
 	if (countStruct(ultScav_cybfactory, ULTSCAV) < ultScav_MIN_CYB_FACTORIES)
 	{
 		for (let i = 0, d = list.length; i < d; ++i)
 		{
-			var droid = list[i];
+			let droid = list[i];
 			ultScav_buildStructure(droid, ultScav_cybfactory);
 		}
 	}
@@ -758,7 +758,7 @@ function ultScav_buildCybFactories()
 
 function ultScav_buildThings()
 {
-	var list = ultScav_findTruck();
+	let list = ultScav_findTruck();
 
 	function isBuilt(structure)
 	{
@@ -767,7 +767,7 @@ function ultScav_buildThings()
 
 	for (let i = 0, d = list.length; i < d; ++i)
 	{
-		var droid = list[i];
+		let droid = list[i];
 		if (!ultScav_checkAndrepair(droid))
 		{
 			if ((countStruct(ultScav_derrick, ULTSCAV) - ((countStruct(ultScav_gen, ULTSCAV) * 4))) > 0)
@@ -788,19 +788,19 @@ function ultScav_buildThings()
 
 function ultScav_attackOils()
 {
-	var list = ultScav_findTruck();
+	let list = ultScav_findTruck();
 
 	for (let i = 0, d = list.length; i < d; ++i)
 	{
-		var droid = list[i];
+		let droid = list[i];
 		if (!ultScav_checkAndrepair(droid))
 		{
-			var dlist = enumStruct(CAM_HUMAN_PLAYER, OIL_RESOURCE);
+			let dlist = enumStruct(CAM_HUMAN_PLAYER, OIL_RESOURCE);
 			if (dlist.length > 0)
 			{
 				for (let r = 0; r < dlist.length; ++r)
 				{
-					var enemy_ultScav_derrick = dlist[r];
+					let enemy_ultScav_derrick = dlist[r];
 					if (camDist(droid.x, droid.y, enemy_ultScav_derrick.x, enemy_ultScav_derrick.y) < 12)
 					{
 						ultScav_buildTower(droid);
@@ -813,8 +813,8 @@ function ultScav_attackOils()
 
 function ultScav_produce(what)
 {
-	var factoryType;
-	var templates;
+	let factoryType;
+	let templates;
 
 	switch (what)
 	{
@@ -828,19 +828,19 @@ function ultScav_produce(what)
 			return undefined;
 	}
 
-	var faclist = enumStruct(ULTSCAV, factoryType);
+	let faclist = enumStruct(ULTSCAV, factoryType);
 	for (let i = 0, len = faclist.length; i < len; ++i)
 	{
-		var fac = faclist[i];
+		let fac = faclist[i];
 
 		if (ultScav_structureReady(fac))
 		{
-			var template_list = [];
+			let template_list = [];
 			for (let key in templates)
 			{
 				template_list.push(key);
 			}
-			var random_template = template_list[camRand(template_list.length)];
+			let random_template = template_list[camRand(template_list.length)];
 			__camBuildDroid(templates[random_template], fac);
 		}
 	}
@@ -911,9 +911,9 @@ function ultScav_attackWithDroid(droid, target, force)
 
 		if (droid.droidType === DROID_WEAPON || droid.droidType === DROID_CYBORG)
 		{
-			if ((droid.order !== DORDER_ATTACK) || force)
+			if ((droid.order !== DORDER_SCOUT) || force)
 			{
-				orderDroidObj(droid, DORDER_ATTACK, target);
+				orderDroidLoc(droid, DORDER_SCOUT, target.x, target.y);
 			}
 		}
 		else if (droid.droidType === DROID_SENSOR)
@@ -965,19 +965,19 @@ function ultScav_helicopterReady(droid)
 //Helicopters can only attack things that the scavengers have seen
 function ultScav_helicopterAttack()
 {
-	var list = ultScav_findFreeHelicopters();
+	let list = ultScav_findFreeHelicopters();
 
 	if (list.length === 0)
 	{
 		return;
 	}
 
-	var target = ultScav_rangeStep(ultScav_baseInfo[camRand(ultScav_baseInfo.length)], true);
+	let target = ultScav_rangeStep(ultScav_baseInfo[camRand(ultScav_baseInfo.length)], true);
 
 	for (let i = 0, l = list.length; i < l; ++i)
 	{
-		var droid = list[i];
-		var coords = [];
+		let droid = list[i];
+		let coords = [];
 
 		if (camDef(target))
 		{
@@ -985,8 +985,8 @@ function ultScav_helicopterAttack()
 		}
 		else
 		{
-			var xOff = camRand(2);
-			var yOff = camRand(2);
+			let xOff = camRand(2);
+			let yOff = camRand(2);
 			xOff = (!xOff) ? -camRand(10) : camRand(10);
 			yOff = (!yOff) ? -camRand(10) : camRand(10);
 			coords = ultScav_mapLimits(droid.x, droid.y, 5, 2, xOff, yOff);
@@ -1017,9 +1017,9 @@ function ultScav_groundAttackStuff()
 		return;
 	}
 
-	var randomBase = camRand(ultScav_baseInfo.length);
+	let randomBase = camRand(ultScav_baseInfo.length);
 
-	var target = ultScav_rangeStep(ultScav_baseInfo[randomBase], true);
+	let target = ultScav_rangeStep(ultScav_baseInfo[randomBase], true);
 	if (!camDef(target))
 	{
 		target = ultScav_rangeStep(ultScav_baseInfo[randomBase], false);
@@ -1029,8 +1029,8 @@ function ultScav_groundAttackStuff()
 	{
 		for (let i = 0, l = ultScav_baseInfo.length; i < l; ++i)
 		{
-			var base = ultScav_baseInfo[i];
-			var attackDroids = enumGroup(base.attackGroup);
+			let base = ultScav_baseInfo[i];
+			let attackDroids = enumGroup(base.attackGroup);
 			if (camDef(target) && (attackDroids.length > ultScav_MIN_ATTACKERS))
 			{
 				for (let j = 0, k = attackDroids.length; j < k; ++j)
@@ -1044,10 +1044,10 @@ function ultScav_groundAttackStuff()
 
 function ultScav_retreat()
 {
-	var list = enumDroid(ULTSCAV);
+	let list = enumDroid(ULTSCAV);
 	for (let i = 0; i < list.length; ++i)
 	{
-		var droid = list[i];
+		let droid = list[i];
 		if (!isVTOL(droid))
 		{
 			if (droid.health < 80)
@@ -1061,10 +1061,10 @@ function ultScav_retreat()
 // does not work yet
 function ultScav_transporterDroids()
 {
-	var droids = [];
-	var count = 6 + camRand(5);
+	let droids = [];
+	let count = 6 + camRand(5);
 
-	var droid_list = [];
+	let droid_list = [];
 	for (let key in ultScav_templates)
 	{
 		droid_list.push(key);
@@ -1081,9 +1081,9 @@ function ultScav_transporterDroids()
 // does not work yet
 function ultScav_reinforcements()
 {
-	var random_x = camRand(mapWidth);
-	var random_y = camRand(mapHeight);
-	var playerUnits = enumDroid(CAM_HUMAN_PLAYER).filter(function(droid) {
+	let random_x = camRand(mapWidth);
+	let random_y = camRand(mapHeight);
+	let playerUnits = enumDroid(CAM_HUMAN_PLAYER).filter(function(droid) {
 		return !isVTOL(droid);
 	});
 
@@ -1091,18 +1091,18 @@ function ultScav_reinforcements()
 	{
 		return;
 	}
-	var aPlayerUnit = playerUnits[0];
+	let aPlayerUnit = playerUnits[0];
 
 	while (!propulsionCanReach("hover01", aPlayerUnit.x, aPlayerUnit.y, random_x, random_y))
 	{
 		random_x = camRand(mapWidth);
 		random_y = camRand(mapHeight);
 	}
-	var nearbyDefense = enumRange(random_x, random_y, 4, CAM_HUMAN_PLAYER, false);
+	let nearbyDefense = enumRange(random_x, random_y, 4, CAM_HUMAN_PLAYER, false);
 
 	if (!nearbyDefense.length)
 	{
-		var list = ultScav_transporterDroids();
+		let list = ultScav_transporterDroids();
 		camSendReinforcement(ULTSCAV, camMakePos(random_x, random_y), list,
 			CAM_REINFORCE_TRANSPORT, {
 				entry: { x: camRand(mapWidth), y: camRand(mapHeight) },
@@ -1125,12 +1125,12 @@ function eventAttacked(victim, attacker)
 		return;
 	}
 
-	var base = ultScav_findNearest(ultScav_baseInfo, victim.x, victim.y, true);
-	var attackerLongRanged = (attacker.isCB || attacker.hasIndirect);
+	let base = ultScav_findNearest(ultScav_baseInfo, victim.x, victim.y, true);
+	let attackerLongRanged = (attacker.isCB || attacker.hasIndirect);
 
 	if (camDef(base) && (camDist(victim.x, victim.y, attacker.x, attacker.y) < (attackerLongRanged ? 40 : 20)))
 	{
-		var list = enumGroup(base.defendGroup);
+		let list = enumGroup(base.defendGroup);
 
 		if (list.length < ultScav_MIN_DEFENDERS)
 		{
@@ -1175,10 +1175,10 @@ function ultScav_eventStartLevel(
 	ultScav_MIN_ATTACKERS = min_attackers;
 	ultScav_MIN_DEFENDERS = min_defenders;
 
-	var list = enumStruct(ULTSCAV, ultScav_factory);
+	let list = enumStruct(ULTSCAV, ultScav_factory);
 	for (let i = 0, l = list.length; i < l; ++i)
 	{
-		var fac = list[i];
+		let fac = list[i];
 		ultScav_baseInfo[i] = new ultScav_constructbaseInfo(fac.x, fac.y);
 	}
 

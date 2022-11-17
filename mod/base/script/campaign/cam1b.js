@@ -179,10 +179,10 @@ function eventStartLevel()
 
 	ultScav_eventStartLevel(
 		-1, // vtols on/off. -1 = off
-		110, // build defense every x seconds
-		75, // build factories every x seconds
+		100, // build defense every x seconds
+		95, // build factories every x seconds
 		-1, // build cyborg factories every x seconds
-		25, // produce trucks every x seconds
+		120, // produce trucks every x seconds
 		30, // produce droids every x seconds
 		-1, // produce cyborgs every x seconds
 		-1, // produce VTOLs every x seconds
@@ -197,4 +197,6 @@ function eventStartLevel()
 		-1, // VTOL attack every x seconds
 		1 // tech level
 	);
+
+	delete ultScav_defenses.MGbunker; //Way too hard with these
 }

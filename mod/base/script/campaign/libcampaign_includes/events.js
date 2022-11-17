@@ -158,6 +158,10 @@ function cam_eventDroidBuilt(droid, structure)
 	{
 		return;
 	}
+	if (camPlayerMatchesFilter(structure.player, ULTSCAV))
+	{
+		return;
+	}
 	if (!camDef(__camFactoryInfo))
 	{
 		return;
@@ -170,6 +174,10 @@ function cam_eventDestroyed(obj)
 	__camCheckPlaceArtifact(obj);
 	if (obj.type === DROID)
 	{
+		if (obj.player === ULTSCAV)
+		{
+			return;
+		}
 		if (obj.droidType === DROID_CONSTRUCT)
 		{
 			__camCheckDeadTruck(obj);
@@ -193,11 +201,19 @@ function cam_eventDestroyed(obj)
 
 function cam_eventObjectSeen(viewer, seen)
 {
+	if (viewer.player === ULTSCAV)
+	{
+		return;
+	}
 	__camCheckBaseSeen(seen);
 }
 
 function cam_eventGroupSeen(viewer, group)
 {
+	if (viewer.player === ULTSCAV)
+	{
+		return;
+	}
 	__camCheckBaseSeen(group);
 }
 
@@ -266,6 +282,10 @@ function cam_eventAttacked(victim, attacker)
 {
 	if (camDef(victim) && victim && victim.type === DROID)
 	{
+		if (victim.player === ULTSCAV)
+		{
+			return;
+		}
 		if (victim.player !== CAM_HUMAN_PLAYER && !allianceExistsBetween(CAM_HUMAN_PLAYER, victim.player))
 		{
 			//Try dynamically creating a group of nearby droids not part
@@ -276,6 +296,7 @@ function cam_eventAttacked(victim, attacker)
 				var loc = {x: victim.x, y: victim.y};
 				var droids = enumRange(loc.x, loc.y, DEFAULT_RADIUS, victim.player, false).filter((obj) => (
 					obj.type === DROID &&
+					obj.player !== ULTSCAV &&
 					obj.group === null &&
 					(obj.canHitGround || obj.isSensor) &&
 					obj.droidType !== DROID_CONSTRUCT &&

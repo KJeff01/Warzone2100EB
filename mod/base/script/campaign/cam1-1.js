@@ -155,15 +155,15 @@ function eventStartLevel()
 
 	ultScav_eventStartLevel(
 		1, // vtols on/off. -1 = off
-		30, // build defense every x seconds
-		35, // build factories every x seconds
+		120, // build defense every x seconds
+		180, // build factories every x seconds
 		-1, // build cyborg factories every x seconds
-		25, // produce trucks every x seconds
-		30, // produce droids every x seconds
+		75, // produce trucks every x seconds
+		50, // produce droids every x seconds
 		-1, // produce cyborgs every x seconds
-		35, // produce VTOLs every x seconds
+		90, // produce VTOLs every x seconds
 		11, // min factories
-		4, // min vtol factories
+		3, // min vtol factories
 		-1, // min cyborg factories
 		3, // min number of trucks
 		2, // min number of sensor droids
@@ -173,6 +173,8 @@ function eventStartLevel()
 		230, // VTOL attack every x seconds
 		1 // tech level
 	);
+
+	delete ultScav_vtoltemplates.HeavyChopper;
 
 	queue("checkFrontBunkers", camSecondsToMilliseconds(5));
 }

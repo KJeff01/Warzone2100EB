@@ -37,12 +37,13 @@ const CAM1B_RES_SCAV = CAM1A_RES_SCAV.concat([
 ]);
 
 const CAM1_1_RES_SCAV = CAM1B_RES_SCAV.concat([
-	"R-Wpn-MG-Damage03",
-	"R-Wpn-Mortar-Damage03",
+	"R-Wpn-Mortar-Damage02",
 ]);
 
 const CAM1_2_RES_SCAV = CAM1_1_RES_SCAV.concat([
+	"R-Wpn-MG-Damage03",
 	"R-Wpn-MG-Damage04",
+	"R-Wpn-Mortar-Damage03",
 	"R-Wpn-Mortar-ROF01",
 	"R-Wpn-Mortar-Acc01",
 	"R-Vehicle-Metals01",

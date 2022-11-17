@@ -127,7 +127,7 @@ function eventGameInit()
 
 function eventStartLevel()
 {
-	const PLAYER_POWER = 1300;
+	const PLAYER_POWER = 2000;
 	var startpos = getObject("startPosition");
 	var lz = getObject("landingZone");
 
@@ -136,18 +136,7 @@ function eventStartLevel()
 	centreView(startpos.x, startpos.y);
 	setNoGoArea(lz.x, lz.y, lz.x2, lz.y2, CAM_HUMAN_PLAYER);
 
-	if (difficulty === HARD)
-	{
-		setPower(600, CAM_HUMAN_PLAYER);
-	}
-	else if (difficulty === INSANE)
-	{
-		setPower(300, CAM_HUMAN_PLAYER);
-	}
-	else
-	{
-		setPower(PLAYER_POWER, CAM_HUMAN_PLAYER);
-	}
+	setPower(PLAYER_POWER, CAM_HUMAN_PLAYER);
 
 	setAlliance(SCAV_6, SCAV_7, true);
 	setAlliance(SCAV_6, ULTSCAV, true);
@@ -205,10 +194,10 @@ function eventStartLevel()
 	});
 
 	camSetArtifacts({
-		"base1ArtifactPos": { tech: "R-Wpn-MG-Damage01" },
+		"base1ArtifactPos": { tech: ["R-Wpn-MG-Damage01", "R-Sys-Engineering01"] },
 		"base2Factory": { tech: "R-Wpn-Flamer01Mk1" },
 		"base3Factory": { tech: "R-Defense-Tower01" },
-		"base4Factory": { tech: "R-Sys-Engineering01" },
+		"base4Factory": { tech: "R-Wpn-MG-Damage02" },
 	});
 
 	camSetFactories({
@@ -251,7 +240,7 @@ function eventStartLevel()
 		140, // build defense every x seconds
 		75, // build factories every x seconds
 		-1, // build cyborg factories every x seconds
-		25, // produce trucks every x seconds
+		-1, // produce trucks every x seconds
 		30, // produce droids every x seconds
 		-1, // produce cyborgs every x seconds
 		-1, // produce VTOLs every x seconds
@@ -273,4 +262,5 @@ function eventStartLevel()
 	delete ultScav_defenses.RocketPit;
 	delete ultScav_defenses.LancerPit;
 	delete ultScav_defenses.MortarPit;
+	delete ultScav_defenses.MGbunker;
 }

@@ -11621,6 +11621,7 @@
     "R-Wpn-MG-Damage02": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-MG-Damage02",
+        "keyTopic": 1,
         "msgName": "RES_W_MG_D2",
         "name": "APDSB MG Bullets",
         "requiredResearch": [
