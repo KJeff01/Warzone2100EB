@@ -42,15 +42,9 @@ const CAM1_1_RES_SCAV = CAM1B_RES_SCAV.concat([
 
 const CAM1_2_RES_SCAV = CAM1_1_RES_SCAV.concat([
 	"R-Wpn-MG-Damage03",
-	"R-Wpn-MG-Damage04",
-	"R-Wpn-Mortar-Damage03",
-	"R-Wpn-Mortar-ROF01",
 	"R-Wpn-Mortar-Acc01",
-	"R-Vehicle-Metals01",
 	"R-Wpn-Cannon-Damage03",
-	"R-Defense-WallUpgrade01",
-	"R-Struc-Materials02",
-	"R-Wpn-Rocket-Damage02",
+	"R-Wpn-Rocket-Damage01",
 	"R-Wpn-Rocket-ROF01",
 ]);
 
@@ -77,11 +71,17 @@ const CAM1_3_RES_NP = [
 ];
 
 const CAM1_3_RES_SCAV = CAM1_2_RES_SCAV.concat([
-	"R-Defense-WallUpgrade02",
+	"R-Wpn-MG-Damage04",
 	"R-Wpn-Rocket-ROF02",
+	"R-Wpn-Rocket-Damage02",
 	"R-Wpn-Mortar-ROF02",
 	"R-Wpn-Cannon-Damage04",
 	"R-Wpn-Cannon-Accuracy01",
+	"R-Vehicle-Metals01",
+	"R-Defense-WallUpgrade01",
+	"R-Struc-Materials01",
+	"R-Wpn-Mortar-Damage03",
+	"R-Wpn-Mortar-ROF01",
 ]);
 
 const CAM1C_RES_NP = CAM1_3_RES_NP.concat([
@@ -100,13 +100,13 @@ const CAM1C_RES_NP = CAM1_3_RES_NP.concat([
 ]);
 
 const CAM1C_RES_SCAV = CAM1_3_RES_SCAV.concat([
-	"R-Defense-WallUpgrade03",
-	"R-Struc-Materials03",
 	"R-Wpn-Rocket-Damage03",
 	"R-Wpn-Mortar-ROF03",
 	"R-Wpn-Cannon-ROF02",
 	"R-Wpn-MG-ROF01",
 	"R-Struc-RprFac-Upgrade01",
+	"R-Defense-WallUpgrade02",
+	"R-Struc-Materials02",
 ]);
 
 const CAM1_4_RES_NP = CAM1C_RES_NP.concat([
@@ -120,6 +120,8 @@ const CAM1_4_RES_NP = CAM1C_RES_NP.concat([
 	"R-Wpn-Mortar-Range02",
 	"R-Wpn-Cannon-Mount01",
 	"R-Wpn-Rocket-Range02",
+	"R-Defense-WallUpgrade03",
+	"R-Struc-Materials03",
 ]);
 
 const CAM1_4_RES_SCAV = CAM1C_RES_SCAV.concat([
@@ -216,24 +218,25 @@ const CAM2A_RESEARCH = CAM1A_RESEARCH.concat([
 	"R-Wpn-Cannon-Damage04",
 	"R-Wpn-Mortar-ROF01",
 	"R-Wpn-Cannon-ROF01",
+	"R-Wpn-MG3Mk1-Twn",
+	"R-Defense-WallTower01",
+	"R-Defense-MG3Mk1-Twn",
+	"R-Wpn-AAGun06",
+	"R-Defense-AASite-QuadRotAAGun-Scav",
+	"R-Vehicle-Metals01",
 	//alpha 5
 	"R-Defense-WallUpgrade01",
 	"R-Struc-CommandRelay",
 	"R-Struc-Factory-Module",
 	"R-Struc-RepairFacility",
 	"R-Sys-ECM-Upgrade01",
-	"R-Wpn-MG3Mk1-Twn",
 	"R-Comp-CommandTurret01",
 	"R-Defense-ECM1PylonMk1",
-	"R-Defense-MG3Mk1-Twn",
 	"R-Defense-Pillbox05",
-	"R-Defense-WallTower01",
 	"R-Defense-WallTower05",
 	"R-Defense-WallUpgrade02",
 	"R-Struc-Materials01",
 	"R-Vehicle-Body05",
-	"R-Wpn-AAGun06",
-	"R-Defense-AASite-QuadRotAAGun-Scav",
 	"R-Defense-WallUpgrade03",
 	"R-Struc-Materials02",
 	"R-Struc-Materials03",
@@ -288,7 +291,6 @@ const CAM2A_RESEARCH = CAM1A_RESEARCH.concat([
 	//alpha 8
 	"R-Vehicle-Body04",
 	"R-Vehicle-Body17",
-	"R-Vehicle-Metals01",
 	"R-Wpn-Cannon-Damage05",
 	"R-Wpn-Cannon-Mount01",
 	"R-Wpn-Rocket-Pod-MRA",

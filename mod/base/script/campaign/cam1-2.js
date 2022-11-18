@@ -102,8 +102,8 @@ function eventStartLevel()
 	camDetectEnemyBase("ScavLabGroup");
 
 	camSetArtifacts({
-		"ScavLab": { tech: "R-Wpn-Mortar01Lt" },
-		"NorthFactory": { tech: ["R-Vehicle-Prop-Halftracks", "R-Wpn-Cannon1Mk1"] },
+		"ScavLab": { tech: ["R-Wpn-MG3Mk1-Twn", "R-Wpn-Mortar01Lt"] },
+		"NorthFactory": { tech: ["R-Vehicle-Prop-Halftracks", "R-Wpn-Cannon1Mk1", "R-Vehicle-Metals01"] },
 	});
 
 	camSetFactories({
@@ -149,23 +149,20 @@ function eventStartLevel()
 	addDroid(ULTSCAV, 23, 56, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
 	addDroid(ULTSCAV, 13, 45, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
 	addDroid(ULTSCAV, 6, 28, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
-	addDroid(ULTSCAV, 21, 29, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
 	addDroid(ULTSCAV, 15, 15, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
-	addDroid(ULTSCAV, 8, 8, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
-	addDroid(ULTSCAV, 40, 16, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
 	addDroid(ULTSCAV, 48, 33, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
 
 	ultScav_eventStartLevel(
 		1, // vtols on/off. -1 = off
-		85, // build defense every x seconds
+		240, // build defense every x seconds
 		75, // build factories every x seconds
 		-1, // build cyborg factories every x seconds
-		45, // produce trucks every x seconds
+		210, // produce trucks every x seconds
 		50, // produce droids every x seconds
 		-1, // produce cyborgs every x seconds
-		55, // produce VTOLs every x seconds
-		4, // min factories
-		4, // min vtol factories
+		105, // produce VTOLs every x seconds
+		3, // min factories
+		2, // min vtol factories
 		-1, // min cyborg factories
 		3, // min number of trucks
 		2, // min number of sensor droids

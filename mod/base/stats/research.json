@@ -7525,6 +7525,7 @@
         "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-Vehicle-Metals02",
         "imdName": "icmolql.pie",
+        "keyTopic": 1,
         "msgName": "RES_V_MET2",
         "name": "Composite Alloys Mk2",
         "requiredResearch": [
@@ -13028,6 +13029,7 @@
     "R-Wpn-Mortar02Hvy": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Mortar02Hvy",
+        "keyTopic": 1,
         "msgName": "RES_W_M2",
         "name": "Heavy Mortar - Bombard",
         "requiredResearch": [
