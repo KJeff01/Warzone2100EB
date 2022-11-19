@@ -25,6 +25,8 @@ var ultScav_factory;
 var ultScav_cybfactory;
 var ultScav_derrick;
 
+namespace("ULT_");
+
 function generateRandomTemplates(bodies, propulsions, weapons)
 {
 	let templates = {};
@@ -1114,7 +1116,7 @@ function ultScav_reinforcements()
 	queue("ultScav_reinforcements", camChangeOnDiff(camMinutesToMilliseconds(1)));
 }
 
-function eventAttacked(victim, attacker)
+function ULT_eventAttacked(victim, attacker)
 {
 	if (victim === null || attacker === null)
 	{

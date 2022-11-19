@@ -210,6 +210,7 @@ function eventStartLevel()
 	camCompleteRequiredResearch(CAM1_3_RES_SCAV, SCAV_7);
 	camCompleteRequiredResearch(CAM1_3_RES_SCAV, ULTSCAV);
 	setAlliance(NEW_PARADIGM, SCAV_7, true);
+	setAlliance(ULTSCAV, SCAV_7, true);
 	setAlliance(NEW_PARADIGM, ULTSCAV, true);
 
 	camUpgradeOnMapTemplates(cTempl.bloke, cTempl.blokeheavy, 7);
@@ -307,15 +308,15 @@ function eventStartLevel()
 
 	ultScav_eventStartLevel(
 		1, // vtols on/off. -1 = off
-		55, // build defense every x seconds
-		35, // build factories every x seconds
+		110, // build defense every x seconds
+		180, // build factories every x seconds
 		-1, // build cyborg factories every x seconds
-		25, // produce trucks every x seconds
-		35, // produce droids every x seconds
+		100, // produce trucks every x seconds
+		45, // produce droids every x seconds
 		-1, // produce cyborgs every x seconds
-		30, // produce VTOLs every x seconds
+		75, // produce VTOLs every x seconds
 		10, // min factories
-		6, // min vtol factories
+		5, // min vtol factories
 		-1, // min cyborg factories
 		3, // min number of trucks
 		3, // min number of sensor droids
