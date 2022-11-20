@@ -261,6 +261,10 @@
                 "left": "prhvtl2.pie",
                 "moving": "fxvtl10.pie"
             },
+            "V-TolNAS": {
+                "left": "prhvtl2.pie",
+                "moving": "fxvtl10.pie"
+            },
             "hover01": {
                 "left": "prhhov1.pie"
             },
@@ -327,6 +331,10 @@
                 "left": "prhnaval1.pie"
             },
             "V-Tol": {
+                "left": "prhvtl3.pie",
+                "moving": "fxvtl11.pie"
+            },
+            "V-TolNAS": {
                 "left": "prhvtl3.pie",
                 "moving": "fxvtl11.pie"
             },
@@ -399,6 +407,10 @@
                 "left": "prhvtl3.pie",
                 "moving": "fxvtl11.pie"
             },
+            "V-TolNAS": {
+                "left": "prhvtl3.pie",
+                "moving": "fxvtl11.pie"
+            },
             "hover01": {
                 "left": "prhhov1.pie"
             },
@@ -465,6 +477,10 @@
                 "left": "prhnaval1.pie"
             },
             "V-Tol": {
+                "left": "prlvtl1.pie",
+                "moving": "fxvtl01.pie"
+            },
+            "V-TolNAS": {
                 "left": "prlvtl1.pie",
                 "moving": "fxvtl01.pie"
             },
@@ -537,6 +553,10 @@
                 "left": "prhvtl4.pie",
                 "moving": "fxvtl12.pie"
             },
+            "V-TolNAS": {
+                "left": "prhvtl4.pie",
+                "moving": "fxvtl12.pie"
+            },
             "hover01": {
                 "left": "prhhov1.pie"
             },
@@ -603,6 +623,10 @@
                 "left": "prhnaval1.pie"
             },
             "V-Tol": {
+                "left": "prhvtl4.pie",
+                "moving": "fxvtl12.pie"
+            },
+            "V-TolNAS": {
                 "left": "prhvtl4.pie",
                 "moving": "fxvtl12.pie"
             },
@@ -675,6 +699,10 @@
                 "left": "prhvtl1.pie",
                 "moving": "fxvtl12.pie"
             },
+            "V-TolNAS": {
+                "left": "prhvtl1.pie",
+                "moving": "fxvtl12.pie"
+            },
             "hover01": {
                 "left": "prhhov1.pie"
             },
@@ -741,6 +769,10 @@
                 "left": "prhnaval1.pie"
             },
             "V-Tol": {
+                "left": "prsvtl1.pie",
+                "moving": "fxvtl12.pie"
+            },
+            "V-TolNAS": {
                 "left": "prsvtl1.pie",
                 "moving": "fxvtl12.pie"
             },
@@ -813,6 +845,10 @@
                 "left": "prlvtl2.pie",
                 "moving": "fxvtl04.pie"
             },
+            "V-TolNAS": {
+                "left": "prlvtl2.pie",
+                "moving": "fxvtl04.pie"
+            },
             "hover01": {
                 "left": "prlhov1.pie"
             },
@@ -879,6 +915,10 @@
                 "left": "prhnaval1.pie"
             },
             "V-Tol": {
+                "left": "prmvtl1.pie",
+                "moving": "fxvtl5to8.pie"
+            },
+            "V-TolNAS": {
                 "left": "prmvtl1.pie",
                 "moving": "fxvtl5to8.pie"
             },
@@ -951,6 +991,10 @@
                 "left": "prlvtl3.pie",
                 "moving": "fxvtl04.pie"
             },
+            "V-TolNAS": {
+                "left": "prlvtl3.pie",
+                "moving": "fxvtl04.pie"
+            },
             "hover01": {
                 "left": "prlhov1.pie"
             },
@@ -1017,6 +1061,10 @@
                 "left": "prhnaval1.pie"
             },
             "V-Tol": {
+                "left": "prmvtl1.pie",
+                "moving": "fxvtl5to8.pie"
+            },
+            "V-TolNAS": {
                 "left": "prmvtl1.pie",
                 "moving": "fxvtl5to8.pie"
             },
@@ -1089,6 +1137,10 @@
                 "left": "prhvtl4.pie",
                 "moving": "fxvtl09.pie"
             },
+            "V-TolNAS": {
+                "left": "prhvtl4.pie",
+                "moving": "fxvtl09.pie"
+            },
             "hover01": {
                 "left": "prhhov1.pie"
             },
@@ -1155,6 +1207,10 @@
                 "left": "prhnaval1.pie"
             },
             "V-Tol": {
+                "left": "prlvtl1.pie",
+                "moving": "fxvtl01.pie"
+            },
+            "V-TolNAS": {
                 "left": "prlvtl1.pie",
                 "moving": "fxvtl01.pie"
             },
@@ -1227,6 +1283,10 @@
                 "left": "prlvtl1.pie",
                 "moving": "fxvtl04.pie"
             },
+            "V-TolNAS": {
+                "left": "prlvtl1.pie",
+                "moving": "fxvtl04.pie"
+            },
             "hover01": {
                 "left": "prlhov1.pie"
             },
@@ -1293,6 +1353,10 @@
                 "left": "prhnaval1.pie"
             },
             "V-Tol": {
+                "left": "prlvtl2.pie",
+                "moving": "fxvtl2and3.pie"
+            },
+            "V-TolNAS": {
                 "left": "prlvtl2.pie",
                 "moving": "fxvtl2and3.pie"
             },
@@ -1365,6 +1429,10 @@
                 "left": "prmvtl1.pie",
                 "moving": "fxvtl5to8.pie"
             },
+            "V-TolNAS": {
+                "left": "prmvtl1.pie",
+                "moving": "fxvtl5to8.pie"
+            },
             "hover01": {
                 "left": "prmhov1.pie"
             },
@@ -1431,6 +1499,10 @@
                 "left": "prhnaval1.pie"
             },
             "V-Tol": {
+                "left": "prhvtl3.pie",
+                "moving": "fxvtl09.pie"
+            },
+            "V-TolNAS": {
                 "left": "prhvtl3.pie",
                 "moving": "fxvtl09.pie"
             },
@@ -1503,6 +1575,10 @@
                 "left": "prhvtl1.pie",
                 "moving": "fxvtl12.pie"
             },
+            "V-TolNAS": {
+                "left": "prhvtl1.pie",
+                "moving": "fxvtl12.pie"
+            },
             "hover01": {
                 "left": "prhhov1.pie"
             },
@@ -1569,6 +1645,10 @@
                 "left": "prhnaval1.pie"
             },
             "V-Tol": {
+                "left": "prhvtl1.pie",
+                "moving": "fxvtl12.pie"
+            },
+            "V-TolNAS": {
                 "left": "prhvtl1.pie",
                 "moving": "fxvtl12.pie"
             },
@@ -1641,6 +1721,10 @@
                 "left": "prhvtl1.pie",
                 "moving": "fxvtl12.pie"
             },
+            "V-TolNAS": {
+                "left": "prhvtl1.pie",
+                "moving": "fxvtl12.pie"
+            },
             "hover01": {
                 "left": "prhhov1.pie"
             },
@@ -1707,6 +1791,10 @@
                 "left": "prhnaval1.pie"
             },
             "V-Tol": {
+                "left": "prhvtl1.pie",
+                "moving": "fxvtl12.pie"
+            },
+            "V-TolNAS": {
                 "left": "prhvtl1.pie",
                 "moving": "fxvtl12.pie"
             },
@@ -1779,6 +1867,10 @@
                 "left": "prhvtl1.pie",
                 "moving": "fxvtl12.pie"
             },
+            "V-TolNAS": {
+                "left": "prhvtl1.pie",
+                "moving": "fxvtl12.pie"
+            },
             "hover01": {
                 "left": "prhhov1.pie"
             },
@@ -1845,6 +1937,10 @@
                 "left": "prhnaval1.pie"
             },
             "V-Tol": {
+                "left": "prhvtl1.pie",
+                "moving": "fxvtl12.pie"
+            },
+            "V-TolNAS": {
                 "left": "prhvtl1.pie",
                 "moving": "fxvtl12.pie"
             },
@@ -1917,6 +2013,10 @@
                 "left": "prlvtl2.pie",
                 "moving": "fxvtl2and3.pie"
             },
+            "V-TolNAS": {
+                "left": "prlvtl2.pie",
+                "moving": "fxvtl2and3.pie"
+            },
             "hover01": {
                 "left": "prlhov1.pie"
             },
@@ -1983,6 +2083,10 @@
                 "left": "prhnaval1.pie"
             },
             "V-Tol": {
+                "left": "prlvtl2.pie",
+                "moving": "fxvtl2and3.pie"
+            },
+            "V-TolNAS": {
                 "left": "prlvtl2.pie",
                 "moving": "fxvtl2and3.pie"
             },
@@ -2055,6 +2159,10 @@
                 "left": "prlvtl3.pie",
                 "moving": "fxvtl04.pie"
             },
+            "V-TolNAS": {
+                "left": "prlvtl3.pie",
+                "moving": "fxvtl04.pie"
+            },
             "hover01": {
                 "left": "prlhov1.pie"
             },
@@ -2121,6 +2229,10 @@
                 "left": "prhnaval1.pie"
             },
             "V-Tol": {
+                "left": "prlvtl3.pie",
+                "moving": "fxvtl04.pie"
+            },
+            "V-TolNAS": {
                 "left": "prlvtl3.pie",
                 "moving": "fxvtl04.pie"
             },
@@ -2193,6 +2305,10 @@
                 "left": "prmvtl1.pie",
                 "moving": "fxvtl5to8.pie"
             },
+            "V-TolNAS": {
+                "left": "prmvtl1.pie",
+                "moving": "fxvtl5to8.pie"
+            },
             "hover01": {
                 "left": "prmhov1.pie"
             },
@@ -2259,6 +2375,10 @@
                 "left": "prhnaval1.pie"
             },
             "V-Tol": {
+                "left": "prmvtl1.pie",
+                "moving": "fxvtl5to8.pie"
+            },
+            "V-TolNAS": {
                 "left": "prmvtl1.pie",
                 "moving": "fxvtl5to8.pie"
             },
@@ -2331,6 +2451,10 @@
                 "left": "prmvtl1.pie",
                 "moving": "fxvtl5to8.pie"
             },
+            "V-TolNAS": {
+                "left": "prmvtl1.pie",
+                "moving": "fxvtl5to8.pie"
+            },
             "hover01": {
                 "left": "prmhov1.pie"
             },
@@ -2397,6 +2521,10 @@
                 "left": "prhnaval1.pie"
             },
             "V-Tol": {
+                "left": "prmvtl1.pie",
+                "moving": "fxvtl5to8.pie"
+            },
+            "V-TolNAS": {
                 "left": "prmvtl1.pie",
                 "moving": "fxvtl5to8.pie"
             },
@@ -2469,6 +2597,10 @@
                 "left": "prmvtl1.pie",
                 "moving": "fxvtl5to8.pie"
             },
+            "V-TolNAS": {
+                "left": "prmvtl1.pie",
+                "moving": "fxvtl5to8.pie"
+            },
             "hover01": {
                 "left": "prmhov2.pie"
             },
@@ -2535,6 +2667,10 @@
                 "left": "prhnaval1.pie"
             },
             "V-Tol": {
+                "left": "prmvtl1.pie",
+                "moving": "fxvtl5to8.pie"
+            },
+            "V-TolNAS": {
                 "left": "prmvtl1.pie",
                 "moving": "fxvtl5to8.pie"
             },
@@ -2607,6 +2743,10 @@
                 "left": "prmvtl1.pie",
                 "moving": "fxvtl5to8.pie"
             },
+            "V-TolNAS": {
+                "left": "prmvtl1.pie",
+                "moving": "fxvtl5to8.pie"
+            },
             "hover01": {
                 "left": "prmhov1.pie"
             },
@@ -2676,6 +2816,10 @@
                 "left": "prhvtl1.pie",
                 "moving": "fxvtl09.pie"
             },
+            "V-TolNAS": {
+                "left": "prhvtl1.pie",
+                "moving": "fxvtl09.pie"
+            },
             "hover01": {
                 "left": "prhhov1.pie"
             },
@@ -2742,6 +2886,10 @@
                 "left": "prhnaval1.pie"
             },
             "V-Tol": {
+                "left": "prhvtl1.pie",
+                "moving": "fxvtl09.pie"
+            },
+            "V-TolNAS": {
                 "left": "prhvtl1.pie",
                 "moving": "fxvtl09.pie"
             },

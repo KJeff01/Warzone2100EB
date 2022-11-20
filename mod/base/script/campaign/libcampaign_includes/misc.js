@@ -546,6 +546,34 @@ function camDiscoverCampaign()
 	return UNKNOWN_CAMPAIGN_NUMBER;
 }
 
+function camSetExpState(state)
+{
+	__camExpState = state;
+}
+
+function camSetExpLevel(number)
+{
+	__camExpLevel = number;
+}
+
+function camSetOnMapEnemyUnitExp()
+{
+	enumDroid(NEW_PARADIGM)
+	.concat(enumDroid(THE_COLLECTIVE))
+	.concat(enumDroid(NEXUS))
+	.concat(enumDroid(SCAV_6))
+	.concat(enumDroid(SCAV_7))
+	.concat(enumDroid(ULTSCAV))
+	.forEach(function(obj) {
+		if (!allianceExistsBetween(CAM_HUMAN_PLAYER, obj.player) && //may have friendly units as other player
+			obj.droidType !== DROID_CONSTRUCT &&
+			obj.droidType !== DROID_REPAIR)
+		{
+			camSetDroidExperience(obj);
+		}
+	});
+}
+
 //////////// privates
 
 function __camGlobalContext()
@@ -621,4 +649,65 @@ function __camSetOffworldLimits()
 	// auto-disabled by the engine in off-world missions.
 	setStructureLimits("A0CommandCentre", 0, CAM_HUMAN_PLAYER);
 	setStructureLimits("A0ComDroidControl", 0, CAM_HUMAN_PLAYER);
+}
+
+function __camGetExpRangeLevel()
+{
+	let ranks = {
+		rookie: 0,
+		green: 4,
+		trained: 8,
+		regular: 16,
+		professional: 32,
+		veteran: 64,
+		elite: 128,
+		special: 256,
+		hero: 512,
+	}; //see brain.json
+	let exp = [];
+
+	switch (__camExpLevel)
+	{
+		case 1:
+			exp = [ranks.rookie, ranks.green];
+			break;
+		case 2:
+			exp = [ranks.rookie, ranks.green, ranks.trained, ranks.regular];
+			break;
+		case 3:
+			exp = [ranks.trained, ranks.regular, ranks.professional];
+			break;
+		case 4:
+			exp = [ranks.professional, ranks.veteran, ranks.elite];
+			break;
+		case 5:
+			exp = [ranks.veteran, ranks.elite, ranks.special, ranks.hero];
+			break;
+		default:
+			exp = [ranks.trained, ranks.regular, ranks.professional];
+	}
+
+	return exp;
+}
+
+function camSetDroidExperience(droid)
+{
+	if (!__camExpState)
+	{
+		return;
+	}
+	if (droid.player === CAM_HUMAN_PLAYER)
+	{
+		return;
+	}
+
+	let expRange = __camGetExpRangeLevel();
+	let exp = expRange[camRand(expRange.length)];
+
+	if (droid.droidType === DROID_COMMAND)
+	{
+		exp = exp * 2;
+	}
+
+	setDroidExperience(droid, exp);
 }

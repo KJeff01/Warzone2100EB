@@ -27,9 +27,17 @@ var ultScav_derrick;
 
 namespace("ULT_");
 
-function generateRandomTemplates(bodies, propulsions, weapons)
+function generateRandomTemplates(bodies, propulsions, weapons, array)
 {
-	let templates = {};
+	let templates;
+	if (array)
+	{
+		templates = [];
+	}
+	else
+	{
+		templates = {};
+	}
 
 	for (let i = 0; i < 50; ++i)
 	{
@@ -296,7 +304,7 @@ function ultScav_setTech(tech_level)
 		let prop = ["HalfTrackGM", "HalfTrackNAS", "hover01NAS", "tracked01NAS", "tracked01NAS", "wheeled01GM", "wheeled01NAS" ];
 		let weap = ["MG3Mk1-Twn", "Rocket-Pod-Twn", "Rocket-Pod-Quad", "Rocket-LtA-T-Quad", "Rocket-LtA-T-AR", "Rocket-Pod-MRA-Twin", "Rocket-Pod-Arch",
 				"MG3Mk1-Aslt", "Rocket-Pod-Arch-Twin", "Rocket-MRL-Homing", "Cannon5VulcanMk1-Gat", "Mortar1Mk1-Ram", "Mortar2Mk1-Ram", "Rocket-Pod-MRA-Quad",
-				"Rocket-Pod-Arch-Quad", "Rocket-MRL-Homing-Hvy", "Rocket-Arch-Hvy-Aslt-Gat", "Flame2"
+				"Rocket-Pod-Arch-Quad", "Rocket-MRL-Homing-Hvy", "Rocket-Arch-Hvy-Aslt-Gat"
 	 	];
 		if (tech_level === -1.5)
 		{

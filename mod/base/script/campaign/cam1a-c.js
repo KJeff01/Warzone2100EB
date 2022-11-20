@@ -127,21 +127,18 @@ function startTransporterAttack()
 
 function checkEnemyVtolArea()
 {
-	var pos = {x: 2, y: 2};
-	var vtols = enumRange(pos.x, pos.y, 2, ULTSCAV, false).filter((obj) => (obj.prop === "Helicopter" || obj.prop === "V-Tol"));
+	var pos = {x: 1, y: 1};
+	var vtols = enumRange(pos.x, pos.y, 2, ULTSCAV, false);
 
 	for (let i = 0, l = vtols.length; i < l; ++i)
 	{
-		if ((vtols[i].weapons[0].armed < 20) || (vtols[i].health < 20))
-		{
-			camSafeRemoveObject(vtols[i], false);
-		}
+		camSafeRemoveObject(vtols[i], false);
 	}
 }
 
 function helicopterAttack()
 {
-	var vtolRemovePos = {x: 2, y: 2};
+	var vtolRemovePos = {x: 1, y: 1};
 	var vtolPositions = undefined; //to randomize the spawns each time
 	var list = [
 		cTempl.ScavChopNASDA, cTempl.HvyChopNASDA

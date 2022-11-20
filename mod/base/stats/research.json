@@ -7846,7 +7846,8 @@
         "researchPoints": 5600,
         "researchPower": 280,
         "resultComponents": [
-            "V-Tol"
+            "V-Tol",
+            "V-TolNAS"
         ]
     },
     "R-Vehicle-Prop-Wheels": {

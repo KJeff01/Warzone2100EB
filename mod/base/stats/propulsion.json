@@ -158,7 +158,7 @@
         "buildPoints": 112,
         "buildPower": 430,
         "deceleration": 1075,
-        "designable": 0,
+        "designable": 1,
         "hitpointPctOfBody": 112,
         "id": "V-TolNAS",
         "model": "DPVTOL.PIE",

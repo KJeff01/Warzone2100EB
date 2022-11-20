@@ -125,6 +125,8 @@ function cam_eventStartLevel()
 	__camNeverGroupDroids = [];
 	__camNumTransporterExits = 0;
 	__camAllowVictoryMsgClear = true;
+	__camExpState = false;
+	__camExpLevel = 1;
 	camSetPropulsionTypeLimit(); //disable the propulsion changer by default
 	__camAiPowerReset(); //grant power to the AI
 	setTimer("__camSpawnVtols", camSecondsToMilliseconds(0.5));
@@ -166,6 +168,7 @@ function cam_eventDroidBuilt(droid, structure)
 	{
 		return;
 	}
+	camSetDroidExperience(droid);
 	__camAddDroidToFactoryGroup(droid, structure);
 }
 
