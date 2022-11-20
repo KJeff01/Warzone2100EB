@@ -138,11 +138,11 @@ function startTransporterAttack()
 function checkEnemyVtolArea()
 {
 	var pos = {x: 2, y: 2};
-	var vtols = enumRange(pos.x, pos.y, 2, ULTSCAV, false).filter((obj) => (obj.prop === "Helicopter" || obj.prop === "V-Tol"));
+	var vtols = enumRange(pos.x, pos.y, 3, ULTSCAV, false);
 
 	for (let i = 0, l = vtols.length; i < l; ++i)
 	{
-		if ((vtols[i].weapons[0].armed < 20) || (vtols[i].health < 20))
+		if (vtols[i].weapons[0].armed < 100)
 		{
 			camSafeRemoveObject(vtols[i], false);
 		}
@@ -188,7 +188,7 @@ function eventStartLevel()
 		setNoGoArea(ph.x, ph.y, ph.x2, ph.y2, i + 2);
 	}
 
-	setMissionTime(camChangeOnDiff(camMinutesToSeconds(30)));
+	setMissionTime(camChangeOnDiff(camMinutesToSeconds(60)));
 	camPlayVideos({video: "MB1CA_MSG", type: CAMP_MSG});
 
 	// first transport after 10 seconds
