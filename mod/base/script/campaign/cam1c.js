@@ -4,6 +4,35 @@ include("script/campaign/templates.js");
 include("script/campaign/transitionTech.js");
 include("script/campaign/ultScav.js");
 
+function enableUltScavs()
+{
+	ultScav_eventStartLevel(
+		1, // vtols on/off. -1 = off
+		190, // build defense every x seconds
+		85, // build factories every x seconds
+		-1, // build cyborg factories every x seconds
+		240, // produce trucks every x seconds
+		120, // produce droids every x seconds
+		-1, // produce cyborgs every x seconds
+		75, // produce VTOLs every x seconds
+		5, // min factories
+		10, // min vtol factories
+		-1, // min cyborg factories
+		4, // min number of trucks
+		-1, // min number of sensor droids
+		4, // min number of attack droids
+		3, // min number of defend droids
+		55, // ground attack every x seconds
+		145, // VTOL attack every x seconds
+		1 // tech level
+	);
+}
+
+function triggerUlts()
+{
+	camCallOnce("enableUltScavs");
+}
+
 function sendRocketForce()
 {
 	camManageGroup(camMakeGroup("RocketForce"), CAM_ORDER_ATTACK, {
@@ -57,6 +86,8 @@ function enableNorthScavFactory()
 camAreaEvent("RemoveBeacon", function()
 {
 	hackRemoveMessage("C1C_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER);
+
+	triggerUlts();
 });
 
 camAreaEvent("AmbushTrigger", function()
@@ -180,18 +211,7 @@ function eventStartLevel()
 		setNoGoArea(ph.x, ph.y, ph.x2, ph.y2, i + 1);
 	}
 
-	if (difficulty === HARD)
-	{
-		setMissionTime(camMinutesToSeconds(100));
-	}
-	else if (difficulty === INSANE)
-	{
-		setMissionTime(camMinutesToSeconds(90));
-	}
-	else
-	{
-		setMissionTime(camChangeOnDiff(camHoursToSeconds(2)));
-	}
+	setMissionTime(camChangeOnDiff(camHoursToSeconds(3)));
 
 	setReinforcementTime(-1);
 	setAlliance(NEW_PARADIGM, SCAV_7, true);
@@ -281,10 +301,10 @@ function eventStartLevel()
 	camPlayVideos([{video: "MB1C_MSG", type: CAMP_MSG}, {video: "MB1C2_MSG", type: CAMP_MSG}]);
 
 	camSetArtifacts({
-		"ScavSouthFactory": { tech: ["R-Wpn-Rocket05-MiniPod", "R-Wpn-Cannon2Mk1"] },
-		"NPResearchFacility": { tech: "R-Struc-Research-Module" },
-		"NPCentralFactory": { tech: ["R-Vehicle-Prop-Tracks", "R-Vehicle-Armor-Heat01"] },
-		"NPNorthFactory": { tech: ["R-Struc-Factory-Upgrade01", "R-Vehicle-Engine02"] },
+		"ScavSouthFactory": { tech: ["R-Wpn-Rocket05-MiniPod", "R-Wpn-Cannon2Mk1", "R-Wpn-Mortar-Range01"] },
+		"NPResearchFacility": { tech: ["R-Struc-Research-Module", "R-Vehicle-Engine02"] },
+		"NPCentralFactory": { tech: ["R-Vehicle-Prop-Tracks", "R-Wpn-Rocket03-HvAT"] },
+		"NPNorthFactory": { tech: ["R-Vehicle-Armor-Heat01", "R-Struc-Factory-Upgrade01"] },
 	});
 
 	camSetFactories({
@@ -365,29 +385,9 @@ function eventStartLevel()
 	addDroid(ULTSCAV, 58, 78, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
 	addDroid(ULTSCAV, 63, 93, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
 
-	ultScav_eventStartLevel(
-		1, // vtols on/off. -1 = off
-		55, // build defense every x seconds
-		75, // build factories every x seconds
-		45, // build cyborg factories every x seconds
-		25, // produce trucks every x seconds
-		45, // produce droids every x seconds
-		35, // produce cyborgs every x seconds
-		30, // produce VTOLs every x seconds
-		20, // min factories
-		10, // min vtol factories
-		15, // min cyborg factories
-		4, // min number of trucks
-		5, // min number of sensor droids
-		4, // min number of attack droids
-		3, // min number of defend droids
-		55, // ground attack every x seconds
-		210, // VTOL attack every x seconds
-		1.5 // tech level
-	);
-
 	queue("sendRocketForce", camSecondsToMilliseconds(25));
 	queue("sendTankScoutForce", camSecondsToMilliseconds(30));
 	queue("sendTankForce", camSecondsToMilliseconds(100)); // in wzcam it moves back and then forward
 	queue("enableNPFactory", camMinutesToMilliseconds(5));
+	queue("triggerUlts", camChangeOnDiff(camMinutesToMilliseconds(15)));
 }

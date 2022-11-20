@@ -243,9 +243,9 @@ function eventStartLevel()
 	hackAddMessage("C1-3_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, false); // south-west beacon
 
 	camSetArtifacts({
-		"ScavFactory": { tech: "R-Struc-RepairFacility" },
+		"ScavFactory": { tech: "R-Vehicle-Body04" },
 		"NPFactory": { tech: "R-Struc-Factory-Module" },
-		"NPLab": { tech: "R-Defense-WallUpgrade01" },
+		"NPLab": { tech: ["R-Struc-RepairFacility", "R-Defense-WallUpgrade01"] },
 		"NPCRC": { tech: "R-Struc-CommandRelay" },
 		"NPHQ": { tech: "R-Sys-ECM-Upgrade01" },
 	});

@@ -88,7 +88,7 @@ function eventGroupLoss(obj, group, newsize)
 			addLabel(acrate, "newArtiLabel");
 
 			camSetArtifacts({
-				"newArtiLabel": { tech: "R-Wpn-Cannon3Mk1" },
+				"newArtiLabel": { tech: ["R-Wpn-Cannon3Mk1", "R-Wpn-Mortar-Range02"] },
 			});
 
 			droidWithArtiID = undefined;
@@ -254,7 +254,7 @@ function eventStartLevel()
 	//Get rid of the already existing crate and replace with another
 	camSafeRemoveObject("artifact1", false);
 	camSetArtifacts({
-		"artifactLocation": { tech: "R-Wpn-Cannon3Mk1" },
+		"artifactLocation": { tech: ["R-Wpn-Cannon3Mk1", "R-Wpn-Mortar-Range02"] },
 	});
 
 	camCompleteRequiredResearch(CAM1_7_RES_NP, NEW_PARADIGM);

@@ -1001,6 +1001,7 @@
     "R-Cyborg-Metals01": {
         "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-Cyborg-Metals01",
+        "keyTopic": 1,
         "imdName": "icmolql.pie",
         "msgName": "RES_CYMET1",
         "name": "Cyborg Composite Alloys",
@@ -12878,6 +12879,7 @@
     "R-Wpn-Mortar-Range02": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Mortar-Range02",
+        "keyTopic": 1,
         "msgName": "RES_W_M_RA2",
         "name": "Stabilized Bombard",
         "redComponents": [
@@ -14092,6 +14094,7 @@
     "R-Wpn-Rocket-Pod-Quad": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket-Pod-Quad",
+        "keyTopic": 1,
         "msgName": "RES_W_RK_MP1",
         "name": "Quad Rocket Pod",
         "requiredResearch": [
@@ -14313,6 +14316,7 @@
     "R-Wpn-Rocket01-LtAT-Quad": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket01-LtAT-Quad",
+        "keyTopic": 1,
         "msgName": "RES_W_RK_LTAT1",
         "name": "Quad Lancer Rocket",
         "requiredResearch": [
@@ -14346,6 +14350,7 @@
     "R-Wpn-Rocket03-HvAT": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket03-HvAT",
+        "keyTopic": 1,
         "msgName": "RES_W_RK_HVAT1",
         "name": "Bunker Buster Rocket",
         "requiredResearch": [

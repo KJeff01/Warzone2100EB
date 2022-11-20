@@ -145,10 +145,11 @@ function eventStartLevel()
 	hackAddMessage("C1-4_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, false);
 
 	camSetArtifacts({
-		"NPCommandCenter": { tech: ["R-Vehicle-Metals02", "R-Wpn-Mortar02Hvy", "R-Wpn-Cannon-Damage05"] },
-		"NPResearchFacility": { tech: ["R-Vehicle-Body04", "R-Wpn-Rocket05-MiniPod-Arch"] },
+		"NPCommandCenter": { tech: ["R-Vehicle-Metals02", "R-Wpn-Mortar02Hvy"] },
+		"NPResearchFacility": { tech: ["R-Wpn-Cannon-Damage05", "R-Wpn-Rocket05-MiniPod-Arch"] },
 		"MediumNPFactory": { tech: ["R-Wpn-Rocket-Pod-MRA", "R-Wpn-Rocket-Pod-MRA-Twin"] },
 		"HeavyNPFactory": { tech: ["R-Vehicle-Body17", "R-Wpn-Cannon-Mount01"] },
+		"NorthScavFactory": { tech: "R-Wpn-Rocket-Pod-Quad" },
 	});
 
 	camSetFactories({
