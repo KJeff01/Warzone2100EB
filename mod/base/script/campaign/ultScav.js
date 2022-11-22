@@ -371,6 +371,9 @@ function ultScav_setTech(tech_level)
 
 		ultScav_cyborgs = {
 			mg: { body: "CyborgLightNAS", prop: "CyborgLegsNAS", weap: "CyborgChaingun" },
+			cannon: { body: "CyborgLightNAS", prop: "CyborgLegsNAS", weap: "CyborgCannon" },
+			grenade: { body: "CyborgLightNAS", prop: "CyborgLegsNAS", weap: "Cyb-Wpn-Grenade" },
+			flamer: { body: "CyborgLightNAS", prop: "CyborgLegsNAS", weap: "CyborgFlamer01" },
 		};
 
 		ultScav_trucks = {

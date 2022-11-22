@@ -301,10 +301,10 @@ function eventStartLevel()
 	camPlayVideos([{video: "MB1C_MSG", type: CAMP_MSG}, {video: "MB1C2_MSG", type: CAMP_MSG}]);
 
 	camSetArtifacts({
-		"ScavSouthFactory": { tech: ["R-Wpn-Rocket05-MiniPod", "R-Wpn-Cannon2Mk1", "R-Wpn-Mortar-Range01"] },
-		"NPResearchFacility": { tech: ["R-Struc-Research-Module", "R-Vehicle-Engine02"] },
-		"NPCentralFactory": { tech: ["R-Vehicle-Prop-Tracks", "R-Wpn-Rocket03-HvAT"] },
-		"NPNorthFactory": { tech: ["R-Vehicle-Armor-Heat01", "R-Struc-Factory-Upgrade01"] },
+		"ScavSouthFactory": { tech: ["R-Wpn-Rocket-Pod-Twn", "R-Wpn-Cannon2Mk1", "R-Wpn-Mortar-Range01", "R-Wpn-Rocket02-MRL"] },
+		"NPResearchFacility": { tech: ["R-Struc-Research-Module", "R-Vehicle-Engine02", "R-Wpn-Rocket-Pod-Twn-Arch"] },
+		"NPCentralFactory": { tech: ["R-Vehicle-Prop-Tracks", "R-Wpn-Rocket03-HvAT", "R-Wpn-Rocket-Range01"] },
+		"NPNorthFactory": { tech: ["R-Vehicle-Armor-Heat01", "R-Struc-Factory-Upgrade01", "R-Wpn-Rocket-Pod-MRA-Twin"] },
 	});
 
 	camSetFactories({

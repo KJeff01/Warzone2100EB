@@ -1381,6 +1381,9 @@
         "id": "R-Defense-AASite-QuadRotAAGun-Scav",
         "name": "Cyclone AA Turret Site",
         "msgName": "RES_ABC_1",
+        "redStructures": [
+            "AASite-QuadMg1AAGun-Scav"
+        ],
         "requiredResearch": [
             "R-Wpn-AAGun06"
         ],
@@ -2714,6 +2717,9 @@
         "id": "R-Defense-Pillbox03",
         "msgName": "RES_DF_P2",
         "name": "Heavy Machinegun Bunker",
+        "redStructures": [
+            "PillBox2"
+        ],
         "requiredResearch": [
             "R-Defense-Pillbox01",
             "R-Wpn-MG3Mk1"
@@ -8313,6 +8319,9 @@
         "id": "R-Wpn-AAGun06",
         "msgName": "RES_W_AA6",
         "name": "Cyclone AA Turret",
+        "redComponents": [
+            "QuadMg1AAGun-Scav"
+        ],
         "requiredResearch": [
             "R-Wpn-AAGun05",
             "R-Wpn-MG3Mk1-Twn"
@@ -9170,6 +9179,7 @@
     "R-Wpn-Cannon-ROF02": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Cannon-ROF02",
+        "keyTopic": 1,
         "msgName": "RES_W_CN_ROF2",
         "name": "Cannon Autoloader Mk2",
         "requiredResearch": [
@@ -14064,6 +14074,7 @@
     "R-Wpn-Rocket-Pod-MRA-Quad": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket-Pod-MRA-Quad",
+        "keyTopic": 1,
         "msgName": "RES_W_RK_MR_QD",
         "name": "Quad Rocket Array",
         "requiredResearch": [
@@ -14111,6 +14122,7 @@
     "R-Wpn-Rocket-Pod-Quad-Arch": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket-Pod-Quad-Arch",
+        "keyTopic": 1,
         "msgName": "RES_W_RK_MP1",
         "name": "Quad Thermal Rockets",
         "requiredResearch": [
@@ -14126,6 +14138,7 @@
     "R-Wpn-Rocket-Pod-Twn": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket-Pod-Twn",
+        "keyTopic": 1,
         "msgName": "RES_W_RK_MP1",
         "name": "Twin Rocket Pod",
         "requiredResearch": [
@@ -14141,6 +14154,7 @@
     "R-Wpn-Rocket-Pod-Twn-Arch": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket-Pod-Twn-Arch",
+        "keyTopic": 1,
         "msgName": "RES_W_RK_MP1",
         "name": "Twin Thermal Rockets",
         "requiredResearch": [
@@ -14224,6 +14238,7 @@
     "R-Wpn-Rocket-Range01": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket-Range01",
+        "keyTopic": 1,
         "msgName": "RES_W_RK_RA1",
         "name": "Ballistic Rockets",
         "requiredResearch": [
@@ -14249,6 +14264,7 @@
     "R-Wpn-Rocket-Range02": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket-Range02",
+        "keyTopic": 1,
         "msgName": "RES_W_RK_RA2",
         "name": "Ballistic Rockets Mk2",
         "requiredResearch": [
@@ -14276,6 +14292,7 @@
     "R-Wpn-Rocket-Range03": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket-Range03",
+        "keyTopic": 1,
         "msgName": "RES_W_RK_RA3",
         "name": "Ballistic Rockets Mk3",
         "requiredResearch": [

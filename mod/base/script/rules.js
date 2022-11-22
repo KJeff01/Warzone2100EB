@@ -283,12 +283,15 @@ function eventGameInit()
 
 function setLimits()
 {
-	setDroidLimit(selectedPlayer, 101, DROID_ANY); //note: the transporter is a unit you own
+	setDroidLimit(selectedPlayer, 151, DROID_ANY); //note: the transporter is a unit you own
 	setDroidLimit(selectedPlayer, 10, DROID_COMMAND);
 	setDroidLimit(selectedPlayer, 15, DROID_CONSTRUCT);
 
 	for (let i = 0; i < maxPlayers; ++i)
 	{
+		setStructureLimits("A0RepairCentre2", 100, i);
+		setStructureLimits("A0RepairCentre3", 100, i);
+		setStructureLimits("A0RepairCentre4", 100, i);
 		setStructureLimits("A0PowerGenerator", 5, i);
 		setStructureLimits("A0ResourceExtractor", 200, i);
 		setStructureLimits("A0ResearchFacility", 5, i);

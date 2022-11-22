@@ -146,10 +146,10 @@ function eventStartLevel()
 
 	camSetArtifacts({
 		"NPCommandCenter": { tech: ["R-Vehicle-Metals02", "R-Wpn-Mortar02Hvy"] },
-		"NPResearchFacility": { tech: ["R-Wpn-Cannon-Damage05", "R-Wpn-Rocket05-MiniPod-Arch"] },
-		"MediumNPFactory": { tech: ["R-Wpn-Rocket-Pod-MRA", "R-Wpn-Rocket-Pod-MRA-Twin"] },
+		"NPResearchFacility": { tech: "R-Wpn-Cannon-ROF02" },
+		"MediumNPFactory": { tech: ["R-Wpn-Rocket-Pod-MRA-Quad", "R-Wpn-Rocket-Pod-Quad-Arch"] },
 		"HeavyNPFactory": { tech: ["R-Vehicle-Body17", "R-Wpn-Cannon-Mount01"] },
-		"NorthScavFactory": { tech: "R-Wpn-Rocket-Pod-Quad" },
+		"NorthScavFactory": { tech: ["R-Wpn-Rocket-Range02", "R-Wpn-Rocket-Pod-Quad"] },
 	});
 
 	camSetFactories({
@@ -201,7 +201,6 @@ function eventStartLevel()
 	addDroid(ULTSCAV, 55, 49, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
 	addDroid(ULTSCAV, 15, 42, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
 	addDroid(ULTSCAV, 6, 31, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
-	addDroid(ULTSCAV, 21, 31, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
 	addDroid(ULTSCAV, 5, 17, "Ultscav crane", "B2crane1", "BaBaProp", "", "", "scavCrane1");
 	addDroid(ULTSCAV, 11, 10, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
 	addDroid(ULTSCAV, 36, 20, "Ultscav crane", "B2crane2", "BaBaProp", "", "", "scavCrane2");
@@ -211,22 +210,25 @@ function eventStartLevel()
 		1, // vtols on/off. -1 = off
 		95, // build defense every x seconds
 		85, // build factories every x seconds
-		-1, // build cyborg factories every x seconds
+		120, // build cyborg factories every x seconds
 		35, // produce trucks every x seconds
 		75, // produce droids every x seconds
-		-1, // produce cyborgs every x seconds
-		-1, // produce VTOLs every x seconds
-		6, // min factories
-		3, // min vtol factories
-		-1, // min cyborg factories
+		50, // produce cyborgs every x seconds
+		65, // produce VTOLs every x seconds
+		5, // min factories
+		5, // min vtol factories
+		2, // min cyborg factories
 		3, // min number of trucks
-		-1, // min number of sensor droids
+		1, // min number of sensor droids
 		5, // min number of attack droids
 		4, // min number of defend droids
 		230, // ground attack every x seconds
 		210, // VTOL attack every x seconds
-		1.5 // tech level
+		1 // tech level
 	);
+
+	camSetExpState(true);
+	camSetExpLevel((difficulty >= HARD) ? 3 : 1);
 
 	queue("enableSouthScavFactory", camChangeOnDiff(camSecondsToMilliseconds(10)));
 }
