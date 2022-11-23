@@ -696,6 +696,10 @@ function camSetDroidExperience(droid)
 	{
 		return;
 	}
+	if (droid.droidType === DROID_REPAIR || droid.droidType === DROID_CONSTRUCT)
+	{
+		return;
+	}
 	if (droid.player === CAM_HUMAN_PLAYER)
 	{
 		return;

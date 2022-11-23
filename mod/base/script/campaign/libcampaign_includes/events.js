@@ -158,6 +158,7 @@ function cam_eventDroidBuilt(droid, structure)
 	}
 	if (camPlayerMatchesFilter(droid.player, ULTSCAV))
 	{
+		camSetDroidExperience(droid);
 		return;
 	}
 	if (camPlayerMatchesFilter(structure.player, ULTSCAV))

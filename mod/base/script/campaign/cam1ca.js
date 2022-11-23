@@ -135,11 +135,14 @@ function startTransporterAttack()
 function checkEnemyVtolArea()
 {
 	var pos = {x: 1, y: 1};
-	var vtols = enumRange(pos.x, pos.y, 2, ULTSCAV, false);
+	var vtols = enumRange(pos.x, pos.y, 2, NEW_PARADIGM, false);
 
 	for (let i = 0, l = vtols.length; i < l; ++i)
 	{
-		camSafeRemoveObject(vtols[i], false);
+		if ((vtols[i].weapons[0].armed < 100) || (vtols[i].health < 100))
+		{
+			camSafeRemoveObject(vtols[i], false);
+		}
 	}
 }
 
@@ -156,7 +159,7 @@ function helicopterAttack()
 		maxRandomVTOLs: (difficulty >= HARD) ? 5 : 3
 	};
 
-	camSetVtolData(ULTSCAV, vtolPositions, vtolRemovePos, list, camChangeOnDiff(camSecondsToMilliseconds(40)), undefined, extras);
+	camSetVtolData(NEW_PARADIGM, vtolPositions, vtolRemovePos, list, camChangeOnDiff(camSecondsToMilliseconds(40)), undefined, extras);
 }
 
 function eventStartLevel()

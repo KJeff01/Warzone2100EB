@@ -313,21 +313,24 @@ function eventStartLevel()
 		85, // build defense every x seconds
 		75, // build factories every x seconds
 		50, // build cyborg factories every x seconds
-		25, // produce trucks every x seconds
+		45, // produce trucks every x seconds
 		30, // produce droids every x seconds
-		40, // produce cyborgs every x seconds
-		40, // produce VTOLs every x seconds
-		6, // min factories
-		5, // min vtol factories
-		3, // min cyborg factories
+		50, // produce cyborgs every x seconds
+		70, // produce VTOLs every x seconds
+		8, // min factories
+		4, // min vtol factories
+		5, // min cyborg factories
 		4, // min number of trucks
 		2, // min number of sensor droids
 		5, // min number of attack droids
 		3, // min number of defend droids
 		55, // ground attack every x seconds
-		170, // VTOL attack every x seconds
-		1.5 // tech level
+		140, // VTOL attack every x seconds
+		1 // tech level
 	);
+
+	camSetExpState(true);
+	camSetExpLevel((difficulty >= HARD) ? 3 : 2);
 
 	queue("enableNPFactories", camChangeOnDiff(camMinutesToMilliseconds(10)));
 }
