@@ -15,12 +15,13 @@ const cyborgPatrolList = [
 ];
 var index; //Current LZ (SE, N, canyon, south hill, road north of base)
 var switchLZ; //Counter for incrementing index every third landing
+var totalPasses;
 
 //Check if all enemies are gone and win after 15 transports
 function extraVictoryCondition()
 {
 	var enemies = enumArea(0, 0, mapWidth, mapHeight, ENEMIES, false);
-	if (index === 5 && enemies.length === 0)
+	if (totalPasses === 2 && enemies.length === 0)
 	{
 		return true;
 	}
@@ -32,28 +33,40 @@ function checkForGroundForces()
 	if (index < 2 && switchLZ === 3)
 	{
 		//Amounts for the ground force
-		const maxTanks = 16;
-		const firstAmount = 10;
+		var tankAssaultAmount = 10;
+		var artilleryAmount = 6;
 
 		var droidGroup1 = []; //Heavy cannon mantis track units
-		var droidGroup2 = []; //Sensor and heavy mortar units
-		var templates = [ cTempl.nphct, cTempl.npmsens, cTempl.npmorb ];
+		var droidGroup2 = []; //Heavy mortar units
 
-		for (let i = 0; i <= maxTanks; ++i)
+		let body = ["Body45ABT", "Body88MBT", "Body88MBT", "Body121SUP"];
+		let prop = ["HalfTrackGM", "HalfTrackNAS", "hover01NAS", "tracked01NAS", "tracked01NAS" ];
+		let weap = ["Rocket-Pod-Quad", "Rocket-LtA-T-Quad", "MG3Mk1-Aslt",
+				"Cannon5VulcanMk1-Gat", "Rocket-Pod-MRA-Quad",
+				"Rocket-Pod-Arch-Quad", "Rocket-Arch-Hvy-Aslt-Gat", "Rocket-BB-AR"
+		];
+		let templates = generateRandomTemplates(body, prop, weap, true);
+
+		for (let i = 0; i <= tankAssaultAmount; ++i)
 		{
-			if (i <= firstAmount)
-			{
-				droidGroup1[i] = templates[0];
-			}
-			if (i === firstAmount + 1)
-			{
-				droidGroup2[i - 1 - firstAmount] = templates[1];
-			}
-			else
-			{
-				droidGroup2[i - 1 - firstAmount] = templates[2];
-			}
+			droidGroup1.push(templates[camRand(templates.length)]);
 		}
+
+		weap = ["Mortar2Mk1-Ram", "Mortar2Mk1-Ram", "Mortar2Mk1-Ram", "Rocket-MRL-Homing-Hvy"];
+		templates = generateRandomTemplates(body, prop, weap, true);
+
+		for (let i = 0; i <= artilleryAmount; ++i)
+		{
+			droidGroup2.push(templates[camRand(templates.length)]);
+		}
+
+		weap = ["SensorTurret1Mk1", "SensorTurret1Mk1", "SensorTurret1Mk1"];
+		if (difficulty >= INSANE)
+		{
+			weap.push("Sensor-WideSpec"); //Why not. Why shouldn't I do this.
+		}
+		templates = generateRandomTemplates(body, prop, weap, true);
+		droidGroup2.push(templates[0]);
 
 		//What part of map to appear at
 		var pos = (index === 0) ? camMakePos("reinforceSouthEast") : camMakePos("reinforceNorth");
@@ -71,19 +84,19 @@ function sendTransport()
 	var position = camMakePos(landingZoneList[index]);
 	switchLZ += 1;
 
-	// (2 or 3 or 4) pairs of each droid template.
-	// This emulates wzcam's droid count distribution.
-	var count = [ 2, 3, 4, 4, 4, 4, 4, 4, 4 ][camRand(9)];
+	var count = 8 + camRand(3);
 
-	var templates = [ cTempl.npcybc, cTempl.npcybf, cTempl.npcybm ];
+	let body = ["CyborgLightNAS"];
+	let prop = ["CyborgLegsNAS"];
+	let weap = ["Cyb-Wpn-Cannon-Sniper", "CyborgRocket", "Cyb-Wpn-Rocket-Sunburst-Arch",
+		"Cyb-Wpn-Rocket-Sunburst", "Cyb-Wpn-Grenade", "CyborgFlamer01"
+	];
+	let templates = generateRandomTemplates(body, prop, weap, true);
 
 	var droids = [];
 	for (let i = 0; i < count; ++i)
 	{
-		var t = templates[camRand(templates.length)];
-		// two droids of each template
-		droids[droids.length] = t;
-		droids[droids.length] = t;
+		droids.push(templates[camRand(templates.length)])
 	}
 
 	camSendReinforcement(NEW_PARADIGM, position, droids, CAM_REINFORCE_TRANSPORT, {
@@ -99,7 +112,7 @@ function sendTransport()
 			],
 			radius: 8,
 			interval: camMinutesToMilliseconds(1),
-			regroup: true,
+			regroup: false,
 			count: -1,
 		}
 	});
@@ -115,7 +128,14 @@ function sendTransport()
 
 	if (index === 5)
 	{
+		index = 0;
+		totalPasses += 1;
+	}
+
+	if (totalPasses === 2)
+	{
 		removeTimer("sendTransport");
+		camSetVtolSpawnStateAll(false);
 	}
 }
 
@@ -143,12 +163,13 @@ function helicopterAttack()
 {
 	var vtolRemovePos = {x: 1, y: 1};
 	var vtolPositions = undefined; //to randomize the spawns each time
-	var list = [
-		cTempl.ScavChopNASDA, cTempl.HvyChopNASDA
-	];
+	let body = ["Body45ABT", "Body88MBT", "Body88MBT", "Body121SUP"];
+	let prop = ["V-TolNAS", "V-TolNAS", "V-TolNAS", "Helicopter"];
+	let weap = ["Rocket-VTOL-TopAttackHvy", "Rocket-VTOL-LtA-T", "Rocket-MRL-VTOL", "Rocket-VTOL-BB" ];
+	let list = generateRandomTemplates(body, prop, weap, true);
 	var extras = {
-		minVTOLs: (difficulty >= HARD) ? 4 : 2,
-		maxRandomVTOLs: (difficulty >= HARD) ? 8 : 4
+		minVTOLs: (difficulty >= HARD) ? 4 : 3,
+		maxRandomVTOLs: (difficulty >= HARD) ? 5 : 3
 	};
 
 	camSetVtolData(NEW_PARADIGM, vtolPositions, vtolRemovePos, list, camChangeOnDiff(camSecondsToMilliseconds(30)), undefined, extras);
@@ -167,7 +188,7 @@ function eventStartLevel()
 	centreView(startpos.x, startpos.y);
 	setNoGoArea(lz.x, lz.y, lz.x2, lz.y2, CAM_HUMAN_PLAYER);
 
-	setMissionTime(camChangeOnDiff(camHoursToSeconds(1)));
+	setMissionTime(camChangeOnDiff(camHoursToSeconds(2)));
 
 	// make sure player doesn't build on enemy LZs
 	for (let i = 6; i <= 10; ++i)
@@ -181,6 +202,10 @@ function eventStartLevel()
 
 	index = 0;
 	switchLZ = 0;
+	totalPasses = 0;
+
+	camSetExpState(true);
+	camSetExpLevel((difficulty >= HARD) ? 3 : 2);
 
 	queue("startTransporterAttack", camSecondsToMilliseconds(10));
 	queue("helicopterAttack", camSecondsToMilliseconds(10));
