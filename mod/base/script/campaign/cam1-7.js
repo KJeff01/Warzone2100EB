@@ -339,24 +339,27 @@ function eventStartLevel()
 
 	ultScav_eventStartLevel(
 		1, // vtols on/off. -1 = off
-		55, // build defense every x seconds
-		45, // build factories every x seconds
-		35, // build cyborg factories every x seconds
-		20, // produce trucks every x seconds
-		65, // produce droids every x seconds
-		35, // produce cyborgs every x seconds
-		35, // produce VTOLs every x seconds
-		12, // min factories
-		5, // min vtol factories
-		3, // min cyborg factories
-		3, // min number of trucks
-		2, // min number of sensor droids
-		5, // min number of attack droids
+		camChangeOnDiff(150), // build defense every x seconds
+		75, // build factories every x seconds
+		-1, // build cyborg factories every x seconds
+		55, // produce trucks every x seconds
+		25, // produce droids every x seconds
+		-1, // produce cyborgs every x seconds
+		45, // produce VTOLs every x seconds
+		10, // min factories
+		7, // min vtol factories
+		-1, // min cyborg factories
+		5, // min number of trucks
+		1, // min number of sensor droids
+		3, // min number of attack droids
 		3, // min number of defend droids
-		135, // ground attack every x seconds
-		230, // VTOL attack every x seconds
-		1.5 // tech level
+		90, // ground attack every x seconds
+		100, // VTOL attack every x seconds
+		1 // tech level
 	);
+
+	camSetExpState(true);
+	camSetExpLevel((difficulty >= HARD) ? 4 : 3);
 
 	artiGroup = camMakeGroup(enumArea("NPArtiGroup", NEW_PARADIGM, false));
 	droidWithArtiID = 0;
@@ -364,5 +367,5 @@ function eventStartLevel()
 	buildLancers();
 
 	hackAddMessage("C1-7_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, false); //Canyon
-	queue("startArtifactCollection", camChangeOnDiff(camMinutesToMilliseconds(1.5)));
+	queue("startArtifactCollection", camChangeOnDiff(camMinutesToMilliseconds(1.25)));
 }

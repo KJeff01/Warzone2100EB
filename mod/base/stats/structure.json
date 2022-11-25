@@ -1005,7 +1005,7 @@
         "type": "REPAIR FACILITY",
         "userLimits": [
             0,
-            5,
+            100,
             100
         ],
         "width": 1
@@ -1032,7 +1032,7 @@
         "type": "REPAIR FACILITY",
         "userLimits": [
             0,
-            5,
+            100,
             100
         ],
         "width": 1
@@ -1059,7 +1059,7 @@
         "type": "REPAIR FACILITY",
         "userLimits": [
             0,
-            5,
+            100,
             100
         ],
         "width": 2
