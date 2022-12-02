@@ -96,7 +96,7 @@ function sendTransport()
 	var count = 5 + camRand(6);
 
 	let body = ["Body17LGT", "Body45ABT", "Body18MED", "Body88MBT"];
-	let prop = ["HalfTrackGM", "HalfTrackNAS", "hover01NAS", "tracked01NAS", "tracked01NAS", "wheeled01GM", "wheeled01NAS" ];
+	let prop = ["HalfTrackGM", "HalfTrackNAS", "hover01NAS", "tracked01NAS", "tracked01GM", "wheeled01GM", "wheeled01NAS" ];
 	let weap = ["MG3Mk1-Twn", "Rocket-Pod-Twn", "Rocket-Pod-Quad", "Rocket-LtA-T-Quad", "Rocket-LtA-T-AR", "Rocket-Pod-MRA-Twin", "Rocket-Pod-Arch",
 			"MG3Mk1-Aslt", "Rocket-Pod-Arch-Twin", "Rocket-MRL-Homing", "Cannon5VulcanMk1-Gat", "Mortar1Mk1-Ram", "Mortar2Mk1-Ram", "Rocket-Pod-MRA-Quad",
 			"Rocket-Pod-Arch-Quad", "Rocket-MRL-Homing-Hvy", "Rocket-Arch-Hvy-Aslt-Gat"

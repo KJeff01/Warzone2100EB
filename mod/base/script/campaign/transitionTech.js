@@ -153,7 +153,7 @@ const CAM1_5_RES_SCAV = CAM1_4_RES_SCAV.concat([
 ]);
 
 const CAM1AC_RES_NP = CAM1_5_RES_NP.concat([
-	"R-Cyborg-Engine01",
+	"R-Cyborg-Engine02",
 	"R-Wpn-Cannon-Damage06",
 ]);
 
@@ -166,7 +166,6 @@ const CAM1_7_RES_SCAV = CAM1_5_RES_SCAV.concat([
 const CAM1D_RES_NP = CAM1_7_RES_NP.concat([
 	"R-Cyborg-Engine03",
 	"R-Wpn-Mortar-Range03",
-	"R-Wpn-Cannon-Damage07",
 	"R-Wpn-Rocket-Damage05",
 	"R-Vehicle-Metals04",
 	"R-Cyborg-Metals04",
@@ -341,6 +340,7 @@ const CAM2A_RESEARCH = CAM1A_RESEARCH.concat([
 	"R-Vehicle-Metals03",
 	"R-Vehicle-Prop-Hover",
 	"R-Vehicle-Body19",
+	"R-Cyborg-Engine02",
 	//beta transition gifts
 	"R-Vehicle-Prop-Helicopter",
 	"R-Struc-VTOLFactory",

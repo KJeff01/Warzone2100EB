@@ -350,6 +350,7 @@
         "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-Cyborg-Engine03",
         "imdName": "scbd_stdar.pie",
+        "keyTopic": 1,
         "msgName": "RES_V_CYEN3",
         "name": "Hydraulic Cyborg Legs Mk3",
         "requiredResearch": [
@@ -2427,6 +2428,9 @@
         "id": "R-Defense-MG3Mk1-Aslt",
         "msgName": "RES_ABC_1",
         "name": "Heavy Machinegun Assault Tower",
+        "redStructures": [
+            "GuardTower3"
+        ],
         "requiredResearch": [
             "R-Wpn-MG3Mk1-Aslt",
             "R-Defense-WallUpgrade01"
@@ -2443,6 +2447,9 @@
         "id": "R-Defense-MG3Mk1-Twn",
         "msgName": "RES_ABC_1",
         "name": "Twin Heavy Machinegun Bunker",
+        "redStructures": [
+            "PillBox3"
+        ],
         "requiredResearch": [
             "R-Wpn-MG3Mk1-Twn",
             "R-Defense-WallUpgrade01"
@@ -9314,6 +9321,11 @@
         "keyTopic": 1,
         "msgName": "RES_CN2MK1",
         "name": "Medium Cannon",
+        "redComponents": [
+            "Cannon1Mk1",
+            "Cannon1Mk1-AR",
+            "CyborgCannon"
+        ],
         "requiredResearch": [
             "R-Struc-Factory-Module",
             "R-Wpn-Cannon-Damage01"
@@ -9350,6 +9362,11 @@
         "keyTopic": 1,
         "msgName": "RES_CN3MK1",
         "name": "Heavy Cannon",
+        "redComponents": [
+            "Cannon2A-TMk1",
+            "Cannon2A-TMk1-Lng",
+            "Cannon2A-TMk1-AR"
+        ],
         "requiredResearch": [
             "R-Wpn-Cannon-Damage05",
             "R-Struc-Factory-Module",
@@ -11879,6 +11896,11 @@
         "keyTopic": 1,
         "msgName": "RES_MG2MK1",
         "name": "Twin Machinegun",
+        "redComponents": [
+            "MG1Mk1",
+            "MG1-VTOL",
+            "MG1Mk1-AR"
+        ],
         "requiredResearch": [
             "R-Wpn-MG-Damage02"
         ],
@@ -11897,6 +11919,11 @@
         "keyTopic": 1,
         "msgName": "RES_MG3MK1",
         "name": "Heavy Machinegun",
+        "redComponents": [
+            "MG2-VTOL",
+            "MG2Mk1",
+            "MG2Mk1-AR"
+        ],
         "requiredResearch": [
             "R-Wpn-MG-Damage03",
             "R-Wpn-MG2Mk1"
@@ -11915,6 +11942,9 @@
         "id": "R-Wpn-MG3Mk1-Aslt",
         "msgName": "RES_MG3MK1H",
         "name": "Augmented Heavy MG",
+        "redComponents": [
+            "MG3Mk1-Twn"
+        ],
         "requiredResearch": [
             "R-Wpn-MG3Mk1",
             "R-Wpn-MG-Damage04",
@@ -11934,6 +11964,10 @@
         "keyTopic": 1,
         "msgName": "RES_W_MG_MN2",
         "name": "Twin Heavy MG",
+        "redComponents": [
+            "MG3Mk1",
+            "MG3Mk1-AR"
+        ],
         "requiredResearch": [
             "R-Wpn-MG3Mk1"
         ],
@@ -12894,7 +12928,8 @@
         "msgName": "RES_W_M_RA2",
         "name": "Stabilized Bombard",
         "redComponents": [
-            "Mortar1Mk1-Ram"
+            "Mortar1Mk1-Ram",
+            "Mortar2Mk1"
         ],
         "requiredResearch": [
             "R-Wpn-Mortar-Range01",
@@ -13045,6 +13080,11 @@
         "keyTopic": 1,
         "msgName": "RES_W_M2",
         "name": "Heavy Mortar - Bombard",
+        "redComponents": [
+            "Mortar1Mk1",
+            "Mortar1Mk1-Ram",
+            "Mortar1Mk1-AR"
+        ],
         "requiredResearch": [
             "R-Vehicle-Metals01",
             "R-Wpn-Mortar-Damage02",
@@ -14077,6 +14117,9 @@
         "keyTopic": 1,
         "msgName": "RES_W_RK_MR_QD",
         "name": "Quad Rocket Array",
+        "redComponents": [
+            "Rocket-Pod-MRA-Twin"
+        ],
         "requiredResearch": [
             "R-Wpn-Rocket02-MRL",
             "R-Wpn-Rocket-Pod-MRA-Twin"
@@ -14093,6 +14136,9 @@
         "id": "R-Wpn-Rocket-Pod-MRA-Twin",
         "msgName": "RES_W_RK_MRL1",
         "name": "Twin Rocket Array",
+        "redComponents": [
+            "Rocket-Pod-MRA"
+        ],
         "requiredResearch": [
             "R-Wpn-Rocket-Pod-MRA"
         ],
@@ -14109,6 +14155,9 @@
         "keyTopic": 1,
         "msgName": "RES_W_RK_MP1",
         "name": "Quad Rocket Pod",
+        "redComponents": [
+            "Rocket-Pod-Twn"
+        ],
         "requiredResearch": [
             "R-Wpn-Rocket-Pod-Twn"
         ],
@@ -14125,6 +14174,9 @@
         "keyTopic": 1,
         "msgName": "RES_W_RK_MP1",
         "name": "Quad Thermal Rockets",
+        "redComponents": [
+            "Rocket-Pod-Arch-Twin"
+        ],
         "requiredResearch": [
             "R-Wpn-Rocket-Pod-Twn-Arch"
         ],
@@ -14141,6 +14193,9 @@
         "keyTopic": 1,
         "msgName": "RES_W_RK_MP1",
         "name": "Twin Rocket Pod",
+        "redComponents": [
+            "Rocket-Pod"
+        ],
         "requiredResearch": [
             "R-Wpn-Rocket-ROF01"
         ],
@@ -14157,6 +14212,9 @@
         "keyTopic": 1,
         "msgName": "RES_W_RK_MP1",
         "name": "Twin Thermal Rockets",
+        "redComponents": [
+            "Rocket-Pod-Arch"
+        ],
         "requiredResearch": [
             "R-Wpn-Rocket05-MiniPod-Arch"
         ],
@@ -14267,6 +14325,9 @@
         "keyTopic": 1,
         "msgName": "RES_W_RK_RA2",
         "name": "Ballistic Rockets Mk2",
+        "redComponents": [
+            "Rocket-MRL-Homing"
+        ],
         "requiredResearch": [
             "R-Wpn-Rocket-Range01",
             "R-Wpn-Rocket-ROF02"
@@ -14337,6 +14398,9 @@
         "keyTopic": 1,
         "msgName": "RES_W_RK_LTAT1",
         "name": "Quad Lancer Rocket",
+        "redComponents": [
+            "Rocket-LtA-T"
+        ],
         "requiredResearch": [
             "R-Wpn-Rocket-Accuracy02",
             "R-Wpn-Rocket01-LtAT"

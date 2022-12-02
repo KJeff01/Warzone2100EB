@@ -40,7 +40,7 @@ function checkForGroundForces()
 		var droidGroup2 = []; //Heavy mortar units
 
 		let body = ["Body45ABT", "Body88MBT", "Body88MBT", "Body121SUP"];
-		let prop = ["HalfTrackGM", "HalfTrackNAS", "hover01NAS", "tracked01NAS", "tracked01NAS" ];
+		let prop = ["HalfTrackGM", "HalfTrackNAS", "hover01NAS", "tracked01NAS", "tracked01GM" ];
 		let weap = ["Rocket-Pod-Quad", "Rocket-LtA-T-Quad", "MG3Mk1-Aslt",
 				"Cannon5VulcanMk1-Gat", "Rocket-Pod-MRA-Quad",
 				"Rocket-Pod-Arch-Quad", "Rocket-Arch-Hvy-Aslt-Gat", "Rocket-BB-AR"

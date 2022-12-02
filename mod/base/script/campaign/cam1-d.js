@@ -52,7 +52,13 @@ function transportBaseSetup()
 function getDroidsForNPLZ()
 {
 	const LIM = 8; //Last alpha mission always has 8 transport units
-	var templates = [ cTempl.nphct, cTempl.nphct, cTempl.npmorb, cTempl.npmorb, cTempl.npsbb ];
+	let body = ["Body45ABT", "Body88MBT", "Body88MBT", "Body121SUP"];
+	let prop = ["HalfTrackGM", "HalfTrackNAS", "hover01NAS", "tracked01GM", "tracked01NAS", "wheeled01GM", "wheeled01NAS" ];
+	let weap = ["Rocket-Pod-Quad", "Rocket-LtA-T-Quad", "MG3Mk1-Aslt",
+			"Rocket-Pod-MRA-Quad", "Rocket-Pod-Arch-Quad", "Rocket-Arch-Hvy-Aslt-Gat",
+			"Rocket-BB-AR", "Cannon375mmMk1-AR", "Cannon375mmMk1-Lng", "Cannon375mmMk1-AR", "Cannon375mmMk1-Lng"
+	];
+	let templates = generateRandomTemplates(body, prop, weap, true);
 
 	var droids = [];
 	for (let i = 0; i < LIM; ++i)
@@ -135,6 +141,69 @@ function blowupRepair()
 	camSafeRemoveObject("NPMiddleRepairFacility", false);
 }
 
+function checkEnemyVtolArea()
+{
+	var pos = {x: 1, y: 1};
+	var vtols = enumRange(pos.x, pos.y, 2, NEW_PARADIGM, false).filter(function(obj) { return isVTOL(obj); });
+
+	for (let i = 0, l = vtols.length; i < l; ++i)
+	{
+		if ((vtols[i].weapons[0].armed < 100) || (vtols[i].health < 100))
+		{
+			camSafeRemoveObject(vtols[i], false);
+		}
+	}
+}
+
+function vtolAttack()
+{
+	let vtolRemovePos = {x: 1, y: 1};
+	let vtolPositions = undefined; //to randomize the spawns each time
+	let body = ["Body17LGT", "Body45ABT", "Body18MED", "Body88MBT", "Body19HVY", "Body121SUP"];
+	let prop = ["V-TolNAS"];
+	let weap = ["Cannon1-VTOL", "Rocket-VTOL-TopAttackHvy", "Rocket-VTOL-Pod3", "Rocket-VTOL-LtA-T", "Rocket-MRL-VTOL", "Rocket-VTOL-BB" ];
+	let list = generateRandomTemplates(body, prop, weap, true);
+	let extras = {
+		minVTOLs: (difficulty >= HARD) ? 3 : 2,
+		maxRandomVTOLs: (difficulty >= HARD) ? 3 : 2
+	};
+
+	camSetVtolData(NEW_PARADIGM, vtolPositions, vtolRemovePos, list, camChangeOnDiff(camSecondsToMilliseconds(240)), "NPFactoryNE", extras);
+}
+
+function tankAttack()
+{
+	let positions = [
+		{x: 78, y: 49},
+		{x: 48, y: 2},
+		{x: 2, y: 63}
+	];
+	let body = ["Body45ABT", "Body88MBT", "Body121SUP"];
+	let prop = ["hover01NAS"];
+	let weap = ["Rocket-Pod-Quad", "Rocket-LtA-T-Quad", "MG3Mk1-Aslt",
+			"Rocket-Pod-MRA-Quad", "Rocket-Pod-Arch-Quad", "Rocket-Arch-Hvy-Aslt-Gat",
+			"Rocket-BB-AR", "Cannon375mmMk1-AR", "Cannon375mmMk1-Lng", "Cannon375mmMk1-AR", "Cannon375mmMk1-Lng"
+	];
+	let templates = generateRandomTemplates(body, prop, weap, true);
+
+	let chosen = [];
+	for (let i = 0; i < 5; ++i)
+	{
+		chosen.push(templates[camRand(templates.length)]);
+	}
+
+	camSendReinforcement(NEW_PARADIGM, camMakePos(positions[camRand(positions.length)]), chosen, CAM_REINFORCE_GROUND, {
+		data: { regroup: false, count: -1, },
+	});
+}
+
+function setupEBStuff()
+{
+	queue("vtolAttack", camMinutesToMilliseconds(10));
+	setTimer("checkEnemyVtolArea", camSecondsToMilliseconds(1));
+	setTimer("tankAttack", camMinutesToMilliseconds(7));
+}
+
 function eventStartLevel()
 {
 	camSetStandardWinLossConditions(CAM_VICTORY_OFFWORLD, "CAM_1END", {
@@ -156,7 +225,7 @@ function eventStartLevel()
 	//Get rid of the already existing crate and replace with another
 	camSafeRemoveObject("artifact1", false);
 	camSetArtifacts({
-		"artifactLocation": { tech: "R-Vehicle-Prop-Hover" }, //SE base
+		"artifactLocation": { tech: ["R-Vehicle-Prop-Hover", "R-Cyborg-Engine02"] }, //SE base
 		"NPFactoryW": { tech: "R-Vehicle-Metals03" }, //West factory
 		"NPFactoryNE": { tech: "R-Vehicle-Body12" }, //Main base factory
 	});
@@ -164,6 +233,8 @@ function eventStartLevel()
 	camCompleteRequiredResearch(CAM1D_RES_NP, NEW_PARADIGM);
 	camCompleteRequiredResearch(CAM1D_RES_NP, ULTSCAV);
 	setAlliance(NEW_PARADIGM, ULTSCAV, true);
+
+	//blowupRepair();
 
 	camSetEnemyBases({
 		"NPSouthEastGroup": {
@@ -192,12 +263,35 @@ function eventStartLevel()
 		},
 	});
 
+	let body = ["Body45ABT", "Body88MBT", "Body88MBT", "Body121SUP"];
+	let prop = ["HalfTrackGM", "HalfTrackNAS", "hover01NAS", "tracked01GM", "tracked01NAS", "wheeled01GM", "wheeled01NAS" ];
+	let weap = ["Rocket-Pod-Quad", "Rocket-LtA-T-Quad", "MG3Mk1-Aslt",
+			"Rocket-Pod-MRA-Quad", "Rocket-Pod-Arch-Quad", "Rocket-Arch-Hvy-Aslt-Gat",
+			"Rocket-BB-AR", "Cannon375mmMk1-AR", "Cannon375mmMk1-Lng", "Cannon375mmMk1-AR", "Cannon375mmMk1-Lng"
+	];
+	let templatesVariety = generateRandomTemplates(body, prop, weap, true);
+	prop = ["hover01NAS"];
+	let templatesHover = generateRandomTemplates(body, prop, weap, true);
+	body = ["Body88MBT", "Body121SUP"];
+	prop = ["HalfTrackGM", "HalfTrackNAS", "tracked01NAS", "tracked01GM"];
+	weap = ["Rocket-LtA-T-Quad", "Rocket-Arch-Hvy-Aslt-Gat", "Cannon375mmMk1-AR", "Cannon375mmMk1-Lng"];
+	let templatesTough = generateRandomTemplates(body, prop, weap, true);
+
+	body = ["CyborgLightNAS"];
+	prop = ["CyborgLegsNAS"];
+	weap = ["Cyb-Wpn-Cannon-Sniper", "CyborgRocket", "Cyb-Wpn-Rocket-Sunburst-Arch",
+		"Cyb-Wpn-Rocket-Sunburst", "Cyb-Wpn-Grenade", "CyborgFlamer01"
+	];
+	let templatesCyborgs1 = generateRandomTemplates(body, prop, weap, true);
+	let templatesCyborgs2 = generateRandomTemplates(body, prop, weap, true);
+	let templatesCyborgs3 = generateRandomTemplates(body, prop, weap, true);
+
 	camSetFactories({
 		"NPFactoryW": {
 			assembly: "NPFactoryWAssembly",
 			order: CAM_ORDER_PATROL,
 			groupSize: 6,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(60)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds(50)),
 			data: {
 				pos: [
 					camMakePos("hoverDefense5"),
@@ -211,106 +305,76 @@ function eventStartLevel()
 				repair: 66,
 				count: -1,
 			},
-			templates: [ cTempl.nphmgh, cTempl.npltath, cTempl.nphch, cTempl.nphbb ] //Hover factory
+			templates: templatesHover //Hover factory
 		},
 		"NPFactoryE": {
 			assembly: "NPFactoryEAssembly",
 			order: CAM_ORDER_ATTACK,
 			groupSize: 4,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(75)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds(65)),
 			data: {
 				regroup: false,
 				repair: 33,
 				count: -1,
 			},
-			templates: [ cTempl.npltat, cTempl.npmsens, cTempl.npmorb, cTempl.npsmct, cTempl.nphct ] //variety
+			templates: templatesVariety //variety
 		},
 		"NPFactoryNE": {
 			assembly: "NPFactoryNEAssembly",
 			order: CAM_ORDER_ATTACK,
 			groupSize: 4,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(90)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds(80)),
 			data: {
 				regroup: false,
 				repair: 33,
 				count: -1,
 			},
-			templates: [ cTempl.nphct, cTempl.npsbb, cTempl.npmorb ] //tough units
+			templates: templatesTough //tough units
 		},
 		"NPCybFactoryW": {
 			assembly: "NPCybFactoryWAssembly",
 			order: CAM_ORDER_ATTACK,
 			groupSize: 4,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(55)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds(45)),
 			data: {
 				regroup: false,
 				repair: 33,
 				count: -1,
 			},
-			templates: [ cTempl.npcybc, cTempl.npcybf, cTempl.npcybr ]
+			templates: templatesCyborgs1
 		},
 		"NPCybFactoryE": {
 			assembly: "NPCybFactoryEAssembly",
 			order: CAM_ORDER_ATTACK,
 			groupSize: 4,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(40)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds(30)),
 			data: {
 				regroup: false,
 				repair: 33,
 				count: -1,
 			},
-			templates: [ cTempl.npcybc, cTempl.npcybf, cTempl.npcybr ]
+			templates: templatesCyborgs2
 		},
 		"NPCybFactoryNE": {
 			assembly: "NPCybFactoryNEAssembly",
 			order: CAM_ORDER_ATTACK,
 			groupSize: 4,
-			throttle: camChangeOnDiff(camSecondsToMilliseconds(70)),
+			throttle: camChangeOnDiff(camSecondsToMilliseconds(60)),
 			data: {
 				regroup: false,
 				repair: 33,
 				count: -1,
 			},
-			templates: [ cTempl.npcybc, cTempl.npcybf, cTempl.npcybr ]
+			templates: templatesCyborgs3
 		},
 	});
 
+	camSetExpState(true);
+	camSetExpLevel(2);
+	camSetOnMapEnemyUnitExp();
+
 	hackAddMessage("C1D_OBJ1", PROX_MSG, CAM_HUMAN_PLAYER, false);
 
-	addDroid(ULTSCAV, 45, 120, "Ultscav hover", "Body4ABT", "hover01NAS", "", "", "Spade1Mk1");
-	addDroid(ULTSCAV, 62, 110, "Ultscav hover", "Body4ABT", "hover01NAS", "", "", "Spade1Mk1");
-	addDroid(ULTSCAV, 19, 95, "Ultscav hover", "Body4ABT", "hover01NAS", "", "", "Spade1Mk1");
-	addDroid(ULTSCAV, 7, 84, "Ultscav hover", "Body4ABT", "hover01NAS", "", "", "Spade1Mk1");
-	addDroid(ULTSCAV, 66, 83, "Ultscav hover", "Body4ABT", "hover01NAS", "", "", "Spade1Mk1");
-	addDroid(ULTSCAV, 14, 60, "Ultscav hover", "Body4ABT", "hover01NAS", "", "", "Spade1Mk1");
-	addDroid(ULTSCAV, 7, 43, "Ultscav hover", "Body4ABT", "hover01NAS", "", "", "Spade1Mk1");
-	addDroid(ULTSCAV, 19, 41, "Ultscav hover", "Body4ABT", "hover01NAS", "", "", "Spade1Mk1");
-	addDroid(ULTSCAV, 8, 10, "Ultscav hover", "Body4ABT", "hover01NAS", "", "", "Spade1Mk1");
-	addDroid(ULTSCAV, 32, 16, "Ultscav hover", "Body4ABT", "hover01NAS", "", "", "Spade1Mk1");
-	addDroid(ULTSCAV, 56, 38, "Ultscav hover", "Body4ABT", "hover01NAS", "", "", "Spade1Mk1");
-	addDroid(ULTSCAV, 74, 4, "Ultscav hover", "Body4ABT", "hover01NAS", "", "", "Spade1Mk1");
-
-	ultScav_eventStartLevel(
-		1, // vtols on/off. -1 = off
-		85, // build defense every x seconds
-		75, // build factories every x seconds
-		-1, // build cyborg factories every x seconds
-		35, // produce trucks every x seconds
-		55, // produce droids every x seconds
-		55, // produce cyborgs every x seconds
-		45, // produce VTOLs every x seconds
-		3, // min factories
-		3, // min vtol factories
-		-1, // min cyborg factories
-		4, // min number of trucks
-		5, // min number of sensor droids
-		5, // min number of attack droids
-		3, // min number of defend droids
-		220, // ground attack every x seconds
-		210, // VTOL attack every x seconds
-		-1.5 // tech level
-	);
-
-	queue("blowupRepair", camSecondsToMilliseconds(1));
 	queue("setupPatrols", camMinutesToMilliseconds(2.5));
+	queue("setupEBStuff", camMinutesToMilliseconds(camChangeOnDiff(15)));
 }
