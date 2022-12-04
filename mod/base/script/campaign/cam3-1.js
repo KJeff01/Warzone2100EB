@@ -292,9 +292,9 @@ function eventStartLevel()
 
 	camCompleteRequiredResearch(CAM3_1_RES_NEXUS, NEXUS);
 
-	/*camSetArtifacts({
-		"NXMediumFac": { tech: "R-Wpn-MG-Damage09" },
-	});*/
+	camSetArtifacts({
+		"NXMediumFac": { tech: ["R-Wpn-MG5-Hvy", "R-Wpn-Howitzer-ROF04", "R-Wpn-Howitzer-Accuracy03", "R-Wpn-Cannon-Mount03"] },
+	});
 
 	camSetEnemyBases({
 		"NX-SWBase": {

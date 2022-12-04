@@ -117,10 +117,10 @@ function eventStartLevel()
 	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, THE_COLLECTIVE);
 
 	camSetArtifacts({
-		"COCyborgFactory-Arti": { tech: "R-Wpn-Rocket07-Tank-Killer" },
+		"COCyborgFactory-Arti": { tech: ["R-Wpn-MG4-Hvy", "R-Wpn-Rocket07-Tank-Killer"] },
 		"COCommandCenter": { tech: "R-Wpn-Mortar-ROF04" },
 		"uplink": { tech: "R-Sys-VTOLCBS-Tower01" },
-		"COCyborgFactory-b1": { tech: ["R-Cyborg-HvyBody", "R-Cyborg-Engine03"] },
+		"COCyborgFactory-b1": { tech: ["R-Cyborg-Metals06", "R-Cyborg-HvyBody"] },
 	});
 
 	camCompleteRequiredResearch(CAM2_6_RES_COL, THE_COLLECTIVE);

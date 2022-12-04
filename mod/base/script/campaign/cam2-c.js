@@ -277,12 +277,13 @@ function eventStartLevel()
 
 	camSetArtifacts({
 		"rippleRocket": { tech: "R-Wpn-Rocket06-IDF" },
-		"quadbof": { tech: "R-Wpn-AAGun02" },
+		"quadbof": { tech: ["R-Wpn-AAGun02", "R-Wpn-Cannon-Damage06"] },
 		"howitzer": { tech: "R-Wpn-HowitzerMk1" },
 		"COHeavyFac-Leopard": { tech: "R-Vehicle-Body06" }, //Panther
 		"COHeavyFac-Upgrade": { tech: "R-Struc-Factory-Upgrade04" },
 		"COVtolFacLeft-Prop": { tech: "R-Vehicle-Prop-VTOL" },
 		"COInfernoEmplacement-Arti": { tech: "R-Wpn-Flamer-ROF02" },
+		"COCyborgFactoryR": { tech: "R-Cyborg-Metals05" },
 	});
 
 	setMissionTime(camChangeOnDiff(camHoursToSeconds(2)));

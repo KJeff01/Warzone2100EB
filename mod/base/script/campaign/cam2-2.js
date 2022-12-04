@@ -162,7 +162,7 @@ function eventStartLevel()
 
 	camSetArtifacts({
 		"COCommander": { tech: "R-Wpn-Rocket-Accuracy02" },
-		"COFactoryEast": { tech: "R-Wpn-Mortar3" },
+		"COFactoryEast": { tech: ["R-Wpn-Rocket-Damage06", "R-Wpn-Mortar3"] },
 		"COFactoryWest": { tech: "R-Struc-Materials04" },
 		"COCommandCenter": { tech: "R-Struc-RprFac-Upgrade04" },
 	});

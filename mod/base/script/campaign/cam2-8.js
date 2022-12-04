@@ -95,7 +95,7 @@ function eventStartLevel()
 	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, THE_COLLECTIVE);
 
 	camSetArtifacts({
-		"COVtolFac-b3": { tech: "R-Vehicle-Body09" }, //Tiger body
+		"COVtolFac-b3": { tech: ["R-Wpn-Howitzer-ROF03", "R-Vehicle-Body09"] }, //Tiger body
 		"COHeavyFacL-b2": { tech: ["R-Wpn-Cannon4AMk1-Hvy", "R-Wpn-PlasmaCannon"] },
 		"COHeavyFacR-b2": { tech: ["R-Wpn-Cannon375mmMk1-Twn", "R-Wpn-HvyHowitzer"] },
 	});

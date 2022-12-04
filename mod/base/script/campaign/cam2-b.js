@@ -120,7 +120,8 @@ function eventStartLevel()
 		"COResearchLab": { tech: "R-Struc-Research-Upgrade04" },
 		"COHeavyFac-b4": { tech: ["R-Wpn-Flame2", "R-Wpn-Flamer-Damage04"] },
 		"COHeavyFacL-b1": { tech: "R-Wpn-MG-ROF03" },
-		"COCommandCenter": { tech: "R-Vehicle-Body02" }, //Leopard
+		"COCommandCenter": { tech: ["R-Wpn-MG-Damage05", "R-Vehicle-Body02"] }, //Leopard
+		"COCybFacL-b2": { tech: "R-Cyborg-Engine03" },
 	});
 
 	camCompleteRequiredResearch(CAM2B_RES_COL, THE_COLLECTIVE);

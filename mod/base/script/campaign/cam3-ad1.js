@@ -259,7 +259,7 @@ function eventStartLevel()
 
 	camSetArtifacts({
 		"NXbase1VtolFacArti": { tech: "R-Wpn-RailGun02" },
-		"NXcommandCenter": { tech: "R-Wpn-LasSat" },
+		"NXcommandCenter": { tech: ["R-Wpn-MdArtMissile-Hvy", "R-Wpn-LasSat"] },
 		"NXcyborgFac2Arti": { tech: "R-Struc-Factory-Upgrade09" },
 		"NXbase2HeavyFac": { tech: ["R-Vehicle-Body16", "R-Vehicle-Body07"] },
 	});

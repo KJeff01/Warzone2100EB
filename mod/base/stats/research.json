@@ -1121,6 +1121,7 @@
     "R-Cyborg-Metals05": {
         "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-Cyborg-Metals05",
+        "keyTopic": 1,
         "imdName": "icmolql.pie",
         "msgName": "RES_CYMET5",
         "name": "Cyborg Dense Composite Alloys Mk2",
@@ -1150,6 +1151,7 @@
     "R-Cyborg-Metals06": {
         "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-Cyborg-Metals06",
+        "keyTopic": 1,
         "imdName": "icmolql.pie",
         "msgName": "RES_CYMET6",
         "name": "Cyborg Dense Composite Alloys Mk3",
@@ -7416,6 +7418,7 @@
         "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-Vehicle-Engine06",
         "imdName": "iceng.pie",
+        "keyTopic": 1,
         "msgName": "RES_V_EN6",
         "name": "Turbo-Charged Engine Mk3",
         "requiredResearch": [
@@ -7628,6 +7631,7 @@
     "R-Vehicle-Metals05": {
         "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-Vehicle-Metals05",
+        "keyTopic": 1,
         "imdName": "icmolql.pie",
         "msgName": "RES_V_MET5",
         "name": "Dense Composite Alloys Mk2",
@@ -8967,6 +8971,7 @@
     "R-Wpn-Cannon-Damage06": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Cannon-Damage06",
+        "keyTopic": 1,
         "msgName": "RES_W_CN_D6",
         "name": "APFSDS Cannon Rounds Mk3",
         "requiredResearch": [
@@ -9026,6 +9031,7 @@
     "R-Wpn-Cannon-Damage08": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Cannon-Damage08",
+        "keyTopic": 1,
         "msgName": "RES_W_CN_D8",
         "name": "HVAPFSDS Cannon Rounds Mk2",
         "requiredResearch": [
@@ -9055,6 +9061,7 @@
     "R-Wpn-Cannon-Damage09": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Cannon-Damage09",
+        "keyTopic": 1,
         "msgName": "RES_W_CN_D9",
         "name": "HVAPFSDS Cannon Rounds Mk3",
         "requiredResearch": [
@@ -9138,6 +9145,7 @@
     "R-Wpn-Cannon-Mount03": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Cannon-Mount03",
+        "keyTopic": 1,
         "msgName": "RES_W_CN_MN3",
         "name": "Augmented Cannon Turret Mk3",
         "requiredResearch": [
@@ -9255,6 +9263,7 @@
     "R-Wpn-Cannon-ROF05": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Cannon-ROF05",
+        "keyTopic": 1,
         "msgName": "RES_W_CN_ROF5",
         "name": "Cannon Rapid Loader Mk2",
         "requiredResearch": [
@@ -9277,6 +9286,7 @@
     "R-Wpn-Cannon-ROF06": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Cannon-ROF06",
+        "keyTopic": 1,
         "msgName": "RES_W_CN_ROF6",
         "name": "Cannon Rapid Loader Mk3",
         "requiredResearch": [
@@ -10608,6 +10618,7 @@
     "R-Wpn-Howitzer-Accuracy03": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Howitzer-Accuracy03",
+        "keyTopic": 1,
         "msgName": "RES_W_HOWAC3",
         "name": "Target Prediction Artillery Shells",
         "requiredResearch": [
@@ -10887,6 +10898,7 @@
     "R-Wpn-Howitzer-ROF02": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Howitzer-ROF02",
+        "keyTopic": 1,
         "msgName": "RES_W_HOWRF2",
         "name": "Howitzer Autoloader Mk2",
         "requiredResearch": [
@@ -10909,6 +10921,7 @@
     "R-Wpn-Howitzer-ROF03": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Howitzer-ROF03",
+        "keyTopic": 1,
         "msgName": "RES_W_HOWRF3",
         "name": "Howitzer Autoloader Mk3",
         "requiredResearch": [
@@ -10931,6 +10944,7 @@
     "R-Wpn-Howitzer-ROF04": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Howitzer-ROF04",
+        "keyTopic": 1,
         "msgName": "RES_W_HOWRF4",
         "name": "Howitzer Fast Loader",
         "requiredResearch": [
@@ -11217,6 +11231,7 @@
     "R-Wpn-HvArtMissile": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-HvArtMissile",
+        "keyTopic": 1,
         "msgName": "RES_W_MS_HART",
         "name": "Archangel Missile",
         "requiredResearch": [
@@ -11743,6 +11758,7 @@
     "R-Wpn-MG-Damage06": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-MG-Damage06",
+        "keyTopic": 1,
         "msgName": "RES_W_MG_D6",
         "name": "Tungsten-Tipped MG Bullets Mk2",
         "requiredResearch": [
@@ -11765,6 +11781,7 @@
     "R-Wpn-MG-Damage07": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-MG-Damage07",
+        "keyTopic": 1,
         "msgName": "RES_W_MG_D7",
         "name": "Tungsten-Tipped MG Bullets Mk3",
         "requiredResearch": [
@@ -11787,6 +11804,7 @@
     "R-Wpn-MG-Damage08": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-MG-Damage08",
+        "keyTopic": 1,
         "msgName": "RES_W_MG_D8",
         "name": "Depleted Uranium MG Bullets",
         "requiredResearch": [
@@ -12046,6 +12064,7 @@
     "R-Wpn-MG5": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-MG5",
+        "keyTopic": 1,
         "msgName": "RES_WT_TWINAGUN",
         "name": "Twin Assault Gun",
         "redComponents": [
@@ -12065,6 +12084,7 @@
     "R-Wpn-MG5-Hvy": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-MG5-Hvy",
+        "keyTopic": 1,
         "msgName": "RES_WT_TWINAGUNA",
         "name": "Augmented Twin Assault Gun",
         "redComponents": [
@@ -12121,6 +12141,7 @@
     "R-Wpn-MdArtMissile-Hvy": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-MdArtMissile-Hvy",
+        "keyTopic": 1,
         "msgName": "RES_W_MS_MARTI",
         "name": "Full Seraph Missile Array",
         "requiredResearch": [
@@ -13982,6 +14003,7 @@
     "R-Wpn-Rocket-Damage06": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket-Damage06",
+        "keyTopic": 1,
         "msgName": "RES_W_RK_D6",
         "name": "HEAT Rocket Warhead Mk3",
         "requiredResearch": [
@@ -14011,6 +14033,7 @@
     "R-Wpn-Rocket-Damage07": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket-Damage07",
+        "keyTopic": 1,
         "msgName": "RES_W_RK_D7",
         "name": "HESH Rocket Warhead",
         "requiredResearch": [
@@ -14040,6 +14063,7 @@
     "R-Wpn-Rocket-Damage08": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket-Damage08",
+        "keyTopic": 1,
         "msgName": "RES_W_RK_D8",
         "name": "HESH Rocket Warhead Mk2",
         "requiredResearch": [
@@ -14069,6 +14093,7 @@
     "R-Wpn-Rocket-Damage09": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Rocket-Damage09",
+        "keyTopic": 1,
         "msgName": "RES_W_RK_D9",
         "name": "HESH Rocket Warhead Mk3",
         "requiredResearch": [

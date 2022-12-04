@@ -259,9 +259,9 @@ function eventStartLevel()
 		retlz: true
 	});
 
-	/*camSetArtifacts({
-		"NXartiCyborg": { tech: "R-Wpn-Cannon-ROF05" },
-	});*/
+	camSetArtifacts({
+		"NXartiCyborg": { tech: "R-Wpn-Cannon-ROF06" },
+	});
 
 	centreView(startpos.x, startpos.y);
 	setNoGoArea(lz.x, lz.y, lz.x2, lz.y2, CAM_HUMAN_PLAYER);

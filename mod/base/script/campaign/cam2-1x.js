@@ -129,7 +129,7 @@ function eventStartLevel()
 	camCompleteRequiredResearch(CAM2_1_RES_HUMAN, TRANSPORT_TEAM);
 
 	camSetArtifacts({
-		"base1ArtifactPos": { tech: "R-Vehicle-Body20" }, //hardened alloys, blue bodies
+		"base1ArtifactPos": { tech: ["R-Vehicle-Body20", "R-Cyborg-Engine03"] }, //hardened alloys, blue bodies
 	});
 	if (difficulty >= HARD)
 	{

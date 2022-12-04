@@ -197,6 +197,9 @@ function cam3Setup()
 	camCompleteRequiredResearch(CAM2A_RESEARCH, NEXUS);
 	camCompleteRequiredResearch(CAM3A_RESEARCH, NEXUS);
 	camCompleteRequiredResearch(CAM3A_RES_NEXUS, NEXUS);
+
+	enableResearch("R-Wpn-Rocket-Damage08", CAM_HUMAN_PLAYER);
+	enableResearch("R-Wpn-Cannon-Damage08", CAM_HUMAN_PLAYER);
 }
 
 function eventStartLevel()
@@ -220,7 +223,7 @@ function eventStartLevel()
 
 	camSetArtifacts({
 		"NXPowerGenArti": { tech: "R-Struc-Power-Upgrade02" },
-		"NXResearchLabArti": { tech: "R-Sys-Engineering03" },
+		"NXResearchLabArti": { tech: ["R-Wpn-MG-Damage08", "R-Sys-Engineering03"] },
 	});
 
 	setPower(PLAYER_POWER, CAM_HUMAN_PLAYER);
