@@ -7720,6 +7720,7 @@
     "R-Vehicle-Metals08": {
         "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-Vehicle-Metals08",
+        "keyTopic": 1,
         "imdName": "icmolql.pie",
         "msgName": "RES_V_MET8",
         "name": "Superdense Composite Alloys Mk2",

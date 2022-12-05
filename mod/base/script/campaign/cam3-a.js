@@ -222,7 +222,7 @@ function eventStartLevel()
 	setNoGoArea(enemyLz.x, enemyLz.y, enemyLz.x2, enemyLz.y2, NEXUS);
 
 	camSetArtifacts({
-		"NXPowerGenArti": { tech: "R-Struc-Power-Upgrade02" },
+		"NXPowerGenArti": { tech: ["R-Wpn-MG5-Hvy", "R-Struc-Power-Upgrade02"] },
 		"NXResearchLabArti": { tech: ["R-Wpn-MG-Damage08", "R-Sys-Engineering03"] },
 	});
 

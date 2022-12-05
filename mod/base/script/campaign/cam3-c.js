@@ -183,9 +183,9 @@ function eventStartLevel()
 	setAlliance(NEXUS, GAMMA, true);
 
 	camSetArtifacts({
-		"NXbase1HeavyFacArti": { tech: "R-Wpn-Laser02" },
+		"NXbase1HeavyFacArti": { tech: ["R-Vehicle-Metals08", "R-Wpn-Laser02"] },
 		"NXcybFacArti": { tech: "R-Wpn-RailGun01" },
-		"NXvtolFacArti": { tech: "R-Struc-Factory-Upgrade07" },
+		"NXvtolFacArti": { tech: ["R-Vehicle-Body07", "R-Struc-Factory-Upgrade07"] },
 		"NXcommandCenter": { tech: ["R-Wpn-Missile-LtSAM", "R-Wpn-Missile2A-T"] },
 	});
 
