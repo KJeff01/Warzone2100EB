@@ -4938,8 +4938,7 @@
         "researchPoints": 2400,
         "researchPower": 120,
         "resultStructures": [
-            "A0FacMod1",
-            "A0LargeFacMod1"
+            "A0FacMod1"
         ],
         "statID": "A0FacMod1"
     },
@@ -5031,6 +5030,9 @@
         "keyTopic": 1,
         "msgName": "RES_ST_FU7",
         "name": "Advanced Manufacturing",
+        "redStructures": [
+            "A0FacMod1"
+        ],
         "requiredResearch": [
             "R-Struc-Factory-Upgrade04",
             "R-Sys-Engineering04"
@@ -5514,8 +5516,7 @@
         "researchPoints": 1200,
         "researchPower": 120,
         "resultStructures": [
-            "A0ResearchModule1",
-            "A0ResearchModule2"
+            "A0ResearchModule1"
         ],
         "statID": "A0ResearchModule1"
     },
@@ -5586,6 +5587,9 @@
         "keyTopic": 1,
         "msgName": "RES_ST_RU4",
         "name": "Dedicated Synaptic Link Data Analysis",
+        "redStructures": [
+            "A0ResearchModule1"
+        ],
         "requiredResearch": [
             "R-Struc-Research-Upgrade03"
         ],
@@ -5593,7 +5597,7 @@
         "researchPower": 350,
         "resultStructures": [
             "A0DedicatedResearchFacility",
-            "A0ResearchModule1"
+            "A0ResearchModule2"
         ],
         "results": [
             {
@@ -12806,6 +12810,7 @@
     "R-Wpn-Mortar-Incendiary": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Mortar-Incendiary",
+        "keyTopic": 1,
         "msgName": "RES_IMORT",
         "name": "Incendiary Mortar",
         "redComponents": [
@@ -13080,6 +13085,7 @@
     "R-Wpn-Mortar02-Incendiary": {
         "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-Wpn-Mortar02-Incendiary",
+        "keyTopic": 1,
         "msgName": "RES_W_M2",
         "name": "Incendiary Bombard",
         "redComponents": [

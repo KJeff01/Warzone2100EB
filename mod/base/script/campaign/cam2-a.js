@@ -1,6 +1,7 @@
 include("script/campaign/transitionTech.js");
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
+include("script/campaign/ultScav.js");
 
 const TRANSPORT_LIMIT = 4;
 var transporterIndex; //Number of transport loads sent into the level
@@ -311,7 +312,7 @@ function eventStartLevel()
 	setTransporterExit(text.x, text.y, CAM_HUMAN_PLAYER);
 
 	camSetArtifacts({
-		"COCommandCenter": { tech: ["R-Sys-Engineering02", "R-Defense-SuperRamjetMortar"] },
+		"COCommandCenter": { tech: ["R-Sys-Engineering02", "R-Wpn-Mortar-Incendiary", "R-Defense-SuperRamjetMortar"] },
 		"COArtiPillbox": { tech: ["R-Wpn-MG-ROF02", "R-Wpn-MG-Damage05"] },
 		"COArtiCBTower": { tech: "R-Sys-Sensor-Upgrade01" },
 	});
@@ -319,6 +320,8 @@ function eventStartLevel()
 	setMissionTime(camChangeOnDiff(camHoursToSeconds(1)));
 	setPower(PLAYER_POWER, CAM_HUMAN_PLAYER);
 	cam2Setup();
+
+	setAlliance(THE_COLLECTIVE, ULTSCAV, true);
 
 	//C2A_BASE2 is not really a base
 	camSetEnemyBases({
@@ -353,12 +356,41 @@ function eventStartLevel()
 		setReinforcementTime(camMinutesToSeconds(5)); // 5 min.
 	}
 
+	addDroid(ULTSCAV, 121, 100, "Collective Truck", "Body61SUPP", "tracked01GM", "", "", "Spade1Mk1NAS");
+	addDroid(ULTSCAV, 112, 77, "Collective Truck", "Body61SUPP", "tracked01GM", "", "", "Spade1Mk1NAS");
+	addDroid(ULTSCAV, 81, 79, "Collective Truck", "Body61SUPP", "tracked01GM", "", "", "Spade1Mk1NAS");
+
+	ultScav_eventStartLevel(
+		-1, // vtols on/off. -1 = off
+		50, // build defense every x seconds
+		75, // build factories every x seconds
+		-1, // build cyborg factories every x seconds
+		35, // produce trucks every x seconds
+		25, // produce droids every x seconds
+		-1, // produce cyborgs every x seconds
+		-1, // produce VTOLs every x seconds
+		3, // min factories
+		-1, // min vtol factories
+		4, // min cyborg factories
+		3, // min number of trucks
+		1, // min number of sensor droids
+		3, // min number of attack droids
+		3, // min number of defend droids
+		50, // ground attack every x seconds
+		-1, // VTOL attack every x seconds
+		2 // tech level
+	);
+
+	camSetExpState(true);
+	camSetExpLevel((difficulty >= INSANE) ? 4 : 3);
+	camSetOnMapEnemyUnitExp();
+
 	queue("secondVideo", camSecondsToMilliseconds(12));
 	queue("groupPatrol", camChangeOnDiff(camMinutesToMilliseconds(1)));
 	queue("vtolAttack", camChangeOnDiff(camMinutesToMilliseconds(3)));
 	setTimer("truckDefense", camChangeOnDiff(camMinutesToMilliseconds(3)));
-	setTimer("sendCOTransporter", camChangeOnDiff(camMinutesToMilliseconds(4)));
-	setTimer("mapEdgeDroids", camChangeOnDiff(camMinutesToMilliseconds(7)));
+	setTimer("sendCOTransporter", camChangeOnDiff(camMinutesToMilliseconds(3)));
+	setTimer("mapEdgeDroids", camChangeOnDiff(camMinutesToMilliseconds(5)));
 
 	truckDefense();
 }

@@ -1,6 +1,7 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
 include("script/campaign/transitionTech.js");
+include("script/campaign/ultScav.js");
 
 function camEnemyBaseDetected_COBase1()
 {

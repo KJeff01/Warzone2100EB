@@ -171,14 +171,79 @@ function ultScav_setTech(tech_level)
 		ultScav_cybfactory = "A0CyborgFactory";
 
 		ultScav_defenses = {
-			MGbunker: "X-Super-Rocket",
-			CanTow: "WallTower-HvATrocket",
-			FlameTow: "Emplacement-Howitzer105",
-			MGTow: "X-Super-Rocket",
-			RocketPit: "Emplacement-Cannon5VulcanMk1-Hvy",
-			LancerPit: "Emplacement-HvyATrocket",
-			MortarPit: "Empl3-Mortar3ROTARYMk1-Ram-Rot",
+			building11: "Emplacement-Howitzer-Incendiary",
+			building12: "Super-HowitzerPlas-Empl", //super incen howitzer
+			building13: "Tower-RotMg", //assult gun emplacement
+			building14: "Emplacement-HPVcannon", // bunker hpv
+			building15: "AASite-QuadRotMg", //whirlwind site
+			building16: "Emplacement-Howitzer105Mk1-Ram", //stable howitzer
+			building17: "Super-Howitzer105Mk1-Ram-Empl", //super stable howitzer
+			building18: "Emplacement-Howitzer03-Rot-Inc",
+			building19: "Sys-SensoTower05", //plascrete sensor tower
+			building20: "Tower2-Cannon5VulcanMk1-Inc",
+			building21: "PillBox-Cannon6",
+			building22: "Emplacement-Cannon5VulcanMk1-Hvy",
+			building23: "WallTower-HvATrocket",
+			building24: "Super-MG-Fort",
+			building25: "Emplacement-PlasmaCannon",
+			building26: "Super-LaserPlasma-Fort",
+			building27: "WallTower2-Cannon4AUTOMk1-Hvy-Inc",
+			building28: "Emplacement-Cannon4AUTOMk1-Hvy-Aslt",
+			building29: "Emplacement-Howitzer150Mk1-Gat",
+			building30: "Emplacement-Howitzer150Mk1-Inc",
+			building31: "Emplacement-Howitzer150Mk1-Ram",
+			building32: "Emplacement-Howitzer03-Rot-Ram",
+			building33: "Emplacement-Howitzer150Mk1-Ram-Hvy",
+			building34: "Emplacement-Cannon4AUTOMk1-Hvy-Aslt"
 		};
+
+		//"Body20LGT" // hard viper
+		//"Body21MED" // hard Cobra
+		//"Body22HVY", // hard python
+		//"Body27SUP" // super sized hard python
+		//"Body211SUP", //nasda leopard
+		//"Body25SUP" //super leopard
+		//"Body61SUPP" //nasda panther
+		//"Body91REC" //nasda tiger
+
+		/*"Rocket-Sunburst"
+		"Rocket-Sunburst-Arch"
+		"Howitzer-Incendiary"
+		"Rocket-IDF-AR"
+		"Cannon4AUTOMk1-AR"
+		"Cannon4AUTOMk1-Lng"
+		"MG4ROTARYMk1-AR"
+		"Howitzer03-Rot-Inc"
+		"Howitzer03-Rot-Ram"
+		"Rocket-HvyA-T"
+		"Rocket-VTOL-HvyA-T"
+		"Rocket-HvyA-T-Quad"
+		"Cyb-Hvywpn-IncMortar"
+		"Cyb-Hvywpn-Mcannon"
+		"Cyb-Hvywpn-Rocket-TopAttack"
+		"Cyb-Hvywpn-TK"
+		"Cyb-Hvywpn-Mortar1Mk1-Ram"
+		"Cyb-Hvywpn-HPV"
+		"Cyb-Hvywpn-MG4"
+		"MG4ROTARYMk1-Hvy"
+		"MG4ROTARYMk1-Hvy-Inc"
+		"Cannon5VulcanMk1-AR"
+		"Cyb-Hvywpn-Acannon"
+		"Cannon5VulcanMk1-Inc"
+		"Cannon4AUTOMk1-Inc"
+		"Cannon6TwinAslt-AR"
+		"Cannon5VulcanMk1-Hvy"
+		"RailGun2Mk1TwinAslt-Inc" // inc twin assault cannon
+		"Rocket-HvyA-T-Quad"
+		"MG5TWINROTARY"
+		"Cannon375mmMk1-Twn" //twin heavy cannon
+		"Cannon4AUTOMk1-Hvy"
+		"Laser4-PlasmaCannon"
+		"Cannon4AUTOMk1-Hvy-Inc"
+		"Howitzer150Mk1-Gat"
+		"Cannon4AUTOMk1-Hvy-Aslt"
+		"Howitzer150Mk1-Inc"
+		"Howitzer150Mk1-Ram-Hvy"*/
 
 		ultScav_templates = {
 			bloke: { body: "Body27SUP", prop: "HalfTrackNAS", weap: "Cannon4AUTOMk1-Hvy-Aslt" },
@@ -186,6 +251,16 @@ function ultScav_setTech(tech_level)
 			buggy: { body: "Body22HVY", prop: "HalfTrackNAS", weap: "Cannon375mmMk1-Twn" },
 			bjeep: { body: "Body91REC", prop: "tracked01NAS", weap: "Cannon4AUTOMk1-Hvy-Inc" },
 		};
+
+		//"Rocket-VTOL-BB2"
+		//"R-Wpn-Bomb07" //BB bomb
+		//"Cannon4AUTO-VTOL"
+		//"Bomb2-VTOL-HvHE"
+		//"Bomb4-VTOL-HvyINC"
+		//"Bomb4-VTOL-HvyINC-Mass"
+		//"MG4ROTARYMk1-Hvy-Inc-VTOL"
+		//"Cannon5Vulcan-VTOL"
+		//"Rocket-VTOL-HvyA-T",
 
 		ultScav_vtoltemplates = {
 			ScavengerChopper: { body: "Body21MED", prop: "Helicopter", weap: "Cannon5Vulcan-VTOL" },
@@ -223,53 +298,52 @@ function ultScav_setTech(tech_level)
 		ultScav_vtolpad = "A0VtolPad";
 		ultScav_cybfactory = "A0CyborgFactory";
 
-		//"Rocket-Sunburst",
-		//"Rocket-VTOL-Sunburst" vtol sunbursts
-		//"Rocket-VTOL-Cherub",
-		//"Rocket-Sunburst-Arch" sunbursts thermal
-
 		ultScav_defenses = {
-			MGbunker: "Tower2-MG3Mk1-Aslt",
-			CanTow: "WallTower-HvATrocket",
-			FlameTow: "Emplacement-Howitzer105",
-			MGTow: "Empl3-Mortar2Mk1-Ram",
-			RocketPit: "Emplacement-Cannon5VulcanMk1-Hvy",
-			LancerPit: "Emplacement-HvyATrocket",
-			MortarPit: "Empl3-Mortar3ROTARYMk1-Ram-Rot",
+			building1: "Super-MortarRamjet-Empl",
+			building2: "Emplacement-MortarPit-Incendiary",
+			building3: "Sys-SensoTower04", //supercrete sensor
+			building4: "Sys-CB-Tower01", // CB tower
+			building5: "Empl3-Mortar2Mk1-Inc",
+			building6: "X-Super-Cannon", //cannon fort
+			building7: "X-Super-Rocket", //rocket fort
+			building8: "Super-MortarPlas-Empl", //super incendiary mortar
+			building9: "Empl3-Mortar3ROTARYMk1-Inc", //incen
+			building10: "Empl3-Mortar3ROTARYMk1-Ram-Rot",
 		};
 
-		ultScav_templates = {
-			bloke: { body: "Body20LGT", prop: "HalfTrackNAS", weap: "Cannon5VulcanMk1-Gat" }, //hardened alloys - viper
-			trike: { body: "Body211SUP", prop: "tracked01NAS", weap: "Cannon4AUTOMk1" },
-			buggy: { body: "Body61SUPP", prop: "HalfTrackNAS", weap: "Cannon5VulcanMk1-Gat" }, //hardened alloys - cobra
-			bjeep: { body: "Body21MED", prop: "tracked01NAS", weap: "Cannon4AUTOMk1" },
-		};
+		let body = ["Body20LGT", "Body21MED", "Body22HVY", "Body27SUP", "Body211SUP", "Body25SUP", "Body61SUPP", "Body91REC"];
+		let prop = ["HalfTrackGM", "HalfTrackNAS", "hover01NAS", "tracked01NAS", "tracked01GM", "wheeled01GM", "wheeled01NAS" ];
+		let weap = [
+			"Rocket-LtA-T-Quad", "Rocket-Arch-Hvy-Aslt-Gat", "Cannon375mmMk1-AR", "Cannon375mmMk1-Lng",
+			"Flame2", "Flame2-Hvy", "Mortar-Incendiary", "Rocket-BB-Arch", "Mortar2Mk1-Inc",
+			"Mortar3ROTARYMk1-Inc", "Mortar3ROTARYMk1-Ram-Rot"
+	 	];
+		ultScav_templates = generateRandomTemplates(body, prop, weap);
 
-		ultScav_vtoltemplates = {
-			ScavengerChopper: { body: "Body20LGT", prop: "Helicopter", weap: "Cannon5Vulcan-VTOL" },
-			HeavyChopper: { body: "Body211SUP", prop: "Helicopter", weap: "Cannon5Vulcan-VTOL" },
-		};
+		body = ["Body20LGT", "Body21MED", "Body211SUP", "Body61SUPP"];
+		prop = ["V-TolNAS"];
+		weap = ["Rocket-VTOL-TopAttackHvy", "Rocket-VTOL-LtA-T", "Rocket-VTOL-BB", "Bomb1-VTOL-LtHE",
+			"Bomb3-VTOL-LtINC", "Bomb2-VTOL-HvHE", "Bomb2-VTOL-HvHE"
+		];
+		ultScav_vtoltemplates = generateRandomTemplates(body, prop, weap);
 
-		ultScav_cyborgs = {
-			cannon: { body: "CyborgLightNAS", prop: "CyborgLegsNAS", weap: "CyborgCannon" },
-			rocket: { body: "CyborgLightNAS", prop: "CyborgLegsNAS", weap: "CyborgRocket" },
-			mortar: { body: "CyborgLightNAS", prop: "CyborgLegsNAS", weap: "Cyb-Wpn-Grenade" },
-			mg: { body: "CyborgLightNAS", prop: "CyborgLegsNAS", weap: "Cyb-Wpn-Rocket-Pod-Arch" },
-			mg1: { body: "CyborgLightNAS", prop: "CyborgLegsNAS", weap: "Cyb-Wpn-Rocket-Pod-MRA" },
-			mg2: { body: "CyborgLightNAS", prop: "CyborgLegsNAS", weap: "Cyb-Wpn-Rocket-Sunburst-Arch" },
-		};
+		body = ["CyborgLightNAS"];
+		prop = ["CyborgLegsNAS"];
+		weap = [
+			"Cyb-Wpn-Cannon-Sniper", "Cyb-Wpn-Rocket-Sunburst-Arch",
+			"Cyb-Wpn-Grenade", "Cyb-Wpn-Thermite", "Cyb-Wpn-MortarInc", "CyborgRotMG"
+		];
+		ultScav_cyborgs = generateRandomTemplates(body, prop, weap);
 
-		ultScav_trucks = {
-			Truck1: { body: "Body211SUP", prop: "wheeled01NAS", weap: "Spade1Mk1NAS" },
-			Truck2: { body: "Body211SUP", prop: "hover01NAS", weap: "Spade1Mk1NAS" },
-			Truck3: { body: "Body20LGT", prop: "wheeled01NAS", weap: "Spade1Mk1NAS" },
-			Truck4: { body: "Body20LGT", prop: "hover01NAS", weap: "Spade1Mk1NAS" },
-		};
+		body = ["Body211SUP", "Body61SUPP",];
+		prop = ["hover01NAS"];
+		weap = ["Spade1Mk1NAS"];
+		ultScav_trucks = generateRandomTemplates(body, prop, weap);
 
-		ultScav_sensors = {
-			scavsensor: { body: "Body211SUP", prop: "HalfTrackNAS", weap: "ScavSensor" },
-			scavsensor2: { body: "Body20LGT", prop: "HalfTrackNAS", weap: "ScavSensor" },
-		};
+		body = ["Body211SUP", "Body61SUPP",];
+		prop = ["hover01NAS"];
+		weap = ["SensorTurret1Mk1"];
+		ultScav_sensors = generateRandomTemplates(body, prop, weap);
 	}
 	else if (tech_level === 1.5 || tech_level === -1.5)
 	{
@@ -301,7 +375,7 @@ function ultScav_setTech(tech_level)
 		//"Body26SUP" super heavy mantis thermal
 
 		let body = ["Body17LGT", "Body45ABT", "Body18MED", "Body88MBT", "Body19HVY", "Body121SUP"];
-		let prop = ["HalfTrackGM", "HalfTrackNAS", "hover01NAS", "tracked01NAS", "tracked01NAS", "wheeled01GM", "wheeled01NAS" ];
+		let prop = ["HalfTrackGM", "HalfTrackNAS", "hover01NAS", "tracked01NAS", "tracked01GM", "wheeled01GM", "wheeled01NAS" ];
 		let weap = ["MG3Mk1-Twn", "Rocket-Pod-Twn", "Rocket-Pod-Quad", "Rocket-LtA-T-Quad", "Rocket-LtA-T-AR", "Rocket-Pod-MRA-Twin", "Rocket-Pod-Arch",
 				"MG3Mk1-Aslt", "Rocket-Pod-Arch-Twin", "Rocket-MRL-Homing", "Cannon5VulcanMk1-Gat", "Mortar1Mk1-Ram", "Mortar2Mk1-Ram", "Rocket-Pod-MRA-Quad",
 				"Rocket-Pod-Arch-Quad", "Rocket-MRL-Homing-Hvy", "Rocket-Arch-Hvy-Aslt-Gat"

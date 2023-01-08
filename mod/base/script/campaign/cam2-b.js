@@ -1,6 +1,7 @@
 include("script/campaign/libcampaign.js");
 include("script/campaign/templates.js");
 include("script/campaign/transitionTech.js");
+include("script/campaign/ultScav.js");
 
 camAreaEvent("vtolRemoveZone", function(droid)
 {
@@ -119,8 +120,8 @@ function eventStartLevel()
 	camSetArtifacts({
 		"COResearchLab": { tech: "R-Struc-Research-Upgrade04" },
 		"COHeavyFac-b4": { tech: ["R-Wpn-Flame2", "R-Wpn-Flamer-Damage04"] },
-		"COHeavyFacL-b1": { tech: "R-Wpn-MG-ROF03" },
-		"COCommandCenter": { tech: ["R-Wpn-MG-Damage05", "R-Vehicle-Body02"] }, //Leopard
+		"COHeavyFacL-b1": { tech: ["R-Wpn-MG-ROF03", "R-Wpn-Mortar02-Incendiary"] },
+		"COCommandCenter": { tech: ["R-Wpn-MG-Damage06", "R-Vehicle-Body02"] }, //Leopard
 		"COCybFacL-b2": { tech: "R-Cyborg-Engine03" },
 	});
 
