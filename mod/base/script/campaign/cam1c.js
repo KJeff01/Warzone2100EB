@@ -213,7 +213,6 @@ function eventStartLevel()
 
 	setMissionTime(camChangeOnDiff(camHoursToSeconds(3)));
 
-	setReinforcementTime(-1);
 	setAlliance(NEW_PARADIGM, SCAV_7, true);
 	setAlliance(NEW_PARADIGM, ULTSCAV, true);
 	setAlliance(SCAV_7, ULTSCAV, true);

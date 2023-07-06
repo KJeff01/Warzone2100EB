@@ -20,10 +20,11 @@ camAreaEvent("vtolRemoveZone", function(droid)
 	resetLabel("vtolRemoveZone", NEXUS);
 });
 
-//Order base three groups to do stuff.
-camAreaEvent("cybAttackers", function(droid)
+//Order base three groups to do stuff and enable cyborg factories in the north
+camAreaEvent("northFactoryTrigger", function(droid)
 {
-	enableAllFactories();
+	camEnableFactory("NXcybFac-b3");
+	camEnableFactory("NXcybFac-b4");
 
 	camManageGroup(camMakeGroup("NEAttackerGroup"), CAM_ORDER_ATTACK, {
 		regroup: true,
@@ -41,7 +42,16 @@ camAreaEvent("cybAttackers", function(droid)
 	});
 });
 
+//Enable factories in the SW base
 camAreaEvent("westFactoryTrigger", function(droid)
+{
+	camEnableFactory("NXcybFac-b2-1");
+	camEnableFactory("NXcybFac-b2-2");
+	camEnableFactory("NXHvyFac-b2");
+});
+
+//Enable all factories if the player tries to bypass a trigger area
+camAreaEvent ("middleTrigger", function(droid)
 {
 	enableAllFactories();
 });
@@ -124,9 +134,9 @@ function sendPlayerTransporter()
 	}
 
 	var droids = [];
-	var list = [cTempl.prhasgnt, cTempl.prhhpvt, cTempl.prhaacnt, cTempl.prtruck];
+	var list = [cTempl.prhasgnt, cTempl.prhhpvt, cTempl.prhaawwt, cTempl.prtruck];
 
-	// send 4 Assault Guns, 2 Hyper Velocity Cannons, 2 Cyclone AA Turrets and 2 Trucks
+	// send 4 Assault Guns, 2 Hyper Velocity Cannons, 2 Whirlwind AA Turrets and 2 Trucks
 	for (let i = 0, d = list.length; i < 10; ++i)
 	{
 		droids.push(i < d * 2 ? list[i % 4] : list[0]);
