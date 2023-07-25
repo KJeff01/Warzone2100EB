@@ -6044,6 +6044,24 @@
         ],
         "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
+    "R-Sys-Engineering-AI": {
+        "iconID": "IMAGE_RES_SYSTEMTECH",
+        "id": "R-Sys-Engineering-AI",
+        "imdName": "trlcon.pie",
+        "keyTopic": 1,
+        "msgName": "RES_ENGIN4",
+        "name": "Gigacheat Engineering",
+        "researchPoints": 16000,
+        "researchPower": 800,
+        "results": [
+            {
+                "class": "Construct",
+                "parameter": "ConstructorPoints",
+                "value": 800
+            }
+        ],
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
+    },
     "R-Sys-Engineering01": {
         "iconID": "IMAGE_RES_SYSTEMTECH",
         "id": "R-Sys-Engineering01",

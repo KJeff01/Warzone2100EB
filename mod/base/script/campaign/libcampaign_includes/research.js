@@ -72,5 +72,10 @@ function __camGrantSpecialResearch()
 			//Boost AI production to produce all droids within a factory throttle
 			completeResearch("R-Struc-Factory-Upgrade-AI", i);
 		}
+		if (camDiscoverCampaign() !== ALPHA_CAMPAIGN_NUMBER)
+		{
+			//Boost AI build speeds
+			completeResearch("R-Sys-Engineering-AI", i);
+		}
 	}
 }

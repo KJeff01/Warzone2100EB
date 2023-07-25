@@ -90,7 +90,7 @@ function checkCrashedTeam()
 		return false;
 	}
 
-	if (camDef(victoryFlag) && victoryFlag)
+	if (camDef(victoryFlag) && victoryFlag && ((enumDroid(THE_COLLECTIVE).length + enumDroid(ULTSCAV).length) === 0))
 	{
 		return true;
 	}
@@ -129,8 +129,10 @@ function eventStartLevel()
 	camCompleteRequiredResearch(CAM2_1_RES_COL, THE_COLLECTIVE);
 	camCompleteRequiredResearch(CAM2_1_RES_HUMAN, TRANSPORT_TEAM);
 
+	setAlliance(THE_COLLECTIVE, ULTSCAV, true);
+
 	camSetArtifacts({
-		"base1ArtifactPos": { tech: ["R-Vehicle-Body20", "R-Cyborg-Engine03"] }, //hardened alloys, blue bodies
+		"artiTank": { tech: ["R-Vehicle-Body20", "R-Cyborg-Engine03"] }, //hardened alloys, blue bodies
 	});
 	if (difficulty >= HARD)
 	{
@@ -157,6 +159,38 @@ function eventStartLevel()
 			eliminateSnd: "pcv394.ogg",
 		},
 	});
+
+	addDroid(ULTSCAV, 23, 5, "Collective Truck", "Body61SUPP", "tracked01GM", "", "", "Spade1Mk1NAS");
+	addDroid(ULTSCAV, 54, 53, "Collective Truck", "Body61SUPP", "tracked01GM", "", "", "Spade1Mk1NAS");
+	addDroid(ULTSCAV, 30, 59, "Collective Truck", "Body61SUPP", "tracked01GM", "", "", "Spade1Mk1NAS");
+	addDroid(ULTSCAV, 30, 30, "Collective Truck", "Body61SUPP", "tracked01GM", "", "", "Spade1Mk1NAS");
+	addDroid(ULTSCAV, 10, 10, "Collective Truck", "Body61SUPP", "tracked01GM", "", "", "Spade1Mk1NAS");
+	addDroid(ULTSCAV, 22, 35, "Collective Truck", "Body61SUPP", "tracked01GM", "", "", "Spade1Mk1NAS");
+
+	ultScav_eventStartLevel(
+		1, // vtols on/off. -1 = off
+		15, // build defense every x seconds
+		20, // build factories every x seconds
+		30, // build cyborg factories every x seconds
+		10, // produce trucks every x seconds
+		15, // produce droids every x seconds
+		15, // produce cyborgs every x seconds
+		25, // produce VTOLs every x seconds
+		5, // min factories
+		6, // min vtol factories
+		3, // min cyborg factories
+		6, // min number of trucks
+		1, // min number of sensor droids
+		5, // min number of attack droids
+		3, // min number of defend droids
+		20, // ground attack every x seconds
+		30, // VTOL attack every x seconds
+		1 // tech level
+	);
+
+	camSetExpState(true);
+	camSetExpLevel((difficulty >= HARD) ? 4 : 3);
+	camSetOnMapEnemyUnitExp();
 
 	setCrashedTeamExp();
 	victoryFlag = false;
