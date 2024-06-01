@@ -644,7 +644,7 @@
     },
     "A0LargeFacMod1": {
         "armour": 10,
-        "breadth": 3,
+        "breadth": 6,
         "buildPoints": 1400,
         "buildPower": 150,
         "ecmID": "ZNULLECM",
@@ -660,7 +660,7 @@
         ],
         "thermal": 10,
         "type": "FACTORY MODULE",
-        "width": 3
+        "width": 6
     },
     "A0LargeFactory1": {
         "armour": 10,
@@ -936,7 +936,7 @@
     },
     "A0PowMod2": {
         "armour": 10,
-        "breadth": 2,
+        "breadth": 4,
         "buildPoints": 1200,
         "ecmID": "ZNULLECM",
         "height": 3,
@@ -951,7 +951,7 @@
         ],
         "thermal": 10,
         "type": "POWER MODULE",
-        "width": 2
+        "width": 4
     },
     "A0PowerGenerator": {
         "armour": 20,
@@ -1116,7 +1116,7 @@
     },
     "A0ResearchModule2": {
         "armour": 10,
-        "breadth": 2,
+        "breadth": 4,
         "buildPoints": 1200,
         "buildPower": 125,
         "ecmID": "ZNULLECM",
@@ -1132,7 +1132,7 @@
         ],
         "thermal": 10,
         "type": "RESEARCH MODULE",
-        "width": 2
+        "width": 4
     },
     "A0ResourceExtractor": {
         "armour": 5,
